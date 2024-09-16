@@ -45,7 +45,7 @@ namespace ClinicaNeko
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            FrmUsuario frmUsuario = new FrmUsuario();
+            FrmNovoUsuario frmUsuario = new FrmNovoUsuario();
             frmUsuario.Dock = DockStyle.Fill;
             frmUsuario.TopLevel = false;
             MainPanel.Controls.Clear();
@@ -55,7 +55,7 @@ namespace ClinicaNeko
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            FrmProduto frmProduto = new FrmProduto();
+            FrmNovoProduto frmProduto = new FrmNovoProduto();
             frmProduto.Dock = DockStyle.Fill;
             frmProduto.TopLevel = false;
             MainPanel.Controls.Clear();
@@ -65,7 +65,7 @@ namespace ClinicaNeko
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            FrmCliente frmCliente = new FrmCliente();
+            FrmNovoCliente frmCliente = new FrmNovoCliente();
             frmCliente.Dock = DockStyle.Fill;
             frmCliente.TopLevel = false;
             MainPanel.Controls.Clear();
@@ -75,7 +75,7 @@ namespace ClinicaNeko
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            FrmPedido frmPedido = new FrmPedido();
+            FrmNovoPedido frmPedido = new FrmNovoPedido();
             frmPedido.Dock = DockStyle.Fill;
             frmPedido.TopLevel = false;
             MainPanel.Controls.Clear();

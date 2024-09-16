@@ -1,6 +1,6 @@
 ﻿namespace ClinicaNeko.Forms
 {
-    partial class FrmPedido
+    partial class FrmNovoProduto
     {
         /// <summary>
         /// Required designer variable.
@@ -35,13 +35,13 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(256, 179);
+            this.label1.Location = new System.Drawing.Point(221, 179);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 73);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "PEDIDO";
+            this.label1.Size = new System.Drawing.Size(359, 73);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "PRODUTO";
             // 
-            // FrmPedido
+            // FrmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -49,8 +49,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmPedido";
-            this.Text = "FrmPedido";
+            this.Name = "FrmProduto";
+            this.Text = "FrmProduto";
             this.ResumeLayout(false);
             this.PerformLayout();
 

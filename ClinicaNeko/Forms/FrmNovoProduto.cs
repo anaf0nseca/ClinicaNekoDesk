@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ClinicaNeko.Forms
 {
-    public partial class FrmTeste : Form
+    public partial class FrmNovoProduto : Form
     {
-        public FrmTeste()
+        public FrmNovoProduto()
         {
             InitializeComponent();
         }

@@ -52,6 +52,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPedido.Designer.cs">
+      <DependentUpon>FrmPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProduto.Designer.cs">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmServico.Designer.cs">
+      <DependentUpon>FrmServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmTeste.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +88,18 @@
     <Compile Include="Forms\FrmTestinho.Designer.cs">
       <DependentUpon>FrmTestinho.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmVeterinario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmVeterinario.Designer.cs">
+      <DependentUpon>FrmVeterinario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,11 +108,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPedido.resx">
+      <DependentUpon>FrmPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmProduto.resx">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmServico.resx">
+      <DependentUpon>FrmServico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTeste.resx">
       <DependentUpon>FrmTeste.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTestinho.resx">
       <DependentUpon>FrmTestinho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmVeterinario.resx">
+      <DependentUpon>FrmVeterinario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -89,6 +143,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -103,6 +158,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woman-user-circle-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

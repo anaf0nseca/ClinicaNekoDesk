@@ -12,3 +12,9 @@ C:\Users\Meu Computador\source\repos\ClinicaNeko\ClinicaNeko\obj\Debug\ClinicaNe
 C:\Users\Meu Computador\source\repos\ClinicaNeko\ClinicaNeko\obj\Debug\ClinicaNeko.pdb
 C:\Users\Meu Computador\source\repos\ClinicaNeko\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmTeste.resources
 C:\Users\Meu Computador\source\repos\ClinicaNeko\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmTestinho.resources
+C:\Users\Meu Computador\source\repos\ClinicaNeko\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmCliente.resources
+C:\Users\Meu Computador\source\repos\ClinicaNeko\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmPedido.resources
+C:\Users\Meu Computador\source\repos\ClinicaNeko\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmProduto.resources
+C:\Users\Meu Computador\source\repos\ClinicaNeko\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmServico.resources
+C:\Users\Meu Computador\source\repos\ClinicaNeko\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmUsuario.resources
+C:\Users\Meu Computador\source\repos\ClinicaNeko\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmVeterinario.resources

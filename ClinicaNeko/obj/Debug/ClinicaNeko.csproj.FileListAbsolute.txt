@@ -18,3 +18,21 @@ C:\Users\Meu Computador\source\repos\ClinicaNeko\ClinicaNeko\obj\Debug\ClinicaNe
 C:\Users\Meu Computador\source\repos\ClinicaNeko\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmServico.resources
 C:\Users\Meu Computador\source\repos\ClinicaNeko\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmUsuario.resources
 C:\Users\Meu Computador\source\repos\ClinicaNeko\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmVeterinario.resources
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.csproj.AssemblyReference.cache
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmNovoCliente.resources
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmNovoPedido.resources
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmNovoProduto.resources
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmServico.resources
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmNovoUsuario.resources
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmVeterinario.resources
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.Properties.Resources.resources
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.csproj.GenerateResource.cache
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.csproj.CoreCompileInputs.cache
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.exe
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.pdb
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\bin\Debug\ClinicaNeko.exe.config
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\bin\Debug\ClinicaNeko.exe
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\bin\Debug\ClinicaNeko.pdb
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\bin\Debug\Guna.UI2.dll
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaN.7A414C25.Up2Date
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.FrmPrincipal.resources

@@ -11,11 +11,19 @@ using ClinicaNeko.Forms;
 
 namespace ClinicaNeko
 {
-    public partial class Form1 : Form
+    public partial class FrmPrincipal : Form
     {
-        private Boolean showPanelMarket = false;
+        //todos os paineis de submenus ocultos
+        private Boolean showPanelUsuarios = false;
+        private Boolean showPanelProdutos = false;
+        private Boolean showPanelClientes = false;
+        private Boolean showPanelPedidos = false;
+        private Boolean showPanelVet = false;
+        private Boolean showPanelServicos = false;
+
+
         public static Panel MainPanel;
-        public Form1()
+        public FrmPrincipal()
         {
             InitializeComponent();
             MainPanel = panel1;
@@ -25,76 +33,91 @@ namespace ClinicaNeko
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            FrmTeste frmTeste = new FrmTeste();
-            frmTeste.Dock = DockStyle.Fill;
-            frmTeste.TopLevel = false;
-            panel1.Controls.Clear();
-            panel1.Controls.Add(frmTeste);
-            frmTeste.Show();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmTestinho frmTestinho = new FrmTestinho();
-            frmTestinho.Dock = DockStyle.Fill;
-            frmTestinho.TopLevel = false;
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(frmTestinho);
-            frmTestinho.Show();
+
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            FrmNovoUsuario frmUsuario = new FrmNovoUsuario();
-            frmUsuario.Dock = DockStyle.Fill;
-            frmUsuario.TopLevel = false;
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(frmUsuario);
-            frmUsuario.Show();
+
+            showPanelClientes = false;
+            showPanelPedidos = false;
+            showPanelProdutos = false;
+            showPanelServicos = false;
+            showPanelVet = false;
+            //Ao clicar no botão usuarios, o submenu é exibido e todos os outros ficam ocultos
+            showPanelUsuarios = !showPanelUsuarios;
+            tooglePanels();
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            FrmNovoProduto frmProduto = new FrmNovoProduto();
-            frmProduto.Dock = DockStyle.Fill;
-            frmProduto.TopLevel = false;
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(frmProduto);
-            frmProduto.Show();
+            showPanelClientes = false;
+            showPanelPedidos = false;
+            showPanelUsuarios = false;
+            showPanelServicos = false;
+            showPanelVet = false;
+
+            //Ao clicar no botão produtos, o submenu é exibido e todos os outros ficam ocultos
+            showPanelProdutos = !showPanelProdutos;
+            tooglePanels();
+
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            FrmNovoCliente frmCliente = new FrmNovoCliente();
-            frmCliente.Dock = DockStyle.Fill;
-            frmCliente.TopLevel = false;
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(frmCliente);
-            frmCliente.Show();
+            showPanelProdutos = false;
+            showPanelPedidos = false;
+            showPanelUsuarios = false;
+            showPanelServicos = false;
+            showPanelVet = false;
+
+            //Ao clicar no botão clientes, o submenu é exibido e todos os outros ficam ocultos
+            showPanelClientes = !showPanelClientes;
+            tooglePanels();
+
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            FrmNovoPedido frmPedido = new FrmNovoPedido();
-            frmPedido.Dock = DockStyle.Fill;
-            frmPedido.TopLevel = false;
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(frmPedido);
-            frmPedido.Show();
+            showPanelProdutos = false;
+            showPanelClientes = false;
+            showPanelUsuarios = false;
+            showPanelServicos = false;
+            showPanelVet = false;
+
+            //Ao clicar no botão pedidos, o submenu é exibido e todos os outros ficam ocultos
+            showPanelPedidos = !showPanelPedidos;
+            tooglePanels();
+
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            FrmVeterinario frmVeterinario = new FrmVeterinario();
-            frmVeterinario.Dock = DockStyle.Fill;
-            frmVeterinario.TopLevel = false;
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(frmVeterinario);
-            frmVeterinario.Show();
+            showPanelProdutos = false;
+            showPanelPedidos = false;
+            showPanelUsuarios = false;
+            showPanelServicos = false;
+            showPanelClientes = false;
+
+            //Ao clicar no botão veterinario, o submenu é exibido e todos os outros ficam ocultos
+            showPanelVet = !showPanelVet;
+            tooglePanels();
+            //FrmVeterinario frmVeterinario = new FrmVeterinario();
+            //frmVeterinario.Dock = DockStyle.Fill;
+            //frmVeterinario.TopLevel = false;
+            //MainPanel.Controls.Clear();
+            //MainPanel.Controls.Add(frmVeterinario);
+            //frmVeterinario.Show();
         }
 
         private void guna2Button7_Click(object sender, EventArgs e)
         {
+            //Exibe o formulário de serviço 
             FrmServico frmServico = new FrmServico();
             frmServico.Dock = DockStyle.Fill;
             frmServico.TopLevel = false;
@@ -105,11 +128,120 @@ namespace ClinicaNeko
 
         private void tooglePanels()
         {
-            if (showPanelMarket) 
-            { 
-            
+            if (showPanelUsuarios) 
+            {
+
+                panelUsuarios.Height = 90;
+            }
+            else
+            {
+                panelUsuarios.Height = 0;
+
             }
 
+            if (showPanelProdutos)
+            {
+                panelProdutos.Height = 60;
+            }
+            else
+            {
+                panelProdutos.Height = 0;
+            }
+
+            if (showPanelClientes)
+            {
+                panelClientes.Height = 90;
+            }
+            else
+            {
+                panelClientes.Height = 0;
+            }
+
+
+            if (showPanelPedidos)
+            {
+                panelPedidos.Height = 60;
+            }
+            else
+            {
+                panelPedidos.Height = 0;
+            }
+
+
+            if (showPanelVet)
+            {
+                panelVet.Height = 120;
+            }
+            else
+            {
+                panelVet.Height = 0;
+            }
+
+
+            if (showPanelProdutos)
+            {
+                panelProdutos.Height = 60;
+            }
+            else
+            {
+                panelProdutos.Height = 0;
+            }
+
+        }
+
+        private void btnNovoUsuario_Click(object sender, EventArgs e)
+        {
+            //exibe o formulário para cadastro de usuario
+            FrmNovoUsuario frmUsuario = new FrmNovoUsuario();
+            frmUsuario.Dock = DockStyle.Fill;
+            frmUsuario.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmUsuario);
+            frmUsuario.Show();
+
+        }
+
+        private void panelPedidos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click_1(object sender, EventArgs e)
+        {
+            //exibe o formulário para cadastro de produto
+            FrmNovoProduto frmProduto = new FrmNovoProduto();
+            frmProduto.Dock = DockStyle.Fill;
+            frmProduto.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmProduto);
+            frmProduto.Show();
+        }
+
+        private void guna2Button3_Click_1(object sender, EventArgs e)
+        {
+            //exibe o formulário para cadastro de cliente
+            FrmNovoCliente frmCliente = new FrmNovoCliente();
+            frmCliente.Dock = DockStyle.Fill;
+            frmCliente.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmCliente);
+            frmCliente.Show();
+        }
+
+        private void guna2Button6_Click_1(object sender, EventArgs e)
+        {
+            //exibe o formulário para cadastro de pedido
+            FrmNovoPedido frmPedido = new FrmNovoPedido();
+            frmPedido.Dock = DockStyle.Fill;
+            frmPedido.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmPedido);
+            frmPedido.Show();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

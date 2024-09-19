@@ -37,9 +37,10 @@
             this.panelVet = new System.Windows.Forms.Panel();
             this.panelPedidos = new System.Windows.Forms.Panel();
             this.panelClientes = new System.Windows.Forms.Panel();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.panelProdutos = new System.Windows.Forms.Panel();
             this.btnCategoria = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnServicos = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
@@ -70,18 +71,20 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(233, 107);
+            this.panel1.Font = new System.Drawing.Font("Broadway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(218, 85);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(805, 490);
+            this.panel1.Size = new System.Drawing.Size(962, 512);
             this.panel1.TabIndex = 0;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.guna2HtmlLabel1);
             this.panel3.Controls.Add(this.guna2CirclePictureBox2);
             this.panel3.Controls.Add(this.guna2Button1);
             this.panel3.Location = new System.Drawing.Point(12, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1026, 73);
+            this.panel3.Size = new System.Drawing.Size(1168, 73);
             this.panel3.TabIndex = 2;
             // 
             // guna2Button1
@@ -95,9 +98,9 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(187)))), ((int)(((byte)(164)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(934, 22);
+            this.guna2Button1.Location = new System.Drawing.Point(1007, 15);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(72, 29);
+            this.guna2Button1.Size = new System.Drawing.Size(147, 45);
             this.guna2Button1.TabIndex = 0;
             this.guna2Button1.Text = "Sair";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -111,7 +114,7 @@
             this.panelUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUsuarios.Location = new System.Drawing.Point(0, 57);
             this.panelUsuarios.Name = "panelUsuarios";
-            this.panelUsuarios.Size = new System.Drawing.Size(200, 10);
+            this.panelUsuarios.Size = new System.Drawing.Size(196, 10);
             this.panelUsuarios.TabIndex = 0;
             // 
             // btnSetores
@@ -129,12 +132,13 @@
             this.btnSetores.Location = new System.Drawing.Point(0, 60);
             this.btnSetores.Name = "btnSetores";
             this.btnSetores.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnSetores.Size = new System.Drawing.Size(200, 30);
+            this.btnSetores.Size = new System.Drawing.Size(196, 30);
             this.btnSetores.TabIndex = 5;
             this.btnSetores.Text = "Setores e Cargos";
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.btnServicos);
             this.panel2.Controls.Add(this.panelVet);
             this.panel2.Controls.Add(this.btnVeterinario);
@@ -161,7 +165,7 @@
             this.panelVet.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelVet.Location = new System.Drawing.Point(0, 301);
             this.panelVet.Name = "panelVet";
-            this.panelVet.Size = new System.Drawing.Size(200, 10);
+            this.panelVet.Size = new System.Drawing.Size(196, 10);
             this.panelVet.TabIndex = 20;
             // 
             // panelPedidos
@@ -172,7 +176,7 @@
             this.panelPedidos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPedidos.Location = new System.Drawing.Point(0, 240);
             this.panelPedidos.Name = "panelPedidos";
-            this.panelPedidos.Size = new System.Drawing.Size(200, 10);
+            this.panelPedidos.Size = new System.Drawing.Size(196, 10);
             this.panelPedidos.TabIndex = 18;
             this.panelPedidos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPedidos_Paint);
             // 
@@ -185,8 +189,26 @@
             this.panelClientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelClientes.Location = new System.Drawing.Point(0, 179);
             this.panelClientes.Name = "panelClientes";
-            this.panelClientes.Size = new System.Drawing.Size(200, 10);
+            this.panelClientes.Size = new System.Drawing.Size(196, 10);
             this.panelClientes.TabIndex = 16;
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button5.BorderRadius = 15;
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Button5.FillColor = System.Drawing.Color.LightGray;
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button5.Location = new System.Drawing.Point(0, 60);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
+            this.guna2Button5.Size = new System.Drawing.Size(196, 30);
+            this.guna2Button5.TabIndex = 7;
             // 
             // panelProdutos
             // 
@@ -196,7 +218,7 @@
             this.panelProdutos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelProdutos.Location = new System.Drawing.Point(0, 118);
             this.panelProdutos.Name = "panelProdutos";
-            this.panelProdutos.Size = new System.Drawing.Size(200, 10);
+            this.panelProdutos.Size = new System.Drawing.Size(196, 10);
             this.panelProdutos.TabIndex = 14;
             // 
             // btnCategoria
@@ -214,27 +236,20 @@
             this.btnCategoria.Location = new System.Drawing.Point(0, 30);
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnCategoria.Size = new System.Drawing.Size(200, 30);
+            this.btnCategoria.Size = new System.Drawing.Size(196, 30);
             this.btnCategoria.TabIndex = 5;
             this.btnCategoria.Text = "Categorias e Marcas";
             // 
-            // guna2Button5
+            // guna2HtmlLabel1
             // 
-            this.guna2Button5.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.BorderRadius = 15;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button5.FillColor = System.Drawing.Color.LightGray;
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.Location = new System.Drawing.Point(0, 60);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.guna2Button5.Size = new System.Drawing.Size(200, 30);
-            this.guna2Button5.TabIndex = 7;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(85)))), ((int)(((byte)(96)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(83, 22);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(490, 34);
+            this.guna2HtmlLabel1.TabIndex = 2;
+            this.guna2HtmlLabel1.Text = "CLÍNICA VETERINÁRIA NEKO  Clínica ";
             // 
             // guna2CirclePictureBox2
             // 
@@ -265,7 +280,7 @@
             this.btnServicos.Location = new System.Drawing.Point(0, 311);
             this.btnServicos.Name = "btnServicos";
             this.btnServicos.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnServicos.Size = new System.Drawing.Size(200, 51);
+            this.btnServicos.Size = new System.Drawing.Size(196, 51);
             this.btnServicos.TabIndex = 21;
             this.btnServicos.Text = "Serviços";
             this.btnServicos.Click += new System.EventHandler(this.guna2Button7_Click);
@@ -287,7 +302,7 @@
             this.guna2Button11.Location = new System.Drawing.Point(0, 90);
             this.guna2Button11.Name = "guna2Button11";
             this.guna2Button11.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.guna2Button11.Size = new System.Drawing.Size(200, 30);
+            this.guna2Button11.Size = new System.Drawing.Size(196, 30);
             this.guna2Button11.TabIndex = 10;
             this.guna2Button11.Text = "Consultas e Exames";
             // 
@@ -308,7 +323,7 @@
             this.guna2Button10.Location = new System.Drawing.Point(0, 60);
             this.guna2Button10.Name = "guna2Button10";
             this.guna2Button10.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.guna2Button10.Size = new System.Drawing.Size(200, 30);
+            this.guna2Button10.Size = new System.Drawing.Size(196, 30);
             this.guna2Button10.TabIndex = 9;
             this.guna2Button10.Text = "Especialidades";
             // 
@@ -329,7 +344,7 @@
             this.guna2Button9.Location = new System.Drawing.Point(0, 30);
             this.guna2Button9.Name = "guna2Button9";
             this.guna2Button9.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.guna2Button9.Size = new System.Drawing.Size(200, 30);
+            this.guna2Button9.Size = new System.Drawing.Size(196, 30);
             this.guna2Button9.TabIndex = 8;
             this.guna2Button9.Text = "Med. Veterinários";
             // 
@@ -350,7 +365,7 @@
             this.guna2Button8.Location = new System.Drawing.Point(0, 0);
             this.guna2Button8.Name = "guna2Button8";
             this.guna2Button8.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.guna2Button8.Size = new System.Drawing.Size(200, 30);
+            this.guna2Button8.Size = new System.Drawing.Size(196, 30);
             this.guna2Button8.TabIndex = 7;
             this.guna2Button8.Text = "Agendados";
             // 
@@ -371,7 +386,7 @@
             this.btnVeterinario.Location = new System.Drawing.Point(0, 250);
             this.btnVeterinario.Name = "btnVeterinario";
             this.btnVeterinario.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnVeterinario.Size = new System.Drawing.Size(200, 51);
+            this.btnVeterinario.Size = new System.Drawing.Size(196, 51);
             this.btnVeterinario.TabIndex = 19;
             this.btnVeterinario.Text = "Veterinário";
             this.btnVeterinario.Click += new System.EventHandler(this.guna2Button6_Click);
@@ -393,7 +408,7 @@
             this.guna2Button7.Location = new System.Drawing.Point(0, 30);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.guna2Button7.Size = new System.Drawing.Size(200, 30);
+            this.guna2Button7.Size = new System.Drawing.Size(196, 30);
             this.guna2Button7.TabIndex = 7;
             this.guna2Button7.Text = "Lista de Pedidos";
             // 
@@ -414,7 +429,7 @@
             this.guna2Button6.Location = new System.Drawing.Point(0, 0);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.guna2Button6.Size = new System.Drawing.Size(200, 30);
+            this.guna2Button6.Size = new System.Drawing.Size(196, 30);
             this.guna2Button6.TabIndex = 6;
             this.guna2Button6.Text = "Novo";
             this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click_1);
@@ -436,7 +451,7 @@
             this.btnPedidos.Location = new System.Drawing.Point(0, 189);
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnPedidos.Size = new System.Drawing.Size(200, 51);
+            this.btnPedidos.Size = new System.Drawing.Size(196, 51);
             this.btnPedidos.TabIndex = 17;
             this.btnPedidos.Text = "Pedidos";
             this.btnPedidos.Click += new System.EventHandler(this.guna2Button5_Click);
@@ -458,7 +473,7 @@
             this.guna2Button4.Location = new System.Drawing.Point(0, 30);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.guna2Button4.Size = new System.Drawing.Size(200, 30);
+            this.guna2Button4.Size = new System.Drawing.Size(196, 30);
             this.guna2Button4.TabIndex = 6;
             this.guna2Button4.Text = "Lista de Clientes";
             // 
@@ -479,7 +494,7 @@
             this.guna2Button3.Location = new System.Drawing.Point(0, 0);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.guna2Button3.Size = new System.Drawing.Size(200, 30);
+            this.guna2Button3.Size = new System.Drawing.Size(196, 30);
             this.guna2Button3.TabIndex = 5;
             this.guna2Button3.Text = "Novo";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click_1);
@@ -501,7 +516,7 @@
             this.btnClientes.Location = new System.Drawing.Point(0, 128);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnClientes.Size = new System.Drawing.Size(200, 51);
+            this.btnClientes.Size = new System.Drawing.Size(196, 51);
             this.btnClientes.TabIndex = 15;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.Click += new System.EventHandler(this.guna2Button4_Click);
@@ -523,7 +538,7 @@
             this.guna2Button2.Location = new System.Drawing.Point(0, 0);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.guna2Button2.Size = new System.Drawing.Size(200, 30);
+            this.guna2Button2.Size = new System.Drawing.Size(196, 30);
             this.guna2Button2.TabIndex = 4;
             this.guna2Button2.Text = "Novo";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click_1);
@@ -545,7 +560,7 @@
             this.btnProdutos.Location = new System.Drawing.Point(0, 67);
             this.btnProdutos.Name = "btnProdutos";
             this.btnProdutos.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnProdutos.Size = new System.Drawing.Size(200, 51);
+            this.btnProdutos.Size = new System.Drawing.Size(196, 51);
             this.btnProdutos.TabIndex = 13;
             this.btnProdutos.Text = "Produtos";
             this.btnProdutos.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -567,7 +582,7 @@
             this.btnListaUsuarios.Location = new System.Drawing.Point(0, 30);
             this.btnListaUsuarios.Name = "btnListaUsuarios";
             this.btnListaUsuarios.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnListaUsuarios.Size = new System.Drawing.Size(200, 30);
+            this.btnListaUsuarios.Size = new System.Drawing.Size(196, 30);
             this.btnListaUsuarios.TabIndex = 4;
             this.btnListaUsuarios.Text = "Funcionários";
             // 
@@ -588,7 +603,7 @@
             this.btnNovoUsuario.Location = new System.Drawing.Point(0, 0);
             this.btnNovoUsuario.Name = "btnNovoUsuario";
             this.btnNovoUsuario.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnNovoUsuario.Size = new System.Drawing.Size(200, 30);
+            this.btnNovoUsuario.Size = new System.Drawing.Size(196, 30);
             this.btnNovoUsuario.TabIndex = 3;
             this.btnNovoUsuario.Text = "Novo";
             this.btnNovoUsuario.Click += new System.EventHandler(this.btnNovoUsuario_Click);
@@ -610,7 +625,7 @@
             this.btnUsuarios.Location = new System.Drawing.Point(0, 0);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnUsuarios.Size = new System.Drawing.Size(200, 57);
+            this.btnUsuarios.Size = new System.Drawing.Size(196, 57);
             this.btnUsuarios.TabIndex = 2;
             this.btnUsuarios.Text = "Usuários";
             this.btnUsuarios.Click += new System.EventHandler(this.guna2Button3_Click);
@@ -620,7 +635,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1050, 613);
+            this.ClientSize = new System.Drawing.Size(1190, 607);
             this.ControlBox = false;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -631,6 +646,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panelUsuarios.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panelVet.ResumeLayout(false);
@@ -674,6 +690,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button10;
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }
 

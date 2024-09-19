@@ -34,11 +34,11 @@ namespace ClinicaNeko
         private void Form1_Load(object sender, EventArgs e)
         {
             FrmLogo frmLogo = new FrmLogo();
-            frmLogo.Dock = DockStyle.None;
+            frmLogo.Dock = DockStyle.Left;
             frmLogo.TopLevel = false;
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(frmLogo);
-            frmLogo.Show();
+            //frmLogo.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,6 +48,7 @@ namespace ClinicaNeko
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
+            //btnUsuarios.FillColor = Color.FromArgb(83, 133, 91);
 
             showPanelClientes = false;
             showPanelPedidos = false;
@@ -61,6 +62,7 @@ namespace ClinicaNeko
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+
             showPanelClientes = false;
             showPanelPedidos = false;
             showPanelUsuarios = false;
@@ -75,6 +77,7 @@ namespace ClinicaNeko
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
+
             showPanelProdutos = false;
             showPanelPedidos = false;
             showPanelUsuarios = false;
@@ -89,6 +92,7 @@ namespace ClinicaNeko
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
+
             showPanelProdutos = false;
             showPanelClientes = false;
             showPanelUsuarios = false;
@@ -103,6 +107,7 @@ namespace ClinicaNeko
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
+
             showPanelProdutos = false;
             showPanelPedidos = false;
             showPanelUsuarios = false;
@@ -122,6 +127,7 @@ namespace ClinicaNeko
 
         private void guna2Button7_Click(object sender, EventArgs e)
         {
+
             //Exibe o formulário de serviço 
             FrmServico frmServico = new FrmServico();
             frmServico.Dock = DockStyle.Fill;
@@ -246,7 +252,24 @@ namespace ClinicaNeko
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Close();
+            var msg = MessageBox.Show(
+                    "Deseja sair do sistema?", //Texto da mensagem 
+                    "Clínica Veterinária Neko", //Título da caixa de mensagem
+                    MessageBoxButtons.YesNo, //Botões exibidos na caixa
+                    MessageBoxIcon.Exclamation, //Ícone exibido
+                    MessageBoxDefaultButton.Button1); //Botão padrão
+
+            if (msg == DialogResult.Yes) this.Close();
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelProdutos_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -39,7 +39,6 @@
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnProximo = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtNome = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,6 +46,7 @@
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTelefone = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnProximo = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // dtpNascimento
@@ -89,7 +89,7 @@
             this.cmbSetor.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.cmbSetor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbSetor.ItemHeight = 30;
-            this.cmbSetor.Location = new System.Drawing.Point(43, 354);
+            this.cmbSetor.Location = new System.Drawing.Point(39, 354);
             this.cmbSetor.Name = "cmbSetor";
             this.cmbSetor.Size = new System.Drawing.Size(201, 36);
             this.cmbSetor.TabIndex = 7;
@@ -106,7 +106,7 @@
             this.cmbCargo.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.cmbCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbCargo.ItemHeight = 30;
-            this.cmbCargo.Location = new System.Drawing.Point(300, 354);
+            this.cmbCargo.Location = new System.Drawing.Point(283, 354);
             this.cmbCargo.Name = "cmbCargo";
             this.cmbCargo.Size = new System.Drawing.Size(201, 36);
             this.cmbCargo.TabIndex = 8;
@@ -171,7 +171,7 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(63)))), ((int)(((byte)(44)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(54, 334);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(50, 334);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(42, 20);
             this.guna2HtmlLabel7.TabIndex = 15;
@@ -182,30 +182,11 @@
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(63)))), ((int)(((byte)(44)))));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(314, 334);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(297, 334);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(46, 20);
             this.guna2HtmlLabel8.TabIndex = 16;
             this.guna2HtmlLabel8.Text = "Cargo";
-            // 
-            // btnProximo
-            // 
-            this.btnProximo.Animated = true;
-            this.btnProximo.BackColor = System.Drawing.Color.Transparent;
-            this.btnProximo.BorderRadius = 20;
-            this.btnProximo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnProximo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnProximo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnProximo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnProximo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnProximo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnProximo.ForeColor = System.Drawing.Color.White;
-            this.btnProximo.Location = new System.Drawing.Point(606, 354);
-            this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(153, 45);
-            this.btnProximo.TabIndex = 18;
-            this.btnProximo.Text = "Próximo";
-            this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
             // 
             // guna2HtmlLabel10
             // 
@@ -243,6 +224,7 @@
             this.txtNome.ForeColor = System.Drawing.Color.Black;
             this.txtNome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNome.Location = new System.Drawing.Point(39, 175);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
             this.txtNome.PlaceholderText = "";
@@ -264,6 +246,7 @@
             this.txtCpf.ForeColor = System.Drawing.Color.Black;
             this.txtCpf.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCpf.Location = new System.Drawing.Point(329, 175);
+            this.txtCpf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.PasswordChar = '\0';
             this.txtCpf.PlaceholderText = "";
@@ -285,6 +268,7 @@
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Location = new System.Drawing.Point(39, 266);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
@@ -306,6 +290,7 @@
             this.txtSenha.ForeColor = System.Drawing.Color.Black;
             this.txtSenha.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSenha.Location = new System.Drawing.Point(329, 266);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '\0';
             this.txtSenha.PlaceholderText = "";
@@ -327,12 +312,35 @@
             this.txtTelefone.ForeColor = System.Drawing.Color.Black;
             this.txtTelefone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTelefone.Location = new System.Drawing.Point(573, 266);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.PasswordChar = '\0';
             this.txtTelefone.PlaceholderText = "";
             this.txtTelefone.SelectedText = "";
             this.txtTelefone.Size = new System.Drawing.Size(200, 36);
             this.txtTelefone.TabIndex = 26;
+            // 
+            // btnProximo
+            // 
+            this.btnProximo.Animated = true;
+            this.btnProximo.BackColor = System.Drawing.Color.Transparent;
+            this.btnProximo.BorderRadius = 20;
+            this.btnProximo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnProximo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnProximo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnProximo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnProximo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
+            this.btnProximo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnProximo.ForeColor = System.Drawing.Color.White;
+            this.btnProximo.Image = global::ClinicaNeko.Properties.Resources.circle_arrow_right;
+            this.btnProximo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnProximo.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnProximo.Location = new System.Drawing.Point(606, 354);
+            this.btnProximo.Name = "btnProximo";
+            this.btnProximo.Size = new System.Drawing.Size(167, 45);
+            this.btnProximo.TabIndex = 18;
+            this.btnProximo.Text = "Próximo";
+            this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
             // 
             // FrmNovoUsuario
             // 

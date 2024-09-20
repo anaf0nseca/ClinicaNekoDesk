@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -38,6 +39,7 @@
             this.btnListaUsuarios = new Guna.UI2.WinForms.Guna2Button();
             this.btnNovoUsuario = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.btnServicos = new Guna.UI2.WinForms.Guna2Button();
             this.panelVet = new System.Windows.Forms.Panel();
             this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
@@ -59,7 +61,6 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnProdutos = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsuarios = new Guna.UI2.WinForms.Guna2Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             this.panelUsuarios.SuspendLayout();
@@ -75,7 +76,7 @@
             this.panel1.Font = new System.Drawing.Font("Broadway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(218, 85);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 510);
+            this.panel1.Size = new System.Drawing.Size(960, 534);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -116,6 +117,7 @@
             // 
             this.btnSair.BorderColor = System.Drawing.Color.Transparent;
             this.btnSair.BorderRadius = 15;
+            this.btnSair.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSair.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSair.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSair.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -137,7 +139,7 @@
             this.panelUsuarios.Controls.Add(this.btnListaUsuarios);
             this.panelUsuarios.Controls.Add(this.btnNovoUsuario);
             this.panelUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelUsuarios.Location = new System.Drawing.Point(0, 57);
+            this.panelUsuarios.Location = new System.Drawing.Point(0, 51);
             this.panelUsuarios.Name = "panelUsuarios";
             this.panelUsuarios.Size = new System.Drawing.Size(200, 10);
             this.panelUsuarios.TabIndex = 0;
@@ -220,8 +222,16 @@
             this.panel2.Controls.Add(this.btnUsuarios);
             this.panel2.Location = new System.Drawing.Point(12, 107);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 490);
+            this.panel2.Size = new System.Drawing.Size(200, 512);
             this.panel2.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 441);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 71);
+            this.panel4.TabIndex = 22;
             // 
             // btnServicos
             // 
@@ -237,7 +247,7 @@
             this.btnServicos.ForeColor = System.Drawing.Color.Black;
             this.btnServicos.Image = global::ClinicaNeko.Properties.Resources.chevron_down;
             this.btnServicos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnServicos.Location = new System.Drawing.Point(0, 311);
+            this.btnServicos.Location = new System.Drawing.Point(0, 305);
             this.btnServicos.Name = "btnServicos";
             this.btnServicos.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
             this.btnServicos.Size = new System.Drawing.Size(200, 51);
@@ -253,7 +263,7 @@
             this.panelVet.Controls.Add(this.guna2Button9);
             this.panelVet.Controls.Add(this.guna2Button8);
             this.panelVet.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelVet.Location = new System.Drawing.Point(0, 301);
+            this.panelVet.Location = new System.Drawing.Point(0, 295);
             this.panelVet.Name = "panelVet";
             this.panelVet.Size = new System.Drawing.Size(200, 10);
             this.panelVet.TabIndex = 20;
@@ -356,7 +366,7 @@
             this.btnVeterinario.ForeColor = System.Drawing.Color.Black;
             this.btnVeterinario.Image = global::ClinicaNeko.Properties.Resources.chevron_down;
             this.btnVeterinario.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnVeterinario.Location = new System.Drawing.Point(0, 250);
+            this.btnVeterinario.Location = new System.Drawing.Point(0, 244);
             this.btnVeterinario.Name = "btnVeterinario";
             this.btnVeterinario.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
             this.btnVeterinario.Size = new System.Drawing.Size(200, 51);
@@ -370,7 +380,7 @@
             this.panelPedidos.Controls.Add(this.guna2Button7);
             this.panelPedidos.Controls.Add(this.guna2Button6);
             this.panelPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPedidos.Location = new System.Drawing.Point(0, 240);
+            this.panelPedidos.Location = new System.Drawing.Point(0, 234);
             this.panelPedidos.Name = "panelPedidos";
             this.panelPedidos.Size = new System.Drawing.Size(200, 10);
             this.panelPedidos.TabIndex = 18;
@@ -433,7 +443,7 @@
             this.btnPedidos.ForeColor = System.Drawing.Color.Black;
             this.btnPedidos.Image = global::ClinicaNeko.Properties.Resources.chevron_down;
             this.btnPedidos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnPedidos.Location = new System.Drawing.Point(0, 189);
+            this.btnPedidos.Location = new System.Drawing.Point(0, 183);
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
             this.btnPedidos.Size = new System.Drawing.Size(200, 51);
@@ -448,7 +458,7 @@
             this.panelClientes.Controls.Add(this.guna2Button4);
             this.panelClientes.Controls.Add(this.guna2Button3);
             this.panelClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelClientes.Location = new System.Drawing.Point(0, 179);
+            this.panelClientes.Location = new System.Drawing.Point(0, 173);
             this.panelClientes.Name = "panelClientes";
             this.panelClientes.Size = new System.Drawing.Size(200, 10);
             this.panelClientes.TabIndex = 16;
@@ -528,7 +538,7 @@
             this.btnClientes.ForeColor = System.Drawing.Color.Black;
             this.btnClientes.Image = global::ClinicaNeko.Properties.Resources.chevron_down;
             this.btnClientes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnClientes.Location = new System.Drawing.Point(0, 128);
+            this.btnClientes.Location = new System.Drawing.Point(0, 122);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
             this.btnClientes.Size = new System.Drawing.Size(200, 51);
@@ -542,7 +552,7 @@
             this.panelProdutos.Controls.Add(this.btnCategoria);
             this.panelProdutos.Controls.Add(this.guna2Button2);
             this.panelProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProdutos.Location = new System.Drawing.Point(0, 118);
+            this.panelProdutos.Location = new System.Drawing.Point(0, 112);
             this.panelProdutos.Name = "panelProdutos";
             this.panelProdutos.Size = new System.Drawing.Size(200, 10);
             this.panelProdutos.TabIndex = 14;
@@ -603,7 +613,7 @@
             this.btnProdutos.ForeColor = System.Drawing.Color.Black;
             this.btnProdutos.Image = global::ClinicaNeko.Properties.Resources.chevron_down;
             this.btnProdutos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnProdutos.Location = new System.Drawing.Point(0, 67);
+            this.btnProdutos.Location = new System.Drawing.Point(0, 61);
             this.btnProdutos.Name = "btnProdutos";
             this.btnProdutos.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
             this.btnProdutos.Size = new System.Drawing.Size(200, 51);
@@ -628,18 +638,10 @@
             this.btnUsuarios.Location = new System.Drawing.Point(0, 0);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnUsuarios.Size = new System.Drawing.Size(200, 57);
+            this.btnUsuarios.Size = new System.Drawing.Size(200, 51);
             this.btnUsuarios.TabIndex = 2;
             this.btnUsuarios.Text = "Usuários";
             this.btnUsuarios.Click += new System.EventHandler(this.guna2Button3_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 419);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 71);
-            this.panel4.TabIndex = 22;
             // 
             // FrmPrincipal
             // 
@@ -647,12 +649,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnSair;
-            this.ClientSize = new System.Drawing.Size(1190, 600);
+            this.ClientSize = new System.Drawing.Size(1190, 631);
             this.ControlBox = false;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPrincipal";

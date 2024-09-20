@@ -34,11 +34,11 @@ namespace ClinicaNeko
         private void Form1_Load(object sender, EventArgs e)
         {
             FrmLogo frmLogo = new FrmLogo();
-            frmLogo.Dock = DockStyle.Left;
+            frmLogo.Dock = DockStyle.Fill;
             frmLogo.TopLevel = false;
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(frmLogo);
-            //frmLogo.Show();
+            frmLogo.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

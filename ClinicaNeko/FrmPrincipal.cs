@@ -271,5 +271,15 @@ namespace ClinicaNeko
         {
 
         }
+
+        private void guna2Button4_Click_1(object sender, EventArgs e)
+        {
+            FrmListaCliente frmListaCliente = new FrmListaCliente();
+            frmListaCliente.Dock = DockStyle.Fill;
+            frmListaCliente.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmListaCliente);
+            frmListaCliente.Show();
+        }
     }
 }

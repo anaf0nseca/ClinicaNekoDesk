@@ -32,43 +32,43 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnSair = new Guna.UI2.WinForms.Guna2Button();
             this.panelUsuarios = new System.Windows.Forms.Panel();
             this.btnSetores = new Guna.UI2.WinForms.Guna2Button();
-            this.btnListaUsuarios = new Guna.UI2.WinForms.Guna2Button();
-            this.btnNovoUsuario = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnServicos = new Guna.UI2.WinForms.Guna2Button();
             this.panelVet = new System.Windows.Forms.Panel();
+            this.panelPedidos = new System.Windows.Forms.Panel();
+            this.panelClientes = new System.Windows.Forms.Panel();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.panelProdutos = new System.Windows.Forms.Panel();
+            this.btnCategoria = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btnServicos = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.btnVeterinario = new Guna.UI2.WinForms.Guna2Button();
-            this.panelPedidos = new System.Windows.Forms.Panel();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.btnPedidos = new Guna.UI2.WinForms.Guna2Button();
-            this.panelClientes = new System.Windows.Forms.Panel();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.btnClientes = new Guna.UI2.WinForms.Guna2Button();
-            this.panelProdutos = new System.Windows.Forms.Panel();
-            this.btnCategoria = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnProdutos = new Guna.UI2.WinForms.Guna2Button();
+            this.btnListaUsuarios = new Guna.UI2.WinForms.Guna2Button();
+            this.btnNovoUsuario = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsuarios = new Guna.UI2.WinForms.Guna2Button();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             this.panelUsuarios.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelVet.SuspendLayout();
             this.panelPedidos.SuspendLayout();
             this.panelClientes.SuspendLayout();
             this.panelProdutos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,18 +100,6 @@
             this.guna2HtmlLabel1.TabIndex = 2;
             this.guna2HtmlLabel1.Text = "CLÍNICA VETERINÁRIA NEKO ";
             this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
-            // 
-            // guna2CirclePictureBox2
-            // 
-            this.guna2CirclePictureBox2.Image = global::ClinicaNeko.Properties.Resources.Logo1;
-            this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(76, 73);
-            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox2.TabIndex = 1;
-            this.guna2CirclePictureBox2.TabStop = false;
             // 
             // btnSair
             // 
@@ -163,49 +151,6 @@
             this.btnSetores.TabIndex = 5;
             this.btnSetores.Text = "Setores e Cargos";
             // 
-            // btnListaUsuarios
-            // 
-            this.btnListaUsuarios.BorderColor = System.Drawing.Color.Transparent;
-            this.btnListaUsuarios.BorderRadius = 15;
-            this.btnListaUsuarios.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnListaUsuarios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnListaUsuarios.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnListaUsuarios.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnListaUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListaUsuarios.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(196)))), ((int)(((byte)(169)))));
-            this.btnListaUsuarios.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnListaUsuarios.ForeColor = System.Drawing.Color.Black;
-            this.btnListaUsuarios.Image = global::ClinicaNeko.Properties.Resources.list;
-            this.btnListaUsuarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnListaUsuarios.Location = new System.Drawing.Point(0, 30);
-            this.btnListaUsuarios.Name = "btnListaUsuarios";
-            this.btnListaUsuarios.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnListaUsuarios.Size = new System.Drawing.Size(200, 30);
-            this.btnListaUsuarios.TabIndex = 4;
-            this.btnListaUsuarios.Text = "Funcionários";
-            // 
-            // btnNovoUsuario
-            // 
-            this.btnNovoUsuario.BorderColor = System.Drawing.Color.Transparent;
-            this.btnNovoUsuario.BorderRadius = 15;
-            this.btnNovoUsuario.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNovoUsuario.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNovoUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNovoUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNovoUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNovoUsuario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(196)))), ((int)(((byte)(169)))));
-            this.btnNovoUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnNovoUsuario.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btnNovoUsuario.Image = global::ClinicaNeko.Properties.Resources.circle_plus;
-            this.btnNovoUsuario.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnNovoUsuario.Location = new System.Drawing.Point(0, 0);
-            this.btnNovoUsuario.Name = "btnNovoUsuario";
-            this.btnNovoUsuario.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnNovoUsuario.Size = new System.Drawing.Size(200, 30);
-            this.btnNovoUsuario.TabIndex = 3;
-            this.btnNovoUsuario.Text = "Novo";
-            this.btnNovoUsuario.Click += new System.EventHandler(this.btnNovoUsuario_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel4);
@@ -233,6 +178,104 @@
             this.panel4.Size = new System.Drawing.Size(200, 71);
             this.panel4.TabIndex = 22;
             // 
+            // panelVet
+            // 
+            this.panelVet.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelVet.Controls.Add(this.guna2Button11);
+            this.panelVet.Controls.Add(this.guna2Button10);
+            this.panelVet.Controls.Add(this.guna2Button9);
+            this.panelVet.Controls.Add(this.guna2Button8);
+            this.panelVet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelVet.Location = new System.Drawing.Point(0, 295);
+            this.panelVet.Name = "panelVet";
+            this.panelVet.Size = new System.Drawing.Size(200, 10);
+            this.panelVet.TabIndex = 20;
+            // 
+            // panelPedidos
+            // 
+            this.panelPedidos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelPedidos.Controls.Add(this.guna2Button7);
+            this.panelPedidos.Controls.Add(this.guna2Button6);
+            this.panelPedidos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelPedidos.Location = new System.Drawing.Point(0, 234);
+            this.panelPedidos.Name = "panelPedidos";
+            this.panelPedidos.Size = new System.Drawing.Size(200, 10);
+            this.panelPedidos.TabIndex = 18;
+            this.panelPedidos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPedidos_Paint);
+            // 
+            // panelClientes
+            // 
+            this.panelClientes.BackColor = System.Drawing.Color.White;
+            this.panelClientes.Controls.Add(this.guna2Button5);
+            this.panelClientes.Controls.Add(this.guna2Button4);
+            this.panelClientes.Controls.Add(this.guna2Button3);
+            this.panelClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelClientes.Location = new System.Drawing.Point(0, 173);
+            this.panelClientes.Name = "panelClientes";
+            this.panelClientes.Size = new System.Drawing.Size(200, 10);
+            this.panelClientes.TabIndex = 16;
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button5.BorderRadius = 15;
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(196)))), ((int)(((byte)(169)))));
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button5.Location = new System.Drawing.Point(0, 60);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
+            this.guna2Button5.Size = new System.Drawing.Size(200, 30);
+            this.guna2Button5.TabIndex = 7;
+            // 
+            // panelProdutos
+            // 
+            this.panelProdutos.BackColor = System.Drawing.Color.White;
+            this.panelProdutos.Controls.Add(this.btnCategoria);
+            this.panelProdutos.Controls.Add(this.guna2Button2);
+            this.panelProdutos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelProdutos.Location = new System.Drawing.Point(0, 112);
+            this.panelProdutos.Name = "panelProdutos";
+            this.panelProdutos.Size = new System.Drawing.Size(200, 10);
+            this.panelProdutos.TabIndex = 14;
+            this.panelProdutos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelProdutos_Paint);
+            // 
+            // btnCategoria
+            // 
+            this.btnCategoria.BorderColor = System.Drawing.Color.Transparent;
+            this.btnCategoria.BorderRadius = 15;
+            this.btnCategoria.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCategoria.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCategoria.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCategoria.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCategoria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCategoria.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(196)))), ((int)(((byte)(169)))));
+            this.btnCategoria.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnCategoria.ForeColor = System.Drawing.Color.Black;
+            this.btnCategoria.Location = new System.Drawing.Point(0, 30);
+            this.btnCategoria.Name = "btnCategoria";
+            this.btnCategoria.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
+            this.btnCategoria.Size = new System.Drawing.Size(200, 30);
+            this.btnCategoria.TabIndex = 5;
+            this.btnCategoria.Text = "Categorias e Marcas";
+            // 
+            // guna2CirclePictureBox2
+            // 
+            this.guna2CirclePictureBox2.Image = global::ClinicaNeko.Properties.Resources.Logo1;
+            this.guna2CirclePictureBox2.ImageRotate = 0F;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(76, 73);
+            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox2.TabIndex = 1;
+            this.guna2CirclePictureBox2.TabStop = false;
+            // 
             // btnServicos
             // 
             this.btnServicos.BorderColor = System.Drawing.Color.Transparent;
@@ -254,19 +297,6 @@
             this.btnServicos.TabIndex = 21;
             this.btnServicos.Text = "Serviços";
             this.btnServicos.Click += new System.EventHandler(this.guna2Button7_Click);
-            // 
-            // panelVet
-            // 
-            this.panelVet.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelVet.Controls.Add(this.guna2Button11);
-            this.panelVet.Controls.Add(this.guna2Button10);
-            this.panelVet.Controls.Add(this.guna2Button9);
-            this.panelVet.Controls.Add(this.guna2Button8);
-            this.panelVet.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelVet.Location = new System.Drawing.Point(0, 295);
-            this.panelVet.Name = "panelVet";
-            this.panelVet.Size = new System.Drawing.Size(200, 10);
-            this.panelVet.TabIndex = 20;
             // 
             // guna2Button11
             // 
@@ -374,18 +404,6 @@
             this.btnVeterinario.Text = "Veterinário";
             this.btnVeterinario.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
-            // panelPedidos
-            // 
-            this.panelPedidos.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelPedidos.Controls.Add(this.guna2Button7);
-            this.panelPedidos.Controls.Add(this.guna2Button6);
-            this.panelPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPedidos.Location = new System.Drawing.Point(0, 234);
-            this.panelPedidos.Name = "panelPedidos";
-            this.panelPedidos.Size = new System.Drawing.Size(200, 10);
-            this.panelPedidos.TabIndex = 18;
-            this.panelPedidos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPedidos_Paint);
-            // 
             // guna2Button7
             // 
             this.guna2Button7.BorderColor = System.Drawing.Color.Transparent;
@@ -451,36 +469,6 @@
             this.btnPedidos.Text = "Pedidos";
             this.btnPedidos.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
-            // panelClientes
-            // 
-            this.panelClientes.BackColor = System.Drawing.Color.White;
-            this.panelClientes.Controls.Add(this.guna2Button5);
-            this.panelClientes.Controls.Add(this.guna2Button4);
-            this.panelClientes.Controls.Add(this.guna2Button3);
-            this.panelClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelClientes.Location = new System.Drawing.Point(0, 173);
-            this.panelClientes.Name = "panelClientes";
-            this.panelClientes.Size = new System.Drawing.Size(200, 10);
-            this.panelClientes.TabIndex = 16;
-            // 
-            // guna2Button5
-            // 
-            this.guna2Button5.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.BorderRadius = 15;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(196)))), ((int)(((byte)(169)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.Location = new System.Drawing.Point(0, 60);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.guna2Button5.Size = new System.Drawing.Size(200, 30);
-            this.guna2Button5.TabIndex = 7;
-            // 
             // guna2Button4
             // 
             this.guna2Button4.BorderColor = System.Drawing.Color.Transparent;
@@ -501,6 +489,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(200, 30);
             this.guna2Button4.TabIndex = 6;
             this.guna2Button4.Text = "Lista de Clientes";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click_1);
             // 
             // guna2Button3
             // 
@@ -546,37 +535,6 @@
             this.btnClientes.Text = "Clientes";
             this.btnClientes.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
-            // panelProdutos
-            // 
-            this.panelProdutos.BackColor = System.Drawing.Color.White;
-            this.panelProdutos.Controls.Add(this.btnCategoria);
-            this.panelProdutos.Controls.Add(this.guna2Button2);
-            this.panelProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProdutos.Location = new System.Drawing.Point(0, 112);
-            this.panelProdutos.Name = "panelProdutos";
-            this.panelProdutos.Size = new System.Drawing.Size(200, 10);
-            this.panelProdutos.TabIndex = 14;
-            this.panelProdutos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelProdutos_Paint);
-            // 
-            // btnCategoria
-            // 
-            this.btnCategoria.BorderColor = System.Drawing.Color.Transparent;
-            this.btnCategoria.BorderRadius = 15;
-            this.btnCategoria.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCategoria.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCategoria.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCategoria.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCategoria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCategoria.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(196)))), ((int)(((byte)(169)))));
-            this.btnCategoria.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnCategoria.ForeColor = System.Drawing.Color.Black;
-            this.btnCategoria.Location = new System.Drawing.Point(0, 30);
-            this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
-            this.btnCategoria.Size = new System.Drawing.Size(200, 30);
-            this.btnCategoria.TabIndex = 5;
-            this.btnCategoria.Text = "Categorias e Marcas";
-            // 
             // guna2Button2
             // 
             this.guna2Button2.BorderColor = System.Drawing.Color.Transparent;
@@ -621,6 +579,49 @@
             this.btnProdutos.Text = "Produtos";
             this.btnProdutos.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
+            // btnListaUsuarios
+            // 
+            this.btnListaUsuarios.BorderColor = System.Drawing.Color.Transparent;
+            this.btnListaUsuarios.BorderRadius = 15;
+            this.btnListaUsuarios.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnListaUsuarios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnListaUsuarios.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnListaUsuarios.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnListaUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListaUsuarios.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(196)))), ((int)(((byte)(169)))));
+            this.btnListaUsuarios.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnListaUsuarios.ForeColor = System.Drawing.Color.Black;
+            this.btnListaUsuarios.Image = global::ClinicaNeko.Properties.Resources.list;
+            this.btnListaUsuarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnListaUsuarios.Location = new System.Drawing.Point(0, 30);
+            this.btnListaUsuarios.Name = "btnListaUsuarios";
+            this.btnListaUsuarios.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
+            this.btnListaUsuarios.Size = new System.Drawing.Size(200, 30);
+            this.btnListaUsuarios.TabIndex = 4;
+            this.btnListaUsuarios.Text = "Funcionários";
+            // 
+            // btnNovoUsuario
+            // 
+            this.btnNovoUsuario.BorderColor = System.Drawing.Color.Transparent;
+            this.btnNovoUsuario.BorderRadius = 15;
+            this.btnNovoUsuario.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNovoUsuario.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNovoUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNovoUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNovoUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNovoUsuario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(196)))), ((int)(((byte)(169)))));
+            this.btnNovoUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnNovoUsuario.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btnNovoUsuario.Image = global::ClinicaNeko.Properties.Resources.circle_plus;
+            this.btnNovoUsuario.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnNovoUsuario.Location = new System.Drawing.Point(0, 0);
+            this.btnNovoUsuario.Name = "btnNovoUsuario";
+            this.btnNovoUsuario.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(133)))), ((int)(((byte)(91)))));
+            this.btnNovoUsuario.Size = new System.Drawing.Size(200, 30);
+            this.btnNovoUsuario.TabIndex = 3;
+            this.btnNovoUsuario.Text = "Novo";
+            this.btnNovoUsuario.Click += new System.EventHandler(this.btnNovoUsuario_Click);
+            // 
             // btnUsuarios
             // 
             this.btnUsuarios.BorderColor = System.Drawing.Color.Transparent;
@@ -663,13 +664,13 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             this.panelUsuarios.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panelVet.ResumeLayout(false);
             this.panelPedidos.ResumeLayout(false);
             this.panelClientes.ResumeLayout(false);
             this.panelProdutos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

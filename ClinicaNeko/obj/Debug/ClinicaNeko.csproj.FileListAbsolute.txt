@@ -58,3 +58,4 @@ C:\Users\ana.csfonseca5\source\repos\anaf0nseca\ClinicaNekoDesk\ClinicaNeko\obj\
 C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmLogo.resources
 C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmNovoEndereco.resources
 C:\Users\ana.csfonseca5\source\repos\anaf0nseca\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmNovoEndereco.resources
+C:\Users\v601953\source\repos\ClinicaNekoDesk\ClinicaNeko\obj\Debug\ClinicaNeko.Forms.FrmListaCliente.resources

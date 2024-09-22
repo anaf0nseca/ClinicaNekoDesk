@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//API de Criptografia
+//using Org.BouncyCastle.Crypto.Prng;
 
 namespace ClinicaNekoLib
 {
@@ -18,8 +20,14 @@ namespace ClinicaNekoLib
         public Setor Setor { get; set; }
         public Cargo Cargo { get; set; }
         public string Senha { get; set; }
+        public bool Ativo {  get; set; }
 
-        public Usuario() { }
+
+        public Usuario() 
+        {
+            Setor = new();
+            Cargo = new();
+        }
 
         public Usuario(string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string senha)
         {
@@ -31,7 +39,17 @@ namespace ClinicaNekoLib
             Senha = senha;
         }
 
-        public Usuario(int id, string? nome, DateTime? dataNascimento, Setor setor, Cargo cargo, string senha)
+        public Usuario(string? nome, DateTime? dataNascimento, Setor setor, Cargo cargo, string senha, bool ativo)
+        {
+            Nome = nome;
+            DataNascimento = dataNascimento;
+            Setor = setor;
+            Cargo = cargo;
+            Senha = senha;
+            Ativo = ativo;
+        }
+
+        public Usuario(int id, string? nome, DateTime? dataNascimento, Setor setor, Cargo cargo, string senha, bool ativo)
         {
             Id = id;
             Nome = nome;
@@ -39,6 +57,7 @@ namespace ClinicaNekoLib
             Setor = setor;
             Cargo = cargo;
             Senha = senha;
+            Ativo = Ativo;
         }
 
         public Usuario(int id, string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string senha)
@@ -80,20 +99,21 @@ namespace ClinicaNekoLib
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = $"select * from usuario where id = {id}";
             var dr = cmd.ExecuteReader();
-            if (dr.Read())
-            {
-                usuario = new(
-                    dr.GetInt32(0),
-                    dr.GetString(1),
-                    dr.GetDatetime(2),
-                    Setor.ObterPorId(dr.GetInt32(3)),
-                    Cargo.ObterPorId(dr.GetInt32(4)),
-                    dr.GetString(5)
-                    );
+            //if (dr.Read())
+            //{
+            //    usuario = new(
+            //        dr.GetInt32(0),
+            //        dr.GetString(1),
+            //        dr.GetDatetime(2),
+            //        Setor.ObterPorId(dr.GetInt32(3)),
+            //        Cargo.ObterPorId(dr.GetInt32(4)),
+            //        dr.GetString(5),
+            //        dr.GetBoolean(6)
+            //        );
 
 
-            }
-            cmd.Connection.Close();
+            //}
+            //cmd.Connection.Close();
 
             return usuario;
         }
@@ -112,17 +132,18 @@ namespace ClinicaNekoLib
                 cmd.CommandText = $"select * from usuario where nome like '%{nome}%' order by nome";
             }
             var dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                usuarios.Add(new(
-                    dr.GetInt32(0),
-                    dr.GetString(1),
-                    dr.GetDatetime(2),
-                    Setor.ObterPorId(dr.GetInt32(3)),
-                    Cargo.ObterPorId(dr.GetInt32(4)),
-                    dr.GetString(5)
-                    ));
-            }
+            //while (dr.Read())
+            //{
+            //    usuarios.Add(new(
+            //        dr.GetInt32(0),
+            //        dr.GetString(1),
+            //        dr.GetDatetime(2),
+            //        Setor.ObterPorId(dr.GetInt32(3)),
+            //        Cargo.ObterPorId(dr.GetInt32(4)),
+            //        dr.GetString(5),
+            //        dr.GetBoolean(6)
+            //        ));
+            //}
 
             cmd.Connection.Close();
             return usuarios;
@@ -135,17 +156,18 @@ namespace ClinicaNekoLib
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = $"select * from usuario where email = '{email}' and senha = md5('{senha}')";
             var dr = cmd.ExecuteReader();
-            if (dr.Read())
-            {
-                usuario = new(
-                    dr.GetInt32(0),
-                    dr.GetString(1),
-                    dr.GetDatetime(2),
-                    Setor.ObterPorId(dr.GetInt32(3)),
-                    Cargo.ObterPorId(dr.GetInt32(4)),
-                    dr.GetString(5)
-                    );
-            }
+            //if (dr.Read())
+            //{
+            //    usuario = new(
+            //        dr.GetInt32(0),
+            //        dr.GetString(1),
+            //        dr.GetDatetime(2),
+            //        Setor.ObterPorId(dr.GetInt32(3)),
+            //        Cargo.ObterPorId(dr.GetInt32(4)),
+            //        dr.GetString(5),
+            //        dr.GetBoolean(6)
+            //        );
+            //}
             
             cmd.Connection.Close();
             return usuario;

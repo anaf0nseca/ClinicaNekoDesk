@@ -26,7 +26,7 @@ namespace ClinicaNeko
         public FrmPrincipal()
         {
             InitializeComponent();
-            MainPanel = panel1;
+            MainPanel = panelFormularios;
 
             tooglePanels();
         }
@@ -41,89 +41,7 @@ namespace ClinicaNeko
             frmLogo.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-            //btnUsuarios.FillColor = Color.FromArgb(83, 133, 91);
-
-            showPanelClientes = false;
-            showPanelPedidos = false;
-            showPanelProdutos = false;
-            showPanelServicos = false;
-            showPanelVet = false;
-            //Ao clicar no botão usuarios, o submenu é exibido e todos os outros ficam ocultos
-            showPanelUsuarios = !showPanelUsuarios;
-            tooglePanels();
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-
-            showPanelClientes = false;
-            showPanelPedidos = false;
-            showPanelUsuarios = false;
-            showPanelServicos = false;
-            showPanelVet = false;
-
-            //Ao clicar no botão produtos, o submenu é exibido e todos os outros ficam ocultos
-            showPanelProdutos = !showPanelProdutos;
-            tooglePanels();
-
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-
-            showPanelProdutos = false;
-            showPanelPedidos = false;
-            showPanelUsuarios = false;
-            showPanelServicos = false;
-            showPanelVet = false;
-
-            //Ao clicar no botão clientes, o submenu é exibido e todos os outros ficam ocultos
-            showPanelClientes = !showPanelClientes;
-            tooglePanels();
-
-        }
-
-        private void guna2Button5_Click(object sender, EventArgs e)
-        {
-
-            showPanelProdutos = false;
-            showPanelClientes = false;
-            showPanelUsuarios = false;
-            showPanelServicos = false;
-            showPanelVet = false;
-
-            //Ao clicar no botão pedidos, o submenu é exibido e todos os outros ficam ocultos
-            showPanelPedidos = !showPanelPedidos;
-            tooglePanels();
-
-        }
-
-        private void guna2Button6_Click(object sender, EventArgs e)
-        {
-
-            showPanelProdutos = false;
-            showPanelPedidos = false;
-            showPanelUsuarios = false;
-            showPanelServicos = false;
-            showPanelClientes = false;
-
-            //Ao clicar no botão veterinario, o submenu é exibido e todos os outros ficam ocultos
-            showPanelVet = !showPanelVet;
-            tooglePanels();
-            //FrmVeterinario frmVeterinario = new FrmVeterinario();
-            //frmVeterinario.Dock = DockStyle.Fill;
-            //frmVeterinario.TopLevel = false;
-            //MainPanel.Controls.Clear();
-            //MainPanel.Controls.Add(frmVeterinario);
-            //frmVeterinario.Show();
-        }
+ 
 
         private void guna2Button7_Click(object sender, EventArgs e)
         {
@@ -139,7 +57,7 @@ namespace ClinicaNeko
 
         private void tooglePanels()
         {
-            if (showPanelUsuarios) 
+            if (showPanelUsuarios)
             {
 
                 panelUsuarios.Height = 90;
@@ -212,10 +130,7 @@ namespace ClinicaNeko
 
         }
 
-        private void panelPedidos_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
         private void guna2Button2_Click_1(object sender, EventArgs e)
         {
@@ -267,10 +182,6 @@ namespace ClinicaNeko
 
         }
 
-        private void panelProdutos_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void guna2Button4_Click_1(object sender, EventArgs e)
         {
@@ -280,6 +191,82 @@ namespace ClinicaNeko
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(frmListaCliente);
             frmListaCliente.Show();
+        }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            showPanelProdutos = false;
+            showPanelClientes = false;
+            showPanelUsuarios = false;
+            showPanelServicos = false;
+            showPanelVet = false;
+
+            //Ao clicar no botão pedidos, o submenu é exibido e todos os outros ficam ocultos
+            showPanelPedidos = !showPanelPedidos;
+            tooglePanels();
+        }
+
+        private void btnAgend_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClientes_Click_1(object sender, EventArgs e)
+        {
+
+            showPanelProdutos = false;
+            showPanelPedidos = false;
+            showPanelUsuarios = false;
+            showPanelServicos = false;
+            showPanelVet = false;
+
+            //Ao clicar no botão clientes, o submenu é exibido e todos os outros ficam ocultos
+            showPanelClientes = !showPanelClientes;
+            tooglePanels();
+        }
+
+
+        private void btnVeterinario_Click(object sender, EventArgs e)
+        {
+            showPanelProdutos = false;
+            showPanelPedidos = false;
+            showPanelUsuarios = false;
+            showPanelServicos = false;
+            showPanelClientes = false;
+
+            //Ao clicar no botão veterinario, o submenu é exibido e todos os outros ficam ocultos
+            showPanelVet = !showPanelVet;
+            tooglePanels();
+        }
+
+        private void btnServico_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            showPanelClientes = false;
+            showPanelPedidos = false;
+            showPanelProdutos = false;
+            showPanelServicos = false;
+            showPanelVet = false;
+            //Ao clicar no botão usuarios, o submenu é exibido e todos os outros ficam ocultos
+            showPanelUsuarios = !showPanelUsuarios;
+            tooglePanels();
+        }
+
+        private void btnProdutos_Click(object sender, EventArgs e)
+        {
+            showPanelClientes = false;
+            showPanelPedidos = false;
+            showPanelUsuarios = false;
+            showPanelServicos = false;
+            showPanelVet = false;
+
+            //Ao clicar no botão produtos, o submenu é exibido e todos os outros ficam ocultos
+            showPanelProdutos = !showPanelProdutos;
+            tooglePanels();
         }
     }
 }

@@ -77,6 +77,7 @@ namespace ClinicaNekoLib
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.CommandText = "sp_usuario_insert";
             cmd.Parameters.AddWithValue("spnome", Nome);
+            cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spdata_nascimento", DataNascimento);
             cmd.Parameters.AddWithValue("spid_setor", Setor.Id);
             cmd.Parameters.AddWithValue("spid_cargo", Cargo.Id);

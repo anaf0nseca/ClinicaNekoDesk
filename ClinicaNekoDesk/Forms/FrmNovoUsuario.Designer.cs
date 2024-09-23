@@ -261,7 +261,7 @@
             txtNome.ForeColor = Color.Black;
             txtNome.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtNome.Location = new Point(46, 202);
-            txtNome.Margin = new Padding(5, 5, 5, 5);
+            txtNome.Margin = new Padding(5);
             txtNome.Name = "txtNome";
             txtNome.PasswordChar = '\0';
             txtNome.PlaceholderText = "";
@@ -285,7 +285,7 @@
             txtCpf.ForeColor = Color.Black;
             txtCpf.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtCpf.Location = new Point(384, 202);
-            txtCpf.Margin = new Padding(5, 5, 5, 5);
+            txtCpf.Margin = new Padding(5);
             txtCpf.Name = "txtCpf";
             txtCpf.PasswordChar = '\0';
             txtCpf.PlaceholderText = "";
@@ -309,7 +309,7 @@
             txtEmail.ForeColor = Color.Black;
             txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtEmail.Location = new Point(46, 307);
-            txtEmail.Margin = new Padding(5, 5, 5, 5);
+            txtEmail.Margin = new Padding(5);
             txtEmail.Name = "txtEmail";
             txtEmail.PasswordChar = '\0';
             txtEmail.PlaceholderText = "";
@@ -333,14 +333,15 @@
             txtSenha.ForeColor = Color.Black;
             txtSenha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSenha.Location = new Point(384, 307);
-            txtSenha.Margin = new Padding(5, 5, 5, 5);
+            txtSenha.Margin = new Padding(5);
             txtSenha.Name = "txtSenha";
-            txtSenha.PasswordChar = '\0';
+            txtSenha.PasswordChar = '●';
             txtSenha.PlaceholderText = "";
             txtSenha.SelectedText = "";
             txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges14;
             txtSenha.Size = new Size(241, 42);
             txtSenha.TabIndex = 25;
+            txtSenha.UseSystemPasswordChar = true;
             // 
             // txtTelefone
             // 
@@ -357,7 +358,7 @@
             txtTelefone.ForeColor = Color.Black;
             txtTelefone.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtTelefone.Location = new Point(668, 307);
-            txtTelefone.Margin = new Padding(5, 5, 5, 5);
+            txtTelefone.Margin = new Padding(5);
             txtTelefone.Name = "txtTelefone";
             txtTelefone.PasswordChar = '\0';
             txtTelefone.PlaceholderText = "";
@@ -395,7 +396,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(159, 187, 164);
-            ClientSize = new Size(1120, 588);
+            ClientSize = new Size(1050, 620);
             Controls.Add(txtTelefone);
             Controls.Add(txtSenha);
             Controls.Add(txtEmail);

@@ -68,6 +68,7 @@ namespace ClinicaNekoLib
             List<Setor> setores = new();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from setor";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {

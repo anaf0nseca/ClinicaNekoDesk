@@ -57,20 +57,39 @@ namespace ClinicaNekoLib
             return cargo;
         }
 
-        public static List<Setor> ObterLista()
+        public static List<Cargo> ObterLista()
         {
-            List<Setor> cargos = new();
+            List<Cargo> cargos = new();
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "select * from setor";
+            cmd.CommandText = "select * from cargo";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 cargos.Add(new(
                     dr.GetInt32(0),
-                    //Setor.ObterPorId(dr.GetInt32(1)),
-
+                    Setor.ObterPorId(dr.GetInt32(1)),
                     dr.GetString(1)
+                    ));
+            }
+
+            cmd.Connection.Close();
+            return cargos;
+        }
+
+        public static List<Cargo> ObterListaPorSetor(int setorId)
+        {
+            List<Cargo> cargos = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select * from cargo where id_setor = {setorId}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cargos.Add(new(
+                    dr.GetInt32(0),
+                    Setor.ObterPorId(dr.GetInt32(1)),
+                    dr.GetString(2)
                     ));
             }
 

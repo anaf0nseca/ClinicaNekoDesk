@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClinicaNeko.Forms;
+using ClinicaNekoLib;
 
 
 namespace ClinicaNeko.Forms
@@ -24,32 +25,81 @@ namespace ClinicaNeko.Forms
         }
         private void FrmNovoUsuario_Load(object sender, EventArgs e)
         {
-            //var setores = Setor.ObterLista();
-            //var cargos = Cargo.ObterLista();
-   
+            //Carrega a lista de setores e cargos
+            var setores = Setor.ObterLista();
+            cmbSetor.DataSource = setores;
+            cmbSetor.DisplayMember = "Nome";
+            cmbSetor.ValueMember = "Id";
+
+
+
+
+
+
         }
 
         private void cmbSetor_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmbSetor.SelectedItem != null)
+            {
+                Setor setor = cmbSetor.SelectedItem as Setor;
+                int id = setor.Id;
+                //int id = Convert.ToInt32(cmbSetor.SelectedValue);
 
+                var cargos = Cargo.ObterListaPorSetor(id);
+
+                //Associa as listas a cada combobox
+                cmbCargo.DataSource = cargos;
+
+                //Exibe o nome para o usuario
+                cmbCargo.DisplayMember = "Nome";
+
+                //Retorna para o banco o valor contido na coluna ID
+                cmbCargo.ValueMember = "Id";
+
+            }
         }
 
         private void btnProximo_Click(object sender, EventArgs e)
         {
+            //Verifica se todos os controles estão preenchidos antes de prosseguir para o cadastro do endereço
             if (VerificaControles())
             {
-                FrmNovoEndereco frmNovoEndereco = new FrmNovoEndereco();
-                frmNovoEndereco.Dock = DockStyle.Fill;
-                frmNovoEndereco.TopLevel = false;
-                MainPanel.Controls.Clear();
-                MainPanel.Controls.Add(frmNovoEndereco);
-                frmNovoEndereco.Show();
+                Usuario usuario = new(
+                    txtNome.Text,
+                    txtCpf.Text,
+                    dtpNascimento.Value,
+                    Setor.ObterPorId(Convert.ToInt32(cmbSetor.SelectedValue)),
+                    Cargo.ObterPorId(Convert.ToInt32(cmbCargo.SelectedValue)),
+                    txtSenha.Text
+                    );
+
+                usuario.Inserir();
+
+                if(usuario.Id > 0)
+                {
+
+                    MessageBox.Show($"O usuário {usuario.Nome}, " + $"foi inserido com sucesso, com o ID {usuario.Id}.");
+
+                    FrmNovoEndereco frmNovoEndereco = new FrmNovoEndereco();
+                    frmNovoEndereco.Dock = DockStyle.Fill;
+                    frmNovoEndereco.TopLevel = false;
+                    MainPanel.Controls.Clear();
+                    MainPanel.Controls.Add(frmNovoEndereco);
+                    frmNovoEndereco.Show();
+
+                }
+
+
+
 
             }
             else
             {
                 MessageBox.Show("Preencha todos os campos antes de continuar");
             }
+
+
         }
 
 

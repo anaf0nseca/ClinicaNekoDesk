@@ -20,7 +20,7 @@ namespace ClinicaNeko
         private Boolean showPanelPedidos = false;
         private Boolean showPanelVet = false;
         private Boolean showPanelServicos = false;
-
+        private Boolean showPanelAgend = false;
 
         public static Panel MainPanel;
         public FrmPrincipal()
@@ -41,7 +41,7 @@ namespace ClinicaNeko
             frmLogo.Show();
         }
 
- 
+
 
         private void guna2Button7_Click(object sender, EventArgs e)
         {
@@ -57,6 +57,70 @@ namespace ClinicaNeko
 
         private void tooglePanels()
         {
+            //Exibe painel de pedidos
+            if (showPanelPedidos)
+            {
+                panelPedidos.Height = 90;
+            }
+            else
+            {
+                panelPedidos.Height = 0;
+            }
+
+
+            //Exibe painel de agendamentos
+            if (showPanelAgend)
+            {
+                panelAgend.Height = 90;
+
+            }
+            else
+            {
+                panelAgend.Height = 0;
+            }
+
+            //Exibe painel de clientes
+            if (showPanelClientes)
+            {
+                panelClientes.Height = 90;
+            }
+            else
+            {
+                panelClientes.Height = 0;
+            }
+
+            //Exibe painel de produtos
+            if (showPanelProdutos)
+            {
+                panelProdutos.Height = 90;
+            }
+            else
+            {
+                panelProdutos.Height = 0;
+            }
+
+            //Exibe painel veterinário
+            if (showPanelVet)
+            {
+                panelVet.Height = 120;
+            }
+            else
+            {
+                panelVet.Height = 0;
+            }
+
+
+            //Exibe painel de serviços
+            if (showPanelServicos)
+            {
+                panelServicos.Height = 120;
+            }
+            else
+            {
+                panelServicos.Height = 0;
+            }
+
+            //Exibe painel de usuarios
             if (showPanelUsuarios)
             {
 
@@ -68,65 +132,11 @@ namespace ClinicaNeko
 
             }
 
-            if (showPanelProdutos)
-            {
-                panelProdutos.Height = 60;
-            }
-            else
-            {
-                panelProdutos.Height = 0;
-            }
-
-            if (showPanelClientes)
-            {
-                panelClientes.Height = 90;
-            }
-            else
-            {
-                panelClientes.Height = 0;
-            }
-
-
-            if (showPanelPedidos)
-            {
-                panelPedidos.Height = 60;
-            }
-            else
-            {
-                panelPedidos.Height = 0;
-            }
-
-
-            if (showPanelVet)
-            {
-                panelVet.Height = 120;
-            }
-            else
-            {
-                panelVet.Height = 0;
-            }
-
-
-            if (showPanelProdutos)
-            {
-                panelProdutos.Height = 60;
-            }
-            else
-            {
-                panelProdutos.Height = 0;
-            }
-
         }
 
         private void btnNovoUsuario_Click(object sender, EventArgs e)
         {
-            //exibe o formulário para cadastro de usuario
-            FrmNovoUsuario frmUsuario = new FrmNovoUsuario();
-            frmUsuario.Dock = DockStyle.Fill;
-            frmUsuario.TopLevel = false;
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(frmUsuario);
-            frmUsuario.Show();
+
 
         }
 
@@ -195,6 +205,7 @@ namespace ClinicaNeko
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
+            showPanelAgend = false;
             showPanelProdutos = false;
             showPanelClientes = false;
             showPanelUsuarios = false;
@@ -208,11 +219,20 @@ namespace ClinicaNeko
 
         private void btnAgend_Click(object sender, EventArgs e)
         {
-
+            showPanelProdutos = false;
+            showPanelClientes = false;
+            showPanelUsuarios = false;
+            showPanelServicos = false;
+            showPanelVet = false;
+            showPanelPedidos = false;
+            //Ao clicar no botão agendamentos, o submenu é exibido e todos os outros ficam ocultos
+            showPanelAgend = !showPanelAgend;
+            tooglePanels();
         }
 
         private void btnClientes_Click_1(object sender, EventArgs e)
         {
+            showPanelAgend = false;
 
             showPanelProdutos = false;
             showPanelPedidos = false;
@@ -228,6 +248,7 @@ namespace ClinicaNeko
 
         private void btnVeterinario_Click(object sender, EventArgs e)
         {
+            showPanelAgend = false;
             showPanelProdutos = false;
             showPanelPedidos = false;
             showPanelUsuarios = false;
@@ -246,6 +267,8 @@ namespace ClinicaNeko
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
+
+            showPanelAgend = false;
             showPanelClientes = false;
             showPanelPedidos = false;
             showPanelProdutos = false;
@@ -258,6 +281,8 @@ namespace ClinicaNeko
 
         private void btnProdutos_Click(object sender, EventArgs e)
         {
+
+            showPanelAgend = false;
             showPanelClientes = false;
             showPanelPedidos = false;
             showPanelUsuarios = false;
@@ -267,6 +292,19 @@ namespace ClinicaNeko
             //Ao clicar no botão produtos, o submenu é exibido e todos os outros ficam ocultos
             showPanelProdutos = !showPanelProdutos;
             tooglePanels();
+        }
+
+        private void btnNovoUsuario_Click_1(object sender, EventArgs e)
+        {
+            //exibe o formulário para cadastro de usuario
+            FrmNovoUsuario frmUsuario = new FrmNovoUsuario();
+            frmUsuario.Dock = DockStyle.Fill;
+            frmUsuario.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmUsuario);
+            frmUsuario.Show();
+
+
         }
     }
 }

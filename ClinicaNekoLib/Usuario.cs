@@ -19,6 +19,7 @@ namespace ClinicaNekoLib
         public DateTime? DataNascimento { get; set; }
         public Setor Setor { get; set; }
         public Cargo Cargo { get; set; }
+        public string Email { get; set; }
         public string Senha { get; set; }
         public bool Ativo {  get; set; }
 
@@ -29,42 +30,44 @@ namespace ClinicaNekoLib
             Cargo = new();
         }
 
-        public Usuario(string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string senha)
+        public Usuario(string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string email, string senha)
         {
             Nome = nome;
             Cpf = cpf;
             DataNascimento = dataNascimento;
             Setor = setor;
             Cargo = cargo;
+            Email = email;
             Senha = senha;
         }
 
-        public Usuario(string? nome, DateTime? dataNascimento, Setor setor, Cargo cargo, string senha, bool ativo)
+        public Usuario(string? nome, DateTime? dataNascimento, Setor setor, Cargo cargo, string email, string senha, bool ativo)
         {
             Nome = nome;
             DataNascimento = dataNascimento;
             Setor = setor;
             Cargo = cargo;
+            Email = email;
             Senha = senha;
             Ativo = ativo;
         }
 
-        public Usuario(int id, string? nome, DateTime? dataNascimento, Setor setor, Cargo cargo, string senha, bool ativo)
+        public Usuario(int id, string? nome, DateTime? dataNascimento, Setor setor, Cargo cargo, string email, string senha, bool ativo)
         {
             Id = id;
             Nome = nome;
             DataNascimento = dataNascimento;
             Setor = setor;
             Cargo = cargo;
+            Email = email;
             Senha = senha;
             Ativo = Ativo;
         }
 
-        public Usuario(int id, string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string senha)
+        public Usuario(int id, string? nome, DateTime? dataNascimento, Setor setor, Cargo cargo, string senha)
         {
             Id = id;
             Nome = nome;
-            Cpf = cpf;
             DataNascimento = dataNascimento;
             Setor = setor;
             Cargo = cargo;
@@ -81,6 +84,7 @@ namespace ClinicaNekoLib
             cmd.Parameters.AddWithValue("spdata_nascimento", DataNascimento);
             cmd.Parameters.AddWithValue("spid_setor", Setor.Id);
             cmd.Parameters.AddWithValue("spid_cargo", Cargo.Id);
+            cmd.Parameters.AddWithValue("spemail", Email);
             cmd.Parameters.AddWithValue("spsenha", Senha);
 
             var dr = cmd.ExecuteReader();

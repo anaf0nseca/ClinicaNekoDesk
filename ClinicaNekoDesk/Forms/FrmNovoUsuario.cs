@@ -25,16 +25,14 @@ namespace ClinicaNeko.Forms
         }
         private void FrmNovoUsuario_Load(object sender, EventArgs e)
         {
-            //Carrega a lista de setores e cargos
+            //Carrega a lista de setores
             var setores = Setor.ObterLista();
+            //Associa as listas ao combobox
             cmbSetor.DataSource = setores;
+            //Exibe o nome para o usuario
             cmbSetor.DisplayMember = "Nome";
+            //Retorna para o banco o valor contido na coluna ID
             cmbSetor.ValueMember = "Id";
-
-
-
-
-
 
         }
 
@@ -44,11 +42,11 @@ namespace ClinicaNeko.Forms
             {
                 Setor setor = cmbSetor.SelectedItem as Setor;
                 int id = setor.Id;
-                //int id = Convert.ToInt32(cmbSetor.SelectedValue);
 
+                //Carrega a lista de cargos de acordo com o setor selecionado
                 var cargos = Cargo.ObterListaPorSetor(id);
 
-                //Associa as listas a cada combobox
+                //Associa as listas ao combobox
                 cmbCargo.DataSource = cargos;
 
                 //Exibe o nome para o usuario
@@ -71,6 +69,7 @@ namespace ClinicaNeko.Forms
                     dtpNascimento.Value,
                     Setor.ObterPorId(Convert.ToInt32(cmbSetor.SelectedValue)),
                     Cargo.ObterPorId(Convert.ToInt32(cmbCargo.SelectedValue)),
+                    txtEmail.Text,
                     txtSenha.Text
                     );
 
@@ -79,7 +78,7 @@ namespace ClinicaNeko.Forms
                 if(usuario.Id > 0)
                 {
 
-                    MessageBox.Show($"O usuário {usuario.Nome}, " + $"foi inserido com sucesso, com o ID {usuario.Id}.");
+                    MessageBox.Show($"O usuário {usuario.Nome} " + $"foi inserido com sucesso, com o ID {usuario.Id}.");
 
                     FrmNovoEndereco frmNovoEndereco = new FrmNovoEndereco();
                     frmNovoEndereco.Dock = DockStyle.Fill;

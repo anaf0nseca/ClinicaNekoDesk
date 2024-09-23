@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClinicaNekoLib
 {
-    internal class Email
+    internal class TelefoneUsuario
     {
     }
 }

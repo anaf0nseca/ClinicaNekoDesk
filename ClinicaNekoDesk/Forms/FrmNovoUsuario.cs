@@ -79,6 +79,20 @@ namespace ClinicaNeko.Forms
                 {
 
                     MessageBox.Show($"O usuário {usuario.Nome} " + $"foi inserido com sucesso, com o ID {usuario.Id}.");
+                    Telefone telefone = new(
+                        txtTelefone.Text,
+                        cmbTipoTel.SelectedText
+                        );
+                    telefone.Inserir();
+
+                    if(telefone.Id > 0) {
+
+                        TelefoneUsuario telefoneUsuario = new(
+                            Telefone.ObterPorId(Convert.ToInt32(telefone.Id)),
+                            Usuario.ObterPorId(Convert.ToInt32(usuario.Id))
+                            );
+                        telefoneUsuario.Inserir();
+                    }
 
                     FrmNovoEndereco frmNovoEndereco = new FrmNovoEndereco();
                     frmNovoEndereco.Dock = DockStyle.Fill;

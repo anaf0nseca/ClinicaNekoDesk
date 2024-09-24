@@ -1,4 +1,4 @@
-﻿using SysPecNSLib;
+﻿using ClinicaNekoLib;
 using System;
 using System.Collections.Generic;
 using System.Data;

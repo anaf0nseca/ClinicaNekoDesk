@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace SysPecNSLib
+namespace ClinicaNekoLib
 {
     /// <summary>
     /// Classe estática (não necessita declaração de instancia) de conexão de banco de dados MYSQL
@@ -22,7 +22,7 @@ namespace SysPecNSLib
         public static MySqlCommand Abrir() // método de conexão
         {
             // dados da conexão
-            string strconn = @"server=127.0.0.1;database=clinica_nekodb;user=root;password=";
+            string strconn = @"server=127.0.0.1;database=clinicanekodb;user=root;password=";
             //string strconn = @"server=10.91.45.21;database=syspecdb;user=root;password=root";
             MySqlConnection cn = new MySqlConnection(strconn);
             MySqlCommand cmd = new MySqlCommand();

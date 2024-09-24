@@ -1,4 +1,4 @@
-﻿using SysPecNSLib;
+﻿using ClinicaNekoLib;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -19,8 +19,8 @@ namespace ClinicaNekoLib
         public DateTime? DataNascimento { get; set; }
         public Setor Setor { get; set; }
         public Cargo Cargo { get; set; }
-        public string Email { get; set; }
-        public string Senha { get; set; }
+        public string? Email { get; set; }
+        public string? Senha { get; set; }
         public bool Ativo {  get; set; }
 
 
@@ -41,8 +41,22 @@ namespace ClinicaNekoLib
             Senha = senha;
         }
 
-        public Usuario(string? nome, DateTime? dataNascimento, Setor setor, Cargo cargo, string email, string senha, bool ativo)
+        public Usuario(string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string email, string senha, bool ativo)
         {
+            Nome = nome;
+            Cpf = cpf;
+            DataNascimento = dataNascimento;
+            Setor = setor;
+            Cargo = cargo;
+            Email = email;
+            Senha = senha;
+            Ativo = ativo;
+        }
+
+        public Usuario(int id, string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string email, string senha, bool ativo)
+        {
+            Id = id;
+            Cpf = cpf;
             Nome = nome;
             DataNascimento = dataNascimento;
             Setor = setor;
@@ -52,22 +66,11 @@ namespace ClinicaNekoLib
             Ativo = ativo;
         }
 
-        public Usuario(int id, string? nome, DateTime? dataNascimento, Setor setor, Cargo cargo, string email, string senha, bool ativo)
+        public Usuario(int id, string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string senha)
         {
             Id = id;
             Nome = nome;
-            DataNascimento = dataNascimento;
-            Setor = setor;
-            Cargo = cargo;
-            Email = email;
-            Senha = senha;
-            Ativo = Ativo;
-        }
-
-        public Usuario(int id, string? nome, DateTime? dataNascimento, Setor setor, Cargo cargo, string senha)
-        {
-            Id = id;
-            Nome = nome;
+            Cpf = cpf;
             DataNascimento = dataNascimento;
             Setor = setor;
             Cargo = cargo;
@@ -104,21 +107,23 @@ namespace ClinicaNekoLib
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = $"select * from usuario where id = {id}";
             var dr = cmd.ExecuteReader();
-            //if (dr.Read())
-            //{
-            //    usuario = new(
-            //        dr.GetInt32(0),
-            //        dr.GetString(1),
-            //        dr.GetDatetime(2),
-            //        Setor.ObterPorId(dr.GetInt32(3)),
-            //        Cargo.ObterPorId(dr.GetInt32(4)),
-            //        dr.GetString(5),
-            //        dr.GetBoolean(6)
-            //        );
+            if (dr.Read())
+            {
+                usuario = new(
+                    dr.GetInt32(0),//id
+                    dr.GetString(1),//nome
+                    dr.GetString(2),//cpf
+                    dr.GetDateTime(3),//data
+                    Setor.ObterPorId(dr.GetInt32(4)),//setor
+                    Cargo.ObterPorId(dr.GetInt32(5)),//cargo
+                    dr.GetString(6),//email
+                    dr.GetString(7),//senha
+                    dr.GetBoolean(8)//ativo
+                    );
 
 
-            //}
-            //cmd.Connection.Close();
+            }
+            cmd.Connection.Close();
 
             return usuario;
         }

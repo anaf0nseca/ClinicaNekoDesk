@@ -274,6 +274,7 @@
             btnListaUsuarios.Size = new Size(233, 30);
             btnListaUsuarios.TabIndex = 6;
             btnListaUsuarios.Text = "Lista de Usuários";
+            btnListaUsuarios.Click += btnListaUsuarios_Click;
             // 
             // btnNovoUsuario
             // 

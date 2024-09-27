@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClinicaNeko.Forms;
+using ClinicaNekoDesk.Forms;
 
 namespace ClinicaNeko
 {
@@ -305,6 +306,16 @@ namespace ClinicaNeko
             frmUsuario.Show();
 
 
+        }
+
+        private void btnListaUsuarios_Click(object sender, EventArgs e)
+        {
+            FrmListaUsuario frmListaUsuario = new FrmListaUsuario();
+            frmListaUsuario.Dock = DockStyle.Fill;
+            frmListaUsuario.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmListaUsuario);
+            frmListaUsuario.Show();
         }
     }
 }

@@ -56,8 +56,8 @@ namespace ClinicaNekoLib
         public Usuario(int id, string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string email, string senha, bool ativo)
         {
             Id = id;
-            Cpf = cpf;
             Nome = nome;
+            Cpf = cpf;
             DataNascimento = dataNascimento;
             Setor = setor;
             Cargo = cargo;
@@ -142,18 +142,21 @@ namespace ClinicaNekoLib
                 cmd.CommandText = $"select * from usuario where nome like '%{nome}%' order by nome";
             }
             var dr = cmd.ExecuteReader();
-            //while (dr.Read())
-            //{
-            //    usuarios.Add(new(
-            //        dr.GetInt32(0),
-            //        dr.GetString(1),
-            //        dr.GetDatetime(2),
-            //        Setor.ObterPorId(dr.GetInt32(3)),
-            //        Cargo.ObterPorId(dr.GetInt32(4)),
-            //        dr.GetString(5),
-            //        dr.GetBoolean(6)
-            //        ));
-            //}
+            while (dr.Read())
+            {
+                usuarios.Add(new
+                    (
+                    dr.GetInt32(0),
+                    dr.GetString(1),
+                    dr.GetString(2),
+                    dr.GetDateTime(3),
+                    Setor.ObterPorId(dr.GetInt32(4)),
+                    Cargo.ObterPorId(dr.GetInt32(5)),
+                    dr.GetString(5),
+                    dr.GetString(6),
+                    dr.GetBoolean(7)
+                    ));
+            }
 
             cmd.Connection.Close();
             return usuarios;

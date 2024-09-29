@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             dgvListaUsuarios = new Guna.UI2.WinForms.Guna2DataGridView();
             clnId = new DataGridViewTextBoxColumn();
             clnNome = new DataGridViewTextBoxColumn();
@@ -48,46 +48,47 @@
             // 
             dgvListaUsuarios.AllowUserToAddRows = false;
             dgvListaUsuarios.AllowUserToDeleteRows = false;
+            dgvListaUsuarios.AllowUserToResizeColumns = false;
             dgvListaUsuarios.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(164, 196, 169);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(115, 158, 122);
-            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dgvListaUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            dgvListaUsuarios.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(115, 158, 122);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(115, 158, 122);
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgvListaUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(164, 196, 169);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvListaUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvListaUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvListaUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvListaUsuarios.ColumnHeadersHeight = 32;
             dgvListaUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgvListaUsuarios.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNome, clnCpf, clnDataNascimento, clnSetor, clnCargo, clnEmail, clnAtivo });
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.White;
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle7.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(115, 158, 122);
-            dataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
-            dgvListaUsuarios.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvListaUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
             dgvListaUsuarios.GridColor = Color.FromArgb(231, 229, 255);
             dgvListaUsuarios.Location = new Point(25, 24);
             dgvListaUsuarios.Name = "dgvListaUsuarios";
             dgvListaUsuarios.ReadOnly = true;
             dgvListaUsuarios.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.White;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dgvListaUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvListaUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvListaUsuarios.RowHeadersVisible = false;
             dgvListaUsuarios.Size = new Size(992, 397);
             dgvListaUsuarios.TabIndex = 0;
@@ -118,48 +119,56 @@
             clnId.HeaderText = "ID";
             clnId.Name = "clnId";
             clnId.ReadOnly = true;
+            clnId.Width = 124;
             // 
             // clnNome
             // 
             clnNome.HeaderText = "Nome Completo";
             clnNome.Name = "clnNome";
             clnNome.ReadOnly = true;
+            clnNome.Width = 124;
             // 
             // clnCpf
             // 
             clnCpf.HeaderText = "CPF";
             clnCpf.Name = "clnCpf";
             clnCpf.ReadOnly = true;
+            clnCpf.Width = 124;
             // 
             // clnDataNascimento
             // 
             clnDataNascimento.HeaderText = "Data de Nascimento";
             clnDataNascimento.Name = "clnDataNascimento";
             clnDataNascimento.ReadOnly = true;
+            clnDataNascimento.Width = 124;
             // 
             // clnSetor
             // 
             clnSetor.HeaderText = "Setor";
             clnSetor.Name = "clnSetor";
             clnSetor.ReadOnly = true;
+            clnSetor.Width = 124;
             // 
             // clnCargo
             // 
             clnCargo.HeaderText = "Cargo";
             clnCargo.Name = "clnCargo";
             clnCargo.ReadOnly = true;
+            clnCargo.Width = 124;
             // 
             // clnEmail
             // 
             clnEmail.HeaderText = "Email";
             clnEmail.Name = "clnEmail";
             clnEmail.ReadOnly = true;
+            clnEmail.Width = 124;
             // 
             // clnAtivo
             // 
             clnAtivo.HeaderText = "Ativo";
             clnAtivo.Name = "clnAtivo";
             clnAtivo.ReadOnly = true;
+            clnAtivo.Width = 124;
             // 
             // FrmListaUsuario
             // 

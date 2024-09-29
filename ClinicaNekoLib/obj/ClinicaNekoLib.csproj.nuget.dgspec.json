@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\ClinicaNekoLib.csproj": {}
+    "C:\\Users\\Meu Computador\\source\\repos\\ClinicaNeko\\ClinicaNekoLib\\ClinicaNekoLib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\ClinicaNekoLib.csproj": {
+    "C:\\Users\\Meu Computador\\source\\repos\\ClinicaNeko\\ClinicaNekoLib\\ClinicaNekoLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\ClinicaNekoLib.csproj",
+        "projectUniqueName": "C:\\Users\\Meu Computador\\source\\repos\\ClinicaNeko\\ClinicaNekoLib\\ClinicaNekoLib.csproj",
         "projectName": "ClinicaNekoLib",
-        "projectPath": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\ClinicaNekoLib.csproj",
-        "packagesPath": "C:\\Users\\v601953\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\obj\\",
+        "projectPath": "C:\\Users\\Meu Computador\\source\\repos\\ClinicaNeko\\ClinicaNekoLib\\ClinicaNekoLib.csproj",
+        "packagesPath": "C:\\Users\\Meu Computador\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Meu Computador\\source\\repos\\ClinicaNeko\\ClinicaNekoLib\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\v601953\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Meu Computador\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

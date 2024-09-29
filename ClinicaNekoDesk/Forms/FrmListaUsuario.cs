@@ -27,8 +27,8 @@ namespace ClinicaNekoDesk.Forms
         {
             var listaUsuarios = Usuario.ObterLista();
 
-            int cont = 0;
             dgvListaUsuarios.Rows.Clear();
+            int cont = 0;
 
             foreach(var usuario in listaUsuarios)
             {

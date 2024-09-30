@@ -20,17 +20,50 @@ namespace ClinicaNekoDesk.Forms
 
         private void FrmListaUsuario_Load(object sender, EventArgs e)
         {
+
+
+            //Carrega a lista de setores
+            var setores = Setor.ObterLista();
+            //Associa as listas ao combobox
+            cmbSetor.DataSource = setores;
+            //Exibe o nome para o usuario
+            cmbSetor.DisplayMember = "Nome";
+            //Retorna para o banco o valor contido na coluna ID
+            cmbSetor.ValueMember = "Id";
+
+            this.tpEditarUsuarios.Enabled = false;
             CarregaGridUsuarios();
         }
-
-        private void CarregaGridUsuarios()
+        private void cmbSetor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var listaUsuarios = Usuario.ObterLista();
+            if (cmbSetor.SelectedItem != null)
+            {
+                Setor setor = cmbSetor.SelectedItem as Setor;
+                int id = setor.Id;
+
+                //Carrega a lista de cargos de acordo com o setor selecionado
+                var cargos = Cargo.ObterListaPorSetor(id);
+
+                //Associa as listas ao combobox
+                cmbCargo.DataSource = cargos;
+
+                //Exibe o nome para o usuario
+                cmbCargo.DisplayMember = "Nome";
+
+                //Retorna para o banco o valor contido na coluna ID
+                cmbCargo.ValueMember = "Id";
+
+            }
+        }
+
+        private void CarregaGridUsuarios(string? nome = "")
+        {
+            var listaUsuarios = Usuario.ObterLista(nome);
 
             dgvListaUsuarios.Rows.Clear();
             int cont = 0;
 
-            foreach(var usuario in listaUsuarios)
+            foreach (var usuario in listaUsuarios)
             {
                 int rowIndex = dgvListaUsuarios.Rows.Add();
                 dgvListaUsuarios.Rows[cont].Cells[0].Value = usuario.Id;
@@ -44,6 +77,73 @@ namespace ClinicaNekoDesk.Forms
 
                 cont++;
             }
+        }
+
+        private void txtBusca_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBusca.Text.Length > 0)
+            {
+                CarregaGridUsuarios(txtBusca.Text);
+
+            }
+            else
+            {
+                CarregaGridUsuarios();
+            }
+        }
+
+        private void tpListarUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tpEditarUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvListaUsuarios_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            this.tpEditarUsuarios.Enabled = true;
+
+
+            int id = 0;
+            int posicaoLinha = dgvListaUsuarios.CurrentRow.Index;
+            id = Convert.ToInt32(dgvListaUsuarios.Rows[posicaoLinha].Cells[0].Value);
+
+            this.tabConsultaUsuario.SelectedTab = tpEditarUsuarios;
+
+            Usuario usuario = Usuario.ObterPorId(id);
+
+            txtId.Text = usuario.Id.ToString();
+            txtNome.Text = usuario.Nome;
+            txtCpf.Text = usuario.Cpf;
+            dtpNascimento.Value = usuario.DataNascimento.Value;
+            txtEmail.Text = usuario.Email;
+            cmbCargo.SelectedItem = usuario.Cargo;
+            cmbSetor.SelectedItem = usuario.Setor;
+
+            txtCpf.ReadOnly = true;
+
+
+
+        }
+
+        private void btnEnd_Click(object sender, EventArgs e)
+        {
+            gpEndereco.Enabled = true;
+
+
+        }
+
+        private void btnAddEndereco_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

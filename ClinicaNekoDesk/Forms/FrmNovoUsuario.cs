@@ -15,6 +15,8 @@ namespace ClinicaNeko.Forms
 {
     public partial class FrmNovoUsuario : Form
     {
+        public int UsuarioId { get; set; }
+        
         public static Panel MainPanel;
 
         public FrmNovoUsuario()
@@ -74,6 +76,8 @@ namespace ClinicaNeko.Forms
                     );
 
                 usuario.Inserir();
+
+                UsuarioId = usuario.Id;
 
                 if(usuario.Id > 0)
                 {

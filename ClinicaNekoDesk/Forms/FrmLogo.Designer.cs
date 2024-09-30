@@ -28,22 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
+            SuspendLayout();
             // 
             // FrmLogo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(187)))), ((int)(((byte)(164)))));
-            this.ClientSize = new System.Drawing.Size(960, 510);
-            this.ControlBox = false;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmLogo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(159, 187, 164);
+            ClientSize = new Size(1120, 588);
+            ControlBox = false;
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "FrmLogo";
+            StartPosition = FormStartPosition.Manual;
+            ResumeLayout(false);
         }
 
         #endregion
+        private TabPage tabPage1;
+        private TabPage Usuários;
     }
 }

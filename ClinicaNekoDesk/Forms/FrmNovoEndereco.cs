@@ -13,6 +13,7 @@ namespace ClinicaNeko.Forms
 {
     public partial class FrmNovoEndereco : Form
     {
+        
         public FrmNovoEndereco()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace ClinicaNeko.Forms
                 txtComplemento.Text,
                 txtBairro.Text,
                 txtCidade.Text,
-                txtUf.Text,
+                cmbUf.Text,
                 cmbTipoEnd.Text
                 );
 
@@ -35,10 +36,13 @@ namespace ClinicaNeko.Forms
 
             if (endereco.Id > 0)
             {
+
                 FrmNovoUsuario frmNovoUsuario = new();
+                MessageBox.Show($"{frmNovoUsuario.UsuarioId}");
+                int idUsuario = frmNovoUsuario.UsuarioId;
                 EnderecoUsuario enderecoUsuario = new(
                     Endereco.ObterPorId(Convert.ToInt32(endereco.Id)),
-                    Usuario.ObterPorId(Convert.ToInt32(frmNovoUsuario.UsuarioId))
+                    Usuario.ObterPorId(Convert.ToInt32(idUsuario))
                     );
 
                 enderecoUsuario.Inserir();

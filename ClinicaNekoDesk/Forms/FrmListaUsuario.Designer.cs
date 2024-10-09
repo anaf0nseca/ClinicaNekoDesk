@@ -321,6 +321,7 @@
             // 
             // tpEditarUsuarios
             // 
+            tpEditarUsuarios.BackColor = Color.FromArgb(159, 187, 164);
             tpEditarUsuarios.Controls.Add(btnEnd);
             tpEditarUsuarios.Controls.Add(guna2HtmlLabel12);
             tpEditarUsuarios.Controls.Add(txtId);
@@ -344,7 +345,6 @@
             tpEditarUsuarios.Size = new Size(1052, 578);
             tpEditarUsuarios.TabIndex = 2;
             tpEditarUsuarios.Text = "Editar Usuário";
-            tpEditarUsuarios.UseVisualStyleBackColor = true;
             tpEditarUsuarios.Click += tpEditarUsuarios_Click;
             // 
             // btnEnd

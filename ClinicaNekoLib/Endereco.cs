@@ -28,6 +28,7 @@ namespace ClinicaNekoLib
             Cep = cep;
             Logradouro = logradouro;
             Numero = numero;
+            Complemento = complemento;
             Bairro = bairro;
             Cidade = cidade;
             Uf = uf;
@@ -40,6 +41,7 @@ namespace ClinicaNekoLib
             Cep = cep;
             Logradouro = logradouro;
             Numero = numero;
+            Complemento = complemento;
             Bairro = bairro;
             Cidade = cidade;
             Uf = uf;

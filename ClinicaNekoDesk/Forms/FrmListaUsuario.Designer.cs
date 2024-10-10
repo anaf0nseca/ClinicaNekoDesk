@@ -402,6 +402,7 @@
             txtId.Name = "txtId";
             txtId.PasswordChar = '\0';
             txtId.PlaceholderText = "";
+            txtId.ReadOnly = true;
             txtId.SelectedText = "";
             txtId.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtId.Size = new Size(71, 27);
@@ -785,6 +786,7 @@
             txtCpf.Name = "txtCpf";
             txtCpf.PasswordChar = '\0';
             txtCpf.PlaceholderText = "";
+            txtCpf.ReadOnly = true;
             txtCpf.SelectedText = "";
             txtCpf.ShadowDecoration.CustomizableEdges = customizableEdges28;
             txtCpf.Size = new Size(241, 27);
@@ -836,6 +838,7 @@
             btnSalvarUsuario.Size = new Size(190, 36);
             btnSalvarUsuario.TabIndex = 39;
             btnSalvarUsuario.Text = "Salvar alterações";
+            btnSalvarUsuario.Click += btnSalvarUsuario_Click;
             // 
             // guna2HtmlLabel8
             // 

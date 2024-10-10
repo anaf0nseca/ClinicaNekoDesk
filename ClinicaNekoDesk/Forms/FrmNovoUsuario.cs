@@ -77,6 +77,8 @@ namespace ClinicaNeko.Forms
 
                 usuario.Inserir();
 
+                FrmNovoEndereco frmNovoEndereco = new FrmNovoEndereco();
+                frmNovoEndereco.idUsuario = usuario.Id;
                 UsuarioId = usuario.Id;
 
                 if(usuario.Id > 0)
@@ -98,8 +100,7 @@ namespace ClinicaNeko.Forms
                         telefoneUsuario.Inserir();
                     }
 
-                    FrmNovoEndereco frmNovoEndereco = new FrmNovoEndereco();
-                    UsuarioId = usuario.Id;
+                    FrmNovoEndereco frmNovoEndereco1 = new FrmNovoEndereco();
                     frmNovoEndereco.Dock = DockStyle.Fill;
                     frmNovoEndereco.TopLevel = false;
                     MainPanel.Controls.Clear();

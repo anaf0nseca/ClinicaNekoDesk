@@ -3,72 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\clinicanekodesk\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekodesk\\forms\\frmnovoendereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\forms\\frmnovoendereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\clinicanekodesk\\forms\\frmnovousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\forms\\frmnovousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekolib\\enderecousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|solutionrelative:clinicanekolib\\enderecousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekodesk\\forms\\frmnovousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\forms\\frmnovousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\clinicanekodesk\\forms\\frmnovoendereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\forms\\frmnovoendereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekodesk\\forms\\frmlistausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\forms\\frmlistausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekolib\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|solutionrelative:clinicanekolib\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekolib\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|solutionrelative:clinicanekolib\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekolib\\telefone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|solutionrelative:clinicanekolib\\telefone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekodesk\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekolib\\clinicanekolib.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|solutionrelative:clinicanekolib\\clinicanekolib.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekodesk\\clinicanekodesk.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\clinicanekodesk.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekodesk\\forms\\frmlistausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\forms\\frmlistausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekodesk\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekolib\\telefoneusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|solutionrelative:clinicanekolib\\telefoneusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekodesk\\forms\\frmnovousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\forms\\frmnovousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\clinicanekodesk\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\clinicanekodesk\\forms\\frmnovoendereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\forms\\frmnovoendereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\clinicanekodesk\\forms\\frmnovousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\forms\\frmnovousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekodesk\\forms\\frmnovoendereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\forms\\frmnovoendereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekodesk\\forms\\frmlogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\forms\\frmlogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekolib\\especialidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|solutionrelative:clinicanekolib\\especialidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekolib\\telefonecliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6722D113-A1BC-4C42-99E7-9114DE924120}|ClinicaNekoLib\\ClinicaNekoLib.csproj|solutionrelative:clinicanekolib\\telefonecliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|c:\\users\\v601953\\source\\repos\\clinicanekodesk\\clinicanekodesk\\forms\\frmlistacliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D740EAA-5FF2-48FE-A3B9-355FC7ADD908}|ClinicaNekoDesk\\ClinicaNekoDesk.csproj|solutionrelative:clinicanekodesk\\forms\\frmlistacliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,92 +66,83 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmNovoUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmNovoUsuario.cs",
-              "RelativeDocumentMoniker": "ClinicaNekoDesk\\Forms\\FrmNovoUsuario.cs",
-              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmNovoUsuario.cs",
-              "RelativeToolTip": "ClinicaNekoDesk\\Forms\\FrmNovoUsuario.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAkwB0AAAAMAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\Usuario.cs",
+              "RelativeDocumentMoniker": "ClinicaNekoLib\\Usuario.cs",
+              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\Usuario.cs",
+              "RelativeToolTip": "ClinicaNekoLib\\Usuario.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAkwC8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T19:50:07.493Z",
+              "WhenOpened": "2024-10-10T20:42:26.239Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ClinicaNekoLib",
-              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\ClinicaNekoLib.csproj",
-              "RelativeDocumentMoniker": "ClinicaNekoLib\\ClinicaNekoLib.csproj",
-              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\ClinicaNekoLib.csproj",
-              "RelativeToolTip": "ClinicaNekoLib\\ClinicaNekoLib.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-09T18:44:33.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ClinicaNekoDesk",
-              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\ClinicaNekoDesk.csproj",
-              "RelativeDocumentMoniker": "ClinicaNekoDesk\\ClinicaNekoDesk.csproj",
-              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\ClinicaNekoDesk.csproj",
-              "RelativeToolTip": "ClinicaNekoDesk\\ClinicaNekoDesk.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-09T18:36:18.103Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FrmPrincipal.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\FrmPrincipal.Designer.cs",
-              "RelativeDocumentMoniker": "ClinicaNekoDesk\\FrmPrincipal.Designer.cs",
-              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\FrmPrincipal.Designer.cs*",
-              "RelativeToolTip": "ClinicaNekoDesk\\FrmPrincipal.Designer.cs*",
-              "ViewState": "AgIAAO8DAAAAAAAAAAAmwAMEAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FrmListaUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmListaUsuario.cs",
+              "RelativeDocumentMoniker": "ClinicaNekoDesk\\Forms\\FrmListaUsuario.cs",
+              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmListaUsuario.cs",
+              "RelativeToolTip": "ClinicaNekoDesk\\Forms\\FrmListaUsuario.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAcwJ0AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T18:13:17.136Z",
+              "WhenOpened": "2024-10-10T20:29:49.027Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Endereco.cs",
-              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\Endereco.cs",
-              "RelativeDocumentMoniker": "ClinicaNekoLib\\Endereco.cs",
-              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\Endereco.cs",
-              "RelativeToolTip": "ClinicaNekoLib\\Endereco.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAhwB8AAAAcAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "FrmPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "ClinicaNekoDesk\\FrmPrincipal.cs",
+              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\FrmPrincipal.cs",
+              "RelativeToolTip": "ClinicaNekoDesk\\FrmPrincipal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0BAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T17:17:47.042Z"
+              "WhenOpened": "2024-10-10T18:06:06.499Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Telefone.cs",
-              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\Telefone.cs",
-              "RelativeDocumentMoniker": "ClinicaNekoLib\\Telefone.cs",
-              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\Telefone.cs",
-              "RelativeToolTip": "ClinicaNekoLib\\Telefone.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Title": "FrmNovoEndereco.cs",
+              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmNovoEndereco.cs",
+              "RelativeDocumentMoniker": "ClinicaNekoDesk\\Forms\\FrmNovoEndereco.cs",
+              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmNovoEndereco.cs",
+              "RelativeToolTip": "ClinicaNekoDesk\\Forms\\FrmNovoEndereco.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wDEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T17:11:38.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FrmPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\FrmPrincipal.cs",
-              "RelativeDocumentMoniker": "ClinicaNekoDesk\\FrmPrincipal.cs",
-              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\FrmPrincipal.cs*",
-              "RelativeToolTip": "ClinicaNekoDesk\\FrmPrincipal.cs*",
-              "ViewState": "AgIAAC4BAAAAAAAAAAAmwEIBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T20:56:52.843Z",
+              "WhenOpened": "2024-10-10T17:53:41.201Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "FrmListaUsuario.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmListaUsuario.cs",
+              "RelativeDocumentMoniker": "ClinicaNekoDesk\\Forms\\FrmListaUsuario.cs",
+              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmListaUsuario.cs [Projeto]",
+              "RelativeToolTip": "ClinicaNekoDesk\\Forms\\FrmListaUsuario.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T20:48:15.034Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FrmListaCliente.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmListaCliente.cs",
+              "RelativeDocumentMoniker": "ClinicaNekoDesk\\Forms\\FrmListaCliente.cs",
+              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmListaCliente.cs [Projeto]",
+              "RelativeToolTip": "ClinicaNekoDesk\\Forms\\FrmListaCliente.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T20:48:10.22Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "FrmNovoUsuario.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmNovoUsuario.cs",
               "RelativeDocumentMoniker": "ClinicaNekoDesk\\Forms\\FrmNovoUsuario.cs",
@@ -187,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FrmNovoEndereco.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmNovoEndereco.cs",
               "RelativeDocumentMoniker": "ClinicaNekoDesk\\Forms\\FrmNovoEndereco.cs",
@@ -199,56 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TelefoneUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\TelefoneUsuario.cs",
-              "RelativeDocumentMoniker": "ClinicaNekoLib\\TelefoneUsuario.cs",
-              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\TelefoneUsuario.cs",
-              "RelativeToolTip": "ClinicaNekoLib\\TelefoneUsuario.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T19:25:38.106Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EnderecoUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\EnderecoUsuario.cs",
-              "RelativeDocumentMoniker": "ClinicaNekoLib\\EnderecoUsuario.cs",
-              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\EnderecoUsuario.cs",
-              "RelativeToolTip": "ClinicaNekoLib\\EnderecoUsuario.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAcwCgAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T19:16:06.788Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Especialidade.cs",
-              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\Especialidade.cs",
-              "RelativeDocumentMoniker": "ClinicaNekoLib\\Especialidade.cs",
-              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\Especialidade.cs",
-              "RelativeToolTip": "ClinicaNekoLib\\Especialidade.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T19:16:06.275Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "TelefoneCliente.cs",
-              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\TelefoneCliente.cs",
-              "RelativeDocumentMoniker": "ClinicaNekoLib\\TelefoneCliente.cs",
-              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\TelefoneCliente.cs",
-              "RelativeToolTip": "ClinicaNekoLib\\TelefoneCliente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T19:16:03.381Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 9,
               "Title": "FrmLogo.cs",
               "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmLogo.cs",
               "RelativeDocumentMoniker": "ClinicaNekoDesk\\Forms\\FrmLogo.cs",
@@ -256,32 +174,20 @@
               "RelativeToolTip": "ClinicaNekoDesk\\Forms\\FrmLogo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T19:01:29.225Z"
+              "WhenOpened": "2024-09-30T19:01:29.225Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "FrmPrincipal.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\FrmPrincipal.cs",
               "RelativeDocumentMoniker": "ClinicaNekoDesk\\FrmPrincipal.cs",
-              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\FrmPrincipal.cs [Projeto]*",
-              "RelativeToolTip": "ClinicaNekoDesk\\FrmPrincipal.cs [Projeto]*",
+              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\FrmPrincipal.cs [Projeto]",
+              "RelativeToolTip": "ClinicaNekoDesk\\FrmPrincipal.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-26T20:22:41.849Z",
               "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\Usuario.cs",
-              "RelativeDocumentMoniker": "ClinicaNekoLib\\Usuario.cs",
-              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoLib\\Usuario.cs",
-              "RelativeToolTip": "ClinicaNekoLib\\Usuario.cs",
-              "ViewState": "AgIAAK4AAAAAAAAAAAAkwHgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T20:15:13.963Z",
-              "EditorCaption": ""
             }
           ]
         }
@@ -291,12 +197,12 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "0cd467fb-4696-4e19-bbd0-681d9344a96c",
+        "Id": "ef5c3c25-38cb-43a8-ac27-e0793338f9b7",
         "Display": 0,
-        "X": 347,
-        "Y": 165,
-        "Width": 1578,
-        "Height": 710,
+        "X": 789,
+        "Y": 346,
+        "Width": 1577,
+        "Height": 767,
         "WindowState": 2
       },
       "DocumentGroups": [
@@ -306,15 +212,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmNovoEndereco.cs",
-              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmNovoEndereco.cs",
-              "RelativeDocumentMoniker": "ClinicaNekoDesk\\Forms\\FrmNovoEndereco.cs",
-              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmNovoEndereco.cs",
-              "RelativeToolTip": "ClinicaNekoDesk\\Forms\\FrmNovoEndereco.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wCwAAABCAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "FrmNovoUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmNovoUsuario.cs",
+              "RelativeDocumentMoniker": "ClinicaNekoDesk\\Forms\\FrmNovoUsuario.cs",
+              "ToolTip": "C:\\Users\\v601953\\source\\repos\\ClinicaNekoDesk\\ClinicaNekoDesk\\Forms\\FrmNovoUsuario.cs",
+              "RelativeToolTip": "ClinicaNekoDesk\\Forms\\FrmNovoUsuario.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwFYAAAB4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T19:49:05.153Z",
+              "WhenOpened": "2024-10-09T19:50:07.493Z",
               "EditorCaption": ""
             }
           ]

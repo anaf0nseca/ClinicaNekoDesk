@@ -48,8 +48,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             txtCep = new Guna.UI2.WinForms.Guna2TextBox();
             txtLogradouro = new Guna.UI2.WinForms.Guna2TextBox();
@@ -59,7 +57,6 @@
             cmbTipoEnd = new Guna.UI2.WinForms.Guna2ComboBox();
             btnSalvarEnd = new Guna.UI2.WinForms.Guna2Button();
             txtComplemento = new Guna.UI2.WinForms.Guna2TextBox();
-            btnAdicionarEnd = new Guna.UI2.WinForms.Guna2Button();
             btnFechar = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -109,7 +106,7 @@
             txtCep.SelectedText = "";
             txtCep.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtCep.Size = new Size(147, 42);
-            txtCep.TabIndex = 1;
+            txtCep.TabIndex = 0;
             // 
             // txtLogradouro
             // 
@@ -133,7 +130,7 @@
             txtLogradouro.SelectedText = "";
             txtLogradouro.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtLogradouro.Size = new Size(328, 42);
-            txtLogradouro.TabIndex = 2;
+            txtLogradouro.TabIndex = 1;
             // 
             // txtNumero
             // 
@@ -157,7 +154,7 @@
             txtNumero.SelectedText = "";
             txtNumero.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtNumero.Size = new Size(122, 42);
-            txtNumero.TabIndex = 3;
+            txtNumero.TabIndex = 2;
             // 
             // txtBairro
             // 
@@ -240,12 +237,12 @@
             btnSalvarEnd.FillColor = Color.FromArgb(83, 133, 91);
             btnSalvarEnd.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnSalvarEnd.ForeColor = Color.White;
-            btnSalvarEnd.Location = new Point(706, 449);
+            btnSalvarEnd.Location = new Point(691, 449);
             btnSalvarEnd.Margin = new Padding(4, 3, 4, 3);
             btnSalvarEnd.Name = "btnSalvarEnd";
             btnSalvarEnd.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnSalvarEnd.Size = new Size(159, 52);
-            btnSalvarEnd.TabIndex = 19;
+            btnSalvarEnd.TabIndex = 8;
             btnSalvarEnd.Text = "Salvar";
             btnSalvarEnd.Click += btnSalvarEnd_Click;
             // 
@@ -271,35 +268,14 @@
             txtComplemento.SelectedText = "";
             txtComplemento.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txtComplemento.Size = new Size(261, 42);
-            txtComplemento.TabIndex = 20;
-            // 
-            // btnAdicionarEnd
-            // 
-            btnAdicionarEnd.Animated = true;
-            btnAdicionarEnd.BackColor = Color.Transparent;
-            btnAdicionarEnd.BorderRadius = 20;
-            btnAdicionarEnd.CustomizableEdges = customizableEdges17;
-            btnAdicionarEnd.DisabledState.BorderColor = Color.DarkGray;
-            btnAdicionarEnd.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAdicionarEnd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAdicionarEnd.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAdicionarEnd.FillColor = Color.FromArgb(83, 133, 91);
-            btnAdicionarEnd.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            btnAdicionarEnd.ForeColor = Color.White;
-            btnAdicionarEnd.Location = new Point(355, 449);
-            btnAdicionarEnd.Margin = new Padding(4, 3, 4, 3);
-            btnAdicionarEnd.Name = "btnAdicionarEnd";
-            btnAdicionarEnd.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            btnAdicionarEnd.Size = new Size(271, 52);
-            btnAdicionarEnd.TabIndex = 21;
-            btnAdicionarEnd.Text = "Adicionar outro endereço";
+            txtComplemento.TabIndex = 3;
             // 
             // btnFechar
             // 
             btnFechar.Animated = true;
             btnFechar.BackColor = Color.Transparent;
             btnFechar.BorderRadius = 20;
-            btnFechar.CustomizableEdges = customizableEdges19;
+            btnFechar.CustomizableEdges = customizableEdges17;
             btnFechar.DisabledState.BorderColor = Color.DarkGray;
             btnFechar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnFechar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -307,10 +283,10 @@
             btnFechar.FillColor = Color.FromArgb(83, 133, 91);
             btnFechar.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnFechar.ForeColor = Color.White;
-            btnFechar.Location = new Point(92, 449);
+            btnFechar.Location = new Point(154, 449);
             btnFechar.Margin = new Padding(4, 3, 4, 3);
             btnFechar.Name = "btnFechar";
-            btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btnFechar.Size = new Size(145, 52);
             btnFechar.TabIndex = 22;
             btnFechar.Text = "Fechar";
@@ -427,7 +403,7 @@
             // 
             cmbUf.BackColor = Color.Transparent;
             cmbUf.BorderRadius = 10;
-            cmbUf.CustomizableEdges = customizableEdges21;
+            cmbUf.CustomizableEdges = customizableEdges19;
             cmbUf.DrawMode = DrawMode.OwnerDrawFixed;
             cmbUf.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbUf.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -438,9 +414,9 @@
             cmbUf.Items.AddRange(new object[] { "AC ", "AL ", "AP", "AM ", "BA ", "CE ", "DF ", "ES", "GO ", "MA ", "MT ", "MS ", "MG ", "PA", "PB ", "PR ", "PE ", "PI ", "RJ ", "RN ", "RS ", "RO ", "RR", "SC ", "SP ", "SE ", "TO " });
             cmbUf.Location = new Point(499, 317);
             cmbUf.Name = "cmbUf";
-            cmbUf.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            cmbUf.ShadowDecoration.CustomizableEdges = customizableEdges20;
             cmbUf.Size = new Size(90, 36);
-            cmbUf.TabIndex = 32;
+            cmbUf.TabIndex = 6;
             // 
             // FrmNovoEndereco
             // 
@@ -460,7 +436,6 @@
             Controls.Add(guna2HtmlLabel1);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(btnFechar);
-            Controls.Add(btnAdicionarEnd);
             Controls.Add(txtComplemento);
             Controls.Add(btnSalvarEnd);
             Controls.Add(cmbTipoEnd);
@@ -492,7 +467,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbTipoEnd;
         private Guna.UI2.WinForms.Guna2Button btnSalvarEnd;
         private Guna.UI2.WinForms.Guna2TextBox txtComplemento;
-        private Guna.UI2.WinForms.Guna2Button btnAdicionarEnd;
         private Guna.UI2.WinForms.Guna2Button btnFechar;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;

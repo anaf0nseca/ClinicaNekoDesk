@@ -143,7 +143,22 @@ namespace ClinicaNekoDesk.Forms
 
         private void btnAddEndereco_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void btnSalvarUsuario_Click(object sender, EventArgs e)
+        {
+            //Usuario usuario = new(
+            //    txtNome.Text,
+            //    dtpNascimento.Value,
+            //    txtEmail.Text,
+            //    Setor.ObterPorId(Convert.ToInt32(cmbSetor.SelectedValue)),
+            //    Cargo.ObterPorId(Convert.ToInt32(cmbCargo.SelectedValue))
+
+                
+            //    );
+
+
         }
     }
 }

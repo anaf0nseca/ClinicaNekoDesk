@@ -41,6 +41,16 @@ namespace ClinicaNekoLib
             Senha = senha;
         }
 
+
+        public Usuario(string? nome, DateTime? dataNascimento, Setor setor, Cargo cargo, string email)
+        {
+            Nome = nome;
+            DataNascimento = dataNascimento;
+            Setor = setor;
+            Cargo = cargo;
+            Email = email;
+
+        }
         public Usuario(string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string email, string senha, bool ativo)
         {
             Nome = nome;

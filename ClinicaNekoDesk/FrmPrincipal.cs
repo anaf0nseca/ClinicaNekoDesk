@@ -308,7 +308,7 @@ namespace ClinicaNeko
 
         }
 
-        private void btnListaUsuarios_Click(object sender, EventArgs e)
+        public void btnListaUsuarios_Click(object sender, EventArgs e)
         {
             FrmListaUsuario frmListaUsuario = new FrmListaUsuario();
             frmListaUsuario.Dock = DockStyle.Fill;

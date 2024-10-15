@@ -42,8 +42,9 @@ namespace ClinicaNekoLib
         }
 
 
-        public Usuario(string? nome, DateTime? dataNascimento, Setor setor, Cargo cargo, string email)
+        public Usuario(int id, string? nome, DateTime? dataNascimento, Setor setor, Cargo cargo, string email)
         {
+            Id = Id;
             Nome = nome;
             DataNascimento = dataNascimento;
             Setor = setor;
@@ -204,9 +205,9 @@ namespace ClinicaNekoLib
             cmd.Parameters.AddWithValue("spid", Id);
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("spdata_nascimento", DataNascimento);
+            cmd.Parameters.AddWithValue("spemail", Email);
             cmd.Parameters.AddWithValue("spid_setor", Setor.Id);
             cmd.Parameters.AddWithValue("spid_cargo", Cargo.Id);
-            cmd.Parameters.AddWithValue("spsenha", Senha);
 
             cmd.ExecuteNonQuery();
             

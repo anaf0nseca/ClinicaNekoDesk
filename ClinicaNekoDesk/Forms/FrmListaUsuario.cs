@@ -1,4 +1,5 @@
 ﻿using ClinicaNekoLib;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -125,8 +126,8 @@ namespace ClinicaNekoDesk.Forms
             txtCpf.Text = usuario.Cpf;
             dtpNascimento.Value = usuario.DataNascimento.Value;
             txtEmail.Text = usuario.Email;
-            cmbCargo.SelectedItem = usuario.Cargo;
-            cmbSetor.SelectedItem = usuario.Setor;
+            cmbSetor.SelectedValue = usuario.Setor.Nome;
+            cmbCargo.SelectedValue = usuario.Cargo.Nome;
 
             txtCpf.ReadOnly = true;
 
@@ -148,16 +149,35 @@ namespace ClinicaNekoDesk.Forms
 
         private void btnSalvarUsuario_Click(object sender, EventArgs e)
         {
-            //Usuario usuario = new(
-            //    txtNome.Text,
-            //    dtpNascimento.Value,
-            //    txtEmail.Text,
-            //    Setor.ObterPorId(Convert.ToInt32(cmbSetor.SelectedValue)),
-            //    Cargo.ObterPorId(Convert.ToInt32(cmbCargo.SelectedValue))
 
-                
-            //    );
+            if (txtNome.Text != null && txtEmail.Text != null && cmbCargo.SelectedValue != null && cmbSetor.SelectedValue != null)
+            {
+                Usuario usuario = new(
+                    int.Parse(txtId.Text),
+                    txtNome.Text,
+                    dtpNascimento.Value,
+                    Setor.ObterPorId(Convert.ToInt32(cmbSetor.SelectedValue)),
+                    Cargo.ObterPorId(Convert.ToInt32(cmbCargo.SelectedValue)),
+                    txtEmail.Text
+                    );
 
+                usuario.Atualizar();
+
+                MessageBox.Show($"Dados do usuário {usuario.Nome}, atualizados com sucesso.");
+                FrmListaUsuario_Load(sender, e);
+                this.tabConsultaUsuario.SelectedTab = tpListarUsuarios;
+
+            }
+            else
+            {
+                MessageBox.Show("Preencha todos os campos antes de salvar as alterações!");
+
+            }
+
+        }
+
+        private void dgvListaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

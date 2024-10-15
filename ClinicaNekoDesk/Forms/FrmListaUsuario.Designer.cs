@@ -258,6 +258,7 @@
             dgvListaUsuarios.ThemeStyle.RowsStyle.Height = 25;
             dgvListaUsuarios.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(115, 158, 122);
             dgvListaUsuarios.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvListaUsuarios.CellContentClick += dgvListaUsuarios_CellContentClick;
             dgvListaUsuarios.CellDoubleClick += dgvListaUsuarios_CellDoubleClick_1;
             // 
             // clnId
@@ -393,6 +394,7 @@
             txtId.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtId.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtId.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtId.Enabled = false;
             txtId.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtId.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtId.ForeColor = Color.FromArgb(39, 63, 44);
@@ -777,6 +779,7 @@
             txtCpf.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtCpf.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtCpf.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtCpf.Enabled = false;
             txtCpf.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtCpf.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             txtCpf.ForeColor = Color.FromArgb(39, 63, 44);

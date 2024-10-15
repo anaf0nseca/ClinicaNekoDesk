@@ -322,5 +322,15 @@ namespace ClinicaNeko
         {
 
         }
+
+        private void btnListaProdutos_Click(object sender, EventArgs e)
+        {
+            FrmListaProduto frmListaProduto = new FrmListaProduto();
+            frmListaProduto.Dock = DockStyle.Fill;
+            frmListaProduto.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmListaProduto);
+            frmListaProduto.Show();
+        }
     }
 }

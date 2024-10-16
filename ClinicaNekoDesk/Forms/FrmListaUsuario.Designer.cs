@@ -73,6 +73,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tabConsultaUsuario = new Guna.UI2.WinForms.Guna2TabControl();
             tpListarUsuarios = new TabPage();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtBusca = new Guna.UI2.WinForms.Guna2TextBox();
             dgvListaUsuarios = new Guna.UI2.WinForms.Guna2DataGridView();
             clnId = new DataGridViewTextBoxColumn();
@@ -157,6 +158,7 @@
             // 
             // tpListarUsuarios
             // 
+            tpListarUsuarios.Controls.Add(guna2HtmlLabel1);
             tpListarUsuarios.Controls.Add(txtBusca);
             tpListarUsuarios.Controls.Add(dgvListaUsuarios);
             tpListarUsuarios.Location = new Point(4, 44);
@@ -167,6 +169,18 @@
             tpListarUsuarios.Text = "Lista";
             tpListarUsuarios.UseVisualStyleBackColor = true;
             tpListarUsuarios.Click += tpListarUsuarios_Click;
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.FromArgb(39, 63, 44);
+            guna2HtmlLabel1.Location = new Point(12, 6);
+            guna2HtmlLabel1.Margin = new Padding(4, 3, 4, 3);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(155, 20);
+            guna2HtmlLabel1.TabIndex = 20;
+            guna2HtmlLabel1.Text = "BUSCAR USUÁRIO";
             // 
             // txtBusca
             // 
@@ -952,7 +966,6 @@
             cmbSetor.ShadowDecoration.CustomizableEdges = customizableEdges36;
             cmbSetor.Size = new Size(234, 36);
             cmbSetor.TabIndex = 30;
-            cmbSetor.SelectedIndexChanged += cmbSetor_SelectedIndexChanged;
             // 
             // dtpNascimento
             // 
@@ -984,6 +997,7 @@
             Load += FrmListaUsuario_Load;
             tabConsultaUsuario.ResumeLayout(false);
             tpListarUsuarios.ResumeLayout(false);
+            tpListarUsuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaUsuarios).EndInit();
             tpEditarUsuarios.ResumeLayout(false);
             tpEditarUsuarios.PerformLayout();
@@ -1041,5 +1055,6 @@
         private DataGridViewTextBoxColumn clnCargo;
         private DataGridViewTextBoxColumn clnEmail;
         private DataGridViewCheckBoxColumn clnAtivo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

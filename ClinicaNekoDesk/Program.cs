@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicaNekoLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace ClinicaNeko
 {
     internal static class Program
     {
+        public static Usuario UsuarioLogado = new();
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>

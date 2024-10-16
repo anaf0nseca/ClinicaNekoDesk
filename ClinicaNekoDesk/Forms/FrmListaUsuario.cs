@@ -126,11 +126,10 @@ namespace ClinicaNekoDesk.Forms
             txtCpf.Text = usuario.Cpf;
             dtpNascimento.Value = usuario.DataNascimento.Value;
             txtEmail.Text = usuario.Email;
-            cmbSetor.SelectedValue = usuario.Setor.Nome;
-            cmbCargo.SelectedValue = usuario.Cargo.Nome;
-
             txtCpf.ReadOnly = true;
 
+            cmbSetor.SelectedIndex = usuario.Setor.Id - 1;
+            cmbCargo.SelectedIndex = usuario.Cargo.Id - 1;
 
 
         }

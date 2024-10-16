@@ -17,6 +17,22 @@ namespace ClinicaNekoDesk.Forms
         {
             InitializeComponent();
         }
+        private void FrmListaProduto_Load(object sender, EventArgs e)
+        {
+            CarregaGridProduto();
+            this.tpEditarProdutos.Enabled = false;
+
+            var categorias = Categoria.ObterLista();
+            cmbCategoria.DataSource = categorias;
+            cmbCategoria.DisplayMember = "Nome";
+            cmbCategoria.ValueMember = "Id";
+
+            var marcas = Marca.ObterLista();
+            cmbMarca.DataSource = marcas;
+            cmbMarca.DisplayMember = "Nome";
+            cmbMarca.ValueMember = "Id";
+
+        }
 
         private void CarregaGridProduto()
         {
@@ -45,6 +61,43 @@ namespace ClinicaNekoDesk.Forms
 
 
         private void dgvListaProduto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtNomeProduto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvListaProduto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.tpEditarProdutos.Enabled = true;
+            int id = 0;
+            int posicaoLinha = dgvListaProduto.CurrentRow.Index;
+            id = Convert.ToInt32(dgvListaProduto.Rows[posicaoLinha].Cells[0].Value);
+
+            this.tabConsultaProduto.SelectedTab = tpEditarProdutos;
+            Produto produto = Produto.ObterPorId(id);
+
+            txtIdProduto.Text = produto.Id.ToString();
+            txtNomeProduto.Text = produto.Nome;
+            txtDescricao.Text = produto.Descricao;
+            txtPeso.Text = produto.Peso.ToString();
+            txtValor.Text = produto.Valor.ToString();
+            txtQtdeEstoque.Text = produto.Qtde_Estoque.ToString();
+            dtpVencimento.Value = produto.Data_Validade.Value;
+
+
+            cmbCategoria.SelectedIndex = produto.Categoria.Id - 1;
+            cmbMarca.SelectedIndex = produto.Marca.Id - 1;
+
+
+
+
+        }
+
+        private void btnCadProduto_Click(object sender, EventArgs e)
         {
 
         }

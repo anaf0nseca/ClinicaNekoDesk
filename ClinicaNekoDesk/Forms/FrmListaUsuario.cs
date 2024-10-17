@@ -129,7 +129,7 @@ namespace ClinicaNekoDesk.Forms
             txtCpf.ReadOnly = true;
 
             cmbSetor.SelectedIndex = usuario.Setor.Id - 1;
-            cmbCargo.SelectedIndex = usuario.Cargo.Id - 1;
+            //cmbCargo.SelectedIndex = usuario.Cargo.Id - 1;
 
 
         }

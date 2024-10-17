@@ -342,5 +342,15 @@ namespace ClinicaNeko
             MainPanel.Controls.Add(frmNovoProduto);
             frmNovoProduto.Show();
         }
+
+        private void btnNovoPedido_Click(object sender, EventArgs e)
+        {
+            FrmNovoPedido frmNovoPedido = new FrmNovoPedido();
+            frmNovoPedido.Dock = DockStyle.Fill;
+            frmNovoPedido.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmNovoPedido);
+            frmNovoPedido.Show();
+        }
     }
 }

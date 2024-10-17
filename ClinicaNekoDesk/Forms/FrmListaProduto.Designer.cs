@@ -69,6 +69,7 @@
             clnQtdeEstoque = new DataGridViewTextBoxColumn();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             tpEditarProdutos = new TabPage();
+            guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnCadProduto = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -89,7 +90,6 @@
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtIdProduto = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             tabConsultaProduto.SuspendLayout();
             tpListarProdutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaProduto).BeginInit();
@@ -319,6 +319,19 @@
             tpEditarProdutos.Size = new Size(1037, 540);
             tpEditarProdutos.TabIndex = 2;
             tpEditarProdutos.Text = "Editar Produto";
+            tpEditarProdutos.Click += tpEditarProdutos_Click;
+            // 
+            // guna2HtmlLabel11
+            // 
+            guna2HtmlLabel11.BackColor = Color.Transparent;
+            guna2HtmlLabel11.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2HtmlLabel11.ForeColor = Color.FromArgb(39, 63, 44);
+            guna2HtmlLabel11.Location = new Point(364, 16);
+            guna2HtmlLabel11.Margin = new Padding(4, 3, 4, 3);
+            guna2HtmlLabel11.Name = "guna2HtmlLabel11";
+            guna2HtmlLabel11.Size = new Size(248, 34);
+            guna2HtmlLabel11.TabIndex = 79;
+            guna2HtmlLabel11.Text = "EDITAR PRODUTO";
             // 
             // guna2HtmlLabel10
             // 
@@ -664,18 +677,6 @@
             guna2HtmlLabel12.Size = new Size(18, 20);
             guna2HtmlLabel12.TabIndex = 48;
             guna2HtmlLabel12.Text = "ID";
-            // 
-            // guna2HtmlLabel11
-            // 
-            guna2HtmlLabel11.BackColor = Color.Transparent;
-            guna2HtmlLabel11.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel11.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel11.Location = new Point(364, 16);
-            guna2HtmlLabel11.Margin = new Padding(4, 3, 4, 3);
-            guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            guna2HtmlLabel11.Size = new Size(248, 34);
-            guna2HtmlLabel11.TabIndex = 79;
-            guna2HtmlLabel11.Text = "EDITAR PRODUTO";
             // 
             // FrmListaProduto
             // 

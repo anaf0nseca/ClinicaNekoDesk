@@ -131,10 +131,10 @@
             tabConsultaUsuario.Controls.Add(tpListarUsuarios);
             tabConsultaUsuario.Controls.Add(tpEditarUsuarios);
             tabConsultaUsuario.ItemSize = new Size(180, 40);
-            tabConsultaUsuario.Location = new Point(-3, -2);
+            tabConsultaUsuario.Location = new Point(-1, -2);
             tabConsultaUsuario.Name = "tabConsultaUsuario";
             tabConsultaUsuario.SelectedIndex = 0;
-            tabConsultaUsuario.Size = new Size(1060, 626);
+            tabConsultaUsuario.Size = new Size(1058, 624);
             tabConsultaUsuario.TabButtonHoverState.BorderColor = Color.Empty;
             tabConsultaUsuario.TabButtonHoverState.FillColor = Color.FromArgb(83, 133, 91);
             tabConsultaUsuario.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F);
@@ -164,7 +164,7 @@
             tpListarUsuarios.Location = new Point(4, 44);
             tpListarUsuarios.Name = "tpListarUsuarios";
             tpListarUsuarios.Padding = new Padding(3);
-            tpListarUsuarios.Size = new Size(1052, 578);
+            tpListarUsuarios.Size = new Size(1050, 576);
             tpListarUsuarios.TabIndex = 1;
             tpListarUsuarios.Text = "Lista";
             tpListarUsuarios.UseVisualStyleBackColor = true;

@@ -29,7 +29,7 @@ namespace ClinicaNeko.Forms
         private void button3_Click(object sender, EventArgs e)
         {
             FrmSelecionarProduto frmSelecionarProduto = new FrmSelecionarProduto();
-            frmSelecionarProduto.Parent = this;
+            //frmSelecionarProduto.Parent = this;
 
             //System.Windows.Media.Effects.BlurEffect myBlur = new System.Windows.Media.Effects.BlurEffect();
             //myBlur.Radius = 5; //Set the radius for the blur - the bigger the number the better the blur

@@ -265,7 +265,7 @@
             panelUsuarios.Controls.Add(btnListaUsuarios);
             panelUsuarios.Controls.Add(btnNovoUsuario);
             panelUsuarios.Dock = DockStyle.Top;
-            panelUsuarios.Location = new Point(0, 500);
+            panelUsuarios.Location = new Point(0, 410);
             panelUsuarios.Margin = new Padding(4, 3, 4, 3);
             panelUsuarios.Name = "panelUsuarios";
             panelUsuarios.Size = new Size(198, 10);
@@ -355,7 +355,7 @@
             btnUsuarios.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUsuarios.ForeColor = Color.White;
             btnUsuarios.ImageAlign = HorizontalAlignment.Right;
-            btnUsuarios.Location = new Point(0, 450);
+            btnUsuarios.Location = new Point(0, 360);
             btnUsuarios.Margin = new Padding(4, 3, 4, 3);
             btnUsuarios.Name = "btnUsuarios";
             btnUsuarios.PressedColor = Color.FromArgb(83, 133, 91);
@@ -372,7 +372,7 @@
             panelServicos.Controls.Add(guna2Button22);
             panelServicos.Controls.Add(guna2Button23);
             panelServicos.Dock = DockStyle.Top;
-            panelServicos.Location = new Point(0, 440);
+            panelServicos.Location = new Point(0, 350);
             panelServicos.Margin = new Padding(4, 3, 4, 3);
             panelServicos.Name = "panelServicos";
             panelServicos.Size = new Size(198, 10);
@@ -459,7 +459,7 @@
             btnServico.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnServico.ForeColor = Color.White;
             btnServico.ImageAlign = HorizontalAlignment.Right;
-            btnServico.Location = new Point(0, 390);
+            btnServico.Location = new Point(0, 300);
             btnServico.Margin = new Padding(4, 3, 4, 3);
             btnServico.Name = "btnServico";
             btnServico.PressedColor = Color.FromArgb(83, 133, 91);
@@ -477,7 +477,7 @@
             panelVet.Controls.Add(btnMedVet);
             panelVet.Controls.Add(btnAgendados);
             panelVet.Dock = DockStyle.Top;
-            panelVet.Location = new Point(0, 380);
+            panelVet.Location = new Point(0, 290);
             panelVet.Margin = new Padding(4, 3, 4, 3);
             panelVet.Name = "panelVet";
             panelVet.Size = new Size(198, 10);
@@ -587,7 +587,7 @@
             btnVeterinario.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVeterinario.ForeColor = Color.White;
             btnVeterinario.ImageAlign = HorizontalAlignment.Right;
-            btnVeterinario.Location = new Point(0, 330);
+            btnVeterinario.Location = new Point(0, 240);
             btnVeterinario.Margin = new Padding(4, 3, 4, 3);
             btnVeterinario.Name = "btnVeterinario";
             btnVeterinario.PressedColor = Color.FromArgb(83, 133, 91);
@@ -604,7 +604,7 @@
             panelProdutos.Controls.Add(btnListaProdutos);
             panelProdutos.Controls.Add(btnNovoProduto);
             panelProdutos.Dock = DockStyle.Top;
-            panelProdutos.Location = new Point(0, 320);
+            panelProdutos.Location = new Point(0, 230);
             panelProdutos.Margin = new Padding(4, 3, 4, 3);
             panelProdutos.Name = "panelProdutos";
             panelProdutos.Size = new Size(198, 10);
@@ -694,7 +694,7 @@
             btnProdutos.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnProdutos.ForeColor = Color.White;
             btnProdutos.ImageAlign = HorizontalAlignment.Right;
-            btnProdutos.Location = new Point(0, 270);
+            btnProdutos.Location = new Point(0, 180);
             btnProdutos.Margin = new Padding(4, 3, 4, 3);
             btnProdutos.Name = "btnProdutos";
             btnProdutos.PressedColor = Color.FromArgb(83, 133, 91);
@@ -711,7 +711,7 @@
             panelClientes.Controls.Add(btnListaClientes);
             panelClientes.Controls.Add(btnNovoCliente);
             panelClientes.Dock = DockStyle.Top;
-            panelClientes.Location = new Point(0, 260);
+            panelClientes.Location = new Point(0, 170);
             panelClientes.Margin = new Padding(4, 3, 4, 3);
             panelClientes.Name = "panelClientes";
             panelClientes.Size = new Size(198, 10);
@@ -799,7 +799,7 @@
             btnClientes.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClientes.ForeColor = Color.White;
             btnClientes.ImageAlign = HorizontalAlignment.Right;
-            btnClientes.Location = new Point(0, 210);
+            btnClientes.Location = new Point(0, 120);
             btnClientes.Margin = new Padding(4, 3, 4, 3);
             btnClientes.Name = "btnClientes";
             btnClientes.PressedColor = Color.FromArgb(83, 133, 91);
@@ -816,7 +816,7 @@
             panelAgend.Controls.Add(btnListaAgend);
             panelAgend.Controls.Add(btnNovoAgend);
             panelAgend.Dock = DockStyle.Top;
-            panelAgend.Location = new Point(0, 200);
+            panelAgend.Location = new Point(0, 110);
             panelAgend.Margin = new Padding(4, 3, 4, 3);
             panelAgend.Name = "panelAgend";
             panelAgend.Size = new Size(198, 10);
@@ -903,7 +903,7 @@
             btnAgend.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAgend.ForeColor = Color.White;
             btnAgend.ImageAlign = HorizontalAlignment.Right;
-            btnAgend.Location = new Point(0, 150);
+            btnAgend.Location = new Point(0, 60);
             btnAgend.Margin = new Padding(4, 3, 4, 3);
             btnAgend.Name = "btnAgend";
             btnAgend.PressedColor = Color.FromArgb(83, 133, 91);
@@ -923,7 +923,7 @@
             panelPedidos.Location = new Point(0, 50);
             panelPedidos.Margin = new Padding(4, 3, 4, 3);
             panelPedidos.Name = "panelPedidos";
-            panelPedidos.Size = new Size(198, 100);
+            panelPedidos.Size = new Size(198, 10);
             panelPedidos.TabIndex = 17;
             // 
             // btnFornecedores

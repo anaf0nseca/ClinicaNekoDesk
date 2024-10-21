@@ -44,6 +44,15 @@ namespace ClinicaNekoLib
             Desconto = desconto;
         }
 
+        public Pedido(Usuario usuario, Cliente cliente, DateTime? data, string status)
+        {
+            Usuario = usuario;
+            Cliente = cliente;
+            Data = data;
+            Status = status;
+        }
+
+
 
         public Pedido(int id, Usuario usuario, Cliente cliente, DateTime? data, string status, double? desconto)
         {
@@ -58,22 +67,58 @@ namespace ClinicaNekoLib
 
         public void Inserir()
         {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.CommandText = "sp_pedido_insert";
+            cmd.Parameters.AddWithValue("spid_usuario", Usuario.Id);
+            cmd.Parameters.AddWithValue("spid_cliente", Cliente.Id);
+            //cmd.Parameters.AddWithValue("spdata", Data);
+            //cmd.Parameters.AddWithValue("spid_status", Status);
+
+            Id = Convert.ToInt32(cmd.ExecuteScalar());
+            cmd.Connection.Close();
 
         }
 
         public void AlterarStatus(int Id, string Status)
         {
-
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"update pedido set status = '{Status} where id = {Id}'";
+            
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
         }
 
         public void AtualizarDesconto(int Id, double Desconto)
         {
-
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"update pedido set desconto = '{Desconto}' where id = {Id}";
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
         }
 
         public static Pedido ObterPorId(int id)
         {
             Pedido pedido = new Pedido();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text ;
+            cmd.CommandText = $"select * from pedido where id = {id}";
+            var dr = cmd.ExecuteReader();
+
+            if (dr.Read())
+            {
+                pedido = new(
+                    //dr.GetInt32(0),
+                    //Usuario.ObterPorId(dr.GetInt32(1))
+                    //Cliente.ObterPorId(dr.GetInt32(2)),
+                    //dr.GetDateTime(3),
+                    //dr.GetString(4),
+                    //dr.GetDouble(5)
+
+                    );
+            }
 
             return pedido;
         }

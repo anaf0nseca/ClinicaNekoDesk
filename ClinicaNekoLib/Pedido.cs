@@ -110,12 +110,12 @@ namespace ClinicaNekoLib
             if (dr.Read())
             {
                 pedido = new(
-                    //dr.GetInt32(0),
-                    //Usuario.ObterPorId(dr.GetInt32(1))
-                    //Cliente.ObterPorId(dr.GetInt32(2)),
-                    //dr.GetDateTime(3),
-                    //dr.GetString(4),
-                    //dr.GetDouble(5)
+                    dr.GetInt32(0),
+                    Usuario.ObterPorId(dr.GetInt32(1)),
+                    Cliente.ObterPorId(dr.GetInt32(2)),
+                    dr.GetDateTime(3),
+                    dr.GetString(4),
+                    dr.GetDouble(5)
 
                     );
             }
@@ -126,22 +126,76 @@ namespace ClinicaNekoLib
         public static List<Pedido> ObterLista(int id = 0)
         {
             List<Pedido> pedidos = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
 
+            cmd.CommandText = "select * from pedido order by data";
+
+
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                pedidos.Add(new(
+                    dr.GetInt32(0),
+                    Usuario.ObterPorId(dr.GetInt32(1)),
+                    Cliente.ObterPorId(dr.GetInt32(2)),
+                    dr.GetDateTime(3),
+                    dr.GetString(4),
+                    dr.GetDouble(5)
+
+
+                    ));
+            }
+
+            cmd.Connection.Close();
             return pedidos;
+
         }
 
         public static List<Pedido> ObterListaPorCliente(int idCliente)
         {
             List<Pedido> pedidosCliente = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select * from pedido where cliente_id = {idCliente}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                pedidosCliente.Add(new(
+                    dr.GetInt32(0),
+                    Usuario.ObterPorId(dr.GetInt32(1)),
+                    Cliente.ObterPorId(dr.GetInt32(2)),
+                    dr.GetDateTime(3),
+                    dr.GetString(4),
+                    dr.GetDouble(5)
 
+                    ));
+            }
 
+            cmd.Connection.Close();
             return pedidosCliente;
         }
 
         public static List<Pedido> ObterListaPorUsuario(int idUsuario)
         {
             List<Pedido> pedidosUsuario = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select * from pedido where usuario_id = {idUsuario}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                pedidosUsuario.Add(new(
+                    dr.GetInt32(0),
+                    Usuario.ObterPorId(dr.GetInt32(1)),
+                    Cliente.ObterPorId(dr.GetInt32(2)),
+                    dr.GetDateTime(3),
+                    dr.GetString(4),
+                    dr.GetDouble(5)
 
+                    ));
+            }
+            cmd.Connection.Close();
 
             return pedidosUsuario;
         }

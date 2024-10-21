@@ -77,12 +77,12 @@
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             btnAbrirPedido = new Guna.UI2.WinForms.Guna2Button();
             btnSelecionarCliente = new Button();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtIdCliente = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            txtNome = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            txtCliente = new Guna.UI2.WinForms.Guna2TextBox();
+            txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
+            grbItens = new Guna.UI2.WinForms.Guna2GroupBox();
             btnSelecionarProduto = new Button();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtSubtotalPedido = new Guna.UI2.WinForms.Guna2TextBox();
@@ -94,16 +94,17 @@
             txtDesconto = new Guna.UI2.WinForms.Guna2TextBox();
             txtQuantidade = new Guna.UI2.WinForms.Guna2TextBox();
             txtValor = new Guna.UI2.WinForms.Guna2TextBox();
-            dgvListaUsuarios = new Guna.UI2.WinForms.Guna2DataGridView();
+            dgvItensPedido = new Guna.UI2.WinForms.Guna2DataGridView();
             clnId = new DataGridViewTextBoxColumn();
             clnNome = new DataGridViewTextBoxColumn();
             clnDescricao = new DataGridViewTextBoxColumn();
             clnValor = new DataGridViewTextBoxColumn();
             clnQtde = new DataGridViewTextBoxColumn();
+            clnDesconto = new DataGridViewTextBoxColumn();
             txtDescricao = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtNPedido = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            grbFinalizacao = new Guna.UI2.WinForms.Guna2GroupBox();
             btnFinalizarPedido = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtTotalPedido = new Guna.UI2.WinForms.Guna2TextBox();
@@ -115,9 +116,9 @@
             button2 = new Button();
             guna2TextBox9 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2GroupBox1.SuspendLayout();
-            guna2GroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvListaUsuarios).BeginInit();
-            guna2GroupBox3.SuspendLayout();
+            grbItens.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvItensPedido).BeginInit();
+            grbFinalizacao.SuspendLayout();
             SuspendLayout();
             // 
             // guna2HtmlLabel9
@@ -138,11 +139,11 @@
             guna2GroupBox1.BorderRadius = 15;
             guna2GroupBox1.Controls.Add(btnAbrirPedido);
             guna2GroupBox1.Controls.Add(btnSelecionarCliente);
-            guna2GroupBox1.Controls.Add(guna2TextBox2);
+            guna2GroupBox1.Controls.Add(txtIdCliente);
             guna2GroupBox1.Controls.Add(guna2HtmlLabel1);
             guna2GroupBox1.Controls.Add(guna2HtmlLabel2);
-            guna2GroupBox1.Controls.Add(guna2TextBox1);
-            guna2GroupBox1.Controls.Add(txtNome);
+            guna2GroupBox1.Controls.Add(txtCliente);
+            guna2GroupBox1.Controls.Add(txtUsuario);
             guna2GroupBox1.CustomBorderColor = Color.FromArgb(83, 133, 91);
             guna2GroupBox1.CustomBorderThickness = new Padding(0, 30, 0, 0);
             guna2GroupBox1.CustomizableEdges = customizableEdges9;
@@ -178,6 +179,7 @@
             btnAbrirPedido.Size = new Size(157, 66);
             btnAbrirPedido.TabIndex = 48;
             btnAbrirPedido.Text = "Abrir Pedido";
+            btnAbrirPedido.Click += btnAbrirPedido_Click;
             // 
             // btnSelecionarCliente
             // 
@@ -193,30 +195,30 @@
             btnSelecionarCliente.TabIndex = 47;
             btnSelecionarCliente.UseVisualStyleBackColor = false;
             // 
-            // guna2TextBox2
+            // txtIdCliente
             // 
-            guna2TextBox2.BackColor = Color.White;
-            guna2TextBox2.BorderRadius = 10;
-            guna2TextBox2.Cursor = Cursors.IBeam;
-            guna2TextBox2.CustomizableEdges = customizableEdges3;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2TextBox2.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(130, 92);
-            guna2TextBox2.Margin = new Padding(5);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PasswordChar = '\0';
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2TextBox2.Size = new Size(61, 27);
-            guna2TextBox2.TabIndex = 46;
+            txtIdCliente.BackColor = Color.White;
+            txtIdCliente.BorderRadius = 10;
+            txtIdCliente.Cursor = Cursors.IBeam;
+            txtIdCliente.CustomizableEdges = customizableEdges3;
+            txtIdCliente.DefaultText = "";
+            txtIdCliente.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtIdCliente.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtIdCliente.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtIdCliente.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtIdCliente.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtIdCliente.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtIdCliente.ForeColor = Color.FromArgb(39, 63, 44);
+            txtIdCliente.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtIdCliente.Location = new Point(130, 92);
+            txtIdCliente.Margin = new Padding(5);
+            txtIdCliente.Name = "txtIdCliente";
+            txtIdCliente.PasswordChar = '\0';
+            txtIdCliente.PlaceholderText = "";
+            txtIdCliente.SelectedText = "";
+            txtIdCliente.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtIdCliente.Size = new Size(61, 27);
+            txtIdCliente.TabIndex = 46;
             // 
             // guna2HtmlLabel1
             // 
@@ -242,88 +244,88 @@
             guna2HtmlLabel2.TabIndex = 44;
             guna2HtmlLabel2.Text = "Usuário";
             // 
-            // guna2TextBox1
+            // txtCliente
             // 
-            guna2TextBox1.BackColor = Color.White;
-            guna2TextBox1.BorderRadius = 10;
-            guna2TextBox1.Cursor = Cursors.IBeam;
-            guna2TextBox1.CustomizableEdges = customizableEdges5;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2TextBox1.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(201, 92);
-            guna2TextBox1.Margin = new Padding(5);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox1.Size = new Size(290, 27);
-            guna2TextBox1.TabIndex = 43;
+            txtCliente.BackColor = Color.White;
+            txtCliente.BorderRadius = 10;
+            txtCliente.Cursor = Cursors.IBeam;
+            txtCliente.CustomizableEdges = customizableEdges5;
+            txtCliente.DefaultText = "";
+            txtCliente.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtCliente.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtCliente.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtCliente.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtCliente.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCliente.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtCliente.ForeColor = Color.FromArgb(39, 63, 44);
+            txtCliente.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCliente.Location = new Point(201, 92);
+            txtCliente.Margin = new Padding(5);
+            txtCliente.Name = "txtCliente";
+            txtCliente.PasswordChar = '\0';
+            txtCliente.PlaceholderText = "";
+            txtCliente.SelectedText = "";
+            txtCliente.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtCliente.Size = new Size(290, 27);
+            txtCliente.TabIndex = 43;
             // 
-            // txtNome
+            // txtUsuario
             // 
-            txtNome.BackColor = Color.White;
-            txtNome.BorderRadius = 10;
-            txtNome.Cursor = Cursors.IBeam;
-            txtNome.CustomizableEdges = customizableEdges7;
-            txtNome.DefaultText = "";
-            txtNome.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtNome.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtNome.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtNome.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtNome.Enabled = false;
-            txtNome.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNome.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNome.ForeColor = Color.FromArgb(39, 63, 44);
-            txtNome.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNome.Location = new Point(130, 52);
-            txtNome.Margin = new Padding(5);
-            txtNome.Name = "txtNome";
-            txtNome.PasswordChar = '\0';
-            txtNome.PlaceholderText = "";
-            txtNome.ReadOnly = true;
-            txtNome.SelectedText = "";
-            txtNome.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtNome.Size = new Size(313, 27);
-            txtNome.TabIndex = 42;
+            txtUsuario.BackColor = Color.White;
+            txtUsuario.BorderRadius = 10;
+            txtUsuario.Cursor = Cursors.IBeam;
+            txtUsuario.CustomizableEdges = customizableEdges7;
+            txtUsuario.DefaultText = "";
+            txtUsuario.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtUsuario.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtUsuario.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtUsuario.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtUsuario.Enabled = false;
+            txtUsuario.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUsuario.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtUsuario.ForeColor = Color.FromArgb(39, 63, 44);
+            txtUsuario.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUsuario.Location = new Point(130, 52);
+            txtUsuario.Margin = new Padding(5);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.PasswordChar = '\0';
+            txtUsuario.PlaceholderText = "";
+            txtUsuario.ReadOnly = true;
+            txtUsuario.SelectedText = "";
+            txtUsuario.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtUsuario.Size = new Size(313, 27);
+            txtUsuario.TabIndex = 42;
             // 
-            // guna2GroupBox2
+            // grbItens
             // 
-            guna2GroupBox2.BorderColor = Color.FromArgb(83, 133, 91);
-            guna2GroupBox2.BorderRadius = 15;
-            guna2GroupBox2.Controls.Add(btnSelecionarProduto);
-            guna2GroupBox2.Controls.Add(guna2HtmlLabel10);
-            guna2GroupBox2.Controls.Add(txtSubtotalPedido);
-            guna2GroupBox2.Controls.Add(btnAddItem);
-            guna2GroupBox2.Controls.Add(guna2HtmlLabel7);
-            guna2GroupBox2.Controls.Add(guna2HtmlLabel6);
-            guna2GroupBox2.Controls.Add(guna2HtmlLabel4);
-            guna2GroupBox2.Controls.Add(guna2HtmlLabel3);
-            guna2GroupBox2.Controls.Add(txtDesconto);
-            guna2GroupBox2.Controls.Add(txtQuantidade);
-            guna2GroupBox2.Controls.Add(txtValor);
-            guna2GroupBox2.Controls.Add(dgvListaUsuarios);
-            guna2GroupBox2.Controls.Add(txtDescricao);
-            guna2GroupBox2.CustomBorderColor = Color.FromArgb(83, 133, 91);
-            guna2GroupBox2.CustomBorderThickness = new Padding(0, 30, 0, 0);
-            guna2GroupBox2.CustomizableEdges = customizableEdges23;
-            guna2GroupBox2.Font = new Font("Segoe UI", 9F);
-            guna2GroupBox2.ForeColor = Color.White;
-            guna2GroupBox2.Location = new Point(51, 206);
-            guna2GroupBox2.Margin = new Padding(5, 3, 5, 3);
-            guna2GroupBox2.Name = "guna2GroupBox2";
-            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2GroupBox2.Size = new Size(776, 391);
-            guna2GroupBox2.TabIndex = 22;
-            guna2GroupBox2.Text = "Itens do Pedido";
-            guna2GroupBox2.Click += guna2GroupBox2_Click;
+            grbItens.BorderColor = Color.FromArgb(83, 133, 91);
+            grbItens.BorderRadius = 15;
+            grbItens.Controls.Add(btnSelecionarProduto);
+            grbItens.Controls.Add(guna2HtmlLabel10);
+            grbItens.Controls.Add(txtSubtotalPedido);
+            grbItens.Controls.Add(btnAddItem);
+            grbItens.Controls.Add(guna2HtmlLabel7);
+            grbItens.Controls.Add(guna2HtmlLabel6);
+            grbItens.Controls.Add(guna2HtmlLabel4);
+            grbItens.Controls.Add(guna2HtmlLabel3);
+            grbItens.Controls.Add(txtDesconto);
+            grbItens.Controls.Add(txtQuantidade);
+            grbItens.Controls.Add(txtValor);
+            grbItens.Controls.Add(dgvItensPedido);
+            grbItens.Controls.Add(txtDescricao);
+            grbItens.CustomBorderColor = Color.FromArgb(83, 133, 91);
+            grbItens.CustomBorderThickness = new Padding(0, 30, 0, 0);
+            grbItens.CustomizableEdges = customizableEdges23;
+            grbItens.Font = new Font("Segoe UI", 9F);
+            grbItens.ForeColor = Color.White;
+            grbItens.Location = new Point(51, 206);
+            grbItens.Margin = new Padding(5, 3, 5, 3);
+            grbItens.Name = "grbItens";
+            grbItens.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            grbItens.Size = new Size(776, 391);
+            grbItens.TabIndex = 22;
+            grbItens.Text = "Itens do Pedido";
+            grbItens.Click += guna2GroupBox2_Click;
             // 
             // btnSelecionarProduto
             // 
@@ -400,6 +402,7 @@
             btnAddItem.Size = new Size(101, 35);
             btnAddItem.TabIndex = 49;
             btnAddItem.Text = "Adicionar";
+            btnAddItem.Click += btnAddItem_Click;
             // 
             // guna2HtmlLabel7
             // 
@@ -455,7 +458,7 @@
             txtDesconto.BorderRadius = 10;
             txtDesconto.Cursor = Cursors.IBeam;
             txtDesconto.CustomizableEdges = customizableEdges15;
-            txtDesconto.DefaultText = "";
+            txtDesconto.DefaultText = "0";
             txtDesconto.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtDesconto.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtDesconto.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -473,6 +476,7 @@
             txtDesconto.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txtDesconto.Size = new Size(90, 26);
             txtDesconto.TabIndex = 53;
+            txtDesconto.TextAlign = HorizontalAlignment.Right;
             // 
             // txtQuantidade
             // 
@@ -498,6 +502,7 @@
             txtQuantidade.ShadowDecoration.CustomizableEdges = customizableEdges18;
             txtQuantidade.Size = new Size(57, 26);
             txtQuantidade.TabIndex = 52;
+            txtQuantidade.TextAlign = HorizontalAlignment.Right;
             // 
             // txtValor
             // 
@@ -526,20 +531,20 @@
             txtValor.Size = new Size(90, 26);
             txtValor.TabIndex = 51;
             // 
-            // dgvListaUsuarios
+            // dgvItensPedido
             // 
-            dgvListaUsuarios.AllowUserToAddRows = false;
-            dgvListaUsuarios.AllowUserToDeleteRows = false;
-            dgvListaUsuarios.AllowUserToResizeColumns = false;
-            dgvListaUsuarios.AllowUserToResizeRows = false;
+            dgvItensPedido.AllowUserToAddRows = false;
+            dgvItensPedido.AllowUserToDeleteRows = false;
+            dgvItensPedido.AllowUserToResizeColumns = false;
+            dgvItensPedido.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(115, 158, 122);
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dgvListaUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgvListaUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-            dgvListaUsuarios.BackgroundColor = Color.FromArgb(200, 219, 203);
+            dgvItensPedido.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvItensPedido.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            dgvItensPedido.BackgroundColor = Color.FromArgb(200, 219, 203);
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(115, 158, 122);
             dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -547,10 +552,10 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(115, 158, 122);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvListaUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvListaUsuarios.ColumnHeadersHeight = 32;
-            dgvListaUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvListaUsuarios.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNome, clnDescricao, clnValor, clnQtde });
+            dgvItensPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvItensPedido.ColumnHeadersHeight = 32;
+            dgvItensPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvItensPedido.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNome, clnDescricao, clnValor, clnQtde, clnDesconto });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -558,12 +563,12 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvListaUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvListaUsuarios.GridColor = Color.FromArgb(231, 229, 255);
-            dgvListaUsuarios.Location = new Point(36, 114);
-            dgvListaUsuarios.Name = "dgvListaUsuarios";
-            dgvListaUsuarios.ReadOnly = true;
-            dgvListaUsuarios.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvItensPedido.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvItensPedido.GridColor = Color.FromArgb(231, 229, 255);
+            dgvItensPedido.Location = new Point(36, 114);
+            dgvItensPedido.Name = "dgvItensPedido";
+            dgvItensPedido.ReadOnly = true;
+            dgvItensPedido.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = Color.White;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
@@ -571,34 +576,35 @@
             dataGridViewCellStyle4.SelectionBackColor = Color.White;
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvListaUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dgvListaUsuarios.RowHeadersVisible = false;
-            dgvListaUsuarios.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dgvListaUsuarios.ShowCellToolTips = false;
-            dgvListaUsuarios.ShowEditingIcon = false;
-            dgvListaUsuarios.Size = new Size(705, 222);
-            dgvListaUsuarios.TabIndex = 50;
-            dgvListaUsuarios.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            dgvListaUsuarios.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvListaUsuarios.ThemeStyle.AlternatingRowsStyle.ForeColor = SystemColors.ControlText;
-            dgvListaUsuarios.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(115, 158, 122);
-            dgvListaUsuarios.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.White;
-            dgvListaUsuarios.ThemeStyle.BackColor = Color.FromArgb(200, 219, 203);
-            dgvListaUsuarios.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            dgvListaUsuarios.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(115, 158, 122);
-            dgvListaUsuarios.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvListaUsuarios.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dgvListaUsuarios.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dgvListaUsuarios.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvListaUsuarios.ThemeStyle.HeaderStyle.Height = 32;
-            dgvListaUsuarios.ThemeStyle.ReadOnly = true;
-            dgvListaUsuarios.ThemeStyle.RowsStyle.BackColor = Color.White;
-            dgvListaUsuarios.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvListaUsuarios.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgvListaUsuarios.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            dgvListaUsuarios.ThemeStyle.RowsStyle.Height = 25;
-            dgvListaUsuarios.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dgvListaUsuarios.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvItensPedido.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvItensPedido.RowHeadersVisible = false;
+            dgvItensPedido.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgvItensPedido.ScrollBars = ScrollBars.None;
+            dgvItensPedido.ShowCellToolTips = false;
+            dgvItensPedido.ShowEditingIcon = false;
+            dgvItensPedido.Size = new Size(705, 222);
+            dgvItensPedido.TabIndex = 50;
+            dgvItensPedido.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvItensPedido.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvItensPedido.ThemeStyle.AlternatingRowsStyle.ForeColor = SystemColors.ControlText;
+            dgvItensPedido.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dgvItensPedido.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.White;
+            dgvItensPedido.ThemeStyle.BackColor = Color.FromArgb(200, 219, 203);
+            dgvItensPedido.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvItensPedido.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(115, 158, 122);
+            dgvItensPedido.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvItensPedido.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgvItensPedido.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvItensPedido.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvItensPedido.ThemeStyle.HeaderStyle.Height = 32;
+            dgvItensPedido.ThemeStyle.ReadOnly = true;
+            dgvItensPedido.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvItensPedido.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvItensPedido.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvItensPedido.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvItensPedido.ThemeStyle.RowsStyle.Height = 25;
+            dgvItensPedido.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvItensPedido.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // clnId
             // 
@@ -612,14 +618,14 @@
             clnNome.HeaderText = "Nome";
             clnNome.Name = "clnNome";
             clnNome.ReadOnly = true;
-            clnNome.Width = 205;
+            clnNome.Width = 185;
             // 
             // clnDescricao
             // 
             clnDescricao.HeaderText = "Descrição";
             clnDescricao.Name = "clnDescricao";
             clnDescricao.ReadOnly = true;
-            clnDescricao.Width = 250;
+            clnDescricao.Width = 200;
             // 
             // clnValor
             // 
@@ -632,6 +638,13 @@
             clnQtde.HeaderText = "Quantidade";
             clnQtde.Name = "clnQtde";
             clnQtde.ReadOnly = true;
+            clnQtde.Width = 95;
+            // 
+            // clnDesconto
+            // 
+            clnDesconto.HeaderText = "Desconto";
+            clnDesconto.Name = "clnDesconto";
+            clnDesconto.ReadOnly = true;
             // 
             // txtDescricao
             // 
@@ -660,32 +673,32 @@
             txtDescricao.Size = new Size(212, 26);
             txtDescricao.TabIndex = 49;
             // 
-            // guna2TextBox4
+            // txtNPedido
             // 
-            guna2TextBox4.BackColor = Color.Transparent;
-            guna2TextBox4.BorderRadius = 10;
-            guna2TextBox4.Cursor = Cursors.IBeam;
-            guna2TextBox4.CustomizableEdges = customizableEdges25;
-            guna2TextBox4.DefaultText = "";
-            guna2TextBox4.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox4.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox4.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox4.Enabled = false;
-            guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2TextBox4.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2TextBox4.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Location = new Point(891, 8);
-            guna2TextBox4.Margin = new Padding(5);
-            guna2TextBox4.Name = "guna2TextBox4";
-            guna2TextBox4.PasswordChar = '\0';
-            guna2TextBox4.PlaceholderText = "";
-            guna2TextBox4.ReadOnly = true;
-            guna2TextBox4.SelectedText = "";
-            guna2TextBox4.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            guna2TextBox4.Size = new Size(104, 37);
-            guna2TextBox4.TabIndex = 49;
+            txtNPedido.BackColor = Color.Transparent;
+            txtNPedido.BorderRadius = 10;
+            txtNPedido.Cursor = Cursors.IBeam;
+            txtNPedido.CustomizableEdges = customizableEdges25;
+            txtNPedido.DefaultText = "";
+            txtNPedido.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtNPedido.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtNPedido.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtNPedido.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtNPedido.Enabled = false;
+            txtNPedido.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNPedido.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNPedido.ForeColor = Color.FromArgb(39, 63, 44);
+            txtNPedido.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNPedido.Location = new Point(891, 8);
+            txtNPedido.Margin = new Padding(5);
+            txtNPedido.Name = "txtNPedido";
+            txtNPedido.PasswordChar = '\0';
+            txtNPedido.PlaceholderText = "";
+            txtNPedido.ReadOnly = true;
+            txtNPedido.SelectedText = "";
+            txtNPedido.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            txtNPedido.Size = new Size(104, 37);
+            txtNPedido.TabIndex = 49;
             // 
             // guna2HtmlLabel5
             // 
@@ -699,32 +712,33 @@
             guna2HtmlLabel5.TabIndex = 50;
             guna2HtmlLabel5.Text = "Nº";
             // 
-            // guna2GroupBox3
+            // grbFinalizacao
             // 
-            guna2GroupBox3.BorderColor = Color.FromArgb(83, 133, 91);
-            guna2GroupBox3.BorderRadius = 15;
-            guna2GroupBox3.Controls.Add(btnFinalizarPedido);
-            guna2GroupBox3.Controls.Add(guna2HtmlLabel12);
-            guna2GroupBox3.Controls.Add(txtTotalPedido);
-            guna2GroupBox3.Controls.Add(cmbDescPedido);
-            guna2GroupBox3.Controls.Add(guna2HtmlLabel11);
-            guna2GroupBox3.Controls.Add(guna2HtmlLabel8);
-            guna2GroupBox3.Controls.Add(txtDescontoItens);
-            guna2GroupBox3.Controls.Add(guna2Button2);
-            guna2GroupBox3.Controls.Add(button2);
-            guna2GroupBox3.Controls.Add(guna2TextBox9);
-            guna2GroupBox3.CustomBorderColor = Color.FromArgb(83, 133, 91);
-            guna2GroupBox3.CustomBorderThickness = new Padding(0, 30, 0, 0);
-            guna2GroupBox3.CustomizableEdges = customizableEdges39;
-            guna2GroupBox3.Font = new Font("Segoe UI", 9F);
-            guna2GroupBox3.ForeColor = Color.White;
-            guna2GroupBox3.Location = new Point(837, 206);
-            guna2GroupBox3.Margin = new Padding(5, 3, 5, 3);
-            guna2GroupBox3.Name = "guna2GroupBox3";
-            guna2GroupBox3.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            guna2GroupBox3.Size = new Size(158, 391);
-            guna2GroupBox3.TabIndex = 49;
-            guna2GroupBox3.Text = "Finalização";
+            grbFinalizacao.BorderColor = Color.FromArgb(83, 133, 91);
+            grbFinalizacao.BorderRadius = 15;
+            grbFinalizacao.Controls.Add(btnFinalizarPedido);
+            grbFinalizacao.Controls.Add(guna2HtmlLabel12);
+            grbFinalizacao.Controls.Add(txtTotalPedido);
+            grbFinalizacao.Controls.Add(cmbDescPedido);
+            grbFinalizacao.Controls.Add(guna2HtmlLabel11);
+            grbFinalizacao.Controls.Add(guna2HtmlLabel8);
+            grbFinalizacao.Controls.Add(txtDescontoItens);
+            grbFinalizacao.Controls.Add(guna2Button2);
+            grbFinalizacao.Controls.Add(button2);
+            grbFinalizacao.Controls.Add(guna2TextBox9);
+            grbFinalizacao.CustomBorderColor = Color.FromArgb(83, 133, 91);
+            grbFinalizacao.CustomBorderThickness = new Padding(0, 30, 0, 0);
+            grbFinalizacao.CustomizableEdges = customizableEdges39;
+            grbFinalizacao.Enabled = false;
+            grbFinalizacao.Font = new Font("Segoe UI", 9F);
+            grbFinalizacao.ForeColor = Color.White;
+            grbFinalizacao.Location = new Point(837, 206);
+            grbFinalizacao.Margin = new Padding(5, 3, 5, 3);
+            grbFinalizacao.Name = "grbFinalizacao";
+            grbFinalizacao.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            grbFinalizacao.Size = new Size(158, 391);
+            grbFinalizacao.TabIndex = 49;
+            grbFinalizacao.Text = "Finalização";
             // 
             // btnFinalizarPedido
             // 
@@ -926,23 +940,24 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(159, 187, 164);
             ClientSize = new Size(1050, 620);
-            Controls.Add(guna2GroupBox3);
+            Controls.Add(grbFinalizacao);
             Controls.Add(guna2HtmlLabel5);
-            Controls.Add(guna2TextBox4);
-            Controls.Add(guna2GroupBox2);
+            Controls.Add(txtNPedido);
+            Controls.Add(grbItens);
             Controls.Add(guna2GroupBox1);
             Controls.Add(guna2HtmlLabel9);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
             Name = "FrmNovoPedido";
             Text = "FrmPedido";
+            Load += FrmNovoPedido_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
-            guna2GroupBox2.ResumeLayout(false);
-            guna2GroupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvListaUsuarios).EndInit();
-            guna2GroupBox3.ResumeLayout(false);
-            guna2GroupBox3.PerformLayout();
+            grbItens.ResumeLayout(false);
+            grbItens.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvItensPedido).EndInit();
+            grbFinalizacao.ResumeLayout(false);
+            grbFinalizacao.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -951,17 +966,17 @@
 
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
-        private Guna.UI2.WinForms.Guna2TextBox txtNome;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2GroupBox grbItens;
+        private Guna.UI2.WinForms.Guna2TextBox txtUsuario;
+        private Guna.UI2.WinForms.Guna2TextBox txtCliente;
+        private Guna.UI2.WinForms.Guna2TextBox txtIdCliente;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Button btnSelecionarCliente;
         private Guna.UI2.WinForms.Guna2Button btnAbrirPedido;
         private Guna.UI2.WinForms.Guna2TextBox txtDescricao;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvListaUsuarios;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvItensPedido;
+        private Guna.UI2.WinForms.Guna2TextBox txtNPedido;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txtDesconto;
         private Guna.UI2.WinForms.Guna2TextBox txtQuantidade;
@@ -973,7 +988,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2TextBox txtSubtotalPedido;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
+        private Guna.UI2.WinForms.Guna2GroupBox grbFinalizacao;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2TextBox txtDescontoItens;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
@@ -990,5 +1005,6 @@
         private DataGridViewTextBoxColumn clnDescricao;
         private DataGridViewTextBoxColumn clnValor;
         private DataGridViewTextBoxColumn clnQtde;
+        private DataGridViewTextBoxColumn clnDesconto;
     }
 }

@@ -180,18 +180,20 @@ namespace ClinicaNekoLib
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = $"select * from usuario where email = '{email}' and senha = md5('{senha}')";
             var dr = cmd.ExecuteReader();
-            //if (dr.Read())
-            //{
-            //    usuario = new(
-            //        dr.GetInt32(0),
-            //        dr.GetString(1),
-            //        dr.GetDateTime(2),
-            //        Setor.ObterPorId(dr.GetInt32(3)),
-            //        Cargo.ObterPorId(dr.GetInt32(4)),
-            //        dr.GetString(5),
-            //        dr.GetBoolean(6)
-            //        );
-            //}
+            if (dr.Read())
+            {
+                usuario = new(
+                    dr.GetInt32(0),
+                    dr.GetString(1),
+                    dr.GetString(2),
+                    dr.GetDateTime(3),
+                    Setor.ObterPorId(dr.GetInt32(4)),
+                    Cargo.ObterPorId(dr.GetInt32(5)),
+                    dr.GetString(6),
+                    dr.GetString(7),
+                    dr.GetBoolean(8)
+                    );
+            }
 
             cmd.Connection.Close();
             return usuario;

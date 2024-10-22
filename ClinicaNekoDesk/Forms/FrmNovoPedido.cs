@@ -18,6 +18,8 @@ namespace ClinicaNeko.Forms
         Produto produto;
 
         public int produtoId;
+        public int clienteId;
+
         public FrmNovoPedido()
         {
             InitializeComponent();
@@ -63,7 +65,7 @@ namespace ClinicaNeko.Forms
 
             }
         }
-            private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             FrmSelecionarProduto frmSelecionarProduto = new FrmSelecionarProduto();
             //frmSelecionarProduto.Parent = this;
@@ -100,7 +102,7 @@ namespace ClinicaNeko.Forms
 
         private void FrmNovoPedido_Load(object sender, EventArgs e)
         {
-            txtUsuario.Text = Program.UsuarioLogado.Id + "-" + Program.UsuarioLogado.Nome;
+            txtUsuario.Text = Program.UsuarioLogado.Id + " - " + Program.UsuarioLogado.Nome;
         }
 
         private void btnAddItem_Click(object sender, EventArgs e)
@@ -111,7 +113,7 @@ namespace ClinicaNeko.Forms
             Estoque estoque = Estoque.ObterPorProduto(produto.Id);
             double qtdeProduto = double.Parse(txtQuantidade.Text);
 
-            if(qtdeProduto > estoque.Quantidade)
+            if (qtdeProduto > estoque.Quantidade)
             {
                 MessageBox.Show($"Não é possível incluir essa quantidade, há {estoque.Quantidade} unidades desse produto disponíveis em estoque.");
             }
@@ -128,6 +130,24 @@ namespace ClinicaNeko.Forms
                 item.Inserir();
                 PreencheGridItens();
             }
+        }
+
+        private void btnSelecionarCliente_Click(object sender, EventArgs e)
+        {
+            FrmSelecionarCliente frmSelecionarCliente = new FrmSelecionarCliente();
+            //frmSelecionarCliente.Parent = this;
+
+            //System.Windows.Media.Effects.BlurEffect myBlur = new System.Windows.Media.Effects.BlurEffect();
+            //myBlur.Radius = 5; //Set the radius for the blur - the bigger the number the better the blur
+            //this.Effect = myBlur;
+
+            frmSelecionarCliente.ShowDialog();
+
+            clienteId = frmSelecionarCliente.ClienteId;
+            string clienteNome = frmSelecionarCliente.ClienteNome;
+
+            txtIdCliente.Text = clienteId.ToString();
+            txtCliente.Text = clienteNome;
         }
     }
 }

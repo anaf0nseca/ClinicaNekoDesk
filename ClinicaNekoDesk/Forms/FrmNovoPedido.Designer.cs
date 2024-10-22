@@ -194,6 +194,7 @@
             btnSelecionarCliente.Size = new Size(28, 28);
             btnSelecionarCliente.TabIndex = 47;
             btnSelecionarCliente.UseVisualStyleBackColor = false;
+            btnSelecionarCliente.Click += btnSelecionarCliente_Click;
             // 
             // txtIdCliente
             // 
@@ -316,6 +317,7 @@
             grbItens.CustomBorderColor = Color.FromArgb(83, 133, 91);
             grbItens.CustomBorderThickness = new Padding(0, 30, 0, 0);
             grbItens.CustomizableEdges = customizableEdges23;
+            grbItens.Enabled = false;
             grbItens.Font = new Font("Segoe UI", 9F);
             grbItens.ForeColor = Color.White;
             grbItens.Location = new Point(51, 206);

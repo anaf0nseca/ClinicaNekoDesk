@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicaNekoLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,28 +7,29 @@ using System.Threading.Tasks;
 
 namespace ClinicaNekoLib
 {
-    public class TelefoneCliente
+    public class EnderecoCliente
     {
+
         public int Id { get; set; }
-        public Telefone Telefone { get; set; }
+        public Endereco Endereco { get; set; }
         public Cliente Cliente { get; set; }
 
 
-        public TelefoneCliente()
+        public EnderecoCliente()
         {
-            Telefone = new Telefone();
+            Endereco = new Endereco();
             Cliente = new Cliente();
         }
 
-        public TelefoneCliente(Telefone telefone, Cliente cliente)
+        public EnderecoCliente(Endereco endereco, Cliente cliente)
         {
-            Telefone = telefone;
+            Endereco = endereco;
             Cliente = cliente;
         }
-        public TelefoneCliente(int id, Telefone telefone, Cliente cliente)
+        public EnderecoCliente(int id, Endereco endereco, Cliente cliente)
         {
             Id = id;
-            Telefone = telefone;
+            Endereco = endereco;
             Cliente = cliente;
         }
 
@@ -35,10 +37,11 @@ namespace ClinicaNekoLib
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"insert into telefone_cliente(id_telefone, id_cliente) values({Telefone.Id}, {Cliente.Id})";
+            cmd.CommandText = $"insert into endereco_cliente(id_endereco, id_cliente) values({Endereco.Id}, {Cliente.Id})";
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
 
         }
+
     }
 }

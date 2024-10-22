@@ -46,7 +46,9 @@ namespace ClinicaNekoDesk.Forms
                         Program.UsuarioLogado = usuario;
 
                         //o formulário de login é fechado e é possível ter acesso ao formulário principal
-                        Close();
+                        FrmPrincipal frmPrincipal  = new FrmPrincipal();   
+                        frmPrincipal.Show();
+                        
 
                     }
                     else
@@ -75,4 +77,4 @@ namespace ClinicaNekoDesk.Forms
         }
         }
     }
-}
+

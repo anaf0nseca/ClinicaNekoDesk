@@ -15,6 +15,7 @@ namespace ClinicaNeko.Forms
     public partial class FrmNovoEndereco : Form
     {
         public int idUsuario {  get; set; }
+        public int idCliente { get; set; }
         public FrmNovoEndereco()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace ClinicaNeko.Forms
 
             endereco.Inserir();
 
-            if (endereco.Id > 0)
+            if (idUsuario > 0  && endereco.Id > 0)
             {
 
                 EnderecoUsuario enderecoUsuario = new(
@@ -49,7 +50,17 @@ namespace ClinicaNeko.Forms
 
                 btnSalvarEnd.Enabled = false;
 
+            }
+            else if(idCliente > 0 && endereco.Id > 0)
+            {
+                EnderecoCliente enderecoCliente = new(
+                    Endereco.ObterPorId(Convert.ToInt32(endereco.Id)),
+                    Cliente.ObterPorId(Convert.ToInt32(idCliente))
+                    );
 
+                enderecoCliente.Inserir();
+
+                MessageBox.Show($"Endereço cadastrado com sucesso, para o cliente com ID {idCliente}");
             }
         }
 

@@ -63,7 +63,7 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel2.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel2.Location = new Point(34, 82);
+            guna2HtmlLabel2.Location = new Point(61, 82);
             guna2HtmlLabel2.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(41, 20);
@@ -76,25 +76,23 @@
             txtEmail.BorderRadius = 10;
             txtEmail.Cursor = Cursors.IBeam;
             txtEmail.CustomizableEdges = customizableEdges1;
-            txtEmail.DefaultText = "";
+            txtEmail.DefaultText = "ana@gmail.com";
             txtEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtEmail.Enabled = false;
             txtEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtEmail.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtEmail.ForeColor = Color.FromArgb(39, 63, 44);
             txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmail.Location = new Point(24, 104);
+            txtEmail.Location = new Point(51, 104);
             txtEmail.Margin = new Padding(5);
             txtEmail.Name = "txtEmail";
             txtEmail.PasswordChar = '\0';
             txtEmail.PlaceholderText = "";
-            txtEmail.ReadOnly = true;
             txtEmail.SelectedText = "";
             txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtEmail.Size = new Size(282, 27);
+            txtEmail.Size = new Size(243, 27);
             txtEmail.TabIndex = 45;
             // 
             // guna2HtmlLabel1
@@ -102,7 +100,7 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel1.Location = new Point(34, 157);
+            guna2HtmlLabel1.Location = new Point(61, 157);
             guna2HtmlLabel1.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(48, 20);
@@ -115,25 +113,23 @@
             txtSenha.BorderRadius = 10;
             txtSenha.Cursor = Cursors.IBeam;
             txtSenha.CustomizableEdges = customizableEdges3;
-            txtSenha.DefaultText = "";
+            txtSenha.DefaultText = "123456";
             txtSenha.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSenha.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtSenha.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtSenha.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtSenha.Enabled = false;
             txtSenha.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSenha.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtSenha.ForeColor = Color.FromArgb(39, 63, 44);
             txtSenha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSenha.Location = new Point(24, 179);
+            txtSenha.Location = new Point(51, 179);
             txtSenha.Margin = new Padding(5);
             txtSenha.Name = "txtSenha";
             txtSenha.PasswordChar = '●';
             txtSenha.PlaceholderText = "";
-            txtSenha.ReadOnly = true;
             txtSenha.SelectedText = "";
             txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtSenha.Size = new Size(282, 27);
+            txtSenha.Size = new Size(243, 27);
             txtSenha.TabIndex = 47;
             txtSenha.UseSystemPasswordChar = true;
             // 

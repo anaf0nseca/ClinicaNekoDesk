@@ -16,6 +16,7 @@ namespace ClinicaNekoLib
         public string Cpf   { get; set; }
         public DateTime? Data_Nascimento { get; set; }
         public string Email { get; set; }
+        public string? Senha { get; set; }
 
         public Cliente()
         {
@@ -30,7 +31,17 @@ namespace ClinicaNekoLib
             Email = email;
         }
 
-        public Cliente(int id, string? nome, string cpf, DateTime? data_Nascimento, string email)
+        public Cliente(string? nome, string cpf, DateTime? data_Nascimento, string email, string senha)
+        {
+            Nome = nome;
+            Cpf = cpf;
+            Data_Nascimento = data_Nascimento;
+            Email = email;
+            Senha = senha;
+        }
+
+
+        public Cliente(int id, string? nome, string cpf, DateTime? data_Nascimento, string email, string senha)
         {
             Id = id;
             Nome = nome;
@@ -39,12 +50,13 @@ namespace ClinicaNekoLib
             Email = email;
         }
 
-        public Cliente(int id, string? nome, DateTime? data_Nascimento, string email)
+        public Cliente(int id, string? nome, DateTime? data_Nascimento, string email, string senha)
         {
             Id = id;
             Nome = nome;
             Data_Nascimento = data_Nascimento;
             Email = email;
+            Senha = senha;
         }
 
         public void Inserir()
@@ -56,6 +68,8 @@ namespace ClinicaNekoLib
             cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spdata_nascimento", Data_Nascimento);
             cmd.Parameters.AddWithValue ("spemail", Email);
+            cmd.Parameters.AddWithValue("spsenha", Senha);
+
             var dr = cmd.ExecuteReader();
             while (dr.Read()) 
             {
@@ -81,7 +95,8 @@ namespace ClinicaNekoLib
                    dr.GetString(1),//nome
                    dr.GetString(2),//cpf
                    dr.GetDateTime(3),//data_Nasc
-                   dr.GetString(4)//email
+                   dr.GetString(4),//email
+                   dr.GetString(5)//senha
                    );
 
             }
@@ -112,7 +127,9 @@ namespace ClinicaNekoLib
                    dr.GetString(1),//nome
                    dr.GetString(2),//cpf
                    dr.GetDateTime(3),//data_Nasc
-                   dr.GetString(4)//email
+                   dr.GetString(4),//email
+                   dr.GetString(5)//senha
+
                     )
 
                );

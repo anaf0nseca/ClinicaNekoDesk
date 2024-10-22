@@ -72,8 +72,6 @@ namespace ClinicaNekoLib
             cmd.CommandText = "sp_pedido_insert";
             cmd.Parameters.AddWithValue("spid_usuario", Usuario.Id);
             cmd.Parameters.AddWithValue("spid_cliente", Cliente.Id);
-            //cmd.Parameters.AddWithValue("spdata", Data);
-            //cmd.Parameters.AddWithValue("spid_status", Status);
 
             Id = Convert.ToInt32(cmd.ExecuteScalar());
             cmd.Connection.Close();

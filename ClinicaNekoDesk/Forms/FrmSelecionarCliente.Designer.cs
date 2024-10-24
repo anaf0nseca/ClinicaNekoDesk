@@ -32,21 +32,21 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSelecionarCliente));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dgvListaCliente = new Guna.UI2.WinForms.Guna2DataGridView();
-            btnFechar = new Guna.UI2.WinForms.Guna2Button();
-            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtBusca = new Guna.UI2.WinForms.Guna2TextBox();
             clnId = new DataGridViewTextBoxColumn();
             clnCategoria = new DataGridViewTextBoxColumn();
             clnCpf = new DataGridViewTextBoxColumn();
             clnDataNascimento = new DataGridViewTextBoxColumn();
             clnEmail = new DataGridViewTextBoxColumn();
+            btnFechar = new Guna.UI2.WinForms.Guna2Button();
+            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBusca = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvListaCliente).BeginInit();
             SuspendLayout();
             // 
@@ -98,7 +98,7 @@
             dgvListaCliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvListaCliente.RowHeadersVisible = false;
             dgvListaCliente.ScrollBars = ScrollBars.None;
-            dgvListaCliente.Size = new Size(787, 374);
+            dgvListaCliente.Size = new Size(802, 414);
             dgvListaCliente.TabIndex = 64;
             dgvListaCliente.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(164, 196, 169);
             dgvListaCliente.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9F);
@@ -123,6 +123,43 @@
             dgvListaCliente.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvListaCliente.CellDoubleClick += dgvListaCliente_CellDoubleClick;
             // 
+            // clnId
+            // 
+            clnId.HeaderText = "ID";
+            clnId.Name = "clnId";
+            clnId.ReadOnly = true;
+            clnId.Width = 55;
+            // 
+            // clnCategoria
+            // 
+            clnCategoria.HeaderText = "Nome";
+            clnCategoria.Name = "clnCategoria";
+            clnCategoria.ReadOnly = true;
+            clnCategoria.Width = 220;
+            // 
+            // clnCpf
+            // 
+            dataGridViewCellStyle3.NullValue = null;
+            clnCpf.DefaultCellStyle = dataGridViewCellStyle3;
+            clnCpf.HeaderText = "CPF";
+            clnCpf.Name = "clnCpf";
+            clnCpf.ReadOnly = true;
+            clnCpf.Width = 180;
+            // 
+            // clnDataNascimento
+            // 
+            clnDataNascimento.HeaderText = "Data de Nascimento";
+            clnDataNascimento.Name = "clnDataNascimento";
+            clnDataNascimento.ReadOnly = true;
+            clnDataNascimento.Width = 150;
+            // 
+            // clnEmail
+            // 
+            clnEmail.HeaderText = "Email";
+            clnEmail.Name = "clnEmail";
+            clnEmail.ReadOnly = true;
+            clnEmail.Width = 200;
+            // 
             // btnFechar
             // 
             btnFechar.BackgroundImage = (Image)resources.GetObject("btnFechar.BackgroundImage");
@@ -137,7 +174,7 @@
             btnFechar.FillColor = Color.Transparent;
             btnFechar.Font = new Font("Segoe UI", 9F);
             btnFechar.ForeColor = Color.White;
-            btnFechar.Location = new Point(751, 4);
+            btnFechar.Location = new Point(761, 5);
             btnFechar.Name = "btnFechar";
             btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnFechar.Size = new Size(27, 27);
@@ -177,48 +214,11 @@
             txtBusca.TabIndex = 68;
             txtBusca.TextChanged += txtBusca_TextChanged;
             // 
-            // clnId
-            // 
-            clnId.HeaderText = "ID";
-            clnId.Name = "clnId";
-            clnId.ReadOnly = true;
-            clnId.Width = 55;
-            // 
-            // clnCategoria
-            // 
-            clnCategoria.HeaderText = "Nome";
-            clnCategoria.Name = "clnCategoria";
-            clnCategoria.ReadOnly = true;
-            clnCategoria.Width = 220;
-            // 
-            // clnCpf
-            // 
-            dataGridViewCellStyle3.NullValue = null;
-            clnCpf.DefaultCellStyle = dataGridViewCellStyle3;
-            clnCpf.HeaderText = "CPF";
-            clnCpf.Name = "clnCpf";
-            clnCpf.ReadOnly = true;
-            clnCpf.Width = 180;
-            // 
-            // clnDataNascimento
-            // 
-            clnDataNascimento.HeaderText = "Data de Nascimento";
-            clnDataNascimento.Name = "clnDataNascimento";
-            clnDataNascimento.ReadOnly = true;
-            clnDataNascimento.Width = 150;
-            // 
-            // clnEmail
-            // 
-            clnEmail.HeaderText = "Email";
-            clnEmail.Name = "clnEmail";
-            clnEmail.ReadOnly = true;
-            clnEmail.Width = 200;
-            // 
             // FrmSelecionarCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(784, 411);
+            ClientSize = new Size(800, 450);
             ControlBox = false;
             Controls.Add(txtBusca);
             Controls.Add(dgvListaCliente);

@@ -16,13 +16,13 @@ namespace ClinicaNekoLib
         public string? Nome { get; set; }
         public string? Descricao { get; set; }
         public DateTime? Data_Validade { get; set; }
-        public double? Valor { get; set; }
+        public double Valor { get; set; }
         public double? Peso { get; set; }
         public int Qtde_Estoque { get; set; }
 
         public Produto(){}
 
-        public Produto(Categoria? categoria, Marca? marca, string? nome, string? descricao, DateTime? data_Validade, double? valor, double? peso, int qtde_Estoque)
+        public Produto(Categoria? categoria, Marca? marca, string? nome, string? descricao, DateTime? data_Validade, double valor, double? peso, int qtde_Estoque)
         {
             Categoria = categoria;
             Marca = marca;
@@ -34,7 +34,7 @@ namespace ClinicaNekoLib
             Qtde_Estoque = qtde_Estoque;
         }
 
-        public Produto(int id, Categoria? categoria, Marca? marca, string? nome, string? descricao, DateTime? data_Validade, double? valor, double? peso, int qtde_Estoque)
+        public Produto(int id, Categoria? categoria, Marca? marca, string? nome, string? descricao, DateTime? data_Validade, double valor, double? peso, int qtde_Estoque)
             {
                 Id = id;
                 Categoria = categoria;

@@ -108,10 +108,6 @@ namespace ClinicaNeko.Forms
                     frmNovoEndereco.Show();
 
                 }
-
-
-
-
             }
             else
             {

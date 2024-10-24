@@ -87,8 +87,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelFormularios = new Panel();
             splitter1 = new Splitter();
             panelCabecalho = new Panel();
@@ -114,7 +112,7 @@
             btnAgendados = new Guna.UI2.WinForms.Guna2Button();
             btnVeterinario = new Guna.UI2.WinForms.Guna2Button();
             panelProdutos = new Panel();
-            btnFornecedor = new Guna.UI2.WinForms.Guna2Button();
+            btnEstoque = new Guna.UI2.WinForms.Guna2Button();
             btnListaProdutos = new Guna.UI2.WinForms.Guna2Button();
             btnNovoProduto = new Guna.UI2.WinForms.Guna2Button();
             btnProdutos = new Guna.UI2.WinForms.Guna2Button();
@@ -129,7 +127,6 @@
             btnNovoAgend = new Guna.UI2.WinForms.Guna2Button();
             btnAgend = new Guna.UI2.WinForms.Guna2Button();
             panelPedidos = new Panel();
-            btnFornecedores = new Guna.UI2.WinForms.Guna2Button();
             btnListaPedidos = new Guna.UI2.WinForms.Guna2Button();
             btnNovoPedido = new Guna.UI2.WinForms.Guna2Button();
             btnPedidos = new Guna.UI2.WinForms.Guna2Button();
@@ -178,6 +175,7 @@
             panelCabecalho.Name = "panelCabecalho";
             panelCabecalho.Size = new Size(1314, 83);
             panelCabecalho.TabIndex = 2;
+            panelCabecalho.Paint += panelCabecalho_Paint;
             // 
             // pictureBox2
             // 
@@ -600,7 +598,7 @@
             // panelProdutos
             // 
             panelProdutos.BackColor = Color.FromArgb(136, 170, 140);
-            panelProdutos.Controls.Add(btnFornecedor);
+            panelProdutos.Controls.Add(btnEstoque);
             panelProdutos.Controls.Add(btnListaProdutos);
             panelProdutos.Controls.Add(btnNovoProduto);
             panelProdutos.Dock = DockStyle.Top;
@@ -610,27 +608,27 @@
             panelProdutos.Size = new Size(198, 10);
             panelProdutos.TabIndex = 28;
             // 
-            // btnFornecedor
+            // btnEstoque
             // 
-            btnFornecedor.BorderColor = Color.Transparent;
-            btnFornecedor.BorderRadius = 15;
-            btnFornecedor.CustomizableEdges = customizableEdges29;
-            btnFornecedor.DisabledState.BorderColor = Color.DarkGray;
-            btnFornecedor.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnFornecedor.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnFornecedor.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnFornecedor.Dock = DockStyle.Top;
-            btnFornecedor.FillColor = Color.FromArgb(164, 196, 169);
-            btnFornecedor.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
-            btnFornecedor.ForeColor = Color.Black;
-            btnFornecedor.Location = new Point(0, 60);
-            btnFornecedor.Margin = new Padding(4, 3, 4, 3);
-            btnFornecedor.Name = "btnFornecedor";
-            btnFornecedor.PressedColor = Color.FromArgb(83, 133, 91);
-            btnFornecedor.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            btnFornecedor.Size = new Size(198, 30);
-            btnFornecedor.TabIndex = 7;
-            btnFornecedor.Text = "Fornecedores";
+            btnEstoque.BorderColor = Color.Transparent;
+            btnEstoque.BorderRadius = 15;
+            btnEstoque.CustomizableEdges = customizableEdges29;
+            btnEstoque.DisabledState.BorderColor = Color.DarkGray;
+            btnEstoque.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEstoque.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEstoque.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEstoque.Dock = DockStyle.Top;
+            btnEstoque.FillColor = Color.FromArgb(164, 196, 169);
+            btnEstoque.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
+            btnEstoque.ForeColor = Color.Black;
+            btnEstoque.Location = new Point(0, 60);
+            btnEstoque.Margin = new Padding(4, 3, 4, 3);
+            btnEstoque.Name = "btnEstoque";
+            btnEstoque.PressedColor = Color.FromArgb(83, 133, 91);
+            btnEstoque.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btnEstoque.Size = new Size(198, 30);
+            btnEstoque.TabIndex = 7;
+            btnEstoque.Text = "Estoque";
             // 
             // btnListaProdutos
             // 
@@ -784,6 +782,7 @@
             btnNovoCliente.Size = new Size(198, 30);
             btnNovoCliente.TabIndex = 5;
             btnNovoCliente.Text = "Novo";
+            btnNovoCliente.Click += btnNovoCliente_Click;
             // 
             // btnClientes
             // 
@@ -916,7 +915,6 @@
             // panelPedidos
             // 
             panelPedidos.BackColor = Color.FromArgb(136, 170, 140);
-            panelPedidos.Controls.Add(btnFornecedores);
             panelPedidos.Controls.Add(btnListaPedidos);
             panelPedidos.Controls.Add(btnNovoPedido);
             panelPedidos.Dock = DockStyle.Top;
@@ -926,33 +924,11 @@
             panelPedidos.Size = new Size(198, 10);
             panelPedidos.TabIndex = 17;
             // 
-            // btnFornecedores
-            // 
-            btnFornecedores.BorderColor = Color.Transparent;
-            btnFornecedores.BorderRadius = 15;
-            btnFornecedores.CustomizableEdges = customizableEdges53;
-            btnFornecedores.DisabledState.BorderColor = Color.DarkGray;
-            btnFornecedores.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnFornecedores.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnFornecedores.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnFornecedores.Dock = DockStyle.Top;
-            btnFornecedores.FillColor = Color.FromArgb(164, 196, 169);
-            btnFornecedores.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
-            btnFornecedores.ForeColor = Color.Black;
-            btnFornecedores.Location = new Point(0, 60);
-            btnFornecedores.Margin = new Padding(4, 3, 4, 3);
-            btnFornecedores.Name = "btnFornecedores";
-            btnFornecedores.PressedColor = Color.FromArgb(83, 133, 91);
-            btnFornecedores.ShadowDecoration.CustomizableEdges = customizableEdges54;
-            btnFornecedores.Size = new Size(198, 30);
-            btnFornecedores.TabIndex = 7;
-            btnFornecedores.Text = "Fornecedores";
-            // 
             // btnListaPedidos
             // 
             btnListaPedidos.BorderColor = Color.Transparent;
             btnListaPedidos.BorderRadius = 15;
-            btnListaPedidos.CustomizableEdges = customizableEdges55;
+            btnListaPedidos.CustomizableEdges = customizableEdges53;
             btnListaPedidos.DisabledState.BorderColor = Color.DarkGray;
             btnListaPedidos.DisabledState.CustomBorderColor = Color.DarkGray;
             btnListaPedidos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -966,16 +942,17 @@
             btnListaPedidos.Margin = new Padding(4, 3, 4, 3);
             btnListaPedidos.Name = "btnListaPedidos";
             btnListaPedidos.PressedColor = Color.FromArgb(83, 133, 91);
-            btnListaPedidos.ShadowDecoration.CustomizableEdges = customizableEdges56;
+            btnListaPedidos.ShadowDecoration.CustomizableEdges = customizableEdges54;
             btnListaPedidos.Size = new Size(198, 30);
             btnListaPedidos.TabIndex = 6;
             btnListaPedidos.Text = "Lista de Pedidos";
+            btnListaPedidos.Click += btnListaPedidos_Click;
             // 
             // btnNovoPedido
             // 
             btnNovoPedido.BorderColor = Color.Transparent;
             btnNovoPedido.BorderRadius = 15;
-            btnNovoPedido.CustomizableEdges = customizableEdges57;
+            btnNovoPedido.CustomizableEdges = customizableEdges55;
             btnNovoPedido.DisabledState.BorderColor = Color.DarkGray;
             btnNovoPedido.DisabledState.CustomBorderColor = Color.DarkGray;
             btnNovoPedido.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -989,7 +966,7 @@
             btnNovoPedido.Margin = new Padding(4, 3, 4, 3);
             btnNovoPedido.Name = "btnNovoPedido";
             btnNovoPedido.PressedColor = Color.FromArgb(83, 133, 91);
-            btnNovoPedido.ShadowDecoration.CustomizableEdges = customizableEdges58;
+            btnNovoPedido.ShadowDecoration.CustomizableEdges = customizableEdges56;
             btnNovoPedido.Size = new Size(198, 30);
             btnNovoPedido.TabIndex = 5;
             btnNovoPedido.Text = "Novo";
@@ -999,7 +976,7 @@
             // 
             btnPedidos.BorderColor = Color.Transparent;
             btnPedidos.BorderRadius = 15;
-            btnPedidos.CustomizableEdges = customizableEdges59;
+            btnPedidos.CustomizableEdges = customizableEdges57;
             btnPedidos.DisabledState.BorderColor = Color.DarkGray;
             btnPedidos.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPedidos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1013,7 +990,7 @@
             btnPedidos.Margin = new Padding(4, 3, 4, 3);
             btnPedidos.Name = "btnPedidos";
             btnPedidos.PressedColor = Color.FromArgb(83, 133, 91);
-            btnPedidos.ShadowDecoration.CustomizableEdges = customizableEdges60;
+            btnPedidos.ShadowDecoration.CustomizableEdges = customizableEdges58;
             btnPedidos.Size = new Size(198, 50);
             btnPedidos.TabIndex = 22;
             btnPedidos.Text = "Pedidos";
@@ -1072,7 +1049,7 @@
         private System.Windows.Forms.Panel panelMenuLateral;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Panel panelProdutos;
-        private Guna.UI2.WinForms.Guna2Button btnFornecedor;
+        private Guna.UI2.WinForms.Guna2Button btnEstoque;
         private Guna.UI2.WinForms.Guna2Button btnListaProdutos;
         private Guna.UI2.WinForms.Guna2Button btnNovoProduto;
         private Guna.UI2.WinForms.Guna2Button btnProdutos;
@@ -1087,7 +1064,6 @@
         private Guna.UI2.WinForms.Guna2Button btnNovoAgend;
         private Guna.UI2.WinForms.Guna2Button btnAgend;
         private Panel panelPedidos;
-        private Guna.UI2.WinForms.Guna2Button btnFornecedores;
         private Guna.UI2.WinForms.Guna2Button btnListaPedidos;
         private Guna.UI2.WinForms.Guna2Button btnNovoPedido;
         private Guna.UI2.WinForms.Guna2Button btnPedidos;

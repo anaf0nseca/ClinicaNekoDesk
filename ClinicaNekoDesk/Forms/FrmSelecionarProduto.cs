@@ -13,10 +13,10 @@ namespace ClinicaNekoDesk.Forms
 {
     public partial class FrmSelecionarProduto : Form
     {
-    public int ProdutoId { get; set; }
-    public string? ProdutoNome {  get; set; }
-    public string? ProdutoDescricao {  get; set; }
-    public double? ProdutoValor {  get; set; }
+        public int ProdutoId { get; set; }
+        public string? ProdutoNome { get; set; }
+        public string? ProdutoDescricao { get; set; }
+        public double? ProdutoValor { get; set; }
 
 
 
@@ -71,6 +71,11 @@ namespace ClinicaNekoDesk.Forms
             ProdutoDescricao = produto.Descricao;
             ProdutoValor = produto.Valor;
 
+            Close();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
             Close();
         }
     }

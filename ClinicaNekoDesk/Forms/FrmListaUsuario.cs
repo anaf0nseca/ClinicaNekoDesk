@@ -82,15 +82,7 @@ namespace ClinicaNekoDesk.Forms
 
         private void txtBusca_TextChanged(object sender, EventArgs e)
         {
-            if (txtBusca.Text.Length > 0)
-            {
-                CarregaGridUsuarios(txtBusca.Text);
-
-            }
-            else
-            {
-                CarregaGridUsuarios();
-            }
+           
         }
 
         private void tpListarUsuarios_Click(object sender, EventArgs e)
@@ -178,6 +170,19 @@ namespace ClinicaNekoDesk.Forms
         private void dgvListaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtBusca_TextChanged_1(object sender, EventArgs e)
+        {
+            if (txtBusca.Text.Length > 0)
+            {
+                CarregaGridUsuarios(txtBusca.Text);
+
+            }
+            else
+            {
+                CarregaGridUsuarios();
+            }
         }
     }
 }

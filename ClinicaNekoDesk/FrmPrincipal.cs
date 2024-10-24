@@ -185,7 +185,7 @@ namespace ClinicaNeko
                     MessageBoxIcon.Exclamation, //Ícone exibido
                     MessageBoxDefaultButton.Button1); //Botão padrão
 
-            if (msg == DialogResult.Yes) this.Close();
+            if (msg == DialogResult.Yes) Application.Exit();
         }
 
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
@@ -351,6 +351,31 @@ namespace ClinicaNeko
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(frmNovoPedido);
             frmNovoPedido.Show();
+        }
+
+        private void btnListaPedidos_Click(object sender, EventArgs e)
+        {
+            FrmListaPedido frmListaPedido = new FrmListaPedido();
+            frmListaPedido.Dock = DockStyle.Fill;
+            frmListaPedido.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmListaPedido);
+            frmListaPedido.Show();
+        }
+
+        private void panelCabecalho_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnNovoCliente_Click(object sender, EventArgs e)
+        {
+            FrmNovoCliente frmCliente = new FrmNovoCliente();
+            frmCliente.Dock = DockStyle.Fill;
+            frmCliente.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmCliente);
+            frmCliente.Show();
         }
     }
 }

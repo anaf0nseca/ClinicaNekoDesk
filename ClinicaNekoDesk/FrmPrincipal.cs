@@ -61,7 +61,7 @@ namespace ClinicaNeko
             //Exibe painel de pedidos
             if (showPanelPedidos)
             {
-                panelPedidos.Height = 90;
+                panelPedidos.Height = 60;
             }
             else
             {
@@ -376,6 +376,16 @@ namespace ClinicaNeko
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(frmCliente);
             frmCliente.Show();
+        }
+
+        private void btnNovoAgend_Click(object sender, EventArgs e)
+        {
+            FrmNovoAgendamento frmAgendamento = new FrmNovoAgendamento();
+            frmAgendamento.Dock = DockStyle.Fill;
+            frmAgendamento.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmAgendamento);
+            frmAgendamento.Show();
         }
     }
 }

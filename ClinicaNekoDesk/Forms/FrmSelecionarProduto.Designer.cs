@@ -226,6 +226,7 @@
             cmbBuscaCat.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cmbBuscaCat.Size = new Size(340, 26);
             cmbBuscaCat.TabIndex = 62;
+            cmbBuscaCat.SelectedIndexChanged += cmbBuscaCat_SelectedIndexChanged;
             // 
             // btnFechar
             // 

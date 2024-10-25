@@ -51,7 +51,7 @@ namespace ClinicaNeko.Forms
                 dgvItensPedido.Rows[cont].Cells[1].Value = item.Produto.Nome;
                 dgvItensPedido.Rows[cont].Cells[2].Value = item.Produto.Descricao;
                 dgvItensPedido.Rows[cont].Cells[3].Value = item.Valor.ToString("#0.00");
-                dgvItensPedido.Rows[cont].Cells[4].Value = item.Quantidade.ToString("#0.000");
+                dgvItensPedido.Rows[cont].Cells[4].Value = item.Quantidade.ToString("#00");
                 dgvItensPedido.Rows[cont].Cells[5].Value = item.Desconto.ToString("#0.00");
 
                 //Soma +1 ao contador de cliente
@@ -64,6 +64,38 @@ namespace ClinicaNeko.Forms
                 desconto += item.Desconto;
 
             }
+
+            txtSubtotalPedido.Text = (total + desconto).ToString("#0.00");
+            txtDescontoItens.Text = desconto.ToString("#0.00");
+
+            if (cmbDescPedido.SelectedItem != null)
+            {
+                if (cmbDescPedido.Text == "5%")
+                {
+                    txtTotalPedido.Text = (total - ((5 * total) / 100)).ToString("#0.00");
+                }
+                else if (cmbDescPedido.Text == "10%")
+                {
+                    txtTotalPedido.Text = (total - ((10 * total) / 100)).ToString("#0.00");
+                }
+                else if (cmbDescPedido.Text == "15%")
+                {
+                    txtTotalPedido.Text = (total - ((15 * total) / 100)).ToString("#0.00");
+                }
+                else if (cmbDescPedido.Text == "20%")
+                {
+                    txtTotalPedido.Text = (total - ((20 * total) / 100)).ToString("#0.00");
+                }
+                else if (cmbDescPedido.Text == "50%")
+                {
+                    txtTotalPedido.Text = (total - ((50 * total) / 100)).ToString("#0.00");
+                }
+                else
+                {
+                    txtTotalPedido.Text = total.ToString("#0.00");
+                }
+            }
+
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -81,7 +113,8 @@ namespace ClinicaNeko.Forms
             string produtoDescricao = frmSelecionarProduto.ProdutoDescricao;
             double? produtoValor = frmSelecionarProduto.ProdutoValor;
 
-            txtDescricao.Text = produtoDescricao;
+            txtDescricao.Text = produtoNome;
+            txtQuantidade.Text = 1.ToString();
             txtValor.Text = produtoValor.ToString();
         }
 
@@ -94,6 +127,9 @@ namespace ClinicaNeko.Forms
             pedido.Inserir();
 
             txtNPedido.Text = pedido.Id.ToString();
+            txtIdCliente.Enabled = false;
+            txtCliente.Enabled = false;
+            btnSelecionarCliente.Enabled = false;
             grbItens.Enabled = true;
             grbFinalizacao.Enabled = true;
             txtDescricao.Focus();
@@ -130,6 +166,11 @@ namespace ClinicaNeko.Forms
                 item.Inserir();
                 PreencheGridItens();
             }
+
+            txtDescricao.Clear();
+            txtDesconto.Clear();
+            txtQuantidade.Clear();
+            txtValor.Clear();
         }
 
         private void btnSelecionarCliente_Click(object sender, EventArgs e)

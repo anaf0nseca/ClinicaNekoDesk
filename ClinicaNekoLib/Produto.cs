@@ -147,6 +147,32 @@ namespace ClinicaNekoLib
             return produtos;
         }
 
+        public static List<Produto> ObterListaPorCategoria(int categoriaId)
+        {
+            List<Produto> produtos = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select * from produto where id_categoria = {categoriaId}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                produtos.Add(new(
+                dr.GetInt32(0),
+                Categoria.ObterPorId(dr.GetInt32(1)),
+                Marca.ObterPorId(dr.GetInt32(2)),
+                dr.GetString(3),
+                dr.GetString(4),
+                dr.GetDateTime(5),
+                dr.GetDouble(6),
+                dr.GetDouble(7),
+                dr.GetInt32(8)
+
+                ));
+            }
+
+            cmd.Connection.Close();
+            return produtos;
+        }
 
 
 

@@ -14,6 +14,8 @@ namespace ClinicaNekoDesk.Forms
     public partial class FrmSelecionarProduto : Form
     {
         public int ProdutoId { get; set; }
+        public Categoria ProdutoCategoria { get; set; }
+
         public string? ProdutoNome { get; set; }
         public string? ProdutoDescricao { get; set; }
         public double? ProdutoValor { get; set; }
@@ -28,6 +30,15 @@ namespace ClinicaNekoDesk.Forms
 
         private void FrmSelecionarProduto_Load(object sender, EventArgs e)
         {
+            //Carrega a lista de categorias
+            var categorias = Categoria.ObterLista();
+            //Associa as listas ao combobox
+            cmbBuscaCat.DataSource = categorias;
+            //Exibe o nome para o usuario
+            cmbBuscaCat.DisplayMember = "Nome";
+            //Retorna para o banco o valor contido na coluna ID
+            cmbBuscaCat.ValueMember = "Id";
+
             CarregaGridProduto();
         }
 
@@ -67,6 +78,7 @@ namespace ClinicaNekoDesk.Forms
             Produto produto = Produto.ObterPorId(id);
 
             ProdutoId = produto.Id;
+            ProdutoCategoria = produto.Categoria;
             ProdutoNome = produto.Nome;
             ProdutoDescricao = produto.Descricao;
             ProdutoValor = produto.Valor;
@@ -77,6 +89,31 @@ namespace ClinicaNekoDesk.Forms
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cmbBuscaCat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbBuscaCat.SelectedItem != null)
+            {
+                //var produtos = Produto.ObterListaPorCategoria(ProdutoCategoria.Id);
+
+                //cmbBuscaCat.DataSource = produtos;
+
+                cmbBuscaCat.DisplayMember = "Nome";
+                //Retorna para o banco o valor contido na coluna ID
+                cmbBuscaCat.ValueMember = "Id";
+
+            }
+            else
+            {
+                var categorias = Categoria.ObterLista();
+                //Associa as listas ao combobox
+                cmbBuscaCat.DataSource = categorias;
+                //Exibe o nome para o usuario
+                cmbBuscaCat.DisplayMember = "Nome";
+                //Retorna para o banco o valor contido na coluna ID
+                cmbBuscaCat.ValueMember = "Id";
+            }
         }
     }
 }

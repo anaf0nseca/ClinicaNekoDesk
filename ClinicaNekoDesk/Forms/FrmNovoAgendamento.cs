@@ -16,5 +16,11 @@ namespace ClinicaNekoDesk.Forms
         {
             InitializeComponent();
         }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            string dia = monthCalendar1.SelectionRange.Start.ToString();
+            MessageBox.Show($"Data selecionada: {dia}");
+        }
     }
 }

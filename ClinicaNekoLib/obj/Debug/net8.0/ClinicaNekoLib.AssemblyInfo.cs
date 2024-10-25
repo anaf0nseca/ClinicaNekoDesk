@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClinicaNekoLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01b9b331cd3b8fdca56705f18d344c612521d395")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f91c7042859654d78229de9213d2314c0068a0d7")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClinicaNekoLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClinicaNekoLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -195,6 +195,7 @@
             // 
             // FrmLogin
             // 
+            AcceptButton = btnLogin;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(159, 187, 164);

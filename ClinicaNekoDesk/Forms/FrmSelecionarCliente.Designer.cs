@@ -32,21 +32,21 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSelecionarCliente));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dgvListaCliente = new Guna.UI2.WinForms.Guna2DataGridView();
+            btnFechar = new Guna.UI2.WinForms.Guna2Button();
+            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtBusca = new Guna.UI2.WinForms.Guna2TextBox();
             clnId = new DataGridViewTextBoxColumn();
             clnCategoria = new DataGridViewTextBoxColumn();
             clnCpf = new DataGridViewTextBoxColumn();
             clnDataNascimento = new DataGridViewTextBoxColumn();
             clnEmail = new DataGridViewTextBoxColumn();
-            btnFechar = new Guna.UI2.WinForms.Guna2Button();
-            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtBusca = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvListaCliente).BeginInit();
             SuspendLayout();
             // 
@@ -64,11 +64,12 @@
             dgvListaCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvListaCliente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             dgvListaCliente.BackgroundColor = Color.FromArgb(200, 219, 203);
+            dgvListaCliente.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(34, 85, 96);
             dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(34, 85, 96);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvListaCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -123,43 +124,6 @@
             dgvListaCliente.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvListaCliente.CellDoubleClick += dgvListaCliente_CellDoubleClick;
             // 
-            // clnId
-            // 
-            clnId.HeaderText = "ID";
-            clnId.Name = "clnId";
-            clnId.ReadOnly = true;
-            clnId.Width = 55;
-            // 
-            // clnCategoria
-            // 
-            clnCategoria.HeaderText = "Nome";
-            clnCategoria.Name = "clnCategoria";
-            clnCategoria.ReadOnly = true;
-            clnCategoria.Width = 220;
-            // 
-            // clnCpf
-            // 
-            dataGridViewCellStyle3.NullValue = null;
-            clnCpf.DefaultCellStyle = dataGridViewCellStyle3;
-            clnCpf.HeaderText = "CPF";
-            clnCpf.Name = "clnCpf";
-            clnCpf.ReadOnly = true;
-            clnCpf.Width = 180;
-            // 
-            // clnDataNascimento
-            // 
-            clnDataNascimento.HeaderText = "Data de Nascimento";
-            clnDataNascimento.Name = "clnDataNascimento";
-            clnDataNascimento.ReadOnly = true;
-            clnDataNascimento.Width = 150;
-            // 
-            // clnEmail
-            // 
-            clnEmail.HeaderText = "Email";
-            clnEmail.Name = "clnEmail";
-            clnEmail.ReadOnly = true;
-            clnEmail.Width = 200;
-            // 
             // btnFechar
             // 
             btnFechar.BackgroundImage = (Image)resources.GetObject("btnFechar.BackgroundImage");
@@ -213,6 +177,43 @@
             txtBusca.Size = new Size(498, 26);
             txtBusca.TabIndex = 68;
             txtBusca.TextChanged += txtBusca_TextChanged;
+            // 
+            // clnId
+            // 
+            clnId.HeaderText = "ID";
+            clnId.Name = "clnId";
+            clnId.ReadOnly = true;
+            clnId.Width = 55;
+            // 
+            // clnCategoria
+            // 
+            clnCategoria.HeaderText = "Nome";
+            clnCategoria.Name = "clnCategoria";
+            clnCategoria.ReadOnly = true;
+            clnCategoria.Width = 220;
+            // 
+            // clnCpf
+            // 
+            dataGridViewCellStyle3.NullValue = null;
+            clnCpf.DefaultCellStyle = dataGridViewCellStyle3;
+            clnCpf.HeaderText = "CPF";
+            clnCpf.Name = "clnCpf";
+            clnCpf.ReadOnly = true;
+            clnCpf.Width = 180;
+            // 
+            // clnDataNascimento
+            // 
+            clnDataNascimento.HeaderText = "Data de Nascimento";
+            clnDataNascimento.Name = "clnDataNascimento";
+            clnDataNascimento.ReadOnly = true;
+            clnDataNascimento.Width = 150;
+            // 
+            // clnEmail
+            // 
+            clnEmail.HeaderText = "Email";
+            clnEmail.Name = "clnEmail";
+            clnEmail.ReadOnly = true;
+            clnEmail.Width = 200;
             // 
             // FrmSelecionarCliente
             // 

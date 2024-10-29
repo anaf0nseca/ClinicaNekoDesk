@@ -361,7 +361,7 @@
             btnCadProduto.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCadProduto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnCadProduto.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCadProduto.FillColor = Color.FromArgb(83, 133, 91);
+            btnCadProduto.FillColor = Color.FromArgb(34, 85, 96);
             btnCadProduto.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnCadProduto.ForeColor = Color.White;
             btnCadProduto.ImageAlign = HorizontalAlignment.Right;

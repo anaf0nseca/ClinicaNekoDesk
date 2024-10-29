@@ -34,7 +34,6 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -71,19 +70,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             tabConsultaUsuario = new Guna.UI2.WinForms.Guna2TabControl();
             tpListarUsuarios = new TabPage();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtBusca = new Guna.UI2.WinForms.Guna2TextBox();
             dgvListaUsuarios = new Guna.UI2.WinForms.Guna2DataGridView();
-            clnId = new DataGridViewTextBoxColumn();
-            clnNome = new DataGridViewTextBoxColumn();
-            clnCpf = new DataGridViewTextBoxColumn();
-            clnDataNascimento = new DataGridViewTextBoxColumn();
-            clnSetor = new DataGridViewTextBoxColumn();
-            clnCargo = new DataGridViewTextBoxColumn();
-            clnEmail = new DataGridViewTextBoxColumn();
-            clnAtivo = new DataGridViewCheckBoxColumn();
             tpEditarUsuarios = new TabPage();
             btnEnd = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -119,6 +111,14 @@
             cmbCargo = new Guna.UI2.WinForms.Guna2ComboBox();
             cmbSetor = new Guna.UI2.WinForms.Guna2ComboBox();
             dtpNascimento = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            clnId = new DataGridViewTextBoxColumn();
+            clnNome = new DataGridViewTextBoxColumn();
+            clnCpf = new DataGridViewTextBoxColumn();
+            clnDataNascimento = new DataGridViewTextBoxColumn();
+            clnSetor = new DataGridViewTextBoxColumn();
+            clnCargo = new DataGridViewTextBoxColumn();
+            clnEmail = new DataGridViewTextBoxColumn();
+            clnAtivo = new DataGridViewCheckBoxColumn();
             tabConsultaUsuario.SuspendLayout();
             tpListarUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaUsuarios).BeginInit();
@@ -217,11 +217,12 @@
             dgvListaUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvListaUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             dgvListaUsuarios.BackgroundColor = Color.FromArgb(200, 219, 203);
+            dgvListaUsuarios.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(34, 85, 96);
             dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(34, 85, 96);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvListaUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -276,65 +277,6 @@
             dgvListaUsuarios.CellContentClick += dgvListaUsuarios_CellContentClick;
             dgvListaUsuarios.CellDoubleClick += dgvListaUsuarios_CellDoubleClick_1;
             // 
-            // clnId
-            // 
-            clnId.HeaderText = "ID";
-            clnId.Name = "clnId";
-            clnId.ReadOnly = true;
-            clnId.Width = 50;
-            // 
-            // clnNome
-            // 
-            clnNome.HeaderText = "Nome Completo";
-            clnNome.Name = "clnNome";
-            clnNome.ReadOnly = true;
-            clnNome.Width = 205;
-            // 
-            // clnCpf
-            // 
-            clnCpf.HeaderText = "CPF";
-            clnCpf.Name = "clnCpf";
-            clnCpf.ReadOnly = true;
-            clnCpf.Width = 150;
-            // 
-            // clnDataNascimento
-            // 
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            clnDataNascimento.DefaultCellStyle = dataGridViewCellStyle3;
-            clnDataNascimento.HeaderText = "Data de Nascimento";
-            clnDataNascimento.Name = "clnDataNascimento";
-            clnDataNascimento.ReadOnly = true;
-            clnDataNascimento.Width = 135;
-            // 
-            // clnSetor
-            // 
-            clnSetor.HeaderText = "Setor";
-            clnSetor.Name = "clnSetor";
-            clnSetor.ReadOnly = true;
-            clnSetor.Width = 128;
-            // 
-            // clnCargo
-            // 
-            clnCargo.HeaderText = "Cargo";
-            clnCargo.Name = "clnCargo";
-            clnCargo.ReadOnly = true;
-            clnCargo.Width = 129;
-            // 
-            // clnEmail
-            // 
-            clnEmail.HeaderText = "Email";
-            clnEmail.Name = "clnEmail";
-            clnEmail.ReadOnly = true;
-            clnEmail.Width = 180;
-            // 
-            // clnAtivo
-            // 
-            clnAtivo.HeaderText = "Ativo";
-            clnAtivo.Name = "clnAtivo";
-            clnAtivo.ReadOnly = true;
-            clnAtivo.Width = 50;
-            // 
             // tpEditarUsuarios
             // 
             tpEditarUsuarios.BackColor = Color.FromArgb(159, 187, 164);
@@ -358,7 +300,7 @@
             tpEditarUsuarios.Location = new Point(4, 44);
             tpEditarUsuarios.Name = "tpEditarUsuarios";
             tpEditarUsuarios.Padding = new Padding(3);
-            tpEditarUsuarios.Size = new Size(1052, 578);
+            tpEditarUsuarios.Size = new Size(1050, 576);
             tpEditarUsuarios.TabIndex = 2;
             tpEditarUsuarios.Text = "Editar Usuário";
             tpEditarUsuarios.Click += tpEditarUsuarios_Click;
@@ -373,7 +315,7 @@
             btnEnd.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEnd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnEnd.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnEnd.FillColor = Color.FromArgb(83, 133, 91);
+            btnEnd.FillColor = Color.FromArgb(34, 85, 96);
             btnEnd.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnEnd.ForeColor = Color.White;
             btnEnd.ImageAlign = HorizontalAlignment.Right;
@@ -463,7 +405,7 @@
             btnAddEndereco.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddEndereco.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAddEndereco.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAddEndereco.FillColor = Color.FromArgb(83, 133, 91);
+            btnAddEndereco.FillColor = Color.FromArgb(34, 85, 96);
             btnAddEndereco.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnAddEndereco.ForeColor = Color.White;
             btnAddEndereco.ImageAlign = HorizontalAlignment.Right;
@@ -844,7 +786,7 @@
             btnSalvarUsuario.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSalvarUsuario.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSalvarUsuario.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSalvarUsuario.FillColor = Color.FromArgb(83, 133, 91);
+            btnSalvarUsuario.FillColor = Color.FromArgb(34, 85, 96);
             btnSalvarUsuario.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnSalvarUsuario.ForeColor = Color.White;
             btnSalvarUsuario.ImageAlign = HorizontalAlignment.Right;
@@ -986,6 +928,65 @@
             dtpNascimento.TabIndex = 29;
             dtpNascimento.Value = new DateTime(2024, 9, 18, 17, 42, 24, 924);
             // 
+            // clnId
+            // 
+            clnId.HeaderText = "ID";
+            clnId.Name = "clnId";
+            clnId.ReadOnly = true;
+            clnId.Width = 50;
+            // 
+            // clnNome
+            // 
+            clnNome.HeaderText = "Nome Completo";
+            clnNome.Name = "clnNome";
+            clnNome.ReadOnly = true;
+            clnNome.Width = 205;
+            // 
+            // clnCpf
+            // 
+            clnCpf.HeaderText = "CPF";
+            clnCpf.Name = "clnCpf";
+            clnCpf.ReadOnly = true;
+            clnCpf.Width = 150;
+            // 
+            // clnDataNascimento
+            // 
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            clnDataNascimento.DefaultCellStyle = dataGridViewCellStyle3;
+            clnDataNascimento.HeaderText = "Data de Nascimento";
+            clnDataNascimento.Name = "clnDataNascimento";
+            clnDataNascimento.ReadOnly = true;
+            clnDataNascimento.Width = 135;
+            // 
+            // clnSetor
+            // 
+            clnSetor.HeaderText = "Setor";
+            clnSetor.Name = "clnSetor";
+            clnSetor.ReadOnly = true;
+            clnSetor.Width = 128;
+            // 
+            // clnCargo
+            // 
+            clnCargo.HeaderText = "Cargo";
+            clnCargo.Name = "clnCargo";
+            clnCargo.ReadOnly = true;
+            clnCargo.Width = 129;
+            // 
+            // clnEmail
+            // 
+            clnEmail.HeaderText = "Email";
+            clnEmail.Name = "clnEmail";
+            clnEmail.ReadOnly = true;
+            clnEmail.Width = 180;
+            // 
+            // clnAtivo
+            // 
+            clnAtivo.HeaderText = "Ativo";
+            clnAtivo.Name = "clnAtivo";
+            clnAtivo.ReadOnly = true;
+            clnAtivo.Width = 50;
+            // 
             // FrmListaUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1048,6 +1049,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtBairro;
         private Guna.UI2.WinForms.Guna2Button btnAddEndereco;
         private Guna.UI2.WinForms.Guna2Button btnEnd;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private DataGridViewTextBoxColumn clnId;
         private DataGridViewTextBoxColumn clnNome;
         private DataGridViewTextBoxColumn clnCpf;
@@ -1056,6 +1058,5 @@
         private DataGridViewTextBoxColumn clnCargo;
         private DataGridViewTextBoxColumn clnEmail;
         private DataGridViewCheckBoxColumn clnAtivo;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

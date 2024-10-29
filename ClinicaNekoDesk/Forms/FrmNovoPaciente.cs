@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicaNekoLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,16 @@ using System.Windows.Forms;
 
 namespace ClinicaNekoDesk.Forms
 {
-    public partial class FrmNovoPaciente: Form
+    public partial class FrmNovoPaciente : Form
     {
         public FrmNovoPaciente()
         {
             InitializeComponent();
+        }
+
+        private void FrmNovoPaciente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

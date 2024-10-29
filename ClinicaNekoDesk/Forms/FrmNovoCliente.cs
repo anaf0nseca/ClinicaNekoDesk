@@ -57,8 +57,8 @@ namespace ClinicaNeko.Forms
 
                 cliente.Inserir();
 
-                FrmNovoEndereco frmNovoEndereco = new FrmNovoEndereco();
-                frmNovoEndereco.idCliente = cliente.Id;
+                FrmNovoPaciente frmNovoPaciente = new FrmNovoPaciente();
+                frmNovoPaciente.idCliente = cliente.Id;
                 ClienteId = cliente.Id;
 
                 if (cliente.Id > 0)
@@ -81,11 +81,11 @@ namespace ClinicaNeko.Forms
                         telefoneCliente.Inserir();
                     }
 
-                    frmNovoEndereco.Dock = DockStyle.Fill;
-                    frmNovoEndereco.TopLevel = false;
+                    frmNovoPaciente.Dock = DockStyle.Fill;
+                    frmNovoPaciente.TopLevel = false;
                     MainPanel.Controls.Clear();
-                    MainPanel.Controls.Add(frmNovoEndereco);
-                    frmNovoEndereco.Show();
+                    MainPanel.Controls.Add(frmNovoPaciente);
+                    frmNovoPaciente.Show();
 
                 }
             }

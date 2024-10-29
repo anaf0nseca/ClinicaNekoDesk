@@ -32,9 +32,6 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -55,18 +52,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             tabConsultaProduto = new Guna.UI2.WinForms.Guna2TabControl();
             tpListarProdutos = new TabPage();
             dgvListaProduto = new Guna.UI2.WinForms.Guna2DataGridView();
-            clnId = new DataGridViewTextBoxColumn();
-            clnCategoria = new DataGridViewTextBoxColumn();
-            clnMarca = new DataGridViewTextBoxColumn();
-            clnNome = new DataGridViewTextBoxColumn();
-            clnDescricao = new DataGridViewTextBoxColumn();
-            clnDataVencimento = new DataGridViewTextBoxColumn();
-            clnValor = new DataGridViewTextBoxColumn();
-            clnPeso = new DataGridViewTextBoxColumn();
-            clnQtdeEstoque = new DataGridViewTextBoxColumn();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             tpEditarProdutos = new TabPage();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -90,6 +81,15 @@
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtIdProduto = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            clnId = new DataGridViewTextBoxColumn();
+            clnCategoria = new DataGridViewTextBoxColumn();
+            clnMarca = new DataGridViewTextBoxColumn();
+            clnNome = new DataGridViewTextBoxColumn();
+            clnDescricao = new DataGridViewTextBoxColumn();
+            clnDataVencimento = new DataGridViewTextBoxColumn();
+            clnValor = new DataGridViewTextBoxColumn();
+            clnPeso = new DataGridViewTextBoxColumn();
+            clnQtdeEstoque = new DataGridViewTextBoxColumn();
             tabConsultaProduto.SuspendLayout();
             tpListarProdutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaProduto).BeginInit();
@@ -152,11 +152,12 @@
             dgvListaProduto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvListaProduto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             dgvListaProduto.BackgroundColor = Color.FromArgb(200, 219, 203);
+            dgvListaProduto.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(34, 85, 96);
             dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(34, 85, 96);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvListaProduto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -209,74 +210,6 @@
             dgvListaProduto.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(115, 158, 122);
             dgvListaProduto.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvListaProduto.CellDoubleClick += dgvListaProduto_CellDoubleClick;
-            // 
-            // clnId
-            // 
-            clnId.HeaderText = "ID";
-            clnId.Name = "clnId";
-            clnId.ReadOnly = true;
-            clnId.Width = 55;
-            // 
-            // clnCategoria
-            // 
-            clnCategoria.HeaderText = "Categoria";
-            clnCategoria.Name = "clnCategoria";
-            clnCategoria.ReadOnly = true;
-            clnCategoria.Width = 113;
-            // 
-            // clnMarca
-            // 
-            clnMarca.HeaderText = "Marca";
-            clnMarca.Name = "clnMarca";
-            clnMarca.ReadOnly = true;
-            clnMarca.Width = 113;
-            // 
-            // clnNome
-            // 
-            clnNome.HeaderText = "Nome";
-            clnNome.Name = "clnNome";
-            clnNome.ReadOnly = true;
-            clnNome.Width = 180;
-            // 
-            // clnDescricao
-            // 
-            clnDescricao.HeaderText = "Descrição";
-            clnDescricao.Name = "clnDescricao";
-            clnDescricao.ReadOnly = true;
-            clnDescricao.Width = 280;
-            // 
-            // clnDataVencimento
-            // 
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            clnDataVencimento.DefaultCellStyle = dataGridViewCellStyle3;
-            clnDataVencimento.HeaderText = "Vencimento";
-            clnDataVencimento.Name = "clnDataVencimento";
-            clnDataVencimento.ReadOnly = true;
-            clnDataVencimento.Width = 113;
-            // 
-            // clnValor
-            // 
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            clnValor.DefaultCellStyle = dataGridViewCellStyle4;
-            clnValor.HeaderText = "Valor";
-            clnValor.Name = "clnValor";
-            clnValor.ReadOnly = true;
-            // 
-            // clnPeso
-            // 
-            dataGridViewCellStyle5.NullValue = null;
-            clnPeso.DefaultCellStyle = dataGridViewCellStyle5;
-            clnPeso.HeaderText = "Peso";
-            clnPeso.Name = "clnPeso";
-            clnPeso.ReadOnly = true;
-            // 
-            // clnQtdeEstoque
-            // 
-            clnQtdeEstoque.HeaderText = "Estoque";
-            clnQtdeEstoque.Name = "clnQtdeEstoque";
-            clnQtdeEstoque.ReadOnly = true;
             // 
             // guna2HtmlLabel1
             // 
@@ -355,7 +288,7 @@
             btnCadProduto.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCadProduto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnCadProduto.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCadProduto.FillColor = Color.FromArgb(83, 133, 91);
+            btnCadProduto.FillColor = Color.FromArgb(34, 85, 96);
             btnCadProduto.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnCadProduto.ForeColor = Color.White;
             btnCadProduto.ImageAlign = HorizontalAlignment.Right;
@@ -678,6 +611,74 @@
             guna2HtmlLabel12.TabIndex = 48;
             guna2HtmlLabel12.Text = "ID";
             // 
+            // clnId
+            // 
+            clnId.HeaderText = "ID";
+            clnId.Name = "clnId";
+            clnId.ReadOnly = true;
+            clnId.Width = 55;
+            // 
+            // clnCategoria
+            // 
+            clnCategoria.HeaderText = "Categoria";
+            clnCategoria.Name = "clnCategoria";
+            clnCategoria.ReadOnly = true;
+            clnCategoria.Width = 113;
+            // 
+            // clnMarca
+            // 
+            clnMarca.HeaderText = "Marca";
+            clnMarca.Name = "clnMarca";
+            clnMarca.ReadOnly = true;
+            clnMarca.Width = 113;
+            // 
+            // clnNome
+            // 
+            clnNome.HeaderText = "Nome";
+            clnNome.Name = "clnNome";
+            clnNome.ReadOnly = true;
+            clnNome.Width = 180;
+            // 
+            // clnDescricao
+            // 
+            clnDescricao.HeaderText = "Descrição";
+            clnDescricao.Name = "clnDescricao";
+            clnDescricao.ReadOnly = true;
+            clnDescricao.Width = 280;
+            // 
+            // clnDataVencimento
+            // 
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            clnDataVencimento.DefaultCellStyle = dataGridViewCellStyle3;
+            clnDataVencimento.HeaderText = "Vencimento";
+            clnDataVencimento.Name = "clnDataVencimento";
+            clnDataVencimento.ReadOnly = true;
+            clnDataVencimento.Width = 113;
+            // 
+            // clnValor
+            // 
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            clnValor.DefaultCellStyle = dataGridViewCellStyle4;
+            clnValor.HeaderText = "Valor";
+            clnValor.Name = "clnValor";
+            clnValor.ReadOnly = true;
+            // 
+            // clnPeso
+            // 
+            dataGridViewCellStyle5.NullValue = null;
+            clnPeso.DefaultCellStyle = dataGridViewCellStyle5;
+            clnPeso.HeaderText = "Peso";
+            clnPeso.Name = "clnPeso";
+            clnPeso.ReadOnly = true;
+            // 
+            // clnQtdeEstoque
+            // 
+            clnQtdeEstoque.HeaderText = "Estoque";
+            clnQtdeEstoque.Name = "clnQtdeEstoque";
+            clnQtdeEstoque.ReadOnly = true;
+            // 
             // FrmListaProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -707,15 +708,6 @@
         private TabPage tpListarProdutos;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvListaProduto;
-        private DataGridViewTextBoxColumn clnId;
-        private DataGridViewTextBoxColumn clnCategoria;
-        private DataGridViewTextBoxColumn clnMarca;
-        private DataGridViewTextBoxColumn clnNome;
-        private DataGridViewTextBoxColumn clnDescricao;
-        private DataGridViewTextBoxColumn clnDataVencimento;
-        private DataGridViewTextBoxColumn clnValor;
-        private DataGridViewTextBoxColumn clnPeso;
-        private DataGridViewTextBoxColumn clnQtdeEstoque;
         private TabPage tpEditarProdutos;
         private Guna.UI2.WinForms.Guna2TextBox txtIdProduto;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
@@ -738,5 +730,14 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNomeProduto;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private DataGridViewTextBoxColumn clnId;
+        private DataGridViewTextBoxColumn clnCategoria;
+        private DataGridViewTextBoxColumn clnMarca;
+        private DataGridViewTextBoxColumn clnNome;
+        private DataGridViewTextBoxColumn clnDescricao;
+        private DataGridViewTextBoxColumn clnDataVencimento;
+        private DataGridViewTextBoxColumn clnValor;
+        private DataGridViewTextBoxColumn clnPeso;
+        private DataGridViewTextBoxColumn clnQtdeEstoque;
     }
 }

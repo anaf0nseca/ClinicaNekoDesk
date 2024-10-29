@@ -234,7 +234,7 @@
             btnSalvarEnd.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSalvarEnd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSalvarEnd.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSalvarEnd.FillColor = Color.FromArgb(83, 133, 91);
+            btnSalvarEnd.FillColor = Color.FromArgb(34, 85, 96);
             btnSalvarEnd.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnSalvarEnd.ForeColor = Color.White;
             btnSalvarEnd.Location = new Point(691, 449);
@@ -280,7 +280,7 @@
             btnFechar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnFechar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnFechar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnFechar.FillColor = Color.FromArgb(83, 133, 91);
+            btnFechar.FillColor = Color.FromArgb(34, 85, 96);
             btnFechar.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnFechar.ForeColor = Color.White;
             btnFechar.Location = new Point(154, 449);

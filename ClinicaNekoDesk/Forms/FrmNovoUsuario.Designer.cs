@@ -381,7 +381,7 @@
             btnProximo.DisabledState.CustomBorderColor = Color.DarkGray;
             btnProximo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnProximo.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnProximo.FillColor = Color.FromArgb(83, 133, 91);
+            btnProximo.FillColor = Color.FromArgb(34, 85, 96);
             btnProximo.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnProximo.ForeColor = Color.White;
             btnProximo.ImageAlign = HorizontalAlignment.Right;

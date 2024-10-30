@@ -53,16 +53,16 @@
             cmbRaca = new Guna.UI2.WinForms.Guna2ComboBox();
             cmbEspecie = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtNomeTutor = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtIdTutor = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            cmbCor = new Guna.UI2.WinForms.Guna2ComboBox();
+            txtIdade = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtPeso = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            btnCadProduto = new Guna.UI2.WinForms.Guna2Button();
+            btnCadPaciente = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             SuspendLayout();
@@ -139,7 +139,7 @@
             cmbRaca.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             cmbRaca.ForeColor = Color.FromArgb(39, 63, 44);
             cmbRaca.ItemHeight = 30;
-            cmbRaca.Location = new Point(717, 260);
+            cmbRaca.Location = new Point(724, 260);
             cmbRaca.Margin = new Padding(4, 3, 4, 3);
             cmbRaca.Name = "cmbRaca";
             cmbRaca.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -164,6 +164,7 @@
             cmbEspecie.ShadowDecoration.CustomizableEdges = customizableEdges6;
             cmbEspecie.Size = new Size(234, 36);
             cmbEspecie.TabIndex = 45;
+            cmbEspecie.SelectedIndexChanged += cmbEspecie_SelectedIndexChanged;
             // 
             // guna2HtmlLabel9
             // 
@@ -177,29 +178,31 @@
             guna2HtmlLabel9.TabIndex = 49;
             guna2HtmlLabel9.Text = "CADASTRO DE PACIENTE";
             // 
-            // guna2TextBox1
+            // txtNomeTutor
             // 
-            guna2TextBox1.BorderRadius = 10;
-            guna2TextBox1.Cursor = Cursors.IBeam;
-            guna2TextBox1.CustomizableEdges = customizableEdges7;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2TextBox1.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(136, 145);
-            guna2TextBox1.Margin = new Padding(5);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2TextBox1.Size = new Size(303, 26);
-            guna2TextBox1.TabIndex = 50;
+            txtNomeTutor.BorderRadius = 10;
+            txtNomeTutor.Cursor = Cursors.IBeam;
+            txtNomeTutor.CustomizableEdges = customizableEdges7;
+            txtNomeTutor.DefaultText = "";
+            txtNomeTutor.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtNomeTutor.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtNomeTutor.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtNomeTutor.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtNomeTutor.Enabled = false;
+            txtNomeTutor.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNomeTutor.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNomeTutor.ForeColor = Color.FromArgb(39, 63, 44);
+            txtNomeTutor.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNomeTutor.Location = new Point(136, 145);
+            txtNomeTutor.Margin = new Padding(5);
+            txtNomeTutor.Name = "txtNomeTutor";
+            txtNomeTutor.PasswordChar = '\0';
+            txtNomeTutor.PlaceholderText = "";
+            txtNomeTutor.ReadOnly = true;
+            txtNomeTutor.SelectedText = "";
+            txtNomeTutor.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtNomeTutor.Size = new Size(303, 26);
+            txtNomeTutor.TabIndex = 50;
             // 
             // guna2HtmlLabel1
             // 
@@ -213,29 +216,31 @@
             guna2HtmlLabel1.TabIndex = 51;
             guna2HtmlLabel1.Text = "Tutor";
             // 
-            // guna2TextBox2
+            // txtIdTutor
             // 
-            guna2TextBox2.BorderRadius = 10;
-            guna2TextBox2.Cursor = Cursors.IBeam;
-            guna2TextBox2.CustomizableEdges = customizableEdges9;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2TextBox2.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(76, 145);
-            guna2TextBox2.Margin = new Padding(5);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PasswordChar = '\0';
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2TextBox2.Size = new Size(56, 26);
-            guna2TextBox2.TabIndex = 52;
+            txtIdTutor.BorderRadius = 10;
+            txtIdTutor.Cursor = Cursors.IBeam;
+            txtIdTutor.CustomizableEdges = customizableEdges9;
+            txtIdTutor.DefaultText = "";
+            txtIdTutor.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtIdTutor.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtIdTutor.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtIdTutor.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtIdTutor.Enabled = false;
+            txtIdTutor.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtIdTutor.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtIdTutor.ForeColor = Color.FromArgb(39, 63, 44);
+            txtIdTutor.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtIdTutor.Location = new Point(76, 145);
+            txtIdTutor.Margin = new Padding(5);
+            txtIdTutor.Name = "txtIdTutor";
+            txtIdTutor.PasswordChar = '\0';
+            txtIdTutor.PlaceholderText = "";
+            txtIdTutor.ReadOnly = true;
+            txtIdTutor.SelectedText = "";
+            txtIdTutor.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtIdTutor.Size = new Size(56, 26);
+            txtIdTutor.TabIndex = 52;
             // 
             // guna2HtmlLabel3
             // 
@@ -249,48 +254,49 @@
             guna2HtmlLabel3.TabIndex = 54;
             guna2HtmlLabel3.Text = "Cor";
             // 
-            // guna2ComboBox1
+            // cmbCor
             // 
-            guna2ComboBox1.BackColor = Color.Transparent;
-            guna2ComboBox1.BorderRadius = 10;
-            guna2ComboBox1.CustomizableEdges = customizableEdges11;
-            guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox1.FocusedColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
-            guna2ComboBox1.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2ComboBox1.ItemHeight = 30;
-            guna2ComboBox1.Location = new Point(76, 346);
-            guna2ComboBox1.Margin = new Padding(4, 3, 4, 3);
-            guna2ComboBox1.Name = "guna2ComboBox1";
-            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2ComboBox1.Size = new Size(234, 36);
-            guna2ComboBox1.TabIndex = 53;
+            cmbCor.BackColor = Color.Transparent;
+            cmbCor.BorderRadius = 10;
+            cmbCor.CustomizableEdges = customizableEdges11;
+            cmbCor.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbCor.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbCor.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbCor.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbCor.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
+            cmbCor.ForeColor = Color.FromArgb(39, 63, 44);
+            cmbCor.ItemHeight = 30;
+            cmbCor.Items.AddRange(new object[] { "Amarelo", "Branco", "Caramelo", "Cinza", "Cinza e Branco", "Laranja", "Marrom", "Preto", "Preto e Branco", "Rajado", "Tricolor" });
+            cmbCor.Location = new Point(76, 346);
+            cmbCor.Margin = new Padding(4, 3, 4, 3);
+            cmbCor.Name = "cmbCor";
+            cmbCor.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cmbCor.Size = new Size(234, 36);
+            cmbCor.TabIndex = 53;
             // 
-            // guna2TextBox3
+            // txtIdade
             // 
-            guna2TextBox3.BorderRadius = 10;
-            guna2TextBox3.Cursor = Cursors.IBeam;
-            guna2TextBox3.CustomizableEdges = customizableEdges13;
-            guna2TextBox3.DefaultText = "";
-            guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox3.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2TextBox3.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(381, 340);
-            guna2TextBox3.Margin = new Padding(5);
-            guna2TextBox3.Name = "guna2TextBox3";
-            guna2TextBox3.PasswordChar = '\0';
-            guna2TextBox3.PlaceholderText = "";
-            guna2TextBox3.SelectedText = "";
-            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2TextBox3.Size = new Size(89, 42);
-            guna2TextBox3.TabIndex = 56;
+            txtIdade.BorderRadius = 10;
+            txtIdade.Cursor = Cursors.IBeam;
+            txtIdade.CustomizableEdges = customizableEdges13;
+            txtIdade.DefaultText = "";
+            txtIdade.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtIdade.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtIdade.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtIdade.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtIdade.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtIdade.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtIdade.ForeColor = Color.FromArgb(39, 63, 44);
+            txtIdade.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtIdade.Location = new Point(381, 340);
+            txtIdade.Margin = new Padding(5);
+            txtIdade.Name = "txtIdade";
+            txtIdade.PasswordChar = '\0';
+            txtIdade.PlaceholderText = "";
+            txtIdade.SelectedText = "";
+            txtIdade.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtIdade.Size = new Size(89, 42);
+            txtIdade.TabIndex = 56;
             // 
             // guna2HtmlLabel4
             // 
@@ -304,29 +310,29 @@
             guna2HtmlLabel4.TabIndex = 55;
             guna2HtmlLabel4.Text = "Idade";
             // 
-            // guna2TextBox4
+            // txtPeso
             // 
-            guna2TextBox4.BorderRadius = 10;
-            guna2TextBox4.Cursor = Cursors.IBeam;
-            guna2TextBox4.CustomizableEdges = customizableEdges15;
-            guna2TextBox4.DefaultText = "";
-            guna2TextBox4.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox4.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox4.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2TextBox4.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2TextBox4.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Location = new Point(608, 340);
-            guna2TextBox4.Margin = new Padding(5);
-            guna2TextBox4.Name = "guna2TextBox4";
-            guna2TextBox4.PasswordChar = '\0';
-            guna2TextBox4.PlaceholderText = "";
-            guna2TextBox4.SelectedText = "";
-            guna2TextBox4.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2TextBox4.Size = new Size(108, 42);
-            guna2TextBox4.TabIndex = 58;
+            txtPeso.BorderRadius = 10;
+            txtPeso.Cursor = Cursors.IBeam;
+            txtPeso.CustomizableEdges = customizableEdges15;
+            txtPeso.DefaultText = "";
+            txtPeso.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPeso.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPeso.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPeso.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPeso.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPeso.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtPeso.ForeColor = Color.FromArgb(39, 63, 44);
+            txtPeso.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPeso.Location = new Point(608, 340);
+            txtPeso.Margin = new Padding(5);
+            txtPeso.Name = "txtPeso";
+            txtPeso.PasswordChar = '\0';
+            txtPeso.PlaceholderText = "";
+            txtPeso.SelectedText = "";
+            txtPeso.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtPeso.Size = new Size(108, 42);
+            txtPeso.TabIndex = 58;
             // 
             // guna2HtmlLabel5
             // 
@@ -340,28 +346,29 @@
             guna2HtmlLabel5.TabIndex = 57;
             guna2HtmlLabel5.Text = "Peso";
             // 
-            // btnCadProduto
+            // btnCadPaciente
             // 
-            btnCadProduto.Animated = true;
-            btnCadProduto.BackColor = Color.Transparent;
-            btnCadProduto.BorderRadius = 20;
-            btnCadProduto.CustomizableEdges = customizableEdges17;
-            btnCadProduto.DisabledState.BorderColor = Color.DarkGray;
-            btnCadProduto.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnCadProduto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnCadProduto.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCadProduto.FillColor = Color.FromArgb(34, 85, 96);
-            btnCadProduto.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            btnCadProduto.ForeColor = Color.White;
-            btnCadProduto.ImageAlign = HorizontalAlignment.Right;
-            btnCadProduto.ImageSize = new Size(24, 24);
-            btnCadProduto.Location = new Point(756, 424);
-            btnCadProduto.Margin = new Padding(4, 3, 4, 3);
-            btnCadProduto.Name = "btnCadProduto";
-            btnCadProduto.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            btnCadProduto.Size = new Size(195, 52);
-            btnCadProduto.TabIndex = 59;
-            btnCadProduto.Text = "Cadastrar Paciente";
+            btnCadPaciente.Animated = true;
+            btnCadPaciente.BackColor = Color.Transparent;
+            btnCadPaciente.BorderRadius = 20;
+            btnCadPaciente.CustomizableEdges = customizableEdges17;
+            btnCadPaciente.DisabledState.BorderColor = Color.DarkGray;
+            btnCadPaciente.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCadPaciente.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCadPaciente.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCadPaciente.FillColor = Color.FromArgb(34, 85, 96);
+            btnCadPaciente.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            btnCadPaciente.ForeColor = Color.White;
+            btnCadPaciente.ImageAlign = HorizontalAlignment.Right;
+            btnCadPaciente.ImageSize = new Size(24, 24);
+            btnCadPaciente.Location = new Point(756, 424);
+            btnCadPaciente.Margin = new Padding(4, 3, 4, 3);
+            btnCadPaciente.Name = "btnCadPaciente";
+            btnCadPaciente.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnCadPaciente.Size = new Size(195, 52);
+            btnCadPaciente.TabIndex = 59;
+            btnCadPaciente.Text = "Cadastrar Paciente";
+            btnCadPaciente.Click += btnCadPaciente_Click;
             // 
             // guna2HtmlLabel6
             // 
@@ -396,16 +403,16 @@
             ControlBox = false;
             Controls.Add(guna2HtmlLabel10);
             Controls.Add(guna2HtmlLabel6);
-            Controls.Add(btnCadProduto);
-            Controls.Add(guna2TextBox4);
+            Controls.Add(btnCadPaciente);
+            Controls.Add(txtPeso);
             Controls.Add(guna2HtmlLabel5);
-            Controls.Add(guna2TextBox3);
+            Controls.Add(txtIdade);
             Controls.Add(guna2HtmlLabel4);
             Controls.Add(guna2HtmlLabel3);
-            Controls.Add(guna2ComboBox1);
-            Controls.Add(guna2TextBox2);
+            Controls.Add(cmbCor);
+            Controls.Add(txtIdTutor);
             Controls.Add(guna2HtmlLabel1);
-            Controls.Add(guna2TextBox1);
+            Controls.Add(txtNomeTutor);
             Controls.Add(guna2HtmlLabel9);
             Controls.Add(guna2HtmlLabel8);
             Controls.Add(guna2HtmlLabel7);
@@ -430,16 +437,16 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbRaca;
         private Guna.UI2.WinForms.Guna2ComboBox cmbEspecie;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtNomeTutor;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtIdTutor;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbCor;
+        private Guna.UI2.WinForms.Guna2TextBox txtIdade;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox txtPeso;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2Button btnCadProduto;
+        private Guna.UI2.WinForms.Guna2Button btnCadPaciente;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
     }

@@ -30,14 +30,15 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSelecionarCliente));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             dgvListaCliente = new Guna.UI2.WinForms.Guna2DataGridView();
             btnFechar = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -64,7 +65,6 @@
             dgvListaCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvListaCliente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             dgvListaCliente.BackgroundColor = Color.FromArgb(200, 219, 203);
-            dgvListaCliente.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(34, 85, 96);
             dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -76,27 +76,27 @@
             dgvListaCliente.ColumnHeadersHeight = 32;
             dgvListaCliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgvListaCliente.Columns.AddRange(new DataGridViewColumn[] { clnId, clnCategoria, clnCpf, clnDataNascimento, clnEmail });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(115, 158, 122);
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgvListaCliente.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dgvListaCliente.DefaultCellStyle = dataGridViewCellStyle5;
             dgvListaCliente.GridColor = Color.FromArgb(231, 229, 255);
             dgvListaCliente.Location = new Point(0, 37);
             dgvListaCliente.Name = "dgvListaCliente";
             dgvListaCliente.ReadOnly = true;
             dgvListaCliente.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.White;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvListaCliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvListaCliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgvListaCliente.RowHeadersVisible = false;
             dgvListaCliente.ScrollBars = ScrollBars.None;
             dgvListaCliente.Size = new Size(802, 414);
@@ -203,6 +203,9 @@
             // 
             // clnDataNascimento
             // 
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            clnDataNascimento.DefaultCellStyle = dataGridViewCellStyle4;
             clnDataNascimento.HeaderText = "Data de Nascimento";
             clnDataNascimento.Name = "clnDataNascimento";
             clnDataNascimento.ReadOnly = true;
@@ -227,6 +230,7 @@
             Controls.Add(guna2HtmlLabel4);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmSelecionarCliente";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmSelecionarCliente";
             Load += FrmSelecionarCliente_Load;
             ((System.ComponentModel.ISupportInitialize)dgvListaCliente).EndInit();

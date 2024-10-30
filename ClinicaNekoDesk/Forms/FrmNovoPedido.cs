@@ -19,10 +19,12 @@ namespace ClinicaNeko.Forms
 
         public int produtoId;
         public int clienteId;
+        public double total;
 
         public FrmNovoPedido()
         {
             InitializeComponent();
+            
         }
 
         private void guna2GroupBox2_Click(object sender, EventArgs e)
@@ -40,7 +42,7 @@ namespace ClinicaNeko.Forms
             //contador para alterar o índice a cada cliente da lista
             int cont = 0;
             double desconto = 0;
-            double total = 0;
+            total = 0;
             foreach (var item in itens)
             {
                 //Adiciona uma nova linha a tabela
@@ -70,45 +72,31 @@ namespace ClinicaNeko.Forms
             txtTotalPedido.Text = total.ToString("#0.00");
 
 
-            if (cmbDescPedido.SelectedItem != null)
-            {
-                if (cmbDescPedido.Text == "5%")
-                {
-                    txtTotalPedido.Text = (total - ((5 * total) / 100)).ToString("#0.00");
-                }
-                else if (cmbDescPedido.Text == "10%")
-                {
-                    txtTotalPedido.Text = (total - ((10 * total) / 100)).ToString("#0.00");
-                }
-                else if (cmbDescPedido.Text == "15%")
-                {
-                    txtTotalPedido.Text = (total - ((15 * total) / 100)).ToString("#0.00");
-                }
-                else if (cmbDescPedido.Text == "20%")
-                {
-                    txtTotalPedido.Text = (total - ((20 * total) / 100)).ToString("#0.00");
-                }
-                else if (cmbDescPedido.Text == "50%")
-                {
-                    txtTotalPedido.Text = (total - ((50 * total) / 100)).ToString("#0.00");
-                }
-                else
-                {
-                    txtTotalPedido.Text = total.ToString("#0.00");
-                }
-            }
+            
 
         }
         private void button3_Click(object sender, EventArgs e)
         {
+            Form Background = new Form();
+
             FrmSelecionarProduto frmSelecionarProduto = new FrmSelecionarProduto();
-            //frmSelecionarProduto.Parent = this;
+            
+            //Código utilizado para criar o efeito de "escurecimento" do formulário principal ao abrir uma janela secundária
+            using (frmSelecionarProduto)
+            {
+                Background.StartPosition = FormStartPosition.CenterScreen;
+                Background.FormBorderStyle = FormBorderStyle.None;
+                Background.Opacity = 0.5d;
+                //Background.BackColor = Color.Black;
+                Background.Size = new Size(1310, 722);
+                Background.Location = this.Location;
+                Background.ShowInTaskbar = false;
+                Background.Show(this);
+                frmSelecionarProduto.Owner = Background;
+                frmSelecionarProduto.ShowDialog(Background);
+                Background.Dispose();
+            }
 
-            //System.Windows.Media.Effects.BlurEffect myBlur = new System.Windows.Media.Effects.BlurEffect();
-            //myBlur.Radius = 5; //Set the radius for the blur - the bigger the number the better the blur
-            //this.Effect = myBlur;
-
-            frmSelecionarProduto.ShowDialog();
 
             produtoId = frmSelecionarProduto.ProdutoId;
             string produtoNome = frmSelecionarProduto.ProdutoNome;
@@ -170,27 +158,68 @@ namespace ClinicaNeko.Forms
             }
 
             txtDescricao.Clear();
-            txtDesconto.Clear();
             txtQuantidade.Clear();
             txtValor.Clear();
         }
 
         private void btnSelecionarCliente_Click(object sender, EventArgs e)
         {
+            Form Background = new Form();
+
             FrmSelecionarCliente frmSelecionarCliente = new FrmSelecionarCliente();
-            //frmSelecionarCliente.Parent = this;
 
-            //System.Windows.Media.Effects.BlurEffect myBlur = new System.Windows.Media.Effects.BlurEffect();
-            //myBlur.Radius = 5; //Set the radius for the blur - the bigger the number the better the blur
-            //this.Effect = myBlur;
-
-            frmSelecionarCliente.ShowDialog();
-
+            //Código utilizado para criar o efeito de "escurecimento" do formulário principal ao abrir uma janela secundária
+            using (frmSelecionarCliente)
+            {
+                Background.StartPosition = FormStartPosition.CenterScreen;
+                Background.FormBorderStyle = FormBorderStyle.None;
+                Background.Opacity = 0.7d;
+                Background.BackColor = Color.Black;
+                Background.Size = new Size(1310, 722);
+                Background.Location = this.Location;
+                Background.ShowInTaskbar = false;
+                Background.Show(this);
+                frmSelecionarCliente.Owner = Background;
+                frmSelecionarCliente.ShowDialog(Background);
+                Background.Dispose();
+            }
+  
             clienteId = frmSelecionarCliente.ClienteId;
             string clienteNome = frmSelecionarCliente.ClienteNome;
 
             txtIdCliente.Text = clienteId.ToString();
             txtCliente.Text = clienteNome;
+        }
+
+        private void cmbDescPedido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbDescPedido.SelectedItem != null)
+            {
+                if (cmbDescPedido.Text == "5%")
+                {
+                    txtTotalPedido.Text = (total - ((5 * total) / 100)).ToString("#0.00");
+                }
+                else if (cmbDescPedido.Text == "10%")
+                {
+                    txtTotalPedido.Text = (total - ((10 * total) / 100)).ToString("#0.00");
+                }
+                else if (cmbDescPedido.Text == "15%")
+                {
+                    txtTotalPedido.Text = (total - ((15 * total) / 100)).ToString("#0.00");
+                }
+                else if (cmbDescPedido.Text == "20%")
+                {
+                    txtTotalPedido.Text = (total - ((20 * total) / 100)).ToString("#0.00");
+                }
+                else if (cmbDescPedido.Text == "50%")
+                {
+                    txtTotalPedido.Text = (total - ((50 * total) / 100)).ToString("#0.00");
+                }
+                else
+                {
+                    txtTotalPedido.Text = total.ToString("#0.00");
+                }
+            }
         }
     }
 }

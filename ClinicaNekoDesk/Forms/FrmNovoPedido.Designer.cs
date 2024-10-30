@@ -87,6 +87,12 @@
             txtQuantidade = new Guna.UI2.WinForms.Guna2TextBox();
             txtValor = new Guna.UI2.WinForms.Guna2TextBox();
             dgvItensPedido = new Guna.UI2.WinForms.Guna2DataGridView();
+            clnId = new DataGridViewTextBoxColumn();
+            clnNome = new DataGridViewTextBoxColumn();
+            clnDescricao = new DataGridViewTextBoxColumn();
+            clnValor = new DataGridViewTextBoxColumn();
+            clnQtde = new DataGridViewTextBoxColumn();
+            clnDesconto = new DataGridViewTextBoxColumn();
             txtDescricao = new Guna.UI2.WinForms.Guna2TextBox();
             txtNPedido = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -114,12 +120,6 @@
             guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            clnId = new DataGridViewTextBoxColumn();
-            clnNome = new DataGridViewTextBoxColumn();
-            clnDescricao = new DataGridViewTextBoxColumn();
-            clnValor = new DataGridViewTextBoxColumn();
-            clnQtde = new DataGridViewTextBoxColumn();
-            clnDesconto = new DataGridViewTextBoxColumn();
             grbItens.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvItensPedido).BeginInit();
             grbFinalizacao.SuspendLayout();
@@ -452,6 +452,48 @@
             dgvItensPedido.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvItensPedido.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
+            // clnId
+            // 
+            clnId.HeaderText = "ID";
+            clnId.Name = "clnId";
+            clnId.ReadOnly = true;
+            clnId.Width = 55;
+            // 
+            // clnNome
+            // 
+            clnNome.HeaderText = "Nome";
+            clnNome.Name = "clnNome";
+            clnNome.ReadOnly = true;
+            clnNome.Width = 150;
+            // 
+            // clnDescricao
+            // 
+            clnDescricao.HeaderText = "Descrição";
+            clnDescricao.Name = "clnDescricao";
+            clnDescricao.ReadOnly = true;
+            clnDescricao.Width = 180;
+            // 
+            // clnValor
+            // 
+            clnValor.HeaderText = "Valor Unit.";
+            clnValor.Name = "clnValor";
+            clnValor.ReadOnly = true;
+            clnValor.Width = 117;
+            // 
+            // clnQtde
+            // 
+            clnQtde.HeaderText = "Quantidade";
+            clnQtde.Name = "clnQtde";
+            clnQtde.ReadOnly = true;
+            clnQtde.Width = 118;
+            // 
+            // clnDesconto
+            // 
+            clnDesconto.HeaderText = "Desconto";
+            clnDesconto.Name = "clnDesconto";
+            clnDesconto.ReadOnly = true;
+            clnDesconto.Width = 117;
+            // 
             // txtDescricao
             // 
             txtDescricao.BackColor = Color.White;
@@ -627,6 +669,7 @@
             cmbDescPedido.ShadowDecoration.CustomizableEdges = customizableEdges24;
             cmbDescPedido.Size = new Size(114, 26);
             cmbDescPedido.TabIndex = 61;
+            cmbDescPedido.SelectedIndexChanged += cmbDescPedido_SelectedIndexChanged;
             // 
             // txtTotalPedido
             // 
@@ -827,6 +870,7 @@
             txtCliente.Name = "txtCliente";
             txtCliente.PasswordChar = '\0';
             txtCliente.PlaceholderText = "";
+            txtCliente.ReadOnly = true;
             txtCliente.SelectedText = "";
             txtCliente.ShadowDecoration.CustomizableEdges = customizableEdges34;
             txtCliente.Size = new Size(290, 27);
@@ -852,6 +896,7 @@
             txtIdCliente.Name = "txtIdCliente";
             txtIdCliente.PasswordChar = '\0';
             txtIdCliente.PlaceholderText = "";
+            txtIdCliente.ReadOnly = true;
             txtIdCliente.SelectedText = "";
             txtIdCliente.ShadowDecoration.CustomizableEdges = customizableEdges36;
             txtIdCliente.Size = new Size(61, 27);
@@ -967,48 +1012,6 @@
             guna2HtmlLabel1.Size = new Size(54, 20);
             guna2HtmlLabel1.TabIndex = 45;
             guna2HtmlLabel1.Text = "Cliente";
-            // 
-            // clnId
-            // 
-            clnId.HeaderText = "ID";
-            clnId.Name = "clnId";
-            clnId.ReadOnly = true;
-            clnId.Width = 55;
-            // 
-            // clnNome
-            // 
-            clnNome.HeaderText = "Nome";
-            clnNome.Name = "clnNome";
-            clnNome.ReadOnly = true;
-            clnNome.Width = 150;
-            // 
-            // clnDescricao
-            // 
-            clnDescricao.HeaderText = "Descrição";
-            clnDescricao.Name = "clnDescricao";
-            clnDescricao.ReadOnly = true;
-            clnDescricao.Width = 180;
-            // 
-            // clnValor
-            // 
-            clnValor.HeaderText = "Valor Unit.";
-            clnValor.Name = "clnValor";
-            clnValor.ReadOnly = true;
-            clnValor.Width = 117;
-            // 
-            // clnQtde
-            // 
-            clnQtde.HeaderText = "Quantidade";
-            clnQtde.Name = "clnQtde";
-            clnQtde.ReadOnly = true;
-            clnQtde.Width = 118;
-            // 
-            // clnDesconto
-            // 
-            clnDesconto.HeaderText = "Desconto";
-            clnDesconto.Name = "clnDesconto";
-            clnDesconto.ReadOnly = true;
-            clnDesconto.Width = 117;
             // 
             // FrmNovoPedido
             // 

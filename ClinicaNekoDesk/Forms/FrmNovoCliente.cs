@@ -1,4 +1,5 @@
-﻿using ClinicaNekoLib;
+﻿using ClinicaNekoDesk.Forms;
+using ClinicaNekoLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace ClinicaNeko.Forms
         public FrmNovoCliente()
         {
             InitializeComponent();
+            MainPanel = FrmPrincipal.MainPanel;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -58,9 +60,9 @@ namespace ClinicaNeko.Forms
                 cliente.Inserir();
 
                 
-                //FrmNovoPaciente frmNovoPaciente = new FrmNovoPaciente();
-                //frmNovoPaciente.idCliente = cliente.Id;
-                //ClienteId = cliente.Id;
+                FrmNovoPaciente frmNovoPaciente = new FrmNovoPaciente();
+                frmNovoPaciente.idCliente = cliente.Id;
+                ClienteId = cliente.Id;
 
                 if (cliente.Id > 0)
                 {
@@ -82,11 +84,11 @@ namespace ClinicaNeko.Forms
                         telefoneCliente.Inserir();
                     }
 
-                    //frmNovoPaciente.Dock = DockStyle.Fill;
-                    //frmNovoPaciente.TopLevel = false;
-                    //MainPanel.Controls.Clear();
-                    //MainPanel.Controls.Add(frmNovoPaciente);
-                    //frmNovoPaciente.Show();
+                    frmNovoPaciente.Dock = DockStyle.Fill;
+                    frmNovoPaciente.TopLevel = false;
+                    MainPanel.Controls.Clear();
+                    MainPanel.Controls.Add(frmNovoPaciente);
+                    frmNovoPaciente.Show();
 
                 }
             }

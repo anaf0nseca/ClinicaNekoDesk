@@ -98,6 +98,9 @@
             txtTotalPedido = new Guna.UI2.WinForms.Guna2TextBox();
             btnFinalizarPedido = new Guna.UI2.WinForms.Guna2Button();
             grbFinalizacao = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -107,19 +110,16 @@
             btnSelecionarCliente = new Button();
             btnAbrirPedido = new Guna.UI2.WinForms.Guna2Button();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            clnDesconto = new DataGridViewTextBoxColumn();
-            clnQtde = new DataGridViewTextBoxColumn();
-            clnValor = new DataGridViewTextBoxColumn();
-            clnDescricao = new DataGridViewTextBoxColumn();
-            clnNome = new DataGridViewTextBoxColumn();
             clnId = new DataGridViewTextBoxColumn();
-            guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            clnNome = new DataGridViewTextBoxColumn();
+            clnDescricao = new DataGridViewTextBoxColumn();
+            clnValor = new DataGridViewTextBoxColumn();
+            clnQtde = new DataGridViewTextBoxColumn();
+            clnDesconto = new DataGridViewTextBoxColumn();
             grbItens.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvItensPedido).BeginInit();
             grbFinalizacao.SuspendLayout();
@@ -235,7 +235,6 @@
             btnAddItem.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddItem.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAddItem.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAddItem.Enabled = false;
             btnAddItem.FillColor = Color.FromArgb(34, 85, 96);
             btnAddItem.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnAddItem.ForeColor = Color.White;
@@ -391,8 +390,8 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(115, 158, 122);
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
             dgvItensPedido.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvItensPedido.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             dgvItensPedido.BackgroundColor = Color.FromArgb(200, 219, 203);
-            dgvItensPedido.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(34, 85, 96);
             dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -401,8 +400,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvItensPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvItensPedido.ColumnHeadersHeight = 32;
-            dgvItensPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvItensPedido.ColumnHeadersHeight = 30;
             dgvItensPedido.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNome, clnDescricao, clnValor, clnQtde, clnDesconto });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
@@ -443,8 +441,8 @@
             dgvItensPedido.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvItensPedido.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dgvItensPedido.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dgvItensPedido.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvItensPedido.ThemeStyle.HeaderStyle.Height = 32;
+            dgvItensPedido.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvItensPedido.ThemeStyle.HeaderStyle.Height = 30;
             dgvItensPedido.ThemeStyle.ReadOnly = true;
             dgvItensPedido.ThemeStyle.RowsStyle.BackColor = Color.White;
             dgvItensPedido.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -669,7 +667,6 @@
             btnFinalizarPedido.DisabledState.CustomBorderColor = Color.DarkGray;
             btnFinalizarPedido.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnFinalizarPedido.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnFinalizarPedido.Enabled = false;
             btnFinalizarPedido.FillColor = Color.FromArgb(34, 85, 96);
             btnFinalizarPedido.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnFinalizarPedido.ForeColor = Color.White;
@@ -710,6 +707,42 @@
             grbFinalizacao.Size = new Size(158, 391);
             grbFinalizacao.TabIndex = 49;
             grbFinalizacao.Text = "Finalização";
+            // 
+            // guna2HtmlLabel17
+            // 
+            guna2HtmlLabel17.BackColor = Color.Transparent;
+            guna2HtmlLabel17.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel17.ForeColor = Color.FromArgb(39, 63, 44);
+            guna2HtmlLabel17.Location = new Point(41, 221);
+            guna2HtmlLabel17.Margin = new Padding(4, 3, 4, 3);
+            guna2HtmlLabel17.Name = "guna2HtmlLabel17";
+            guna2HtmlLabel17.Size = new Size(69, 24);
+            guna2HtmlLabel17.TabIndex = 62;
+            guna2HtmlLabel17.Text = "TOTAL";
+            // 
+            // guna2HtmlLabel16
+            // 
+            guna2HtmlLabel16.BackColor = Color.Transparent;
+            guna2HtmlLabel16.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel16.ForeColor = Color.FromArgb(39, 63, 44);
+            guna2HtmlLabel16.Location = new Point(24, 140);
+            guna2HtmlLabel16.Margin = new Padding(4, 3, 4, 3);
+            guna2HtmlLabel16.Name = "guna2HtmlLabel16";
+            guna2HtmlLabel16.Size = new Size(110, 18);
+            guna2HtmlLabel16.TabIndex = 63;
+            guna2HtmlLabel16.Text = "Desconto Pedido";
+            // 
+            // guna2HtmlLabel15
+            // 
+            guna2HtmlLabel15.BackColor = Color.Transparent;
+            guna2HtmlLabel15.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel15.ForeColor = Color.FromArgb(39, 63, 44);
+            guna2HtmlLabel15.Location = new Point(29, 60);
+            guna2HtmlLabel15.Margin = new Padding(4, 3, 4, 3);
+            guna2HtmlLabel15.Name = "guna2HtmlLabel15";
+            guna2HtmlLabel15.Size = new Size(95, 18);
+            guna2HtmlLabel15.TabIndex = 62;
+            guna2HtmlLabel15.Text = "Desconto Itens";
             // 
             // guna2HtmlLabel8
             // 
@@ -849,7 +882,6 @@
             btnAbrirPedido.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAbrirPedido.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAbrirPedido.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAbrirPedido.Enabled = false;
             btnAbrirPedido.FillColor = Color.FromArgb(34, 85, 96);
             btnAbrirPedido.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnAbrirPedido.ForeColor = Color.White;
@@ -888,6 +920,30 @@
             guna2GroupBox1.TabIndex = 21;
             guna2GroupBox1.Text = "Identificação";
             // 
+            // guna2HtmlLabel14
+            // 
+            guna2HtmlLabel14.BackColor = Color.Transparent;
+            guna2HtmlLabel14.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel14.ForeColor = Color.FromArgb(39, 63, 44);
+            guna2HtmlLabel14.Location = new Point(57, 95);
+            guna2HtmlLabel14.Margin = new Padding(4, 3, 4, 3);
+            guna2HtmlLabel14.Name = "guna2HtmlLabel14";
+            guna2HtmlLabel14.Size = new Size(54, 20);
+            guna2HtmlLabel14.TabIndex = 50;
+            guna2HtmlLabel14.Text = "Cliente";
+            // 
+            // guna2HtmlLabel13
+            // 
+            guna2HtmlLabel13.BackColor = Color.Transparent;
+            guna2HtmlLabel13.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel13.ForeColor = Color.FromArgb(39, 63, 44);
+            guna2HtmlLabel13.Location = new Point(53, 53);
+            guna2HtmlLabel13.Margin = new Padding(4, 3, 4, 3);
+            guna2HtmlLabel13.Name = "guna2HtmlLabel13";
+            guna2HtmlLabel13.Size = new Size(58, 20);
+            guna2HtmlLabel13.TabIndex = 49;
+            guna2HtmlLabel13.Text = "Usuário";
+            // 
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
@@ -912,101 +968,47 @@
             guna2HtmlLabel1.TabIndex = 45;
             guna2HtmlLabel1.Text = "Cliente";
             // 
-            // clnDesconto
+            // clnId
             // 
-            clnDesconto.HeaderText = "Desconto";
-            clnDesconto.Name = "clnDesconto";
-            clnDesconto.ReadOnly = true;
-            // 
-            // clnQtde
-            // 
-            clnQtde.HeaderText = "Quantidade";
-            clnQtde.Name = "clnQtde";
-            clnQtde.ReadOnly = true;
-            // 
-            // clnValor
-            // 
-            clnValor.HeaderText = "Valor Unit.";
-            clnValor.Name = "clnValor";
-            clnValor.ReadOnly = true;
-            // 
-            // clnDescricao
-            // 
-            clnDescricao.HeaderText = "Descrição";
-            clnDescricao.Name = "clnDescricao";
-            clnDescricao.ReadOnly = true;
+            clnId.HeaderText = "ID";
+            clnId.Name = "clnId";
+            clnId.ReadOnly = true;
+            clnId.Width = 55;
             // 
             // clnNome
             // 
             clnNome.HeaderText = "Nome";
             clnNome.Name = "clnNome";
             clnNome.ReadOnly = true;
+            clnNome.Width = 150;
             // 
-            // clnId
+            // clnDescricao
             // 
-            clnId.HeaderText = "ID";
-            clnId.Name = "clnId";
-            clnId.ReadOnly = true;
+            clnDescricao.HeaderText = "Descrição";
+            clnDescricao.Name = "clnDescricao";
+            clnDescricao.ReadOnly = true;
+            clnDescricao.Width = 180;
             // 
-            // guna2HtmlLabel13
+            // clnValor
             // 
-            guna2HtmlLabel13.BackColor = Color.Transparent;
-            guna2HtmlLabel13.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel13.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel13.Location = new Point(53, 53);
-            guna2HtmlLabel13.Margin = new Padding(4, 3, 4, 3);
-            guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            guna2HtmlLabel13.Size = new Size(58, 20);
-            guna2HtmlLabel13.TabIndex = 49;
-            guna2HtmlLabel13.Text = "Usuário";
+            clnValor.HeaderText = "Valor Unit.";
+            clnValor.Name = "clnValor";
+            clnValor.ReadOnly = true;
+            clnValor.Width = 117;
             // 
-            // guna2HtmlLabel14
+            // clnQtde
             // 
-            guna2HtmlLabel14.BackColor = Color.Transparent;
-            guna2HtmlLabel14.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel14.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel14.Location = new Point(57, 95);
-            guna2HtmlLabel14.Margin = new Padding(4, 3, 4, 3);
-            guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            guna2HtmlLabel14.Size = new Size(54, 20);
-            guna2HtmlLabel14.TabIndex = 50;
-            guna2HtmlLabel14.Text = "Cliente";
+            clnQtde.HeaderText = "Quantidade";
+            clnQtde.Name = "clnQtde";
+            clnQtde.ReadOnly = true;
+            clnQtde.Width = 118;
             // 
-            // guna2HtmlLabel15
+            // clnDesconto
             // 
-            guna2HtmlLabel15.BackColor = Color.Transparent;
-            guna2HtmlLabel15.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel15.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel15.Location = new Point(29, 60);
-            guna2HtmlLabel15.Margin = new Padding(4, 3, 4, 3);
-            guna2HtmlLabel15.Name = "guna2HtmlLabel15";
-            guna2HtmlLabel15.Size = new Size(95, 18);
-            guna2HtmlLabel15.TabIndex = 62;
-            guna2HtmlLabel15.Text = "Desconto Itens";
-            // 
-            // guna2HtmlLabel16
-            // 
-            guna2HtmlLabel16.BackColor = Color.Transparent;
-            guna2HtmlLabel16.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel16.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel16.Location = new Point(24, 140);
-            guna2HtmlLabel16.Margin = new Padding(4, 3, 4, 3);
-            guna2HtmlLabel16.Name = "guna2HtmlLabel16";
-            guna2HtmlLabel16.Size = new Size(110, 18);
-            guna2HtmlLabel16.TabIndex = 63;
-            guna2HtmlLabel16.Text = "Desconto Pedido";
-            // 
-            // guna2HtmlLabel17
-            // 
-            guna2HtmlLabel17.BackColor = Color.Transparent;
-            guna2HtmlLabel17.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel17.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel17.Location = new Point(41, 221);
-            guna2HtmlLabel17.Margin = new Padding(4, 3, 4, 3);
-            guna2HtmlLabel17.Name = "guna2HtmlLabel17";
-            guna2HtmlLabel17.Size = new Size(69, 24);
-            guna2HtmlLabel17.TabIndex = 62;
-            guna2HtmlLabel17.Text = "TOTAL";
+            clnDesconto.HeaderText = "Desconto";
+            clnDesconto.Name = "clnDesconto";
+            clnDesconto.ReadOnly = true;
+            clnDesconto.Width = 117;
             // 
             // FrmNovoPedido
             // 
@@ -1053,12 +1055,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2TextBox txtSubtotalPedido;
         private Button btnSelecionarProduto;
-        private DataGridViewTextBoxColumn clnId;
-        private DataGridViewTextBoxColumn clnNome;
-        private DataGridViewTextBoxColumn clnDescricao;
-        private DataGridViewTextBoxColumn clnValor;
-        private DataGridViewTextBoxColumn clnQtde;
-        private DataGridViewTextBoxColumn clnDesconto;
         private Guna.UI2.WinForms.Guna2TextBox txtNPedido;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox9;
@@ -1085,5 +1081,11 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private DataGridViewTextBoxColumn clnId;
+        private DataGridViewTextBoxColumn clnNome;
+        private DataGridViewTextBoxColumn clnDescricao;
+        private DataGridViewTextBoxColumn clnValor;
+        private DataGridViewTextBoxColumn clnQtde;
+        private DataGridViewTextBoxColumn clnDesconto;
     }
 }

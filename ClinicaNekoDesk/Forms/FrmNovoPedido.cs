@@ -67,6 +67,8 @@ namespace ClinicaNeko.Forms
 
             txtSubtotalPedido.Text = (total + desconto).ToString("#0.00");
             txtDescontoItens.Text = desconto.ToString("#0.00");
+            txtTotalPedido.Text = total.ToString("#0.00");
+
 
             if (cmbDescPedido.SelectedItem != null)
             {

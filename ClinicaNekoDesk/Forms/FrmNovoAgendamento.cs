@@ -22,5 +22,15 @@ namespace ClinicaNekoDesk.Forms
             string dia = monthCalendar1.SelectionRange.Start.ToString();
             MessageBox.Show($"Data selecionada: {dia}");
         }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

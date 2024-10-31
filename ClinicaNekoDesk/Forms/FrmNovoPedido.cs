@@ -87,7 +87,7 @@ namespace ClinicaNeko.Forms
                 Background.StartPosition = FormStartPosition.CenterScreen;
                 Background.FormBorderStyle = FormBorderStyle.None;
                 Background.Opacity = 0.5d;
-                //Background.BackColor = Color.Black;
+                Background.BackColor = Color.Black;
                 Background.Size = new Size(1310, 722);
                 Background.Location = this.Location;
                 Background.ShowInTaskbar = false;

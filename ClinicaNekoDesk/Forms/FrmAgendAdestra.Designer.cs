@@ -346,6 +346,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmAgendAdestra";
             Text = "FrmAgendAdestra";
+            Load += FrmAgendAdestra_Load;
             ResumeLayout(false);
         }
 

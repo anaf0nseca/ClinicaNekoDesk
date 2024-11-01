@@ -7,20 +7,21 @@ using System.Threading.Tasks;
 
 namespace ClinicaNekoLib
 {
-    public class Servico
+    internal class Vacina
     {
+
         public int Id { get; set; }
         public string Nome { get; set; }
         public double Valor { get; set; }
 
-        public Servico() { }
+        public Vacina() { }
 
-        public Servico(string nome, double valor)
+        public Vacina(string nome, double valor)
         {
             Nome = nome;
             Valor = valor;
         }
-        public Servico(int id, string nome, double valor)
+        public Vacina(int id, string nome, double valor)
         {
             Id = id;
             Nome = nome;
@@ -40,9 +41,9 @@ namespace ClinicaNekoLib
             cmd.Connection.Close();
         }
 
-        public static Servico ObterPorId(int id)
+        public static Vacina ObterPorId(int id)
         {
-            Servico servico = new();
+            Vacina servico = new();
             var cmd = Banco.Abrir();
             //Por padrão o CommandType é tipo .Text
             cmd.CommandType = CommandType.Text;
@@ -61,9 +62,9 @@ namespace ClinicaNekoLib
             return servico;
         }
 
-        public static List<Servico> ObterLista()
+        public static List<Vacina> ObterLista()
         {
-            List<Servico> servicos = new List<Servico>();
+            List<Vacina> servicos = new List<Vacina>();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "select * from servico";
@@ -80,6 +81,5 @@ namespace ClinicaNekoLib
 
             return servicos;
         }
-
     }
 }

@@ -16,5 +16,10 @@ namespace ClinicaNekoDesk.Forms
         {
             InitializeComponent();
         }
+
+        private void FrmAgendAdestra_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

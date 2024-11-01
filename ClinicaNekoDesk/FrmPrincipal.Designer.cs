@@ -1092,6 +1092,7 @@
             panelFormularios.Name = "panelFormularios";
             panelFormularios.Size = new Size(1048, 641);
             panelFormularios.TabIndex = 0;
+            panelFormularios.Paint += panelFormularios_Paint;
             // 
             // FrmPrincipal
             // 

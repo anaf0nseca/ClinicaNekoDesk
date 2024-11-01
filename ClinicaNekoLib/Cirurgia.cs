@@ -7,22 +7,26 @@ using System.Threading.Tasks;
 
 namespace ClinicaNekoLib
 {
-    public class Servico
+    public class Cirurgia
     {
         public int Id { get; set; }
+
+        public Especialidade Especialidade { get; set; }
         public string Nome { get; set; }
         public double Valor { get; set; }
 
-        public Servico() { }
+        public Cirurgia() { }
 
-        public Servico(string nome, double valor)
+        public Cirurgia(Especialidade especialidade, string nome, double valor)
         {
+            Especialidade = especialidade;
             Nome = nome;
             Valor = valor;
         }
-        public Servico(int id, string nome, double valor)
+        public Cirurgia(int id, Especialidade especialidade, string nome, double valor)
         {
             Id = id;
+            Especialidade = especialidade;
             Nome = nome;
             Valor = valor;
         }
@@ -31,7 +35,8 @@ namespace ClinicaNekoLib
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_servico_insert";
+            cmd.CommandText = "sp_cirurgia_insert";
+            cmd.Parameters.AddWithValue("spid_especialidade", Especialidade);
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("spvalor", Valor);
 
@@ -40,46 +45,47 @@ namespace ClinicaNekoLib
             cmd.Connection.Close();
         }
 
-        public static Servico ObterPorId(int id)
+        public static Cirurgia ObterPorId(int id)
         {
-            Servico servico = new();
+            Cirurgia cirurgia = new();
             var cmd = Banco.Abrir();
             //Por padrão o CommandType é tipo .Text
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"SELECT * FROM servico where id = {id};";
+            cmd.CommandText = $"SELECT * FROM cirurgia where id = {id};";
             var dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                servico = new(
+                cirurgia = new(
                 dr.GetInt32(0),
-                dr.GetString(1),
-                dr.GetDouble(2)
+                Especialidade.ObterPorId(dr.GetInt32(1)),
+                dr.GetString(2),
+                dr.GetDouble(3)
                 );
             }
             cmd.Connection.Close();
 
-            return servico;
+            return cirurgia;
         }
 
-        public static List<Servico> ObterLista()
+        public static List<Cirurgia> ObterLista()
         {
-            List<Servico> servicos = new List<Servico>();
+            List<Cirurgia> cirurgias = new List<Cirurgia>();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from servico";
+            cmd.CommandText = "select * from cirurgia";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                servicos.Add(new(
+                cirurgias.Add(new(
                 dr.GetInt32(0),
-                dr.GetString(1),
-                dr.GetDouble(2)
+                Especialidade.ObterPorId(dr.GetInt32(1)),
+                dr.GetString(2),
+                dr.GetDouble(3)
                 ));
             }
             cmd.Connection.Close();
 
-            return servicos;
+            return cirurgias;
         }
-
     }
 }

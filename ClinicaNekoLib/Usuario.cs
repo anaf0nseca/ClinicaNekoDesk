@@ -157,15 +157,41 @@ namespace ClinicaNekoLib
             {
                 usuarios.Add(new
                     (
-                    dr.GetInt32(0),
-                    dr.GetString(1),
-                    dr.GetString(2),
-                    dr.GetDateTime(3),
-                    Setor.ObterPorId(dr.GetInt32(4)),
-                    Cargo.ObterPorId(dr.GetInt32(5)),
-                    dr.GetString(6),
-                    dr.GetString(7),
-                    dr.GetBoolean(8)
+                    dr.GetInt32(0),//id
+                    dr.GetString(1),//nome
+                    dr.GetString(2),//cpf
+                    dr.GetDateTime(3),//data
+                    Setor.ObterPorId(dr.GetInt32(4)),//setor
+                    Cargo.ObterPorId(dr.GetInt32(5)),//cargo
+                    dr.GetString(6),//email
+                    dr.GetString(7),//senha
+                    dr.GetBoolean(8)//ativo
+                    ));
+            }
+
+            cmd.Connection.Close();
+            return usuarios;
+        }
+
+        public static List<Usuario> ObterListaPorCargo(int cargoId)
+        {
+            List<Usuario> usuarios = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select * from usuario where id_cargo = {cargoId}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                usuarios.Add(new(
+                    dr.GetInt32(0),//id
+                    dr.GetString(1),//nome
+                    dr.GetString(2),//cpf
+                    dr.GetDateTime(3),//data
+                    Setor.ObterPorId(dr.GetInt32(4)),//setor
+                    Cargo.ObterPorId(dr.GetInt32(5)),//cargo
+                    dr.GetString(6),//email
+                    dr.GetString(7),//senha
+                    dr.GetBoolean(8)//ativo
                     ));
             }
 
@@ -183,15 +209,15 @@ namespace ClinicaNekoLib
             if (dr.Read())
             {
                 usuario = new(
-                    dr.GetInt32(0),
-                    dr.GetString(1),
-                    dr.GetString(2),
-                    dr.GetDateTime(3),
-                    Setor.ObterPorId(dr.GetInt32(4)),
-                    Cargo.ObterPorId(dr.GetInt32(5)),
-                    dr.GetString(6),
-                    dr.GetString(7),
-                    dr.GetBoolean(8)
+                    dr.GetInt32(0),//id
+                    dr.GetString(1),//nome
+                    dr.GetString(2),//cpf
+                    dr.GetDateTime(3),//data
+                    Setor.ObterPorId(dr.GetInt32(4)),//setor
+                    Cargo.ObterPorId(dr.GetInt32(5)),//cargo
+                    dr.GetString(6),//email
+                    dr.GetString(7),//senha
+                    dr.GetBoolean(8)//ativo
                     );
             }
 

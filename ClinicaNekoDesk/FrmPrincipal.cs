@@ -387,5 +387,10 @@ namespace ClinicaNeko
             MainPanel.Controls.Add(frmAgendamento);
             frmAgendamento.Show();
         }
+
+        private void panelFormularios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

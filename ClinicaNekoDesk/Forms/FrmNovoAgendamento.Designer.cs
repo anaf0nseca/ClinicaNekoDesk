@@ -30,6 +30,8 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNovoAgendamento));
@@ -51,11 +53,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             monthCalendar1 = new MonthCalendar();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             gpbDataHora = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             panelHorarios = new Panel();
             gpbDadosPaciente = new Guna.UI2.WinForms.Guna2GroupBox();
             btnSelecionarCliente = new Button();
@@ -82,7 +83,6 @@
             rbExame = new Guna.UI2.WinForms.Guna2RadioButton();
             rbCirurgia = new Guna.UI2.WinForms.Guna2RadioButton();
             gpbTipoAgendamento = new Guna.UI2.WinForms.Guna2GroupBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             gpbDataHora.SuspendLayout();
             gpbDadosPaciente.SuspendLayout();
             gpbEspecialidade.SuspendLayout();
@@ -145,6 +145,30 @@
             gpbDataHora.Size = new Size(1004, 213);
             gpbDataHora.TabIndex = 30;
             gpbDataHora.Text = "Selecione um dia";
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.Animated = true;
+            guna2Button1.BackColor = Color.Transparent;
+            guna2Button1.BorderRadius = 10;
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.FromArgb(34, 85, 96);
+            guna2Button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.ImageAlign = HorizontalAlignment.Right;
+            guna2Button1.ImageSize = new Size(24, 24);
+            guna2Button1.Location = new Point(478, 95);
+            guna2Button1.Margin = new Padding(4, 3, 4, 3);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(64, 40);
+            guna2Button1.TabIndex = 63;
+            guna2Button1.Text = "Agendar";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // panelHorarios
             // 
@@ -418,6 +442,7 @@
             cmbEspecialidade.ShadowDecoration.CustomizableEdges = customizableEdges20;
             cmbEspecialidade.Size = new Size(191, 26);
             cmbEspecialidade.TabIndex = 66;
+            cmbEspecialidade.SelectedIndexChanged += cmbEspecialidade_SelectedIndexChanged;
             // 
             // guna2HtmlLabel2
             // 
@@ -659,30 +684,6 @@
             gpbTipoAgendamento.TabIndex = 29;
             gpbTipoAgendamento.Text = "Selecione o tipo de agendamento";
             gpbTipoAgendamento.Click += guna2GroupBox1_Click;
-            // 
-            // guna2Button1
-            // 
-            guna2Button1.Animated = true;
-            guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.BorderRadius = 10;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(34, 85, 96);
-            guna2Button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.ImageAlign = HorizontalAlignment.Right;
-            guna2Button1.ImageSize = new Size(24, 24);
-            guna2Button1.Location = new Point(478, 95);
-            guna2Button1.Margin = new Padding(4, 3, 4, 3);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(64, 40);
-            guna2Button1.TabIndex = 63;
-            guna2Button1.Text = "Agendar";
-            guna2Button1.Click += guna2Button1_Click;
             // 
             // FrmNovoAgendamento
             // 

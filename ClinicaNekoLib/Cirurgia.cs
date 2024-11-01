@@ -87,5 +87,26 @@ namespace ClinicaNekoLib
 
             return cirurgias;
         }
+
+        public static List<Cirurgia> ObterListaPorEspecialidade(int especialidadeId)
+        {
+            List<Cirurgia> cirurgias = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select * from cirurgia where id_especialidade = {especialidadeId}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cirurgias.Add(new(
+                dr.GetInt32(0),
+                Especialidade.ObterPorId(dr.GetInt32(1)),
+                dr.GetString(2),
+                dr.GetDouble(3)
+                    ));
+            }
+
+            cmd.Connection.Close();
+            return cirurgias;
+        }
     }
 }

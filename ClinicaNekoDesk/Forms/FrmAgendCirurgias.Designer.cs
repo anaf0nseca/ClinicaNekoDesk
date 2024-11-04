@@ -214,6 +214,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmAgendCirurgias";
             Text = "FrmAgendCirurgias";
+            Load += FrmAgendCirurgias_Load;
             ResumeLayout(false);
         }
 

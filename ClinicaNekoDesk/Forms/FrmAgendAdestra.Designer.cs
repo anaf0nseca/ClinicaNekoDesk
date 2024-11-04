@@ -70,7 +70,7 @@
             guna2Button38 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button39 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button40 = new Guna.UI2.WinForms.Guna2Button();
-            SuspendLayout();
+//            SuspendLayout();
             // 
             // guna2Button46
             // 

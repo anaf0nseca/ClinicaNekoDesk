@@ -30,8 +30,6 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNovoAgendamento));
@@ -54,10 +52,11 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             monthCalendar1 = new MonthCalendar();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             gpbDataHora = new Guna.UI2.WinForms.Guna2GroupBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             panelHorarios = new Panel();
             gpbDadosPaciente = new Guna.UI2.WinForms.Guna2GroupBox();
             btnSelecionarCliente = new Button();
@@ -85,6 +84,7 @@
             rbExame = new Guna.UI2.WinForms.Guna2RadioButton();
             rbCirurgia = new Guna.UI2.WinForms.Guna2RadioButton();
             gpbTipoAgendamento = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             gpbDataHora.SuspendLayout();
             gpbDadosPaciente.SuspendLayout();
             gpbEspecialidade.SuspendLayout();
@@ -149,35 +149,13 @@
             gpbDataHora.Text = "Selecione um dia";
             gpbDataHora.Click += gpbDataHora_Click;
             // 
-            // guna2Button1
-            // 
-            guna2Button1.Animated = true;
-            guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.BorderRadius = 10;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(34, 85, 96);
-            guna2Button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.ImageAlign = HorizontalAlignment.Right;
-            guna2Button1.ImageSize = new Size(24, 24);
-            guna2Button1.Location = new Point(478, 95);
-            guna2Button1.Margin = new Padding(4, 3, 4, 3);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(64, 40);
-            guna2Button1.TabIndex = 63;
-            // 
             // panelHorarios
             // 
             panelHorarios.BackColor = Color.Transparent;
             panelHorarios.Location = new Point(569, 38);
             panelHorarios.Name = "panelHorarios";
             panelHorarios.Size = new Size(420, 162);
-            panelHorarios.TabIndex = 2;
+            panelHorarios.TabIndex = 0;
             panelHorarios.Visible = false;
             // 
             // gpbDadosPaciente
@@ -709,6 +687,28 @@
             gpbTipoAgendamento.Text = "Selecione o tipo de agendamento";
             gpbTipoAgendamento.Click += guna2GroupBox1_Click;
             // 
+            // guna2Button1
+            // 
+            guna2Button1.Animated = true;
+            guna2Button1.BackColor = Color.Transparent;
+            guna2Button1.BorderRadius = 10;
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.FromArgb(34, 85, 96);
+            guna2Button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.ImageAlign = HorizontalAlignment.Right;
+            guna2Button1.ImageSize = new Size(24, 24);
+            guna2Button1.Location = new Point(478, 95);
+            guna2Button1.Margin = new Padding(4, 3, 4, 3);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(64, 40);
+            guna2Button1.TabIndex = 63;
+            // 
             // FrmNovoAgendamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -768,7 +768,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtIdTutor;
         private Guna.UI2.WinForms.Guna2TextBox txtNomeTutor;
         private Button btnSelecionarCliente;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

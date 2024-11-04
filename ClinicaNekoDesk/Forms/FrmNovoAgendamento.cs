@@ -145,6 +145,8 @@ namespace ClinicaNekoDesk.Forms
             if (rbConsulta.Checked)
             {
                 gpbEspecialidade.Enabled = true;
+                cmbEspecialidade.Enabled = true;
+
                 // ----- Especialidade
                 //Carrega a lista de cargos de acordo com o cliente selecionado
                 var especialidades = Especialidade.ObterLista();
@@ -154,10 +156,6 @@ namespace ClinicaNekoDesk.Forms
                 cmbEspecialidade.DisplayMember = "Nome";
                 //Retorna para o banco o valor contido na coluna ID
                 cmbEspecialidade.ValueMember = "Id";
-
-
-
-
 
                 // ----- Profissional
                 //Carrega a lista de cargos de acordo com o cliente selecionado
@@ -169,53 +167,6 @@ namespace ClinicaNekoDesk.Forms
                 //Retorna para o banco o valor contido na coluna ID
                 cmbProfissional.ValueMember = "Id";
             }
-        }
-        }
-
-        private void rbExame_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbExame.Checked)
-            {
-
-            }
-        }
-
-        private void rbCirurgia_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbCirurgia.Checked)
-            {
-                gpbEspecialidade.Enabled = true;
-                // ----- Especialidade
-                //Carrega a lista de cargos de acordo com o cliente selecionado
-                var especialidades = Especialidade.ObterLista();
-                //Associa as listas ao combobox
-                cmbEspecialidade.DataSource = especialidades;
-                //Exibe o nome para o usuario
-                cmbEspecialidade.DisplayMember = "Nome";
-                //Retorna para o banco o valor contido na coluna ID
-                cmbEspecialidade.ValueMember = "Id";
-
-
-
-
-
-                // ----- Profissional
-                //Carrega a lista de cargos de acordo com o cliente selecionado
-                var usuarios = Usuario.ObterListaPorCargo(6);
-                //Associa as listas ao combobox
-                cmbProfissional.DataSource = usuarios;
-                //Exibe o nome para o usuario
-                cmbProfissional.DisplayMember = "Nome";
-                //Retorna para o banco o valor contido na coluna ID
-                cmbProfissional.ValueMember = "Id";
-            }
-        }
-
-
-
-        private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSelecionarCliente_Click(object sender, EventArgs e)
@@ -248,6 +199,105 @@ namespace ClinicaNekoDesk.Forms
             txtNomeTutor.Text = clienteNome;
         }
 
+        private void rbCirurgia_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbCirurgia.Checked)
+            {
+                gpbEspecialidade.Enabled = true;
+                cmbEspecialidade.Enabled = true;
+
+                // ----- Especialidade
+                //Carrega a lista de cargos de acordo com o cliente selecionado
+                var especialidades = Especialidade.ObterLista();
+                //Associa as listas ao combobox
+                cmbEspecialidade.DataSource = especialidades;
+                //Exibe o nome para o usuario
+                cmbEspecialidade.DisplayMember = "Nome";
+                //Retorna para o banco o valor contido na coluna ID
+                cmbEspecialidade.ValueMember = "Id";
+
+
+
+
+
+                // ----- Profissional
+                //Carrega a lista de cargos de acordo com o cliente selecionado
+                var usuarios = Usuario.ObterListaPorCargo(6);
+                //Associa as listas ao combobox
+                cmbProfissional.DataSource = usuarios;
+                //Exibe o nome para o usuario
+                cmbProfissional.DisplayMember = "Nome";
+                //Retorna para o banco o valor contido na coluna ID
+                cmbProfissional.ValueMember = "Id";
+
+            }
+        }
+
+        private void rbExame_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbExame.Checked)
+            {
+
+            }
+        }
+
+        private void cmbEspecialidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Especialidade especialidade = cmbEspecialidade.SelectedItem as Especialidade;
+            int id = especialidade.Id;
+            cmbTipo.Enabled = true;
+
+            if (cmbEspecialidade.SelectedItem != null)
+            {
+                if (rbConsulta.Checked)
+                {
+                    // ----- Tipo
+                    //Carrega a lista de cargos de acordo com o cliente selecionado
+                    var consultas = Consulta.ObterListaPorEspecialidade(id);
+                    //Associa as listas ao combobox
+                    cmbTipo.DataSource = consultas;
+                    //Exibe o nome para o usuario
+                    cmbTipo.DisplayMember = "Nome";
+                    //Retorna para o banco o valor contido na coluna ID
+                    cmbTipo.ValueMember = "Id";
+                }
+                else if (rbCirurgia.Checked)
+                {
+                    // ----- Tipo
+                    //Carrega a lista de cargos de acordo com o cliente selecionado
+                    var cirurgias = Cirurgia.ObterListaPorEspecialidade(id);
+                    //Associa as listas ao combobox
+                    cmbTipo.DataSource = cirurgias;
+                    //Exibe o nome para o usuario
+                    cmbTipo.DisplayMember = "Nome";
+                    //Retorna para o banco o valor contido na coluna ID
+                    cmbTipo.ValueMember = "Id";
+
+                }
+                else if (rbExame.Checked)
+                {
+                    // ----- Tipo
+                    //Carrega a lista de cargos de acordo com o cliente selecionado
+                    var exames = Exame.ObterListaPorEspecialidade(id);
+                    //Associa as listas ao combobox
+                    cmbTipo.DataSource = exames;
+                    //Exibe o nome para o usuario
+                    cmbTipo.DisplayMember = "Nome";
+                    //Retorna para o banco o valor contido na coluna ID
+                    cmbTipo.ValueMember = "Id";
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+
         private void txtIdTutor_TextChanged(object sender, EventArgs e)
         {
             if (txtIdTutor.Text != string.Empty)
@@ -278,33 +328,40 @@ namespace ClinicaNekoDesk.Forms
             }
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FrmAgendAdestra frmAgendAdestra = new FrmAgendAdestra();
-            frmAgendAdestra.Dock = DockStyle.Fill;
-            frmAgendAdestra.TopLevel = false;
-            PanelAgenda.Controls.Clear();
-            PanelAgenda.Controls.Add(frmAgendAdestra);
-            frmAgendAdestra.Show();
+
         }
 
-        private void cmbEspecialidade_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbProfissional_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbEspecialidade.SelectedItem != null)
-            {
-                Especialidade especialidade = cmbEspecialidade.SelectedItem as Especialidade;
-                int id = especialidade.Id;
 
-                // ----- Tipo
-                //Carrega a lista de cargos de acordo com o cliente selecionado
-                var cirurgias = Cirurgia.ObterListaPorEspecialidade(id);
-                //Associa as listas ao combobox
-                cmbTipo.DataSource = cirurgias;
-                //Exibe o nome para o usuario
-                cmbTipo.DisplayMember = "Nome";
-                //Retorna para o banco o valor contido na coluna ID
-                cmbTipo.ValueMember = "Id";
+        }
+
+        private void gpbEspecialidade_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gpbDataHora_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            if(rbCirurgia.Checked)
+            {
+                FrmAgendCirurgias frmAgendCirurgias = new FrmAgendCirurgias();
+                frmAgendCirurgias.Dock = DockStyle.Fill;
+                frmAgendCirurgias.TopLevel = false;
+                PanelAgenda.Controls.Clear();
+                PanelAgenda.Controls.Add(frmAgendCirurgias);
+                frmAgendCirurgias.Show();
             }
         }
     }
+
+
+
 }

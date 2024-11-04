@@ -43,16 +43,17 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             monthCalendar1 = new MonthCalendar();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             gpbDataHora = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -67,6 +68,7 @@
             guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnFinalizarPedido = new Guna.UI2.WinForms.Guna2Button();
             gpbEspecialidade = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             cmbProfissional = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             cmbTipo = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -145,6 +147,7 @@
             gpbDataHora.Size = new Size(1004, 213);
             gpbDataHora.TabIndex = 30;
             gpbDataHora.Text = "Selecione um dia";
+            gpbDataHora.Click += gpbDataHora_Click;
             // 
             // guna2Button1
             // 
@@ -167,8 +170,6 @@
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button1.Size = new Size(64, 40);
             guna2Button1.TabIndex = 63;
-            guna2Button1.Text = "Agendar";
-            guna2Button1.Click += guna2Button1_Click;
             // 
             // panelHorarios
             // 
@@ -341,6 +342,7 @@
             // 
             gpbEspecialidade.BorderColor = Color.FromArgb(83, 133, 91);
             gpbEspecialidade.BorderRadius = 15;
+            gpbEspecialidade.Controls.Add(guna2CircleButton1);
             gpbEspecialidade.Controls.Add(cmbProfissional);
             gpbEspecialidade.Controls.Add(guna2HtmlLabel3);
             gpbEspecialidade.Controls.Add(cmbTipo);
@@ -352,23 +354,43 @@
             gpbEspecialidade.Controls.Add(guna2RadioButton12);
             gpbEspecialidade.CustomBorderColor = Color.FromArgb(34, 85, 96);
             gpbEspecialidade.CustomBorderThickness = new Padding(0, 30, 0, 0);
-            gpbEspecialidade.CustomizableEdges = customizableEdges21;
+            gpbEspecialidade.CustomizableEdges = customizableEdges22;
             gpbEspecialidade.Enabled = false;
             gpbEspecialidade.Font = new Font("Segoe UI", 9F);
             gpbEspecialidade.ForeColor = Color.White;
             gpbEspecialidade.Location = new Point(16, 232);
             gpbEspecialidade.Margin = new Padding(5, 3, 5, 3);
             gpbEspecialidade.Name = "gpbEspecialidade";
-            gpbEspecialidade.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            gpbEspecialidade.ShadowDecoration.CustomizableEdges = customizableEdges23;
             gpbEspecialidade.Size = new Size(1004, 76);
             gpbEspecialidade.TabIndex = 30;
             gpbEspecialidade.Text = "Selecione a especialidade e/ou o profissional";
+            gpbEspecialidade.Click += gpbEspecialidade_Click;
+            // 
+            // guna2CircleButton1
+            // 
+            guna2CircleButton1.BackColor = Color.Transparent;
+            guna2CircleButton1.BackgroundImageLayout = ImageLayout.Stretch;
+            guna2CircleButton1.DisabledState.BorderColor = Color.DarkGray;
+            guna2CircleButton1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2CircleButton1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2CircleButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2CircleButton1.FillColor = Color.FromArgb(34, 85, 96);
+            guna2CircleButton1.Font = new Font("Segoe UI", 9F);
+            guna2CircleButton1.ForeColor = Color.White;
+            guna2CircleButton1.Location = new Point(950, 34);
+            guna2CircleButton1.Name = "guna2CircleButton1";
+            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton1.Size = new Size(34, 34);
+            guna2CircleButton1.TabIndex = 71;
+            guna2CircleButton1.Click += guna2CircleButton1_Click;
             // 
             // cmbProfissional
             // 
             cmbProfissional.BackColor = Color.Transparent;
             cmbProfissional.BorderRadius = 10;
-            cmbProfissional.CustomizableEdges = customizableEdges15;
+            cmbProfissional.CustomizableEdges = customizableEdges16;
             cmbProfissional.DrawMode = DrawMode.OwnerDrawFixed;
             cmbProfissional.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbProfissional.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -377,18 +399,19 @@
             cmbProfissional.ForeColor = Color.FromArgb(68, 88, 112);
             cmbProfissional.ItemHeight = 20;
             cmbProfissional.Items.AddRange(new object[] { "" });
-            cmbProfissional.Location = new Point(749, 39);
+            cmbProfissional.Location = new Point(711, 39);
             cmbProfissional.Name = "cmbProfissional";
-            cmbProfissional.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            cmbProfissional.ShadowDecoration.CustomizableEdges = customizableEdges17;
             cmbProfissional.Size = new Size(233, 26);
             cmbProfissional.TabIndex = 70;
+            cmbProfissional.SelectedIndexChanged += cmbProfissional_SelectedIndexChanged;
             // 
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel3.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel3.Location = new Point(655, 43);
+            guna2HtmlLabel3.Location = new Point(617, 43);
             guna2HtmlLabel3.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(87, 20);
@@ -399,7 +422,7 @@
             // 
             cmbTipo.BackColor = Color.Transparent;
             cmbTipo.BorderRadius = 10;
-            cmbTipo.CustomizableEdges = customizableEdges17;
+            cmbTipo.CustomizableEdges = customizableEdges18;
             cmbTipo.DrawMode = DrawMode.OwnerDrawFixed;
             cmbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTipo.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -407,18 +430,19 @@
             cmbTipo.Font = new Font("Segoe UI", 10F);
             cmbTipo.ForeColor = Color.FromArgb(68, 88, 112);
             cmbTipo.ItemHeight = 20;
-            cmbTipo.Location = new Point(387, 37);
+            cmbTipo.Location = new Point(371, 37);
             cmbTipo.Name = "cmbTipo";
-            cmbTipo.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            cmbTipo.ShadowDecoration.CustomizableEdges = customizableEdges19;
             cmbTipo.Size = new Size(233, 26);
             cmbTipo.TabIndex = 68;
+            cmbTipo.SelectedIndexChanged += cmbTipo_SelectedIndexChanged;
             // 
             // Tipo
             // 
             Tipo.BackColor = Color.Transparent;
             Tipo.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Tipo.ForeColor = Color.FromArgb(39, 63, 44);
-            Tipo.Location = new Point(345, 40);
+            Tipo.Location = new Point(329, 42);
             Tipo.Margin = new Padding(4, 3, 4, 3);
             Tipo.Name = "Tipo";
             Tipo.Size = new Size(35, 20);
@@ -429,7 +453,7 @@
             // 
             cmbEspecialidade.BackColor = Color.Transparent;
             cmbEspecialidade.BorderRadius = 10;
-            cmbEspecialidade.CustomizableEdges = customizableEdges19;
+            cmbEspecialidade.CustomizableEdges = customizableEdges20;
             cmbEspecialidade.DrawMode = DrawMode.OwnerDrawFixed;
             cmbEspecialidade.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbEspecialidade.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -439,7 +463,7 @@
             cmbEspecialidade.ItemHeight = 20;
             cmbEspecialidade.Location = new Point(127, 40);
             cmbEspecialidade.Name = "cmbEspecialidade";
-            cmbEspecialidade.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            cmbEspecialidade.ShadowDecoration.CustomizableEdges = customizableEdges21;
             cmbEspecialidade.Size = new Size(191, 26);
             cmbEspecialidade.TabIndex = 66;
             cmbEspecialidade.SelectedIndexChanged += cmbEspecialidade_SelectedIndexChanged;
@@ -672,14 +696,14 @@
             gpbTipoAgendamento.Controls.Add(rbConsulta);
             gpbTipoAgendamento.CustomBorderColor = Color.FromArgb(34, 85, 96);
             gpbTipoAgendamento.CustomBorderThickness = new Padding(0, 30, 0, 0);
-            gpbTipoAgendamento.CustomizableEdges = customizableEdges23;
+            gpbTipoAgendamento.CustomizableEdges = customizableEdges24;
             gpbTipoAgendamento.Enabled = false;
             gpbTipoAgendamento.Font = new Font("Segoe UI", 9F);
             gpbTipoAgendamento.ForeColor = Color.White;
             gpbTipoAgendamento.Location = new Point(528, 95);
             gpbTipoAgendamento.Margin = new Padding(5, 3, 5, 3);
             gpbTipoAgendamento.Name = "gpbTipoAgendamento";
-            gpbTipoAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            gpbTipoAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges25;
             gpbTipoAgendamento.Size = new Size(492, 127);
             gpbTipoAgendamento.TabIndex = 29;
             gpbTipoAgendamento.Text = "Selecione o tipo de agendamento";
@@ -745,5 +769,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNomeTutor;
         private Button btnSelecionarCliente;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
     }
 }

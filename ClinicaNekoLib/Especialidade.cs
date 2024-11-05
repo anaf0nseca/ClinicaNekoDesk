@@ -62,7 +62,7 @@ namespace ClinicaNekoLib
             List<Especialidade> especialidades = new List<Especialidade>();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from especialidade";
+            cmd.CommandText = "select * from especialidade order by nome";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {

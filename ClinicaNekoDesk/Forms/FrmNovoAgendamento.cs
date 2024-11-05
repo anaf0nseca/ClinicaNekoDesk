@@ -23,7 +23,7 @@ namespace ClinicaNekoDesk.Forms
         public FrmNovoAgendamento()
         {
             InitializeComponent();
-            PanelAgenda = panelHorarios;
+            //PanelAgenda = panelHorarios;
         }
         private void FrmNovoAgendamento_Load(object sender, EventArgs e)
         {
@@ -157,15 +157,8 @@ namespace ClinicaNekoDesk.Forms
                 //Retorna para o banco o valor contido na coluna ID
                 cmbEspecialidade.ValueMember = "Id";
 
-                // ----- Profissional
-                //Carrega a lista de cargos de acordo com o cliente selecionado
-                var usuarios = Usuario.ObterListaPorCargo(5);
-                //Associa as listas ao combobox
-                cmbProfissional.DataSource = usuarios;
-                //Exibe o nome para o usuario
-                cmbProfissional.DisplayMember = "Nome";
-                //Retorna para o banco o valor contido na coluna ID
-                cmbProfissional.ValueMember = "Id";
+
+  
             }
         }
 
@@ -222,7 +215,7 @@ namespace ClinicaNekoDesk.Forms
 
                 // ----- Profissional
                 //Carrega a lista de cargos de acordo com o cliente selecionado
-                var usuarios = Usuario.ObterListaPorCargo(6);
+                var usuarios = Usuario.ObterListaPorCargo(16);
                 //Associa as listas ao combobox
                 cmbProfissional.DataSource = usuarios;
                 //Exibe o nome para o usuario
@@ -260,6 +253,74 @@ namespace ClinicaNekoDesk.Forms
                     cmbTipo.DisplayMember = "Nome";
                     //Retorna para o banco o valor contido na coluna ID
                     cmbTipo.ValueMember = "Id";
+
+                    if(id == 1)
+                    {
+                        // ----- Profissional
+                        //Carrega a lista de cargos de acordo com o cliente selecionado
+                        var usuarios = Usuario.ObterListaPorCargo(6);
+                        //Associa as listas ao combobox
+                        cmbProfissional.DataSource = usuarios;
+                        //Exibe o nome para o usuario
+                        cmbProfissional.DisplayMember = "Nome";
+                        //Retorna para o banco o valor contido na coluna ID
+                        cmbProfissional.ValueMember = "Id";
+                    }else if(id == 2)
+                    {
+                        // ----- Profissional
+                        //Carrega a lista de cargos de acordo com o cliente selecionado
+                        var usuarios = Usuario.ObterListaPorCargo(7);
+                        //Associa as listas ao combobox
+                        cmbProfissional.DataSource = usuarios;
+                        //Exibe o nome para o usuario
+                        cmbProfissional.DisplayMember = "Nome";
+                        //Retorna para o banco o valor contido na coluna ID
+                        cmbProfissional.ValueMember = "Id";
+                    }else if (id == 3)
+                    {
+                        // ----- Profissional
+                        //Carrega a lista de cargos de acordo com o cliente selecionado
+                        var usuarios = Usuario.ObterListaPorCargo(8);
+                        //Associa as listas ao combobox
+                        cmbProfissional.DataSource = usuarios;
+                        //Exibe o nome para o usuario
+                        cmbProfissional.DisplayMember = "Nome";
+                        //Retorna para o banco o valor contido na coluna ID
+                        cmbProfissional.ValueMember = "Id";
+                    }else if( id == 4)
+                    {
+                        // ----- Profissional
+                        //Carrega a lista de cargos de acordo com o cliente selecionado
+                        var usuarios = Usuario.ObterListaPorCargo(9);
+                        //Associa as listas ao combobox
+                        cmbProfissional.DataSource = usuarios;
+                        //Exibe o nome para o usuario
+                        cmbProfissional.DisplayMember = "Nome";
+                        //Retorna para o banco o valor contido na coluna ID
+                        cmbProfissional.ValueMember = "Id";
+                    }else if(id == 5) 
+                    {
+                        // ----- Profissional
+                        //Carrega a lista de cargos de acordo com o cliente selecionado
+                        var usuarios = Usuario.ObterListaPorCargo(10);
+                        //Associa as listas ao combobox
+                        cmbProfissional.DataSource = usuarios;
+                        //Exibe o nome para o usuario
+                        cmbProfissional.DisplayMember = "Nome";
+                        //Retorna para o banco o valor contido na coluna ID
+                        cmbProfissional.ValueMember = "Id";
+                    }else if(id == 6)
+                    {
+                        // ----- Profissional
+                        //Carrega a lista de cargos de acordo com o cliente selecionado
+                        var usuarios = Usuario.ObterListaPorCargo(11);
+                        //Associa as listas ao combobox
+                        cmbProfissional.DataSource = usuarios;
+                        //Exibe o nome para o usuario
+                        cmbProfissional.DisplayMember = "Nome";
+                        //Retorna para o banco o valor contido na coluna ID
+                        cmbProfissional.ValueMember = "Id";
+                    }
                 }
                 else if (rbCirurgia.Checked)
                 {
@@ -350,7 +411,7 @@ namespace ClinicaNekoDesk.Forms
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            if(rbCirurgia.Checked)
+            if (txtIdTutor.Text != string.Empty)
             {
                 FrmAgendCirurgias frmAgendCirurgias = new FrmAgendCirurgias();
                 frmAgendCirurgias.Dock = DockStyle.Fill;
@@ -359,6 +420,11 @@ namespace ClinicaNekoDesk.Forms
                 PanelAgenda.Controls.Add(frmAgendCirurgias);
                 frmAgendCirurgias.Show();
             }
+        }
+
+        private void guna2HtmlLabel9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

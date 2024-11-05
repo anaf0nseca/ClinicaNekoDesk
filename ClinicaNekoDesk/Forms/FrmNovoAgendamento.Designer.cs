@@ -151,7 +151,6 @@
             monthCalendar1.TabIndex = 1;
             monthCalendar1.TitleBackColor = SystemColors.ControlDarkDark;
             monthCalendar1.TrailingForeColor = SystemColors.ControlText;
-            monthCalendar1.DateChanged += monthCalendar1_DateChanged;
             monthCalendar1.DateSelected += monthCalendar1_DateSelected;
             // 
             // guna2HtmlLabel9
@@ -990,7 +989,6 @@
             gpbTipoAgendamento.Size = new Size(492, 127);
             gpbTipoAgendamento.TabIndex = 29;
             gpbTipoAgendamento.Text = "Selecione o tipo de agendamento";
-            gpbTipoAgendamento.Click += guna2GroupBox1_Click;
             // 
             // FrmNovoAgendamento
             // 

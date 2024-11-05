@@ -39,15 +39,6 @@ namespace ClinicaNekoDesk.Forms
 
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void guna2GroupBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void rbBanhoETosa_CheckedChanged(object sender, EventArgs e)
         {

@@ -73,7 +73,7 @@ namespace ClinicaNekoLib
             List<Exame> exames = new List<Exame>();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from exame";
+            cmd.CommandText = "select * from exame order by nome";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -94,7 +94,7 @@ namespace ClinicaNekoLib
             List<Exame> exames = new();
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"select * from exame where id_especialidade = {especialidadeId}";
+            cmd.CommandText = $"select * from exame where id_especialidade = {especialidadeId} order by nome";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {

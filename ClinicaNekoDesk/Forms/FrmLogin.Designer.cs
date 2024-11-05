@@ -76,7 +76,7 @@
             txtEmail.BorderRadius = 10;
             txtEmail.Cursor = Cursors.IBeam;
             txtEmail.CustomizableEdges = customizableEdges1;
-            txtEmail.DefaultText = "ana@gmail.com";
+            txtEmail.DefaultText = "kimura.kenji@gmail";
             txtEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);

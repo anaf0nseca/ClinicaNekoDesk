@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
-    Microsoft ResX Schema 
+    Microsoft ResX Schema
 
     Version 2.0
 
@@ -48,7 +48,7 @@
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
@@ -399,6 +399,14 @@
         sNP07IGBgWWtOAAAACgTmqh3iOP4Lm/yHrf2lf9eOvTk+SUAAABAKRkeHl7CTdry/gUT+Th8TJP/F/X6
         SjssAAAAVIFWq7W0JvH3axI/Ua8P9EzuQfV3HpGn6f2O3W53BTsMAAAAVJWZM2e+TJN6R5P7O+TOmuj3
         1+vn9LpLFEXvdLv56c9T7K8DAAAApMl//Mf/B/upvrrTryqYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="guna2CircleButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAB/SURBVEhL7c/BCYAwDEbhbuH+Q3SKXtyo5pU/h4JgS3MzHwSlmoeWlJb13i9d6ziIRNym2aDp
+        OIYFp7jN+JMQxBTFH+L2Yv1a4Jnewd6XawGvi5zpGfbiYEGLmALc6wz7cceiAhghzXncEVAItwbncUdI
+        QRcXdwQVjo+ntKiUB2G8IF4o5odJAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

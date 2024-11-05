@@ -18,12 +18,11 @@ namespace ClinicaNekoDesk.Forms
     {
         public int clienteId;
 
-        public static Panel PanelAgenda;
+        //public static Panel PanelAgenda;
 
         public FrmNovoAgendamento()
         {
             InitializeComponent();
-            //PanelAgenda = panelHorarios;
         }
         private void FrmNovoAgendamento_Load(object sender, EventArgs e)
         {
@@ -36,15 +35,6 @@ namespace ClinicaNekoDesk.Forms
             string dia = monthCalendar1.SelectionRange.Start.ToString();
             MessageBox.Show($"Data selecionada: {dia}");
 
-            if (rbBanhoETosa.Checked)
-            {
-                FrmAgendAdestra frmAgendAdestra = new FrmAgendAdestra();
-                frmAgendAdestra.Dock = DockStyle.Fill;
-                frmAgendAdestra.TopLevel = false;
-                PanelAgenda.Controls.Clear();
-                PanelAgenda.Controls.Add(frmAgendAdestra);
-                frmAgendAdestra.Show();
-            }
 
 
         }
@@ -68,7 +58,7 @@ namespace ClinicaNekoDesk.Forms
                 cmbEspecialidade.Enabled = false;
                 cmbTipo.Enabled = false;
 
-                //Carrega a lista de cargos de acordo com o cliente selecionado
+                //Carrega a lista de usuarios de acordo com o serviço selecionado
                 var usuarios = Usuario.ObterListaPorCargo(11);
 
                 //Associa as listas ao combobox
@@ -96,7 +86,7 @@ namespace ClinicaNekoDesk.Forms
                 cmbEspecialidade.Enabled = false;
                 cmbTipo.Enabled = false;
 
-                //Carrega a lista de cargos de acordo com o cliente selecionado
+                //Carrega a lista de usuarios de acordo com o serviço selecionado
                 var usuarios = Usuario.ObterListaPorCargo(7);
 
                 //Associa as listas ao combobox
@@ -121,8 +111,8 @@ namespace ClinicaNekoDesk.Forms
                 gpbEspecialidade.Enabled = true;
                 cmbEspecialidade.Enabled = false;
                 cmbTipo.Enabled = false;
-
-                //Carrega a lista de cargos de acordo com o cliente selecionado
+                
+                //Carrega a lista de usuarios de acordo com o serviço selecionado
                 var usuarios = Usuario.ObterListaPorCargo(10);
 
                 //Associa as listas ao combobox
@@ -148,7 +138,7 @@ namespace ClinicaNekoDesk.Forms
                 cmbEspecialidade.Enabled = true;
 
                 // ----- Especialidade
-                //Carrega a lista de cargos de acordo com o cliente selecionado
+                //Carrega a lista de especialidades
                 var especialidades = Especialidade.ObterLista();
                 //Associa as listas ao combobox
                 cmbEspecialidade.DataSource = especialidades;
@@ -200,7 +190,7 @@ namespace ClinicaNekoDesk.Forms
                 cmbEspecialidade.Enabled = true;
 
                 // ----- Especialidade
-                //Carrega a lista de cargos de acordo com o cliente selecionado
+                //Carrega a lista de especialidades
                 var especialidades = Especialidade.ObterLista();
                 //Associa as listas ao combobox
                 cmbEspecialidade.DataSource = especialidades;
@@ -214,7 +204,7 @@ namespace ClinicaNekoDesk.Forms
 
 
                 // ----- Profissional
-                //Carrega a lista de cargos de acordo com o cliente selecionado
+                //Carrega a lista de usuários de acordo com o serviço selecionado
                 var usuarios = Usuario.ObterListaPorCargo(16);
                 //Associa as listas ao combobox
                 cmbProfissional.DataSource = usuarios;
@@ -230,7 +220,29 @@ namespace ClinicaNekoDesk.Forms
         {
             if (rbExame.Checked)
             {
+                gpbEspecialidade.Enabled = true;
+                cmbEspecialidade.Enabled = true;
 
+                // ----- Especialidade
+                //Carrega a lista de especialidades
+                var especialidades = Especialidade.ObterLista();
+                //Associa as listas ao combobox
+                cmbEspecialidade.DataSource = especialidades;
+                //Exibe o nome para o usuario
+                cmbEspecialidade.DisplayMember = "Nome";
+                //Retorna para o banco o valor contido na coluna ID
+                cmbEspecialidade.ValueMember = "Id";
+
+
+                // ----- Profissional
+                //Carrega a lista de usuários de acordo com o serviço selecionado
+                var usuarios = Usuario.ObterListaPorCargo(16);
+                //Associa as listas ao combobox
+                cmbProfissional.DataSource = usuarios;
+                //Exibe o nome para o usuario
+                cmbProfissional.DisplayMember = "Nome";
+                //Retorna para o banco o valor contido na coluna ID
+                cmbProfissional.ValueMember = "Id";
             }
         }
 
@@ -245,7 +257,7 @@ namespace ClinicaNekoDesk.Forms
                 if (rbConsulta.Checked)
                 {
                     // ----- Tipo
-                    //Carrega a lista de cargos de acordo com o cliente selecionado
+                    //Carrega a lista de consultas de acordo com a especialidade selecionada
                     var consultas = Consulta.ObterListaPorEspecialidade(id);
                     //Associa as listas ao combobox
                     cmbTipo.DataSource = consultas;
@@ -257,7 +269,7 @@ namespace ClinicaNekoDesk.Forms
                     if(id == 1)
                     {
                         // ----- Profissional
-                        //Carrega a lista de cargos de acordo com o cliente selecionado
+                        //Carrega a lista de usuários de acordo com o serviço selecionado
                         var usuarios = Usuario.ObterListaPorCargo(6);
                         //Associa as listas ao combobox
                         cmbProfissional.DataSource = usuarios;
@@ -268,7 +280,7 @@ namespace ClinicaNekoDesk.Forms
                     }else if(id == 2)
                     {
                         // ----- Profissional
-                        //Carrega a lista de cargos de acordo com o cliente selecionado
+                        //Carrega a lista de usuários de acordo com o serviço selecionado
                         var usuarios = Usuario.ObterListaPorCargo(7);
                         //Associa as listas ao combobox
                         cmbProfissional.DataSource = usuarios;
@@ -279,7 +291,7 @@ namespace ClinicaNekoDesk.Forms
                     }else if (id == 3)
                     {
                         // ----- Profissional
-                        //Carrega a lista de cargos de acordo com o cliente selecionado
+                        //Carrega a lista de usuários de acordo com o serviço selecionado
                         var usuarios = Usuario.ObterListaPorCargo(8);
                         //Associa as listas ao combobox
                         cmbProfissional.DataSource = usuarios;
@@ -290,7 +302,7 @@ namespace ClinicaNekoDesk.Forms
                     }else if( id == 4)
                     {
                         // ----- Profissional
-                        //Carrega a lista de cargos de acordo com o cliente selecionado
+                        //Carrega a lista de usuários de acordo com o serviço selecionado
                         var usuarios = Usuario.ObterListaPorCargo(9);
                         //Associa as listas ao combobox
                         cmbProfissional.DataSource = usuarios;
@@ -301,7 +313,7 @@ namespace ClinicaNekoDesk.Forms
                     }else if(id == 5) 
                     {
                         // ----- Profissional
-                        //Carrega a lista de cargos de acordo com o cliente selecionado
+                        //Carrega a lista de usuários de acordo com o serviço selecionado
                         var usuarios = Usuario.ObterListaPorCargo(10);
                         //Associa as listas ao combobox
                         cmbProfissional.DataSource = usuarios;
@@ -312,7 +324,7 @@ namespace ClinicaNekoDesk.Forms
                     }else if(id == 6)
                     {
                         // ----- Profissional
-                        //Carrega a lista de cargos de acordo com o cliente selecionado
+                        //Carrega a lista de usuários de acordo com o serviço selecionado
                         var usuarios = Usuario.ObterListaPorCargo(11);
                         //Associa as listas ao combobox
                         cmbProfissional.DataSource = usuarios;
@@ -320,12 +332,72 @@ namespace ClinicaNekoDesk.Forms
                         cmbProfissional.DisplayMember = "Nome";
                         //Retorna para o banco o valor contido na coluna ID
                         cmbProfissional.ValueMember = "Id";
+                    }else if (id == 7)
+                     {
+                        // ----- Profissional
+                        //Carrega a lista de usuários de acordo com o serviço selecionado
+                        var usuarios = Usuario.ObterListaPorCargo(12);
+                        //Associa as listas ao combobox
+                        cmbProfissional.DataSource = usuarios;
+                        //Exibe o nome para o usuario
+                        cmbProfissional.DisplayMember = "Nome";
+                        //Retorna para o banco o valor contido na coluna ID
+                        cmbProfissional.ValueMember = "Id";
                     }
+                    else if (id == 8)
+                    {
+                        // ----- Profissional
+                        //Carrega a lista de usuários de acordo com o serviço selecionado
+                        var usuarios = Usuario.ObterListaPorCargo(13);
+                        //Associa as listas ao combobox
+                        cmbProfissional.DataSource = usuarios;
+                        //Exibe o nome para o usuario
+                        cmbProfissional.DisplayMember = "Nome";
+                        //Retorna para o banco o valor contido na coluna ID
+                        cmbProfissional.ValueMember = "Id";
+                    }else if(id == 9)
+                    {
+                        // ----- Profissional
+                        //Carrega a lista de usuários de acordo com o serviço selecionado
+                        var usuarios = Usuario.ObterListaPorCargo(14);
+                        //Associa as listas ao combobox
+                        cmbProfissional.DataSource = usuarios;
+                        //Exibe o nome para o usuario
+                        cmbProfissional.DisplayMember = "Nome";
+                        //Retorna para o banco o valor contido na coluna ID
+                        cmbProfissional.ValueMember = "Id";
+                    }
+                    else if (id == 10)
+                    {
+                        // ----- Profissional
+                        //Carrega a lista de usuários de acordo com o serviço selecionado
+                        var usuarios = Usuario.ObterListaPorCargo(15);
+                        //Associa as listas ao combobox
+                        cmbProfissional.DataSource = usuarios;
+                        //Exibe o nome para o usuario
+                        cmbProfissional.DisplayMember = "Nome";
+                        //Retorna para o banco o valor contido na coluna ID
+                        cmbProfissional.ValueMember = "Id";
+                    }
+                    else if(id == 11)
+                    {
+                        // ----- Profissional
+                        //Carrega a lista de usuários de acordo com o serviço selecionado
+                        var usuarios = Usuario.ObterListaPorCargo(5);
+                        //Associa as listas ao combobox
+                        cmbProfissional.DataSource = usuarios;
+                        //Exibe o nome para o usuario
+                        cmbProfissional.DisplayMember = "Nome";
+                        //Retorna para o banco o valor contido na coluna ID
+                        cmbProfissional.ValueMember = "Id";
+                    }
+
+
                 }
                 else if (rbCirurgia.Checked)
                 {
                     // ----- Tipo
-                    //Carrega a lista de cargos de acordo com o cliente selecionado
+                    //Carrega a lista de cirurgias de acordo com a especialidade selecionada
                     var cirurgias = Cirurgia.ObterListaPorEspecialidade(id);
                     //Associa as listas ao combobox
                     cmbTipo.DataSource = cirurgias;
@@ -338,7 +410,7 @@ namespace ClinicaNekoDesk.Forms
                 else if (rbExame.Checked)
                 {
                     // ----- Tipo
-                    //Carrega a lista de cargos de acordo com o cliente selecionado
+                    //Carrega a lista de exames de acordo com a especialidade selecionada
                     var exames = Exame.ObterListaPorEspecialidade(id);
                     //Associa as listas ao combobox
                     cmbTipo.DataSource = exames;
@@ -365,7 +437,7 @@ namespace ClinicaNekoDesk.Forms
             {
                 int id = Convert.ToInt32(txtIdTutor.Text);
 
-                //Carrega a lista de cargos de acordo com o cliente selecionado
+                //Carrega a lista de pacientes de acordo com o cliente selecionado
                 var pacientes = Paciente.ObterListaPorCliente(id);
 
                 //Associa as listas ao combobox
@@ -389,43 +461,13 @@ namespace ClinicaNekoDesk.Forms
             }
         }
 
-        private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbProfissional_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gpbEspecialidade_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gpbDataHora_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            if (txtIdTutor.Text != string.Empty)
-            {
-                FrmAgendCirurgias frmAgendCirurgias = new FrmAgendCirurgias();
-                frmAgendCirurgias.Dock = DockStyle.Fill;
-                frmAgendCirurgias.TopLevel = false;
-                PanelAgenda.Controls.Clear();
-                PanelAgenda.Controls.Add(frmAgendCirurgias);
-                frmAgendCirurgias.Show();
-            }
+            gpbEspecialidade.Enabled = false;   
         }
 
-        private void guna2HtmlLabel9_Click(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 
 

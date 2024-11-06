@@ -34,6 +34,7 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -70,12 +71,19 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             tabConsultaUsuario = new Guna.UI2.WinForms.Guna2TabControl();
             tpListarUsuarios = new TabPage();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtBusca = new Guna.UI2.WinForms.Guna2TextBox();
             dgvListaUsuarios = new Guna.UI2.WinForms.Guna2DataGridView();
+            clnId = new DataGridViewTextBoxColumn();
+            clnNome = new DataGridViewTextBoxColumn();
+            clnCpf = new DataGridViewTextBoxColumn();
+            clnDataNascimento = new DataGridViewTextBoxColumn();
+            clnSetor = new DataGridViewTextBoxColumn();
+            clnCargo = new DataGridViewTextBoxColumn();
+            clnEmail = new DataGridViewTextBoxColumn();
+            clnAtivo = new DataGridViewCheckBoxColumn();
             tpEditarUsuarios = new TabPage();
             btnEnd = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -111,14 +119,6 @@
             cmbCargo = new Guna.UI2.WinForms.Guna2ComboBox();
             cmbSetor = new Guna.UI2.WinForms.Guna2ComboBox();
             dtpNascimento = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            clnId = new DataGridViewTextBoxColumn();
-            clnNome = new DataGridViewTextBoxColumn();
-            clnCpf = new DataGridViewTextBoxColumn();
-            clnDataNascimento = new DataGridViewTextBoxColumn();
-            clnSetor = new DataGridViewTextBoxColumn();
-            clnCargo = new DataGridViewTextBoxColumn();
-            clnEmail = new DataGridViewTextBoxColumn();
-            clnAtivo = new DataGridViewCheckBoxColumn();
             tabConsultaUsuario.SuspendLayout();
             tpListarUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaUsuarios).BeginInit();
@@ -217,7 +217,6 @@
             dgvListaUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvListaUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             dgvListaUsuarios.BackgroundColor = Color.FromArgb(200, 219, 203);
-            dgvListaUsuarios.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(34, 85, 96);
             dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -276,6 +275,65 @@
             dgvListaUsuarios.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvListaUsuarios.CellContentClick += dgvListaUsuarios_CellContentClick;
             dgvListaUsuarios.CellDoubleClick += dgvListaUsuarios_CellDoubleClick_1;
+            // 
+            // clnId
+            // 
+            clnId.HeaderText = "ID";
+            clnId.Name = "clnId";
+            clnId.ReadOnly = true;
+            clnId.Width = 50;
+            // 
+            // clnNome
+            // 
+            clnNome.HeaderText = "Nome Completo";
+            clnNome.Name = "clnNome";
+            clnNome.ReadOnly = true;
+            clnNome.Width = 205;
+            // 
+            // clnCpf
+            // 
+            clnCpf.HeaderText = "CPF";
+            clnCpf.Name = "clnCpf";
+            clnCpf.ReadOnly = true;
+            clnCpf.Width = 150;
+            // 
+            // clnDataNascimento
+            // 
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            clnDataNascimento.DefaultCellStyle = dataGridViewCellStyle3;
+            clnDataNascimento.HeaderText = "Data de Nascimento";
+            clnDataNascimento.Name = "clnDataNascimento";
+            clnDataNascimento.ReadOnly = true;
+            clnDataNascimento.Width = 135;
+            // 
+            // clnSetor
+            // 
+            clnSetor.HeaderText = "Setor";
+            clnSetor.Name = "clnSetor";
+            clnSetor.ReadOnly = true;
+            clnSetor.Width = 128;
+            // 
+            // clnCargo
+            // 
+            clnCargo.HeaderText = "Cargo";
+            clnCargo.Name = "clnCargo";
+            clnCargo.ReadOnly = true;
+            clnCargo.Width = 129;
+            // 
+            // clnEmail
+            // 
+            clnEmail.HeaderText = "Email";
+            clnEmail.Name = "clnEmail";
+            clnEmail.ReadOnly = true;
+            clnEmail.Width = 180;
+            // 
+            // clnAtivo
+            // 
+            clnAtivo.HeaderText = "Ativo";
+            clnAtivo.Name = "clnAtivo";
+            clnAtivo.ReadOnly = true;
+            clnAtivo.Width = 50;
             // 
             // tpEditarUsuarios
             // 
@@ -927,65 +985,6 @@
             dtpNascimento.Size = new Size(233, 27);
             dtpNascimento.TabIndex = 29;
             dtpNascimento.Value = new DateTime(2024, 9, 18, 17, 42, 24, 924);
-            // 
-            // clnId
-            // 
-            clnId.HeaderText = "ID";
-            clnId.Name = "clnId";
-            clnId.ReadOnly = true;
-            clnId.Width = 50;
-            // 
-            // clnNome
-            // 
-            clnNome.HeaderText = "Nome Completo";
-            clnNome.Name = "clnNome";
-            clnNome.ReadOnly = true;
-            clnNome.Width = 205;
-            // 
-            // clnCpf
-            // 
-            clnCpf.HeaderText = "CPF";
-            clnCpf.Name = "clnCpf";
-            clnCpf.ReadOnly = true;
-            clnCpf.Width = 150;
-            // 
-            // clnDataNascimento
-            // 
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            clnDataNascimento.DefaultCellStyle = dataGridViewCellStyle3;
-            clnDataNascimento.HeaderText = "Data de Nascimento";
-            clnDataNascimento.Name = "clnDataNascimento";
-            clnDataNascimento.ReadOnly = true;
-            clnDataNascimento.Width = 135;
-            // 
-            // clnSetor
-            // 
-            clnSetor.HeaderText = "Setor";
-            clnSetor.Name = "clnSetor";
-            clnSetor.ReadOnly = true;
-            clnSetor.Width = 128;
-            // 
-            // clnCargo
-            // 
-            clnCargo.HeaderText = "Cargo";
-            clnCargo.Name = "clnCargo";
-            clnCargo.ReadOnly = true;
-            clnCargo.Width = 129;
-            // 
-            // clnEmail
-            // 
-            clnEmail.HeaderText = "Email";
-            clnEmail.Name = "clnEmail";
-            clnEmail.ReadOnly = true;
-            clnEmail.Width = 180;
-            // 
-            // clnAtivo
-            // 
-            clnAtivo.HeaderText = "Ativo";
-            clnAtivo.Name = "clnAtivo";
-            clnAtivo.ReadOnly = true;
-            clnAtivo.Width = 50;
             // 
             // FrmListaUsuario
             // 

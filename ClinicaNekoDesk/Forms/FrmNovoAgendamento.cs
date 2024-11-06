@@ -32,7 +32,7 @@ namespace ClinicaNekoDesk.Forms
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            string dia = monthCalendar1.SelectionRange.Start.ToString();
+            string dia = monthCalendar1.SelectionRange.Start.ToString("dd/MM/yyyy");
             MessageBox.Show($"Data selecionada: {dia}");
 
 
@@ -227,7 +227,7 @@ namespace ClinicaNekoDesk.Forms
 
                 // ----- Profissional
                 //Carrega a lista de usuários de acordo com o serviço selecionado
-                var usuarios = Usuario.ObterListaPorCargo(16);
+                var usuarios = Usuario.ObterListaPorCargo(17);
                 //Associa as listas ao combobox
                 cmbProfissional.DataSource = usuarios;
                 //Exibe o nome para o usuario

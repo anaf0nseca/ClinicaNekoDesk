@@ -11,12 +11,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClinicaNeko.Forms;
 using ClinicaNekoDesk.Forms;
+using MySql.Data.MySqlClient;
+using System.Collections;
 
 namespace ClinicaNekoDesk.Forms
 {
     public partial class FrmNovoAgendamento : Form
     {
         public int clienteId;
+
+        public string diaSelecionado;
 
         //public static Panel PanelAgenda;
 
@@ -29,14 +33,75 @@ namespace ClinicaNekoDesk.Forms
 
         }
 
+        public void ConsultarHorariosDisponíveis(string Tipo, DateTime Data)
+        {
+            // Definir os horários possíveis em um array
+            string[] horariosPossiveisExame = new string[]
+            {
+                "07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
+                "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30",
+                "16:00", "16:30", "17:00", "17:30", "18:00", "18:30"
+            };
+
+            // Lista de horários disponíveis
+            var horariosDisponiveis = new List<string>(horariosPossiveisExame);
+
+            var cmd = Banco.Abrir();
+
+            //string comando = 
+            cmd.CommandType = System.Data.CommandType.Text;
+
+            // Consulta para pegar os horários já agendados
+            cmd.CommandText = $"select hora from agendamento where tipo = {Tipo} and data = {Data}";
+
+            //Obter a data selecionada
+            diaSelecionado = monthCalendar1.SelectionRange.Start.ToString("yyyy-MM-dd");
+
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                string horarioAgendado = dr["HorarioAgendamento"].ToString();
+                // Se o horário já foi agendado, removê-lo da lista de horários disponíveis
+                horariosDisponiveis.Remove(horarioAgendado);
+            }
+
+
+        //    // Criar o comando SQL com o parâmetro da data
+        //    using (SqlCommand cmd = new SqlCommand(query, connection))
+        //    {
+        //        cmd.Parameters.AddWithValue("@DataAgendamento", dataAgendamento);
+
+        //        // Executar a consulta e obter os horários já agendados
+        //        using (SqlDataReader reader = cmd.ExecuteReader())
+        //        {
+        //            while (reader.Read())
+        //            {
+        //                string horarioAgendado = reader["HorarioAgendamento"].ToString();
+        //                // Se o horário já foi agendado, removê-lo da lista de horários disponíveis
+        //                horariosDisponiveis.Remove(horarioAgendado);
+        //            }
+        //        }
+        //    }
+
+        //    // Atualizar o ComboBox com os horários disponíveis
+        //    comboBoxHorarios.Items.Clear();
+        //    foreach (var horario in horariosDisponiveis)
+        //    {
+        //        comboBoxHorarios.Items.Add(horario);
+        //    }
+
+        //    // Se não houver horários disponíveis, mostrar uma mensagem
+        //    if (comboBoxHorarios.Items.Count == 0)
+        //    {
+        //        MessageBox.Show("Não há horários disponíveis para agendamento nesta data.");
+        //    }
+        //}
+    }
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            string dia = monthCalendar1.SelectionRange.Start.ToString("dd/MM/yyyy");
-            MessageBox.Show($"Data selecionada: {dia}");
-
-
-
+            ConsultarHorariosDisponíveis("consulta", Convert.ToDateTime(diaSelecionado));
+            MessageBox.Show($"Dia selecionado: {diaSelecionado}");
         }
 
 

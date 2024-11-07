@@ -72,8 +72,7 @@ namespace ClinicaNekoLib
         {
             Agendamento agendamento = new Agendamento();
             var cmd = Banco.Abrir();
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"select * from agendamento where id = {id}";
+
             var dr = cmd.ExecuteReader();
 
             if (dr.Read())

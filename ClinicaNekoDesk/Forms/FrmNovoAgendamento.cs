@@ -13,6 +13,7 @@ using ClinicaNeko.Forms;
 using ClinicaNekoDesk.Forms;
 using MySql.Data.MySqlClient;
 using System.Collections;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 
 namespace ClinicaNekoDesk.Forms
 {
@@ -21,6 +22,7 @@ namespace ClinicaNekoDesk.Forms
         public int clienteId;
 
         public string diaSelecionado;
+        private string connectionString = "Data Source=127.0.0.1;Initial Catalog=clinicanekodb";
 
         //public static Panel PanelAgenda;
 
@@ -33,12 +35,12 @@ namespace ClinicaNekoDesk.Forms
 
         }
 
-        public void ConsultarHorariosDisponíveis(string Tipo, DateTime Data)
+        private void ConsultarHorariosDisponíveis(string Tipo)
         {
             // Definir os horários possíveis em um array
             string[] horariosPossiveisExame = new string[]
             {
-                "07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
+                "07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00:00", "11:30",
                 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30",
                 "16:00", "16:30", "17:00", "17:30", "18:00", "18:30"
             };
@@ -49,61 +51,67 @@ namespace ClinicaNekoDesk.Forms
             var cmd = Banco.Abrir();
 
             //string comando = 
-            cmd.CommandType = System.Data.CommandType.Text;
+
 
             // Consulta para pegar os horários já agendados
-            cmd.CommandText = $"select hora from agendamento where tipo = {Tipo} and data = {Data}";
+            string comando = $"select hora from agendamento where tipo = {Tipo} and data = @diaSelecionado";
 
             //Obter a data selecionada
             diaSelecionado = monthCalendar1.SelectionRange.Start.ToString("yyyy-MM-dd");
 
-            var dr = cmd.ExecuteReader();
-            while (dr.Read())
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                string horarioAgendado = dr["HorarioAgendamento"].ToString();
-                // Se o horário já foi agendado, removê-lo da lista de horários disponíveis
-                horariosDisponiveis.Remove(horarioAgendado);
+
+                // Criar o comando SQL com o parâmetro da data
+                using (MySqlCommand mysql = new MySqlCommand(comando, connection))
+                {
+                    cmd.Parameters.AddWithValue("@diaSelecionado", diaSelecionado);
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = $"select hora from agendamento where tipo = '{Tipo}' and data = @diaSelecionado";
+                    // Executar a consulta e obter os horários já agendados
+                    using (MySqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            string horarioAgendado = dr["hora"].ToString();
+                            // Se o horário já foi agendado, removê-lo da lista de horários disponíveis
+                            horariosDisponiveis.Remove(horarioAgendado);
+                        }
+                    }
+
+                }
+
+                // Atualizar o ComboBox com os horários disponíveis
+                cmbHorarios.Items.Clear();
+                foreach (var horario in horariosDisponiveis)
+                {
+                    cmbHorarios.Items.Add(horario);
+                }
+
+                // Se não houver horários disponíveis, mostrar uma mensagem
+                if (cmbHorarios.Items.Count == 0)
+                {
+                    MessageBox.Show("Não há horários disponíveis para agendamento nesta data.");
+                }
+
+
+
+
             }
-
-
-        //    // Criar o comando SQL com o parâmetro da data
-        //    using (SqlCommand cmd = new SqlCommand(query, connection))
-        //    {
-        //        cmd.Parameters.AddWithValue("@DataAgendamento", dataAgendamento);
-
-        //        // Executar a consulta e obter os horários já agendados
-        //        using (SqlDataReader reader = cmd.ExecuteReader())
-        //        {
-        //            while (reader.Read())
-        //            {
-        //                string horarioAgendado = reader["HorarioAgendamento"].ToString();
-        //                // Se o horário já foi agendado, removê-lo da lista de horários disponíveis
-        //                horariosDisponiveis.Remove(horarioAgendado);
-        //            }
-        //        }
-        //    }
-
-        //    // Atualizar o ComboBox com os horários disponíveis
-        //    comboBoxHorarios.Items.Clear();
-        //    foreach (var horario in horariosDisponiveis)
-        //    {
-        //        comboBoxHorarios.Items.Add(horario);
-        //    }
-
-        //    // Se não houver horários disponíveis, mostrar uma mensagem
-        //    if (comboBoxHorarios.Items.Count == 0)
-        //    {
-        //        MessageBox.Show("Não há horários disponíveis para agendamento nesta data.");
-        //    }
-        //}
-    }
-
-        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
-        {
-            ConsultarHorariosDisponíveis("consulta", Convert.ToDateTime(diaSelecionado));
-            MessageBox.Show($"Dia selecionado: {diaSelecionado}");
         }
 
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void monthCalendar1_DateSelected_1(object sender, DateRangeEventArgs e)
+        {
+            ConsultarHorariosDisponíveis("consulta");
+            MessageBox.Show($"Dia selecionado: {diaSelecionado}");
+        }
 
         private void rbBanhoETosa_CheckedChanged(object sender, EventArgs e)
         {
@@ -131,7 +139,6 @@ namespace ClinicaNekoDesk.Forms
             {
 
             }
-
         }
 
         private void rbVacinacao_CheckedChanged(object sender, EventArgs e)
@@ -167,7 +174,7 @@ namespace ClinicaNekoDesk.Forms
                 gpbEspecialidade.Enabled = true;
                 cmbEspecialidade.Enabled = false;
                 cmbTipo.Enabled = false;
-                
+
                 //Carrega a lista de usuarios de acordo com o serviço selecionado
                 var usuarios = Usuario.ObterListaPorCargo(10);
 
@@ -204,38 +211,38 @@ namespace ClinicaNekoDesk.Forms
                 cmbEspecialidade.ValueMember = "Id";
 
 
-  
+
             }
         }
 
-        private void btnSelecionarCliente_Click(object sender, EventArgs e)
+        private void rbExame_CheckedChanged(object sender, EventArgs e)
         {
-            Form Background = new Form();
-
-            FrmSelecionarCliente frmSelecionarCliente = new FrmSelecionarCliente();
-
-            //Código utilizado para criar o efeito de "escurecimento" do formulário principal ao abrir uma janela secundária
-            using (frmSelecionarCliente)
+            if (rbExame.Checked)
             {
-                Background.StartPosition = FormStartPosition.CenterScreen;
-                Background.FormBorderStyle = FormBorderStyle.None;
-                Background.Opacity = 0.7d;
-                Background.BackColor = Color.Black;
-                Background.Size = new Size(1310, 722);
-                Background.Location = this.Location;
-                Background.ShowInTaskbar = false;
-                Background.Show(this);
-                frmSelecionarCliente.Owner = Background;
-                frmSelecionarCliente.ShowDialog(Background);
-                Background.Dispose();
-            }
-            //Recupera o ID e o Nome do cliente selecionado na lista
-            clienteId = frmSelecionarCliente.ClienteId;
-            string clienteNome = frmSelecionarCliente.ClienteNome;
+                gpbEspecialidade.Enabled = true;
+                cmbEspecialidade.Enabled = true;
 
-            //Preenche os campos com as informações
-            txtIdTutor.Text = clienteId.ToString();
-            txtNomeTutor.Text = clienteNome;
+                // ----- Especialidade
+                //Carrega a lista de especialidades
+                var especialidades = Especialidade.ObterLista();
+                //Associa as listas ao combobox
+                cmbEspecialidade.DataSource = especialidades;
+                //Exibe o nome para o usuario
+                cmbEspecialidade.DisplayMember = "Nome";
+                //Retorna para o banco o valor contido na coluna ID
+                cmbEspecialidade.ValueMember = "Id";
+
+
+                // ----- Profissional
+                //Carrega a lista de usuários de acordo com o serviço selecionado
+                var usuarios = Usuario.ObterListaPorCargo(17);
+                //Associa as listas ao combobox
+                cmbProfissional.DataSource = usuarios;
+                //Exibe o nome para o usuario
+                cmbProfissional.DisplayMember = "Nome";
+                //Retorna para o banco o valor contido na coluna ID
+                cmbProfissional.ValueMember = "Id";
+            }
         }
 
         private void rbCirurgia_CheckedChanged(object sender, EventArgs e)
@@ -272,34 +279,34 @@ namespace ClinicaNekoDesk.Forms
             }
         }
 
-        private void rbExame_CheckedChanged(object sender, EventArgs e)
+        private void btnSelecionarCliente_Click(object sender, EventArgs e)
         {
-            if (rbExame.Checked)
+            Form Background = new Form();
+
+            FrmSelecionarCliente frmSelecionarCliente = new FrmSelecionarCliente();
+
+            //Código utilizado para criar o efeito de "escurecimento" do formulário principal ao abrir uma janela secundária
+            using (frmSelecionarCliente)
             {
-                gpbEspecialidade.Enabled = true;
-                cmbEspecialidade.Enabled = true;
-
-                // ----- Especialidade
-                //Carrega a lista de especialidades
-                var especialidades = Especialidade.ObterLista();
-                //Associa as listas ao combobox
-                cmbEspecialidade.DataSource = especialidades;
-                //Exibe o nome para o usuario
-                cmbEspecialidade.DisplayMember = "Nome";
-                //Retorna para o banco o valor contido na coluna ID
-                cmbEspecialidade.ValueMember = "Id";
-
-
-                // ----- Profissional
-                //Carrega a lista de usuários de acordo com o serviço selecionado
-                var usuarios = Usuario.ObterListaPorCargo(17);
-                //Associa as listas ao combobox
-                cmbProfissional.DataSource = usuarios;
-                //Exibe o nome para o usuario
-                cmbProfissional.DisplayMember = "Nome";
-                //Retorna para o banco o valor contido na coluna ID
-                cmbProfissional.ValueMember = "Id";
+                Background.StartPosition = FormStartPosition.CenterScreen;
+                Background.FormBorderStyle = FormBorderStyle.None;
+                Background.Opacity = 0.7d;
+                Background.BackColor = Color.Black;
+                Background.Size = new Size(1310, 722);
+                Background.Location = this.Location;
+                Background.ShowInTaskbar = false;
+                Background.Show(this);
+                frmSelecionarCliente.Owner = Background;
+                frmSelecionarCliente.ShowDialog(Background);
+                Background.Dispose();
             }
+            //Recupera o ID e o Nome do cliente selecionado na lista
+            clienteId = frmSelecionarCliente.ClienteId;
+            string clienteNome = frmSelecionarCliente.ClienteNome;
+
+            //Preenche os campos com as informações
+            txtIdTutor.Text = clienteId.ToString();
+            txtNomeTutor.Text = clienteNome;
         }
 
         private void cmbEspecialidade_SelectedIndexChanged(object sender, EventArgs e)
@@ -322,7 +329,7 @@ namespace ClinicaNekoDesk.Forms
                     //Retorna para o banco o valor contido na coluna ID
                     cmbTipo.ValueMember = "Id";
 
-                    if(id == 1)
+                    if (id == 1)
                     {
                         // ----- Profissional
                         //Carrega a lista de usuários de acordo com o serviço selecionado
@@ -333,7 +340,8 @@ namespace ClinicaNekoDesk.Forms
                         cmbProfissional.DisplayMember = "Nome";
                         //Retorna para o banco o valor contido na coluna ID
                         cmbProfissional.ValueMember = "Id";
-                    }else if(id == 2)
+                    }
+                    else if (id == 2)
                     {
                         // ----- Profissional
                         //Carrega a lista de usuários de acordo com o serviço selecionado
@@ -344,7 +352,8 @@ namespace ClinicaNekoDesk.Forms
                         cmbProfissional.DisplayMember = "Nome";
                         //Retorna para o banco o valor contido na coluna ID
                         cmbProfissional.ValueMember = "Id";
-                    }else if (id == 3)
+                    }
+                    else if (id == 3)
                     {
                         // ----- Profissional
                         //Carrega a lista de usuários de acordo com o serviço selecionado
@@ -355,7 +364,8 @@ namespace ClinicaNekoDesk.Forms
                         cmbProfissional.DisplayMember = "Nome";
                         //Retorna para o banco o valor contido na coluna ID
                         cmbProfissional.ValueMember = "Id";
-                    }else if( id == 4)
+                    }
+                    else if (id == 4)
                     {
                         // ----- Profissional
                         //Carrega a lista de usuários de acordo com o serviço selecionado
@@ -366,7 +376,8 @@ namespace ClinicaNekoDesk.Forms
                         cmbProfissional.DisplayMember = "Nome";
                         //Retorna para o banco o valor contido na coluna ID
                         cmbProfissional.ValueMember = "Id";
-                    }else if(id == 5) 
+                    }
+                    else if (id == 5)
                     {
                         // ----- Profissional
                         //Carrega a lista de usuários de acordo com o serviço selecionado
@@ -377,7 +388,8 @@ namespace ClinicaNekoDesk.Forms
                         cmbProfissional.DisplayMember = "Nome";
                         //Retorna para o banco o valor contido na coluna ID
                         cmbProfissional.ValueMember = "Id";
-                    }else if(id == 6)
+                    }
+                    else if (id == 6)
                     {
                         // ----- Profissional
                         //Carrega a lista de usuários de acordo com o serviço selecionado
@@ -388,8 +400,9 @@ namespace ClinicaNekoDesk.Forms
                         cmbProfissional.DisplayMember = "Nome";
                         //Retorna para o banco o valor contido na coluna ID
                         cmbProfissional.ValueMember = "Id";
-                    }else if (id == 7)
-                     {
+                    }
+                    else if (id == 7)
+                    {
                         // ----- Profissional
                         //Carrega a lista de usuários de acordo com o serviço selecionado
                         var usuarios = Usuario.ObterListaPorCargo(12);
@@ -411,7 +424,8 @@ namespace ClinicaNekoDesk.Forms
                         cmbProfissional.DisplayMember = "Nome";
                         //Retorna para o banco o valor contido na coluna ID
                         cmbProfissional.ValueMember = "Id";
-                    }else if(id == 9)
+                    }
+                    else if (id == 9)
                     {
                         // ----- Profissional
                         //Carrega a lista de usuários de acordo com o serviço selecionado
@@ -435,7 +449,7 @@ namespace ClinicaNekoDesk.Forms
                         //Retorna para o banco o valor contido na coluna ID
                         cmbProfissional.ValueMember = "Id";
                     }
-                    else if(id == 11)
+                    else if (id == 11)
                     {
                         // ----- Profissional
                         //Carrega a lista de usuários de acordo com o serviço selecionado
@@ -517,15 +531,34 @@ namespace ClinicaNekoDesk.Forms
             }
         }
 
-
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            gpbEspecialidade.Enabled = false;   
+            gpbEspecialidade.Enabled = false;
+
         }
 
-    
+        private void butao_click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbProfissional_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gpbDataHora_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
-
 }
+
+
+
+
+
+
+

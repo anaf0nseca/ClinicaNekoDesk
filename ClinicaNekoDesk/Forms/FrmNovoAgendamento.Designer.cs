@@ -55,11 +55,11 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            monthCalendar1 = new MonthCalendar();
+            calendarioNeko = new MonthCalendar();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             gpbDataHora = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            btnFinalizarPedido = new Guna.UI2.WinForms.Guna2Button();
+            btnAgendar = new Guna.UI2.WinForms.Guna2Button();
             cmbHorarios = new Guna.UI2.WinForms.Guna2ComboBox();
             gpbDadosPaciente = new Guna.UI2.WinForms.Guna2GroupBox();
             btnSelecionarCliente = new Button();
@@ -89,36 +89,36 @@
             gpbTipoAgendamento.SuspendLayout();
             SuspendLayout();
             // 
-            // monthCalendar1
+            // calendarioNeko
             // 
-            monthCalendar1.AnnuallyBoldedDates = new DateTime[]
+            calendarioNeko.AnnuallyBoldedDates = new DateTime[]
     {
     new DateTime(2024, 10, 24, 17, 1, 31, 0)
     };
-            monthCalendar1.BackColor = SystemColors.ControlLightLight;
-            monthCalendar1.BoldedDates = new DateTime[]
+            calendarioNeko.BackColor = SystemColors.ControlLightLight;
+            calendarioNeko.BoldedDates = new DateTime[]
     {
     new DateTime(2024, 10, 24, 0, 0, 0, 0)
     };
-            monthCalendar1.CalendarDimensions = new Size(2, 2);
-            monthCalendar1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            monthCalendar1.Location = new Point(18, 38);
-            monthCalendar1.MaxDate = new DateTime(2025, 3, 31, 0, 0, 0, 0);
-            monthCalendar1.MaxSelectionCount = 1;
-            monthCalendar1.MinDate = new DateTime(2024, 10, 24, 0, 0, 0, 0);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.RightToLeft = RightToLeft.No;
-            monthCalendar1.TabIndex = 1;
-            monthCalendar1.TitleBackColor = SystemColors.ControlDarkDark;
-            monthCalendar1.TrailingForeColor = SystemColors.ControlText;
-            monthCalendar1.DateSelected += monthCalendar1_DateSelected_1;
+            calendarioNeko.CalendarDimensions = new Size(2, 2);
+            calendarioNeko.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            calendarioNeko.Location = new Point(18, 38);
+            calendarioNeko.MaxDate = new DateTime(2025, 3, 31, 0, 0, 0, 0);
+            calendarioNeko.MaxSelectionCount = 1;
+            calendarioNeko.MinDate = new DateTime(2024, 10, 24, 0, 0, 0, 0);
+            calendarioNeko.Name = "calendarioNeko";
+            calendarioNeko.RightToLeft = RightToLeft.No;
+            calendarioNeko.TabIndex = 1;
+            calendarioNeko.TitleBackColor = SystemColors.ControlDarkDark;
+            calendarioNeko.TrailingForeColor = SystemColors.ControlText;
+            calendarioNeko.DateSelected += monthCalendar1_DateSelected_1;
             // 
             // guna2HtmlLabel9
             // 
             guna2HtmlLabel9.BackColor = Color.Transparent;
             guna2HtmlLabel9.Font = new Font("Arial Rounded MT Bold", 26.25F);
             guna2HtmlLabel9.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel9.Location = new Point(282, 47);
+            guna2HtmlLabel9.Location = new Point(285, 44);
             guna2HtmlLabel9.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             guna2HtmlLabel9.Size = new Size(402, 42);
@@ -130,9 +130,9 @@
             gpbDataHora.BorderColor = Color.FromArgb(83, 133, 91);
             gpbDataHora.BorderRadius = 15;
             gpbDataHora.Controls.Add(guna2HtmlLabel4);
-            gpbDataHora.Controls.Add(btnFinalizarPedido);
+            gpbDataHora.Controls.Add(btnAgendar);
             gpbDataHora.Controls.Add(cmbHorarios);
-            gpbDataHora.Controls.Add(monthCalendar1);
+            gpbDataHora.Controls.Add(calendarioNeko);
             gpbDataHora.CustomBorderColor = Color.FromArgb(34, 85, 96);
             gpbDataHora.CustomBorderThickness = new Padding(0, 30, 0, 0);
             gpbDataHora.CustomizableEdges = customizableEdges5;
@@ -159,28 +159,29 @@
             guna2HtmlLabel4.TabIndex = 72;
             guna2HtmlLabel4.Text = "Selecione um horário:";
             // 
-            // btnFinalizarPedido
+            // btnAgendar
             // 
-            btnFinalizarPedido.Animated = true;
-            btnFinalizarPedido.BackColor = Color.Transparent;
-            btnFinalizarPedido.BorderRadius = 10;
-            btnFinalizarPedido.CustomizableEdges = customizableEdges1;
-            btnFinalizarPedido.DisabledState.BorderColor = Color.DarkGray;
-            btnFinalizarPedido.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnFinalizarPedido.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnFinalizarPedido.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnFinalizarPedido.FillColor = Color.FromArgb(34, 85, 96);
-            btnFinalizarPedido.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            btnFinalizarPedido.ForeColor = Color.White;
-            btnFinalizarPedido.ImageAlign = HorizontalAlignment.Right;
-            btnFinalizarPedido.ImageSize = new Size(24, 24);
-            btnFinalizarPedido.Location = new Point(154, 410);
-            btnFinalizarPedido.Margin = new Padding(4, 3, 4, 3);
-            btnFinalizarPedido.Name = "btnFinalizarPedido";
-            btnFinalizarPedido.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnFinalizarPedido.Size = new Size(181, 40);
-            btnFinalizarPedido.TabIndex = 62;
-            btnFinalizarPedido.Text = "Agendar";
+            btnAgendar.Animated = true;
+            btnAgendar.BackColor = Color.Transparent;
+            btnAgendar.BorderRadius = 10;
+            btnAgendar.CustomizableEdges = customizableEdges1;
+            btnAgendar.DisabledState.BorderColor = Color.DarkGray;
+            btnAgendar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAgendar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAgendar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAgendar.FillColor = Color.FromArgb(34, 85, 96);
+            btnAgendar.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            btnAgendar.ForeColor = Color.White;
+            btnAgendar.ImageAlign = HorizontalAlignment.Right;
+            btnAgendar.ImageSize = new Size(24, 24);
+            btnAgendar.Location = new Point(154, 410);
+            btnAgendar.Margin = new Padding(4, 3, 4, 3);
+            btnAgendar.Name = "btnAgendar";
+            btnAgendar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnAgendar.Size = new Size(181, 40);
+            btnAgendar.TabIndex = 62;
+            btnAgendar.Text = "Agendar";
+            btnAgendar.Click += btnAgendar_Click;
             // 
             // cmbHorarios
             // 
@@ -672,12 +673,12 @@
 
         #endregion
 
-        public MonthCalendar monthCalendar1;
+        public MonthCalendar calendarioNeko;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2GroupBox gpbDataHora;
         private Guna.UI2.WinForms.Guna2GroupBox gpbDadosPaciente;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
-        private Guna.UI2.WinForms.Guna2Button btnFinalizarPedido;
+        private Guna.UI2.WinForms.Guna2Button btnAgendar;
         private Guna.UI2.WinForms.Guna2ComboBox cmbPaciente;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2GroupBox gpbEspecialidade;

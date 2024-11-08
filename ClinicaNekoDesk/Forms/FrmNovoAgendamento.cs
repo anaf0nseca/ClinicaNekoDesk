@@ -15,6 +15,7 @@ using MySql.Data.MySqlClient;
 using System.Collections;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 using System.Diagnostics.Eventing.Reader;
+using System.Globalization;
 
 namespace ClinicaNekoDesk.Forms
 {
@@ -39,7 +40,23 @@ namespace ClinicaNekoDesk.Forms
 
         }
 
-        private void ConsultarHorariosDisponíveis(string Tipo)
+        //Verifica se todos os campos necessários estão preenchidos
+        private bool VerificaControles()
+        {
+            if (txtIdTutor.Text != string.Empty &&
+                txtNomeTutor.Text != string.Empty &&
+                cmbPaciente.SelectedItem != null &&
+                cmbEspecialidade.SelectedItem != null &&
+                cmbProfissional.SelectedItem != null &&
+                cmbHorarios.SelectedItem != null)
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
+
+        private void ConsultarHorariosDisponíveis()
         {
             // Lista de horários disponíveis de acordo com o serviço selecionado
             if (rbBanhoETosa.Checked)
@@ -52,7 +69,6 @@ namespace ClinicaNekoDesk.Forms
                 };
 
                 horariosDisponiveis = new List<string>(horariosPossiveis);
-                Tipo = "Banho e Tosa";
             }
             else if (rbAdestramento.Checked)
             {
@@ -63,7 +79,6 @@ namespace ClinicaNekoDesk.Forms
                 "16:00:00",  "17:00:00",  "18:00:00", "19:00:00", "20:00:00"
                 };
 
-                Tipo = "Adestramento";
 
                 horariosDisponiveis = new List<string>(horariosPossiveis);
 
@@ -78,7 +93,6 @@ namespace ClinicaNekoDesk.Forms
                 "16:00:00", "16:30:00", "17:00:00", "17:30:00", "18:00:00", "18:30:00"
                 };
 
-                Tipo = "Vacinação";
 
                 horariosDisponiveis = new List<string>(horariosPossiveis);
 
@@ -92,7 +106,6 @@ namespace ClinicaNekoDesk.Forms
                 "16:00:00",  "17:00:00",  "18:00:00", "19:00:00", "20:00:00", "21:00:00"
                 };
 
-                Tipo = "Consulta";
 
                 horariosDisponiveis = new List<string>(horariosPossiveis);
             }
@@ -106,7 +119,6 @@ namespace ClinicaNekoDesk.Forms
                 "16:00:00", "16:30:00", "17:00:00", "17:30:00", "18:00:00", "18:30:00"
                 };
 
-                Tipo = "Exame";
 
                 horariosDisponiveis = new List<string>(horariosPossiveis);
 
@@ -119,16 +131,15 @@ namespace ClinicaNekoDesk.Forms
                 "07:00:00", "09:00:00", "11:00:00", "13:00:00",  "15:00:00", "17:00:00",  "19:00:00"
                 };
 
-                Tipo = "Cirurgia";
 
                 horariosDisponiveis = new List<string>(horariosPossiveis);
             }
 
             var cmd = Banco.Abrir();
-            string comando = $"select hora from agendamento where tipo = {Tipo} and data = @diaSelecionado";
+            string comando = $"select hora from agendamento where data = @diaSelecionado";
 
             //Obter a data selecionada
-            diaSelecionado = monthCalendar1.SelectionRange.Start.ToString("yyyy-MM-dd");
+            diaSelecionado = calendarioNeko.SelectionRange.Start.ToString("yyyy-MM-dd");
 
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -141,7 +152,7 @@ namespace ClinicaNekoDesk.Forms
                     cmd.CommandType = System.Data.CommandType.Text;
 
                     // Consulta para pegar os horários já agendados
-                    cmd.CommandText = $"select hora from agendamento where tipo = '{Tipo}' and data = @diaSelecionado";
+                    cmd.CommandText = $"select hora from agendamento where data = @diaSelecionado";
 
                     // Executar a consulta e obter os horários já agendados
                     using (MySqlDataReader dr = cmd.ExecuteReader())
@@ -193,35 +204,34 @@ namespace ClinicaNekoDesk.Forms
 
             if (rbBanhoETosa.Checked)
             {
-                ConsultarHorariosDisponíveis("Banho e Tosa");
                 MessageBox.Show($"Dia selecionado para banho e tosa: {diaSelecionado}");
 
             }
             else if (rbAdestramento.Checked)
             {
-                ConsultarHorariosDisponíveis("Banho e Tosa");
+                ConsultarHorariosDisponíveis();
                 MessageBox.Show($"Dia selecionado para adestramento: {diaSelecionado}");
 
             }
             else if (rbVacinacao.Checked)
             {
-                ConsultarHorariosDisponíveis("Banho e Tosa");
+                ConsultarHorariosDisponíveis();
                 MessageBox.Show($"Dia selecionado para vacinacao: {diaSelecionado}");
             }
             else if (rbConsulta.Checked)
             {
-                ConsultarHorariosDisponíveis("consulta");
+                ConsultarHorariosDisponíveis();
 
                 MessageBox.Show($"Dia selecionado para consulta: {diaSelecionado}");
             }
             else if (rbExame.Checked)
             {
-                ConsultarHorariosDisponíveis("Banho e Tosa");
+                ConsultarHorariosDisponíveis();
                 MessageBox.Show($"Dia selecionado para Exame: {diaSelecionado}");
             }
             else if (rbCirurgia.Checked)
             {
-                ConsultarHorariosDisponíveis("Banho e Tosa");
+                ConsultarHorariosDisponíveis();
                 MessageBox.Show($"Dia selecionado para cirurgia: {diaSelecionado}");
             }
         }
@@ -230,7 +240,6 @@ namespace ClinicaNekoDesk.Forms
         {
             if (rbBanhoETosa.Checked)
             {
-                MessageBox.Show($"Data selecionada:");
                 gpbEspecialidade.Enabled = true;
                 cmbEspecialidade.Enabled = false;
                 cmbTipo.Enabled = false;
@@ -660,39 +669,60 @@ namespace ClinicaNekoDesk.Forms
         private void cmbHorarios_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            if (rbBanhoETosa.Checked)
-            {
+            //if (rbBanhoETosa.Checked)
+            //{
 
 
-            }
-            else if (rbAdestramento.Checked)
-            {
-                ConsultarHorariosDisponíveis("Banho e Tosa");
-                MessageBox.Show($"Dia selecionado para adestramento: {diaSelecionado}");
+            //}
+            //else if (rbAdestramento.Checked)
+            //{
 
-            }
-            else if (rbVacinacao.Checked)
-            {
-                ConsultarHorariosDisponíveis("Banho e Tosa");
-                MessageBox.Show($"Dia selecionado para vacinacao: {diaSelecionado}");
-            }
-            else if (rbConsulta.Checked)
-            {
-                ConsultarHorariosDisponíveis("consulta");
 
-                MessageBox.Show($"Dia selecionado para consulta: {diaSelecionado}");
-            }
-            else if (rbExame.Checked)
+            //}
+            //else if (rbVacinacao.Checked)
+            //{
+
+            //}
+            //else if (rbConsulta.Checked)
+            //{
+            //    ConsultarHorariosDisponíveis("consulta");
+
+            //    MessageBox.Show($"Dia selecionado para consulta: {diaSelecionado}");
+            //}
+            //else if (rbExame.Checked)
+            //{
+            //    ConsultarHorariosDisponíveis("Banho e Tosa");
+            //    MessageBox.Show($"Dia selecionado para Exame: {diaSelecionado}");
+            //}
+            //else if (rbCirurgia.Checked)
+            //{
+            //    ConsultarHorariosDisponíveis("Banho e Tosa");
+            //    MessageBox.Show($"Dia selecionado para cirurgia: {diaSelecionado}");
+            //}
+        }
+
+        private void btnAgendar_Click(object sender, EventArgs e)
+        {
+            if (VerificaControles())
             {
-                ConsultarHorariosDisponíveis("Banho e Tosa");
-                MessageBox.Show($"Dia selecionado para Exame: {diaSelecionado}");
-            }
-            else if (rbCirurgia.Checked)
-            {
-                ConsultarHorariosDisponíveis("Banho e Tosa");
-                MessageBox.Show($"Dia selecionado para cirurgia: {diaSelecionado}");
+                //string Hora = cmbHorarios.SelectedItem;
+                //DateTime hora = DateTime.ParseExact(Hora, "t", CultureInfo.CurrentCulture);
+                
+
+                   Agendamento agendamento = new(
+                   Usuario.ObterPorId(Convert.ToInt32(cmbProfissional.SelectedValue)),
+                   Paciente.ObterPorId(Convert.ToInt32(cmbPaciente.SelectedValue)),
+                   calendarioNeko.SelectionRange.Start,
+                   Convert.ToDateTime(cmbHorarios.Text)
+                   );
+
+                agendamento.Inserir();
+                   
+
             }
         }
+
+
     }
 
 

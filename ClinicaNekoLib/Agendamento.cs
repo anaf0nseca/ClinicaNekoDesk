@@ -26,6 +26,14 @@ namespace ClinicaNekoLib
             Hora = hora;
             Status = status;
         }
+
+        public Agendamento(Usuario usuario, Paciente paciente, DateTime data, DateTime hora)
+        {
+            Usuario = usuario;
+            Paciente = paciente;
+            Data = data;
+            Hora = hora;
+        }
         public Agendamento(int id, Usuario usuario, Paciente paciente, DateTime data, DateTime hora, string? status)
         {
             Id = id;
@@ -50,7 +58,6 @@ namespace ClinicaNekoLib
             cmd.Parameters.AddWithValue("spid_paciente", Paciente.Id);
             cmd.Parameters.AddWithValue("spdata", Data);
             cmd.Parameters.AddWithValue("sphora", Hora);
-            cmd.Parameters.AddWithValue("spstatus", Status);
 
 
             Id = Convert.ToInt32(cmd.ExecuteScalar());

@@ -46,7 +46,7 @@ namespace ClinicaNekoLib
             var cmd = Banco.Abrir();
             //Por padrão o CommandType é tipo .Text
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"SELECT * FROM servico where id = {id};";
+            cmd.CommandText = $"SELECT * FROM servico where id = {id}";
             var dr = cmd.ExecuteReader();
             if (dr.Read())
             {

@@ -85,8 +85,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelCabecalho = new Panel();
             pictureBox2 = new PictureBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -120,7 +118,6 @@
             btnNovoCliente = new Guna.UI2.WinForms.Guna2Button();
             btnClientes = new Guna.UI2.WinForms.Guna2Button();
             panelAgend = new Panel();
-            guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             btnListaAgend = new Guna.UI2.WinForms.Guna2Button();
             btnNovoAgend = new Guna.UI2.WinForms.Guna2Button();
             btnAgend = new Guna.UI2.WinForms.Guna2Button();
@@ -245,7 +242,7 @@
             panelUsuarios.Controls.Add(btnListaUsuarios);
             panelUsuarios.Controls.Add(btnNovoUsuario);
             panelUsuarios.Dock = DockStyle.Top;
-            panelUsuarios.Location = new Point(0, 460);
+            panelUsuarios.Location = new Point(0, 410);
             panelUsuarios.Margin = new Padding(4, 3, 4, 3);
             panelUsuarios.Name = "panelUsuarios";
             panelUsuarios.Size = new Size(198, 10);
@@ -350,7 +347,7 @@
             btnUsuarios.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUsuarios.ForeColor = Color.White;
             btnUsuarios.ImageAlign = HorizontalAlignment.Right;
-            btnUsuarios.Location = new Point(0, 410);
+            btnUsuarios.Location = new Point(0, 360);
             btnUsuarios.Margin = new Padding(4, 3, 4, 3);
             btnUsuarios.Name = "btnUsuarios";
             btnUsuarios.PressedColor = Color.FromArgb(83, 133, 91);
@@ -367,7 +364,7 @@
             panelServicos.Controls.Add(guna2Button22);
             panelServicos.Controls.Add(guna2Button23);
             panelServicos.Dock = DockStyle.Top;
-            panelServicos.Location = new Point(0, 400);
+            panelServicos.Location = new Point(0, 350);
             panelServicos.Margin = new Padding(4, 3, 4, 3);
             panelServicos.Name = "panelServicos";
             panelServicos.Size = new Size(198, 10);
@@ -466,7 +463,7 @@
             btnServico.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnServico.ForeColor = Color.White;
             btnServico.ImageAlign = HorizontalAlignment.Right;
-            btnServico.Location = new Point(0, 350);
+            btnServico.Location = new Point(0, 300);
             btnServico.Margin = new Padding(4, 3, 4, 3);
             btnServico.Name = "btnServico";
             btnServico.PressedColor = Color.FromArgb(83, 133, 91);
@@ -484,7 +481,7 @@
             panelVet.Controls.Add(btnMedVet);
             panelVet.Controls.Add(btnAgendados);
             panelVet.Dock = DockStyle.Top;
-            panelVet.Location = new Point(0, 340);
+            panelVet.Location = new Point(0, 290);
             panelVet.Margin = new Padding(4, 3, 4, 3);
             panelVet.Name = "panelVet";
             panelVet.Size = new Size(198, 10);
@@ -610,7 +607,7 @@
             btnVeterinario.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVeterinario.ForeColor = Color.White;
             btnVeterinario.ImageAlign = HorizontalAlignment.Right;
-            btnVeterinario.Location = new Point(0, 290);
+            btnVeterinario.Location = new Point(0, 240);
             btnVeterinario.Margin = new Padding(4, 3, 4, 3);
             btnVeterinario.Name = "btnVeterinario";
             btnVeterinario.PressedColor = Color.FromArgb(83, 133, 91);
@@ -627,7 +624,7 @@
             panelProdutos.Controls.Add(btnListaProdutos);
             panelProdutos.Controls.Add(btnNovoProduto);
             panelProdutos.Dock = DockStyle.Top;
-            panelProdutos.Location = new Point(0, 280);
+            panelProdutos.Location = new Point(0, 230);
             panelProdutos.Margin = new Padding(4, 3, 4, 3);
             panelProdutos.Name = "panelProdutos";
             panelProdutos.Size = new Size(198, 10);
@@ -729,7 +726,7 @@
             btnProdutos.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnProdutos.ForeColor = Color.White;
             btnProdutos.ImageAlign = HorizontalAlignment.Right;
-            btnProdutos.Location = new Point(0, 230);
+            btnProdutos.Location = new Point(0, 180);
             btnProdutos.Margin = new Padding(4, 3, 4, 3);
             btnProdutos.Name = "btnProdutos";
             btnProdutos.PressedColor = Color.FromArgb(83, 133, 91);
@@ -746,7 +743,7 @@
             panelClientes.Controls.Add(btnListaClientes);
             panelClientes.Controls.Add(btnNovoCliente);
             panelClientes.Dock = DockStyle.Top;
-            panelClientes.Location = new Point(0, 220);
+            panelClientes.Location = new Point(0, 170);
             panelClientes.Margin = new Padding(4, 3, 4, 3);
             panelClientes.Name = "panelClientes";
             panelClientes.Size = new Size(198, 10);
@@ -804,6 +801,7 @@
             btnListaClientes.Size = new Size(198, 30);
             btnListaClientes.TabIndex = 6;
             btnListaClientes.Text = "Lista de Clientes";
+            btnListaClientes.Click += btnListaClientes_Click;
             // 
             // btnNovoCliente
             // 
@@ -847,7 +845,7 @@
             btnClientes.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClientes.ForeColor = Color.White;
             btnClientes.ImageAlign = HorizontalAlignment.Right;
-            btnClientes.Location = new Point(0, 170);
+            btnClientes.Location = new Point(0, 120);
             btnClientes.Margin = new Padding(4, 3, 4, 3);
             btnClientes.Name = "btnClientes";
             btnClientes.PressedColor = Color.FromArgb(83, 133, 91);
@@ -860,46 +858,20 @@
             // panelAgend
             // 
             panelAgend.BackColor = Color.FromArgb(136, 170, 140);
-            panelAgend.Controls.Add(guna2Button8);
             panelAgend.Controls.Add(btnListaAgend);
             panelAgend.Controls.Add(btnNovoAgend);
             panelAgend.Dock = DockStyle.Top;
-            panelAgend.Location = new Point(0, 160);
+            panelAgend.Location = new Point(0, 110);
             panelAgend.Margin = new Padding(4, 3, 4, 3);
             panelAgend.Name = "panelAgend";
             panelAgend.Size = new Size(198, 10);
             panelAgend.TabIndex = 24;
             // 
-            // guna2Button8
-            // 
-            guna2Button8.BorderColor = Color.Transparent;
-            guna2Button8.BorderRadius = 15;
-            guna2Button8.CustomizableEdges = customizableEdges45;
-            guna2Button8.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button8.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button8.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button8.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button8.Dock = DockStyle.Top;
-            guna2Button8.FillColor = Color.FromArgb(164, 196, 169);
-            guna2Button8.FocusedColor = Color.FromArgb(34, 85, 96);
-            guna2Button8.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
-            guna2Button8.ForeColor = Color.Black;
-            guna2Button8.HoverState.FillColor = Color.FromArgb(37, 94, 106);
-            guna2Button8.HoverState.ForeColor = Color.White;
-            guna2Button8.IndicateFocus = true;
-            guna2Button8.Location = new Point(0, 60);
-            guna2Button8.Margin = new Padding(4, 3, 4, 3);
-            guna2Button8.Name = "guna2Button8";
-            guna2Button8.PressedColor = Color.FromArgb(83, 133, 91);
-            guna2Button8.ShadowDecoration.CustomizableEdges = customizableEdges46;
-            guna2Button8.Size = new Size(198, 30);
-            guna2Button8.TabIndex = 7;
-            // 
             // btnListaAgend
             // 
             btnListaAgend.BorderColor = Color.Transparent;
             btnListaAgend.BorderRadius = 15;
-            btnListaAgend.CustomizableEdges = customizableEdges47;
+            btnListaAgend.CustomizableEdges = customizableEdges45;
             btnListaAgend.DisabledState.BorderColor = Color.DarkGray;
             btnListaAgend.DisabledState.CustomBorderColor = Color.DarkGray;
             btnListaAgend.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -917,7 +889,7 @@
             btnListaAgend.Margin = new Padding(4, 3, 4, 3);
             btnListaAgend.Name = "btnListaAgend";
             btnListaAgend.PressedColor = Color.FromArgb(83, 133, 91);
-            btnListaAgend.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            btnListaAgend.ShadowDecoration.CustomizableEdges = customizableEdges46;
             btnListaAgend.Size = new Size(198, 30);
             btnListaAgend.TabIndex = 6;
             btnListaAgend.Text = "Lista de Agendamentos";
@@ -926,7 +898,7 @@
             // 
             btnNovoAgend.BorderColor = Color.Transparent;
             btnNovoAgend.BorderRadius = 15;
-            btnNovoAgend.CustomizableEdges = customizableEdges49;
+            btnNovoAgend.CustomizableEdges = customizableEdges47;
             btnNovoAgend.DisabledState.BorderColor = Color.DarkGray;
             btnNovoAgend.DisabledState.CustomBorderColor = Color.DarkGray;
             btnNovoAgend.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -944,7 +916,7 @@
             btnNovoAgend.Margin = new Padding(4, 3, 4, 3);
             btnNovoAgend.Name = "btnNovoAgend";
             btnNovoAgend.PressedColor = Color.FromArgb(83, 133, 91);
-            btnNovoAgend.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            btnNovoAgend.ShadowDecoration.CustomizableEdges = customizableEdges48;
             btnNovoAgend.Size = new Size(198, 30);
             btnNovoAgend.TabIndex = 5;
             btnNovoAgend.Text = "Novo";
@@ -954,7 +926,7 @@
             // 
             btnAgend.BorderColor = Color.Transparent;
             btnAgend.BorderRadius = 15;
-            btnAgend.CustomizableEdges = customizableEdges51;
+            btnAgend.CustomizableEdges = customizableEdges49;
             btnAgend.DisabledState.BorderColor = Color.DarkGray;
             btnAgend.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAgend.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -964,11 +936,11 @@
             btnAgend.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAgend.ForeColor = Color.White;
             btnAgend.ImageAlign = HorizontalAlignment.Right;
-            btnAgend.Location = new Point(0, 110);
+            btnAgend.Location = new Point(0, 60);
             btnAgend.Margin = new Padding(4, 3, 4, 3);
             btnAgend.Name = "btnAgend";
             btnAgend.PressedColor = Color.FromArgb(83, 133, 91);
-            btnAgend.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            btnAgend.ShadowDecoration.CustomizableEdges = customizableEdges50;
             btnAgend.Size = new Size(198, 50);
             btnAgend.TabIndex = 23;
             btnAgend.Text = "Agendamentos";
@@ -983,14 +955,14 @@
             panelPedidos.Location = new Point(0, 50);
             panelPedidos.Margin = new Padding(4, 3, 4, 3);
             panelPedidos.Name = "panelPedidos";
-            panelPedidos.Size = new Size(198, 60);
+            panelPedidos.Size = new Size(198, 10);
             panelPedidos.TabIndex = 17;
             // 
             // btnListaPedidos
             // 
             btnListaPedidos.BorderColor = Color.Transparent;
             btnListaPedidos.BorderRadius = 15;
-            btnListaPedidos.CustomizableEdges = customizableEdges53;
+            btnListaPedidos.CustomizableEdges = customizableEdges51;
             btnListaPedidos.DisabledState.BorderColor = Color.DarkGray;
             btnListaPedidos.DisabledState.CustomBorderColor = Color.DarkGray;
             btnListaPedidos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1008,7 +980,7 @@
             btnListaPedidos.Margin = new Padding(4, 3, 4, 3);
             btnListaPedidos.Name = "btnListaPedidos";
             btnListaPedidos.PressedColor = Color.FromArgb(83, 133, 91);
-            btnListaPedidos.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            btnListaPedidos.ShadowDecoration.CustomizableEdges = customizableEdges52;
             btnListaPedidos.Size = new Size(198, 30);
             btnListaPedidos.TabIndex = 6;
             btnListaPedidos.Text = "Lista de Pedidos";
@@ -1018,7 +990,7 @@
             // 
             btnNovoPedido.BorderColor = Color.Transparent;
             btnNovoPedido.BorderRadius = 15;
-            btnNovoPedido.CustomizableEdges = customizableEdges55;
+            btnNovoPedido.CustomizableEdges = customizableEdges53;
             btnNovoPedido.DisabledState.BorderColor = Color.DarkGray;
             btnNovoPedido.DisabledState.CustomBorderColor = Color.DarkGray;
             btnNovoPedido.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1036,7 +1008,7 @@
             btnNovoPedido.Margin = new Padding(4, 3, 4, 3);
             btnNovoPedido.Name = "btnNovoPedido";
             btnNovoPedido.PressedColor = Color.FromArgb(83, 133, 91);
-            btnNovoPedido.ShadowDecoration.CustomizableEdges = customizableEdges56;
+            btnNovoPedido.ShadowDecoration.CustomizableEdges = customizableEdges54;
             btnNovoPedido.Size = new Size(198, 30);
             btnNovoPedido.TabIndex = 5;
             btnNovoPedido.Text = "Novo";
@@ -1046,7 +1018,7 @@
             // 
             btnPedidos.BorderColor = Color.Transparent;
             btnPedidos.BorderRadius = 15;
-            btnPedidos.CustomizableEdges = customizableEdges57;
+            btnPedidos.CustomizableEdges = customizableEdges55;
             btnPedidos.DisabledState.BorderColor = Color.DarkGray;
             btnPedidos.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPedidos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1060,7 +1032,7 @@
             btnPedidos.Margin = new Padding(4, 3, 4, 3);
             btnPedidos.Name = "btnPedidos";
             btnPedidos.PressedColor = Color.FromArgb(83, 133, 91);
-            btnPedidos.ShadowDecoration.CustomizableEdges = customizableEdges58;
+            btnPedidos.ShadowDecoration.CustomizableEdges = customizableEdges56;
             btnPedidos.Size = new Size(198, 50);
             btnPedidos.TabIndex = 22;
             btnPedidos.Text = "Pedidos";
@@ -1146,7 +1118,6 @@
         private Guna.UI2.WinForms.Guna2Button btnNovoCliente;
         private Guna.UI2.WinForms.Guna2Button btnClientes;
         private Panel panelAgend;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button btnListaAgend;
         private Guna.UI2.WinForms.Guna2Button btnNovoAgend;
         private Guna.UI2.WinForms.Guna2Button btnAgend;

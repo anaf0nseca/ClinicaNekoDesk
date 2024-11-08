@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,7 +80,8 @@ namespace ClinicaNekoLib
         {
             Agendamento agendamento = new Agendamento();
             var cmd = Banco.Abrir();
-
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"SELECT * from agendamento where id = {id}";
             var dr = cmd.ExecuteReader();
 
             if (dr.Read())
@@ -89,7 +91,7 @@ namespace ClinicaNekoLib
                     Usuario.ObterPorId(dr.GetInt32(1)),
                     Paciente.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
-                    dr.GetDateTime(4),
+                    dr.GetDateTime(3).Date + dr.GetTimeSpan(4),
                     dr.GetString(5)
 
                     );

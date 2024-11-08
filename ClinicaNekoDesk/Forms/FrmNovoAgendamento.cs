@@ -46,7 +46,6 @@ namespace ClinicaNekoDesk.Forms
             if (txtIdTutor.Text != string.Empty &&
                 txtNomeTutor.Text != string.Empty &&
                 cmbPaciente.SelectedItem != null &&
-                cmbEspecialidade.SelectedItem != null &&
                 cmbProfissional.SelectedItem != null &&
                 cmbHorarios.SelectedItem != null)
             {
@@ -708,23 +707,79 @@ namespace ClinicaNekoDesk.Forms
                 //string Hora = cmbHorarios.SelectedItem;
                 //DateTime hora = DateTime.ParseExact(Hora, "t", CultureInfo.CurrentCulture);
                 
-
                    Agendamento agendamento = new(
                    Usuario.ObterPorId(Convert.ToInt32(cmbProfissional.SelectedValue)),
                    Paciente.ObterPorId(Convert.ToInt32(cmbPaciente.SelectedValue)),
                    calendarioNeko.SelectionRange.Start,
                    Convert.ToDateTime(cmbHorarios.Text)
                    );
+                    agendamento.Inserir();
 
-                agendamento.Inserir();
-                   
+
+                if (agendamento.Id > 0)
+                {
+                    if (rbBanhoETosa.Checked)
+                    {
+                        AgendamentoServico agendamentoServico = new(
+                            Agendamento.ObterPorId(Convert.ToInt32(agendamento.Id)),
+                            Servico.ObterPorId(1)
+                            );
+                        agendamentoServico.Inserir();
+                    }
+                    else if (rbAdestramento.Checked)
+                    {
+                        AgendamentoServico agendamentoServico = new(
+                            Agendamento.ObterPorId(Convert.ToInt32(agendamento.Id)),
+                            Servico.ObterPorId(3)
+                            );
+                        agendamentoServico.Inserir();
+                    }
+                    else if (rbVacinacao.Checked)
+                    {
+                        AgendamentoServico agendamentoServico = new(
+                           Agendamento.ObterPorId(Convert.ToInt32(agendamento.Id)),
+                           Servico.ObterPorId(4)
+                           );
+                        agendamentoServico.Inserir();
+                    }
+                    else if (rbConsulta.Checked)
+                    {
+                        AgendamentoConsulta agendamentoConsulta = new(
+                            Agendamento.ObterPorId(Convert.ToInt32(agendamento.Id)),
+                            Consulta.ObterPorId(Convert.ToInt32(cmbTipo.SelectedValue))
+
+                            );
+                        agendamentoConsulta.Inserir();
+
+                    }
+                    else if (rbExame.Checked)
+                    {
+                        AgendamentoExame agendamentoExame = new(
+                            Agendamento.ObterPorId(Convert.ToInt32(agendamento.Id)),
+                            Exame.ObterPorId(Convert.ToInt32(cmbTipo.SelectedValue))
+
+                        );
+                        agendamentoExame.Inserir();
+                    }
+                    else if (rbCirurgia.Checked)
+                    {
+                        AgendamentoCirurgia agendamentoCirurgia = new(
+                            Agendamento.ObterPorId(Convert.ToInt32(agendamento.Id)),
+                            Cirurgia.ObterPorId(Convert.ToInt32(cmbTipo.SelectedValue))
+
+                        );
+                        agendamentoCirurgia.Inserir();
+                    }
+
+                    MessageBox.Show($"Agendamento realizado com sucesso para o dia: {calendarioNeko.SelectionRange.Start}");
+
+                }
+
 
             }
         }
 
-
     }
-
 
 }
 

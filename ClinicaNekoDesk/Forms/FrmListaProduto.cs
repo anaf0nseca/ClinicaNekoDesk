@@ -106,5 +106,10 @@ namespace ClinicaNekoDesk.Forms
         {
 
         }
+
+        private void dgvListaProduto_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

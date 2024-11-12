@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tabConsultaProduto = new Guna.UI2.WinForms.Guna2TabControl();
             tpListarPedidos = new TabPage();
             dgvListaPedido = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -47,7 +47,6 @@
             clnDesconto = new DataGridViewTextBoxColumn();
             clnValor = new DataGridViewTextBoxColumn();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            label1 = new Label();
             tpDetalhePedido = new TabPage();
             btnCadProduto = new Guna.UI2.WinForms.Guna2Button();
             tabConsultaProduto.SuspendLayout();
@@ -61,10 +60,10 @@
             tabConsultaProduto.Controls.Add(tpListarPedidos);
             tabConsultaProduto.Controls.Add(tpDetalhePedido);
             tabConsultaProduto.ItemSize = new Size(180, 40);
-            tabConsultaProduto.Location = new Point(-1, -1);
+            tabConsultaProduto.Location = new Point(-3, -2);
             tabConsultaProduto.Name = "tabConsultaProduto";
             tabConsultaProduto.SelectedIndex = 0;
-            tabConsultaProduto.Size = new Size(1052, 622);
+            tabConsultaProduto.Size = new Size(1054, 623);
             tabConsultaProduto.TabButtonHoverState.BorderColor = Color.Empty;
             tabConsultaProduto.TabButtonHoverState.FillColor = Color.FromArgb(83, 133, 91);
             tabConsultaProduto.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F);
@@ -90,11 +89,10 @@
             // 
             tpListarPedidos.Controls.Add(dgvListaPedido);
             tpListarPedidos.Controls.Add(guna2HtmlLabel1);
-            tpListarPedidos.Controls.Add(label1);
             tpListarPedidos.Location = new Point(4, 44);
             tpListarPedidos.Name = "tpListarPedidos";
             tpListarPedidos.Padding = new Padding(3);
-            tpListarPedidos.Size = new Size(1044, 574);
+            tpListarPedidos.Size = new Size(1046, 575);
             tpListarPedidos.TabIndex = 1;
             tpListarPedidos.Text = "Lista";
             tpListarPedidos.UseVisualStyleBackColor = true;
@@ -105,48 +103,48 @@
             dgvListaPedido.AllowUserToDeleteRows = false;
             dgvListaPedido.AllowUserToResizeColumns = false;
             dgvListaPedido.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(164, 196, 169);
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle7.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(115, 158, 122);
-            dataGridViewCellStyle7.SelectionForeColor = Color.White;
-            dgvListaPedido.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(164, 196, 169);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dgvListaPedido.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvListaPedido.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             dgvListaPedido.BackgroundColor = Color.FromArgb(200, 219, 203);
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(34, 85, 96);
-            dataGridViewCellStyle8.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle8.ForeColor = Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(34, 85, 96);
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dgvListaPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(34, 85, 96);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(34, 85, 96);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvListaPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvListaPedido.ColumnHeadersHeight = 32;
             dgvListaPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgvListaPedido.Columns.AddRange(new DataGridViewColumn[] { clnId, clnUsuario, clnCliente, clnData, clnStatus, clnDesconto, clnValor });
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.White;
-            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle11.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(115, 158, 122);
-            dataGridViewCellStyle11.SelectionForeColor = Color.White;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
-            dgvListaPedido.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dgvListaPedido.DefaultCellStyle = dataGridViewCellStyle5;
             dgvListaPedido.GridColor = Color.FromArgb(231, 229, 255);
-            dgvListaPedido.Location = new Point(13, 64);
+            dgvListaPedido.Location = new Point(13, 78);
             dgvListaPedido.Name = "dgvListaPedido";
             dgvListaPedido.ReadOnly = true;
             dgvListaPedido.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = Color.White;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = Color.White;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
-            dgvListaPedido.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvListaPedido.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgvListaPedido.RowHeadersVisible = false;
-            dgvListaPedido.Size = new Size(1017, 501);
+            dgvListaPedido.Size = new Size(1019, 487);
             dgvListaPedido.TabIndex = 28;
             dgvListaPedido.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(164, 196, 169);
             dgvListaPedido.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9F);
@@ -207,9 +205,9 @@
             // 
             // clnDesconto
             // 
-            dataGridViewCellStyle9.Format = "d";
-            dataGridViewCellStyle9.NullValue = null;
-            clnDesconto.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            clnDesconto.DefaultCellStyle = dataGridViewCellStyle3;
             clnDesconto.HeaderText = "Desconto";
             clnDesconto.Name = "clnDesconto";
             clnDesconto.ReadOnly = true;
@@ -217,9 +215,9 @@
             // 
             // clnValor
             // 
-            dataGridViewCellStyle10.Format = "C2";
-            dataGridViewCellStyle10.NullValue = null;
-            clnValor.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            clnValor.DefaultCellStyle = dataGridViewCellStyle4;
             clnValor.HeaderText = "Valor";
             clnValor.Name = "clnValor";
             clnValor.ReadOnly = true;
@@ -229,23 +227,12 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel1.Location = new Point(362, 14);
+            guna2HtmlLabel1.Location = new Point(384, 27);
             guna2HtmlLabel1.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(256, 34);
             guna2HtmlLabel1.TabIndex = 27;
             guna2HtmlLabel1.Text = "LISTA DE PEDIDOS";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(312, 77);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(328, 73);
-            label1.TabIndex = 26;
-            label1.Text = "SERVIÇO";
             // 
             // tpDetalhePedido
             // 
@@ -254,7 +241,7 @@
             tpDetalhePedido.Location = new Point(4, 44);
             tpDetalhePedido.Name = "tpDetalhePedido";
             tpDetalhePedido.Padding = new Padding(3);
-            tpDetalhePedido.Size = new Size(1044, 574);
+            tpDetalhePedido.Size = new Size(1046, 575);
             tpDetalhePedido.TabIndex = 2;
             tpDetalhePedido.Text = "Detalhes do Pedido";
             // 
@@ -263,7 +250,7 @@
             btnCadProduto.Animated = true;
             btnCadProduto.BackColor = Color.Transparent;
             btnCadProduto.BorderRadius = 20;
-            btnCadProduto.CustomizableEdges = customizableEdges3;
+            btnCadProduto.CustomizableEdges = customizableEdges1;
             btnCadProduto.DisabledState.BorderColor = Color.DarkGray;
             btnCadProduto.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCadProduto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -273,11 +260,11 @@
             btnCadProduto.ForeColor = Color.White;
             btnCadProduto.ImageAlign = HorizontalAlignment.Right;
             btnCadProduto.ImageSize = new Size(24, 24);
-            btnCadProduto.Location = new Point(815, 464);
+            btnCadProduto.Location = new Point(874, 506);
             btnCadProduto.Margin = new Padding(4, 3, 4, 3);
             btnCadProduto.Name = "btnCadProduto";
-            btnCadProduto.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnCadProduto.Size = new Size(195, 52);
+            btnCadProduto.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnCadProduto.Size = new Size(136, 10);
             btnCadProduto.TabIndex = 77;
             btnCadProduto.Text = "Salvar alterações";
             // 
@@ -292,6 +279,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmListaPedido";
             Text = "FrmListaPedido";
+            Load += FrmListaPedido_Load_1;
             tabConsultaProduto.ResumeLayout(false);
             tpListarPedidos.ResumeLayout(false);
             tpListarPedidos.PerformLayout();
@@ -315,6 +303,5 @@
         private DataGridViewTextBoxColumn clnDesconto;
         private DataGridViewTextBoxColumn clnValor;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Label label1;
     }
 }

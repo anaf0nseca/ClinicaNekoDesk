@@ -20,11 +20,12 @@ namespace ClinicaNeko.Forms
         public int produtoId;
         public int clienteId;
         public double total;
+        public double descontoTotal;
 
         public FrmNovoPedido()
         {
             InitializeComponent();
-            
+
         }
 
         private void guna2GroupBox2_Click(object sender, EventArgs e)
@@ -72,7 +73,7 @@ namespace ClinicaNeko.Forms
             txtTotalPedido.Text = total.ToString("#0.00");
 
 
-            
+
 
         }
         private void button3_Click(object sender, EventArgs e)
@@ -80,7 +81,7 @@ namespace ClinicaNeko.Forms
             Form Background = new Form();
 
             FrmSelecionarProduto frmSelecionarProduto = new FrmSelecionarProduto();
-            
+
             //Código utilizado para criar o efeito de "escurecimento" do formulário principal ao abrir uma janela secundária
             using (frmSelecionarProduto)
             {
@@ -183,7 +184,7 @@ namespace ClinicaNeko.Forms
                 frmSelecionarCliente.ShowDialog(Background);
                 Background.Dispose();
             }
-  
+
             clienteId = frmSelecionarCliente.ClienteId;
             string clienteNome = frmSelecionarCliente.ClienteNome;
 
@@ -220,6 +221,16 @@ namespace ClinicaNeko.Forms
                     txtTotalPedido.Text = total.ToString("#0.00");
                 }
             }
+        }
+
+        private void btnFinalizarPedido_Click(object sender, EventArgs e)
+        {
+            //Pedido pedido = new(
+            //    txtNPedido.Text),
+            //    (Convert.ToDouble(txtSubtotalPedido.Text) - Convert.ToDouble(txtTotalPedido.Text))
+            //    );
+            
+            //descontoTotal =  Pedido.AtualizarDesconto(Convert.ToInt32(txtNPedido.Text), ;
         }
     }
 }

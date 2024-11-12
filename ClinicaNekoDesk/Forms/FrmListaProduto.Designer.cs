@@ -208,6 +208,7 @@
             dgvListaProduto.ThemeStyle.RowsStyle.Height = 25;
             dgvListaProduto.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(115, 158, 122);
             dgvListaProduto.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvListaProduto.CellContentClick += dgvListaProduto_CellContentClick_1;
             dgvListaProduto.CellDoubleClick += dgvListaProduto_CellDoubleClick;
             // 
             // clnId

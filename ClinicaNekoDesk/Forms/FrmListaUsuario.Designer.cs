@@ -967,6 +967,7 @@
             cmbSetor.ShadowDecoration.CustomizableEdges = customizableEdges36;
             cmbSetor.Size = new Size(234, 36);
             cmbSetor.TabIndex = 30;
+            cmbSetor.SelectedIndexChanged += cmbSetor_SelectedIndexChanged_1;
             // 
             // dtpNascimento
             // 

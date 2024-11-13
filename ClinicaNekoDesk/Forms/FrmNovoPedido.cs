@@ -60,11 +60,24 @@ namespace ClinicaNeko.Forms
                 //Soma +1 ao contador de cliente
                 cont++;
 
-                //a cada item inserido, o valor total é atualizado
-                total += (item.Valor * item.Quantidade) - item.Desconto;
-
                 //a cada item inserido, o valor de desconto total dos itens é atualizado
-                desconto += item.Desconto;
+                if(item.Quantidade > 1)
+                {
+                    item.Desconto = item.Desconto * item.Quantidade;
+                    desconto += item.Desconto;
+                    //a cada item inserido, o valor total é atualizado
+                    total += (item.Valor * item.Quantidade) - item.Desconto;
+                }
+                else
+                {
+                    desconto += item.Desconto;
+                    //a cada item inserido, o valor total é atualizado
+                    total += (item.Valor * item.Quantidade) - item.Desconto;
+                }
+
+                ////a cada item inserido, o valor total é atualizado
+                //total += (item.Valor * item.Quantidade) - item.Desconto;
+
 
             }
 
@@ -225,12 +238,23 @@ namespace ClinicaNeko.Forms
 
         private void btnFinalizarPedido_Click(object sender, EventArgs e)
         {
-            //Pedido pedido = new(
-            //    txtNPedido.Text),
-            //    (Convert.ToDouble(txtSubtotalPedido.Text) - Convert.ToDouble(txtTotalPedido.Text))
-            //    );
-            
-            //descontoTotal =  Pedido.AtualizarDesconto(Convert.ToInt32(txtNPedido.Text), ;
+            string status = "P";
+            string subtotalPedido = txtSubtotalPedido.Text;
+            string totalPedido = txtTotalPedido.Text;   
+
+            double descontoPedido = double.Parse(subtotalPedido) - double.Parse(totalPedido);
+
+            Pedido pedido = new(
+                Convert.ToInt32(txtNPedido.Text),
+                Convert.ToString(status),
+                descontoPedido
+                );
+
+            pedido.AlterarStatus(Convert.ToInt32(txtNPedido.Text), status);
+            pedido.AtualizarDesconto(Convert.ToInt32(txtNPedido.Text), descontoPedido);
+
+            MessageBox.Show("Pedido fechado com sucesso, realize o pagamento.");
+
         }
     }
 }

@@ -91,29 +91,31 @@ namespace ClinicaNekoDesk.Forms
             Close();
         }
 
-        private void cmbBuscaCat_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbBuscaCat.SelectedItem != null)
-            {
-                //var produtos = Produto.ObterListaPorCategoria(ProdutoCategoria.Id);
+        //private void cmbBuscaCat_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (cmbBuscaCat.SelectedItem != null)
+        //    {
+        //        //categoria categoria = cmbbuscacat.selecteditem as categoria;
+        //        //int id = categoria.id;
+        //        //var produtos = produto.obterlistaporcategoria(id);
 
-                //cmbBuscaCat.DataSource = produtos;
+        //        //cmbBuscaCat.DataSource = produtos;
 
-                cmbBuscaCat.DisplayMember = "Nome";
-                //Retorna para o banco o valor contido na coluna ID
-                cmbBuscaCat.ValueMember = "Id";
+        //        cmbBuscaCat.DisplayMember = "Nome";
+        //        //Retorna para o banco o valor contido na coluna ID
+        //        cmbBuscaCat.ValueMember = "Id";
 
-            }
-            else
-            {
-                var categorias = Categoria.ObterLista();
-                //Associa as listas ao combobox
-                cmbBuscaCat.DataSource = categorias;
-                //Exibe o nome para o usuario
-                cmbBuscaCat.DisplayMember = "Nome";
-                //Retorna para o banco o valor contido na coluna ID
-                cmbBuscaCat.ValueMember = "Id";
-            }
-        }
+        //    }
+        //    else
+        //    {
+        //        var categorias = Categoria.ObterLista();
+        //        //Associa as listas ao combobox
+        //        cmbBuscaCat.DataSource = categorias;
+        //        //Exibe o nome para o usuario
+        //        cmbBuscaCat.DisplayMember = "Nome";
+        //        //Retorna para o banco o valor contido na coluna ID
+        //        cmbBuscaCat.ValueMember = "Id";
+        //    }
+        //}
     }
 }

@@ -28,16 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tabConsultaProduto = new Guna.UI2.WinForms.Guna2TabControl();
             tpListarPedidos = new TabPage();
+            gpbDadosPaciente = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dgvListaPedido = new Guna.UI2.WinForms.Guna2DataGridView();
             clnId = new DataGridViewTextBoxColumn();
             clnUsuario = new DataGridViewTextBoxColumn();
@@ -51,6 +58,7 @@
             btnCadProduto = new Guna.UI2.WinForms.Guna2Button();
             tabConsultaProduto.SuspendLayout();
             tpListarPedidos.SuspendLayout();
+            gpbDadosPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaPedido).BeginInit();
             tpDetalhePedido.SuspendLayout();
             SuspendLayout();
@@ -87,6 +95,7 @@
             // 
             // tpListarPedidos
             // 
+            tpListarPedidos.Controls.Add(gpbDadosPaciente);
             tpListarPedidos.Controls.Add(dgvListaPedido);
             tpListarPedidos.Controls.Add(guna2HtmlLabel1);
             tpListarPedidos.Location = new Point(4, 44);
@@ -96,6 +105,75 @@
             tpListarPedidos.TabIndex = 1;
             tpListarPedidos.Text = "Lista";
             tpListarPedidos.UseVisualStyleBackColor = true;
+            // 
+            // gpbDadosPaciente
+            // 
+            gpbDadosPaciente.BorderColor = Color.FromArgb(83, 133, 91);
+            gpbDadosPaciente.BorderRadius = 15;
+            gpbDadosPaciente.Controls.Add(guna2HtmlLabel4);
+            gpbDadosPaciente.Controls.Add(guna2HtmlLabel3);
+            gpbDadosPaciente.Controls.Add(guna2HtmlLabel2);
+            gpbDadosPaciente.Controls.Add(guna2HtmlLabel13);
+            gpbDadosPaciente.CustomBorderColor = Color.FromArgb(34, 85, 96);
+            gpbDadosPaciente.CustomBorderThickness = new Padding(0, 30, 0, 0);
+            gpbDadosPaciente.CustomizableEdges = customizableEdges1;
+            gpbDadosPaciente.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            gpbDadosPaciente.ForeColor = Color.White;
+            gpbDadosPaciente.Location = new Point(682, 9);
+            gpbDadosPaciente.Margin = new Padding(5, 0, 5, 0);
+            gpbDadosPaciente.Name = "gpbDadosPaciente";
+            gpbDadosPaciente.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            gpbDadosPaciente.Size = new Size(348, 67);
+            gpbDadosPaciente.TabIndex = 31;
+            gpbDadosPaciente.Text = "Legenda - STATUS";
+            // 
+            // guna2HtmlLabel4
+            // 
+            guna2HtmlLabel4.BackColor = Color.Transparent;
+            guna2HtmlLabel4.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel4.ForeColor = Color.FromArgb(39, 63, 44);
+            guna2HtmlLabel4.Location = new Point(257, 38);
+            guna2HtmlLabel4.Margin = new Padding(4, 3, 4, 3);
+            guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            guna2HtmlLabel4.Size = new Size(84, 17);
+            guna2HtmlLabel4.TabIndex = 54;
+            guna2HtmlLabel4.Text = "C = Cancelado";
+            // 
+            // guna2HtmlLabel3
+            // 
+            guna2HtmlLabel3.BackColor = Color.Transparent;
+            guna2HtmlLabel3.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel3.ForeColor = Color.FromArgb(39, 63, 44);
+            guna2HtmlLabel3.Location = new Point(168, 38);
+            guna2HtmlLabel3.Margin = new Padding(4, 3, 4, 3);
+            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            guna2HtmlLabel3.Size = new Size(84, 17);
+            guna2HtmlLabel3.TabIndex = 53;
+            guna2HtmlLabel3.Text = "F = Finalizado | ";
+            // 
+            // guna2HtmlLabel2
+            // 
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel2.ForeColor = Color.FromArgb(39, 63, 44);
+            guna2HtmlLabel2.Location = new Point(79, 38);
+            guna2HtmlLabel2.Margin = new Padding(4, 3, 4, 3);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(84, 17);
+            guna2HtmlLabel2.TabIndex = 52;
+            guna2HtmlLabel2.Text = "P = Pendente | ";
+            // 
+            // guna2HtmlLabel13
+            // 
+            guna2HtmlLabel13.BackColor = Color.Transparent;
+            guna2HtmlLabel13.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel13.ForeColor = Color.FromArgb(39, 63, 44);
+            guna2HtmlLabel13.Location = new Point(7, 38);
+            guna2HtmlLabel13.Margin = new Padding(4, 3, 4, 3);
+            guna2HtmlLabel13.Name = "guna2HtmlLabel13";
+            guna2HtmlLabel13.Size = new Size(68, 17);
+            guna2HtmlLabel13.TabIndex = 51;
+            guna2HtmlLabel13.Text = "A = Aberto | ";
             // 
             // dgvListaPedido
             // 
@@ -131,7 +209,7 @@
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
             dgvListaPedido.DefaultCellStyle = dataGridViewCellStyle5;
             dgvListaPedido.GridColor = Color.FromArgb(231, 229, 255);
-            dgvListaPedido.Location = new Point(13, 78);
+            dgvListaPedido.Location = new Point(11, 79);
             dgvListaPedido.Name = "dgvListaPedido";
             dgvListaPedido.ReadOnly = true;
             dgvListaPedido.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -205,7 +283,7 @@
             // 
             // clnDesconto
             // 
-            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.Format = "C2";
             dataGridViewCellStyle3.NullValue = null;
             clnDesconto.DefaultCellStyle = dataGridViewCellStyle3;
             clnDesconto.HeaderText = "Desconto";
@@ -250,7 +328,7 @@
             btnCadProduto.Animated = true;
             btnCadProduto.BackColor = Color.Transparent;
             btnCadProduto.BorderRadius = 20;
-            btnCadProduto.CustomizableEdges = customizableEdges1;
+            btnCadProduto.CustomizableEdges = customizableEdges3;
             btnCadProduto.DisabledState.BorderColor = Color.DarkGray;
             btnCadProduto.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCadProduto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -263,7 +341,7 @@
             btnCadProduto.Location = new Point(874, 506);
             btnCadProduto.Margin = new Padding(4, 3, 4, 3);
             btnCadProduto.Name = "btnCadProduto";
-            btnCadProduto.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnCadProduto.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnCadProduto.Size = new Size(136, 10);
             btnCadProduto.TabIndex = 77;
             btnCadProduto.Text = "Salvar alterações";
@@ -283,6 +361,8 @@
             tabConsultaProduto.ResumeLayout(false);
             tpListarPedidos.ResumeLayout(false);
             tpListarPedidos.PerformLayout();
+            gpbDadosPaciente.ResumeLayout(false);
+            gpbDadosPaciente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaPedido).EndInit();
             tpDetalhePedido.ResumeLayout(false);
             ResumeLayout(false);
@@ -295,6 +375,7 @@
         private TabPage tpDetalhePedido;
         private Guna.UI2.WinForms.Guna2Button btnCadProduto;
         private Guna.UI2.WinForms.Guna2DataGridView dgvListaPedido;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private DataGridViewTextBoxColumn clnId;
         private DataGridViewTextBoxColumn clnUsuario;
         private DataGridViewTextBoxColumn clnCliente;
@@ -302,6 +383,10 @@
         private DataGridViewTextBoxColumn clnStatus;
         private DataGridViewTextBoxColumn clnDesconto;
         private DataGridViewTextBoxColumn clnValor;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2GroupBox gpbDadosPaciente;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
     }
 }

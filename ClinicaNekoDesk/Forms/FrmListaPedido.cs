@@ -36,9 +36,10 @@ namespace ClinicaNekoDesk.Forms
             {
                 var listaItens = ItemPedido.ObterListaPorPedido(pedido.Id);
                 double valor = 0;
+                //Para cada pedido, somar o valor de todos os itens relacionados a ele para exibir o valor total do pedido.
                 foreach (var item in listaItens)
                 {
-                    valor += item.Valor - item.Desconto;
+                    valor += item.Valor;
                 }
 
                 int rowIndex = dgvListaPedido.Rows.Add();
@@ -48,7 +49,7 @@ namespace ClinicaNekoDesk.Forms
                 dgvListaPedido.Rows[cont].Cells[3].Value = pedido.Data;
                 dgvListaPedido.Rows[cont].Cells[4].Value = pedido.Status;
                 dgvListaPedido.Rows[cont].Cells[5].Value = pedido.Desconto;
-                dgvListaPedido.Rows[cont].Cells[6].Value = valor;
+                dgvListaPedido.Rows[cont].Cells[6].Value = valor - pedido.Desconto;
 
 
                 cont++;

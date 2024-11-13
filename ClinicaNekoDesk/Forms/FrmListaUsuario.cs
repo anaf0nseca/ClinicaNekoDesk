@@ -35,7 +35,7 @@ namespace ClinicaNekoDesk.Forms
             this.tpEditarUsuarios.Enabled = false;
             CarregaGridUsuarios();
         }
-        private void cmbSetor_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbSetor_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (cmbSetor.SelectedItem != null)
             {
@@ -82,7 +82,7 @@ namespace ClinicaNekoDesk.Forms
 
         private void txtBusca_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void tpListarUsuarios_Click(object sender, EventArgs e)
@@ -141,7 +141,7 @@ namespace ClinicaNekoDesk.Forms
         private void btnSalvarUsuario_Click(object sender, EventArgs e)
         {
 
-            if (txtNome.Text != null && txtEmail.Text != null && cmbCargo.SelectedValue != null && cmbSetor.SelectedValue != null)
+            if (txtNome.Text != string.Empty && txtEmail.Text != string.Empty && cmbCargo.SelectedValue != null && cmbSetor.SelectedValue != null)
             {
                 Usuario usuario = new(
                     int.Parse(txtId.Text),
@@ -184,5 +184,7 @@ namespace ClinicaNekoDesk.Forms
                 CarregaGridUsuarios();
             }
         }
+
+
     }
 }

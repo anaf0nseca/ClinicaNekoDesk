@@ -88,6 +88,8 @@ namespace ClinicaNekoLib
             Senha = senha;
         }
 
+
+
         public void Inserir()
         {
             var cmd = Banco.Abrir();

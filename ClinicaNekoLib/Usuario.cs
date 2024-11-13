@@ -235,9 +235,9 @@ namespace ClinicaNekoLib
             cmd.Parameters.AddWithValue("spid", Id);
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("spdata_nascimento", DataNascimento);
-            cmd.Parameters.AddWithValue("spemail", Email);
             cmd.Parameters.AddWithValue("spid_setor", Setor.Id);
             cmd.Parameters.AddWithValue("spid_cargo", Cargo.Id);
+            cmd.Parameters.AddWithValue("spemail", Email);
 
             cmd.ExecuteNonQuery();
             

@@ -47,6 +47,16 @@ namespace ClinicaNekoLib
                 Qtde_Estoque = qtde_Estoque;
             }
 
+        public Produto(int id, Categoria? categoria, Marca? marca, string? nome, string? descricao, DateTime? data_Validade, double valor)
+        {
+            Id = id;
+            Categoria = categoria;
+            Marca = marca;
+            Nome = nome;
+            Descricao = descricao;
+            Data_Validade = data_Validade;
+            Valor = valor;
+        }
 
         public void Inserir()
         {
@@ -83,7 +93,6 @@ namespace ClinicaNekoLib
             cmd.Parameters.AddWithValue("spdata_validade", Data_Validade);
             cmd.Parameters.AddWithValue("spvalor", Valor);
             cmd.Parameters.AddWithValue("sppeso", Peso);
-            cmd.Parameters.AddWithValue("spqtde_estoque", Qtde_Estoque);
 
             cmd.ExecuteNonQuery();
 

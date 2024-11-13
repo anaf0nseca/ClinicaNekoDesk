@@ -322,6 +322,7 @@
             tpDetalhePedido.Size = new Size(1046, 575);
             tpDetalhePedido.TabIndex = 2;
             tpDetalhePedido.Text = "Detalhes do Pedido";
+            tpDetalhePedido.Click += tpDetalhePedido_Click;
             // 
             // btnCadProduto
             // 
@@ -338,11 +339,11 @@
             btnCadProduto.ForeColor = Color.White;
             btnCadProduto.ImageAlign = HorizontalAlignment.Right;
             btnCadProduto.ImageSize = new Size(24, 24);
-            btnCadProduto.Location = new Point(874, 506);
+            btnCadProduto.Location = new Point(874, 487);
             btnCadProduto.Margin = new Padding(4, 3, 4, 3);
             btnCadProduto.Name = "btnCadProduto";
             btnCadProduto.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnCadProduto.Size = new Size(136, 10);
+            btnCadProduto.Size = new Size(136, 29);
             btnCadProduto.TabIndex = 77;
             btnCadProduto.Text = "Salvar alterações";
             // 

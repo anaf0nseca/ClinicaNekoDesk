@@ -80,10 +80,7 @@ namespace ClinicaNekoDesk.Forms
             }
         }
 
-        private void txtBusca_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void tpListarUsuarios_Click(object sender, EventArgs e)
         {
@@ -144,7 +141,7 @@ namespace ClinicaNekoDesk.Forms
             if (txtNome.Text != string.Empty && txtEmail.Text != string.Empty && cmbCargo.SelectedValue != null && cmbSetor.SelectedValue != null)
             {
                 Usuario usuario = new(
-                    int.Parse(txtId.Text),
+                    Convert.ToInt32(txtId.Text),
                     txtNome.Text,
                     dtpNascimento.Value,
                     Setor.ObterPorId(Convert.ToInt32(cmbSetor.SelectedValue)),

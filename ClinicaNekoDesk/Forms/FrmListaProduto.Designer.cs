@@ -413,6 +413,7 @@
             txtQtdeEstoque.Name = "txtQtdeEstoque";
             txtQtdeEstoque.PasswordChar = '\0';
             txtQtdeEstoque.PlaceholderText = "";
+            txtQtdeEstoque.ReadOnly = true;
             txtQtdeEstoque.SelectedText = "";
             txtQtdeEstoque.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtQtdeEstoque.Size = new Size(235, 42);
@@ -428,6 +429,7 @@
             txtPeso.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtPeso.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtPeso.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPeso.Enabled = false;
             txtPeso.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPeso.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPeso.ForeColor = Color.FromArgb(39, 63, 44);
@@ -652,6 +654,7 @@
             txtIdProduto.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtIdProduto.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtIdProduto.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtIdProduto.Enabled = false;
             txtIdProduto.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtIdProduto.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtIdProduto.ForeColor = Color.FromArgb(39, 63, 44);

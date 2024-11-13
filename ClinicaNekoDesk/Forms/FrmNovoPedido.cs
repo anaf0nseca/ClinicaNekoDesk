@@ -20,6 +20,7 @@ namespace ClinicaNeko.Forms
         public int produtoId;
         public int clienteId;
         public double total;
+        public double totalP;
         public double descontoTotal;
 
         public FrmNovoPedido()
@@ -174,6 +175,8 @@ namespace ClinicaNeko.Forms
             txtDescricao.Clear();
             txtQuantidade.Clear();
             txtValor.Clear();
+            cmbDescPedido.SelectedIndex = 0;
+
         }
 
         private void btnSelecionarCliente_Click(object sender, EventArgs e)
@@ -240,8 +243,9 @@ namespace ClinicaNeko.Forms
         {
             string status = "P";
             string subtotalPedido = txtSubtotalPedido.Text;
-            string totalPedido = txtTotalPedido.Text;   
+            string totalPedido = txtTotalPedido.Text;
 
+            totalP = double.Parse(totalPedido);
             double descontoPedido = double.Parse(subtotalPedido) - double.Parse(totalPedido);
 
             Pedido pedido = new(
@@ -253,7 +257,25 @@ namespace ClinicaNeko.Forms
             pedido.AlterarStatus(Convert.ToInt32(txtNPedido.Text), status);
             pedido.AtualizarDesconto(Convert.ToInt32(txtNPedido.Text), descontoPedido);
 
-            MessageBox.Show("Pedido fechado com sucesso, realize o pagamento.");
+            Form Background = new Form();
+
+            FrmPagamento frmPagamento = new FrmPagamento();
+
+            //Código utilizado para criar o efeito de "escurecimento" do formulário principal ao abrir uma janela secundária
+            using (frmPagamento)
+            {
+                Background.StartPosition = FormStartPosition.CenterScreen;
+                Background.FormBorderStyle = FormBorderStyle.None;
+                Background.Opacity = 0.7d;
+                Background.BackColor = Color.Black;
+                Background.Size = new Size(1310, 722);
+                Background.Location = this.Location;
+                Background.ShowInTaskbar = false;
+                Background.Show(this);
+                frmPagamento.Owner = Background;
+                frmPagamento.ShowDialog(Background);
+                Background.Dispose();
+            }
 
         }
     }

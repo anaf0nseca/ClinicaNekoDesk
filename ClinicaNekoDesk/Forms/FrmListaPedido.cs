@@ -36,10 +36,11 @@ namespace ClinicaNekoDesk.Forms
             {
                 var listaItens = ItemPedido.ObterListaPorPedido(pedido.Id);
                 double valor = 0;
+
                 //Para cada pedido, somar o valor de todos os itens relacionados a ele para exibir o valor total do pedido.
                 foreach (var item in listaItens)
                 {
-                    valor += item.Valor;
+                    valor += item.Valor * item.Quantidade;
                 }
 
                 int rowIndex = dgvListaPedido.Rows.Add();
@@ -66,7 +67,9 @@ namespace ClinicaNekoDesk.Forms
             CarregaGridPedidos();
         }
 
+        private void tpDetalhePedido_Click(object sender, EventArgs e)
+        {
 
-        
+        }
     }
 }

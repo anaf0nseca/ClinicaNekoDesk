@@ -99,12 +99,25 @@ namespace ClinicaNekoDesk.Forms
 
         private void btnCadProduto_Click(object sender, EventArgs e)
         {
+            Produto produto = new(
+               int.Parse(txtIdProduto.Text),
+               Categoria.ObterPorId(Convert.ToInt32(cmbCategoria.SelectedValue)),
+               Marca.ObterPorId(Convert.ToInt32(cmbMarca.SelectedValue)),
+               txtNomeProduto.Text,
+               txtDescricao.Text,
+               dtpVencimento.Value,
+               double.Parse(txtValor.Text)
+               );
 
+            produto.Atualizar();
+            MessageBox.Show($"Dados do usuário {produto.Nome}, atualizados com sucesso.");
+            FrmListaProduto_Load(sender, e);
+            this.tabConsultaProduto.SelectedTab = tpListarProdutos;
         }
 
         private void tpEditarProdutos_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void dgvListaProduto_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

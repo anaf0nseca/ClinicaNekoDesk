@@ -71,5 +71,20 @@ namespace ClinicaNekoDesk.Forms
         {
 
         }
+
+        private void dgvListaPedido_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.tpDetalhePedido.Enabled = true;
+            int id = 0;
+            int posicaoLinha = dgvListaPedido.CurrentRow.Index;
+            id = Convert.ToInt32(dgvListaPedido.Rows[posicaoLinha].Cells[0].Value);
+
+            this.tabConsultaPedido.SelectedTab = tpDetalhePedido;
+
+            Pedido pedido = Pedido.ObterPorId(id);
+
+
+
+        }
     }
 }

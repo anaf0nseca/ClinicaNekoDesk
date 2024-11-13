@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClinicaNeko.Forms;
 using ClinicaNekoDesk.Forms;
+using ClinicaNekoLib;
 
 namespace ClinicaNeko
 {
@@ -30,6 +31,53 @@ namespace ClinicaNeko
             MainPanel = panelFormularios;
 
             tooglePanels();
+
+            lblNomeUsuario.Text = Program.UsuarioLogado.Nome;
+            lblCargoUsuario.Text = Program.UsuarioLogado.Cargo.Nome;
+
+            int cargo = Program.UsuarioLogado.Cargo.Id;
+
+            if (cargo == 3)
+            {
+                btnPedidos.Enabled = false;
+                btnAgend.Enabled = false;
+                btnClientes.Enabled = false;
+                btnProdutos.Enabled = false;
+                btnVeterinario.Enabled = false;
+                btnServico.Enabled = false;
+            }
+            else if (cargo >= 5 && cargo <= 17)
+            {
+                btnPedidos.Enabled = false;
+                btnNovoAgend.Enabled = false;
+                btnClientes.Enabled = false;
+                btnProdutos.Enabled = false;
+                btnServico.Enabled = false;
+            }
+            else if (cargo == 18)
+            {
+                btnPedidos.Enabled = false;
+                btnProdutos.Enabled = false;
+                btnVeterinario.Enabled = false;
+                btnServico.Enabled = false;
+                btnUsuarios.Enabled = false;
+            }
+            else if (cargo == 19)
+            {
+                btnAgend.Enabled = false;
+                btnVeterinario.Enabled = false;
+                btnServico.Enabled = false;
+                btnUsuarios.Enabled = false;
+            }
+            else if (cargo >= 20 && cargo <= 22)
+            {
+                btnPedidos.Enabled = false;
+                btnClientes.Enabled = false;
+                btnProdutos.Enabled = false;
+                btnVeterinario.Enabled = false;
+                btnServico.Enabled = false;
+                btnUsuarios.Enabled = false;
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -402,5 +450,11 @@ namespace ClinicaNeko
             MainPanel.Controls.Add(frmListaCliente);
             frmListaCliente.Show();
         }
+
+
+
+
+
+
     }
 }

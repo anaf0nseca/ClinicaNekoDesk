@@ -52,6 +52,11 @@ namespace ClinicaNekoLib
             Status = status;
         }
 
+        public Pedido(int id, string status)
+        {
+            Id = id;
+            Status = status;
+        }
 
         public Pedido(int id, string status, double? desconto)
         {

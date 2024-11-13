@@ -19,6 +19,7 @@ namespace ClinicaNeko.Forms
 
         public int produtoId;
         public int clienteId;
+        public int idPedido {  get; set; }
         public double total;
         public double totalP;
         public double descontoTotal;
@@ -131,6 +132,9 @@ namespace ClinicaNeko.Forms
 
             pedido.Inserir();
 
+
+            //frmPagamento.idUsuario = 
+
             txtNPedido.Text = pedido.Id.ToString();
             txtIdCliente.Enabled = false;
             txtCliente.Enabled = false;
@@ -204,8 +208,14 @@ namespace ClinicaNeko.Forms
             clienteId = frmSelecionarCliente.ClienteId;
             string clienteNome = frmSelecionarCliente.ClienteNome;
 
+
             txtIdCliente.Text = clienteId.ToString();
             txtCliente.Text = clienteNome;
+
+            FrmPagamento frmPagamento = new FrmPagamento();
+            frmPagamento.idCliente = clienteId;
+         
+
         }
 
         private void cmbDescPedido_SelectedIndexChanged(object sender, EventArgs e)
@@ -260,6 +270,8 @@ namespace ClinicaNeko.Forms
             Form Background = new Form();
 
             FrmPagamento frmPagamento = new FrmPagamento();
+            frmPagamento.totalP = totalP;
+            frmPagamento.idPedido = pedido.Id;
 
             //Código utilizado para criar o efeito de "escurecimento" do formulário principal ao abrir uma janela secundária
             using (frmPagamento)
@@ -275,6 +287,8 @@ namespace ClinicaNeko.Forms
                 frmPagamento.Owner = Background;
                 frmPagamento.ShowDialog(Background);
                 Background.Dispose();
+
+                
             }
 
         }

@@ -90,7 +90,6 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnSair = new Guna.UI2.WinForms.Guna2Button();
             panelMenuLateral = new Panel();
-            pictureBox1 = new PictureBox();
             panelUsuarios = new Panel();
             btnSetorCargo = new Guna.UI2.WinForms.Guna2Button();
             btnListaUsuarios = new Guna.UI2.WinForms.Guna2Button();
@@ -126,12 +125,15 @@
             btnNovoPedido = new Guna.UI2.WinForms.Guna2Button();
             btnPedidos = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
+            panel2 = new Panel();
+            pictureBox3 = new PictureBox();
+            lblCargoUsuario = new Label();
+            lblNomeUsuario = new Label();
             splitter1 = new Splitter();
             panelFormularios = new Panel();
             panelCabecalho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelMenuLateral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelUsuarios.SuspendLayout();
             panelServicos.SuspendLayout();
             panelVet.SuspendLayout();
@@ -140,6 +142,8 @@
             panelAgend.SuspendLayout();
             panelPedidos.SuspendLayout();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panelFormularios.SuspendLayout();
             SuspendLayout();
             // 
@@ -204,7 +208,6 @@
             // panelMenuLateral
             // 
             panelMenuLateral.BackColor = Color.FromArgb(136, 170, 140);
-            panelMenuLateral.Controls.Add(pictureBox1);
             panelMenuLateral.Controls.Add(panelUsuarios);
             panelMenuLateral.Controls.Add(btnUsuarios);
             panelMenuLateral.Controls.Add(panelServicos);
@@ -224,16 +227,6 @@
             panelMenuLateral.Name = "panelMenuLateral";
             panelMenuLateral.Size = new Size(198, 616);
             panelMenuLateral.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1, 515);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(194, 84);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
             // 
             // panelUsuarios
             // 
@@ -340,8 +333,8 @@
             btnUsuarios.CustomizableEdges = customizableEdges9;
             btnUsuarios.DisabledState.BorderColor = Color.DarkGray;
             btnUsuarios.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnUsuarios.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnUsuarios.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnUsuarios.DisabledState.FillColor = Color.DarkSlateGray;
+            btnUsuarios.DisabledState.ForeColor = Color.Gray;
             btnUsuarios.Dock = DockStyle.Top;
             btnUsuarios.FillColor = Color.FromArgb(34, 85, 96);
             btnUsuarios.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -456,8 +449,8 @@
             btnServico.CustomizableEdges = customizableEdges17;
             btnServico.DisabledState.BorderColor = Color.DarkGray;
             btnServico.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnServico.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnServico.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnServico.DisabledState.FillColor = Color.DarkSlateGray;
+            btnServico.DisabledState.ForeColor = Color.Gray;
             btnServico.Dock = DockStyle.Top;
             btnServico.FillColor = Color.FromArgb(34, 85, 96);
             btnServico.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -600,8 +593,8 @@
             btnVeterinario.CustomizableEdges = customizableEdges27;
             btnVeterinario.DisabledState.BorderColor = Color.DarkGray;
             btnVeterinario.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnVeterinario.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnVeterinario.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnVeterinario.DisabledState.FillColor = Color.DarkSlateGray;
+            btnVeterinario.DisabledState.ForeColor = Color.Gray;
             btnVeterinario.Dock = DockStyle.Top;
             btnVeterinario.FillColor = Color.FromArgb(34, 85, 96);
             btnVeterinario.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -719,8 +712,8 @@
             btnProdutos.CustomizableEdges = customizableEdges35;
             btnProdutos.DisabledState.BorderColor = Color.DarkGray;
             btnProdutos.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnProdutos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnProdutos.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnProdutos.DisabledState.FillColor = Color.DarkSlateGray;
+            btnProdutos.DisabledState.ForeColor = Color.Gray;
             btnProdutos.Dock = DockStyle.Top;
             btnProdutos.FillColor = Color.FromArgb(34, 85, 96);
             btnProdutos.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -838,8 +831,8 @@
             btnClientes.CustomizableEdges = customizableEdges43;
             btnClientes.DisabledState.BorderColor = Color.DarkGray;
             btnClientes.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnClientes.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnClientes.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnClientes.DisabledState.FillColor = Color.DarkSlateGray;
+            btnClientes.DisabledState.ForeColor = Color.Gray;
             btnClientes.Dock = DockStyle.Top;
             btnClientes.FillColor = Color.FromArgb(34, 85, 96);
             btnClientes.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -929,8 +922,8 @@
             btnAgend.CustomizableEdges = customizableEdges49;
             btnAgend.DisabledState.BorderColor = Color.DarkGray;
             btnAgend.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAgend.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAgend.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAgend.DisabledState.FillColor = Color.DarkSlateGray;
+            btnAgend.DisabledState.ForeColor = Color.Gray;
             btnAgend.Dock = DockStyle.Top;
             btnAgend.FillColor = Color.FromArgb(34, 85, 96);
             btnAgend.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -1018,11 +1011,12 @@
             // 
             btnPedidos.BorderColor = Color.Transparent;
             btnPedidos.BorderRadius = 15;
+            btnPedidos.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             btnPedidos.CustomizableEdges = customizableEdges55;
             btnPedidos.DisabledState.BorderColor = Color.DarkGray;
             btnPedidos.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnPedidos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnPedidos.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnPedidos.DisabledState.FillColor = Color.DarkSlateGray;
+            btnPedidos.DisabledState.ForeColor = Color.Gray;
             btnPedidos.Dock = DockStyle.Top;
             btnPedidos.FillColor = Color.FromArgb(34, 85, 96);
             btnPedidos.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -1041,11 +1035,55 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(136, 170, 140);
+            panel1.Controls.Add(panel2);
             panel1.Controls.Add(panelMenuLateral);
             panel1.Location = new Point(5, 85);
             panel1.Name = "panel1";
             panel1.Size = new Size(259, 641);
             panel1.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(pictureBox3);
+            panel2.Controls.Add(lblCargoUsuario);
+            panel2.Controls.Add(lblNomeUsuario);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 541);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(259, 100);
+            panel2.TabIndex = 35;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(23, 19);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(60, 60);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 3;
+            pictureBox3.TabStop = false;
+            // 
+            // lblCargoUsuario
+            // 
+            lblCargoUsuario.AutoSize = true;
+            lblCargoUsuario.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            lblCargoUsuario.ForeColor = Color.FromArgb(34, 85, 96);
+            lblCargoUsuario.Location = new Point(89, 45);
+            lblCargoUsuario.Name = "lblCargoUsuario";
+            lblCargoUsuario.Size = new Size(51, 21);
+            lblCargoUsuario.TabIndex = 2;
+            lblCargoUsuario.Text = "label1";
+            // 
+            // lblNomeUsuario
+            // 
+            lblNomeUsuario.AutoSize = true;
+            lblNomeUsuario.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            lblNomeUsuario.ForeColor = Color.FromArgb(34, 85, 96);
+            lblNomeUsuario.Location = new Point(89, 27);
+            lblNomeUsuario.Name = "lblNomeUsuario";
+            lblNomeUsuario.Size = new Size(51, 21);
+            lblNomeUsuario.TabIndex = 1;
+            lblNomeUsuario.Text = "label1";
             // 
             // splitter1
             // 
@@ -1089,7 +1127,6 @@
             panelCabecalho.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panelMenuLateral.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelUsuarios.ResumeLayout(false);
             panelServicos.ResumeLayout(false);
             panelVet.ResumeLayout(false);
@@ -1098,6 +1135,9 @@
             panelAgend.ResumeLayout(false);
             panelPedidos.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panelFormularios.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -1145,7 +1185,10 @@
         private PictureBox pictureBox2;
         private Splitter splitter1;
         private Panel panelFormularios;
-        private PictureBox pictureBox1;
+        private Panel panel2;
+        private PictureBox pictureBox3;
+        private Label lblCargoUsuario;
+        private Label lblNomeUsuario;
     }
 }
 

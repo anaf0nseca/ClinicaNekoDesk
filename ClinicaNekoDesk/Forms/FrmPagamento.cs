@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ClinicaNeko;
+using ClinicaNeko.Forms;
+using ClinicaNekoLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,24 +15,22 @@ namespace ClinicaNekoDesk.Forms
 {
     public partial class FrmPagamento : Form
     {
+        public static Panel MainPanel;
+        public int idPedido { get; set; }
+        public int idCliente {  get; set; }
+        public double totalP { get; set; }
+
+
+
         public FrmPagamento()
         {
             InitializeComponent();
+            MainPanel = FrmPrincipal.MainPanel;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             grbFormaPgto.Enabled = false;
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void guna2HtmlLabel17_Click(object sender, EventArgs e)
@@ -39,7 +40,16 @@ namespace ClinicaNekoDesk.Forms
 
         private void FrmPagamento_Load(object sender, EventArgs e)
         {
-            //txtUsuario.Text = 
+            Pedido pedido = Pedido.ObterPorId(idPedido);
+            Cliente cliente = Cliente.ObterPorId(pedido.Cliente.Id);
+
+            txtIdN.Text = pedido.Id.ToString();
+            txtIdCliente.Text = cliente.Id.ToString();
+            txtCliente.Text = pedido.Cliente.Nome;
+            txtUsuario.Text = Program.UsuarioLogado.Nome;
+            txtTotal.Text = totalP.ToString();
+
+
         }
 
         private async Task btnFinalizarPedido_ClickAsync(object sender, EventArgs e)
@@ -54,16 +64,13 @@ namespace ClinicaNekoDesk.Forms
                 cmbParcelas.Visible = true;
                 cmbParcelas.SelectedIndex = 0;
             }
-            else
-            {
 
-            }
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
             var msg = MessageBox.Show(
-                   "Deseja cancelar o pagamento? Isso irá cancelar seu pedido e/ou agendamento.", //Texto da mensagem 
+                   "Deseja cancelar o pagamento? O status do seu pedido ficará pendente.", //Texto da mensagem 
                    "Pagamento", //Título da caixa de mensagem
                    MessageBoxButtons.YesNo, //Botões exibidos na caixa
                    MessageBoxIcon.Exclamation, //Ícone exibido
@@ -73,6 +80,10 @@ namespace ClinicaNekoDesk.Forms
             {
                 //Mudar status do pedido ou agendamento para cancelado
                 this.Close();
+            }
+            else
+            {
+                
             }
 
 
@@ -116,6 +127,14 @@ namespace ClinicaNekoDesk.Forms
             // do other useful initializations, this might be shorter or longer than 5 seconds
             pbLoading.Visible = true;
 
+            string status = "F";
+            Pedido pedido = new(
+                int.Parse(txtIdN.Text),
+                status
+                );
+
+            pedido.AlterarStatus(Convert.ToInt32(txtIdN.Text), status);
+
             // now wait for the delay task to finish:
             await delayTask;
 
@@ -125,7 +144,14 @@ namespace ClinicaNekoDesk.Forms
                    MessageBoxButtons.OK, //Botões exibidos na caixa
                    MessageBoxIcon.Information//Ícone exibido
                    );
-            this.Close();  ;
+            this.Close();
+
+            FrmListaPedido frmListaPedido = new FrmListaPedido();
+            frmListaPedido.Dock = DockStyle.Fill;
+            frmListaPedido.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmListaPedido);
+            frmListaPedido.Show();
         }
     }
 }

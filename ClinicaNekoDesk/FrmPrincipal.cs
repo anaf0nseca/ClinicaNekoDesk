@@ -454,10 +454,14 @@ namespace ClinicaNeko
             frmListaCliente.Show();
         }
 
-
-
-
-
-
+        private void btnListaAgend_Click(object sender, EventArgs e)
+        {
+            FrmListaAgendamento frmListaAgendamento = new FrmListaAgendamento();
+            frmListaAgendamento.Dock = DockStyle.Fill;
+            frmListaAgendamento.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmListaAgendamento);
+            frmListaAgendamento.Show();
+        }
     }
 }

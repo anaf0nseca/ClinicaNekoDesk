@@ -117,7 +117,7 @@ namespace ClinicaNekoLib
                     Usuario.ObterPorId(dr.GetInt32(1)),
                     Paciente.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
-                    dr.GetDateTime(4),
+                    dr.GetDateTime(3).Date + dr.GetTimeSpan(4),
                     dr.GetString(5)
 
                     ));
@@ -145,7 +145,7 @@ namespace ClinicaNekoLib
                     Usuario.ObterPorId(dr.GetInt32(1)),
                     Paciente.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
-                    dr.GetDateTime(4),
+                    dr.GetDateTime(3).Date + dr.GetTimeSpan(4),
                     dr.GetString(5)
 
                     ));
@@ -172,7 +172,7 @@ namespace ClinicaNekoLib
                     Usuario.ObterPorId(dr.GetInt32(1)),
                     Paciente.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
-                    dr.GetDateTime(4),
+                    dr.GetDateTime(3).Date + dr.GetTimeSpan(4),
                     dr.GetString(5)
 
                     ));
@@ -200,7 +200,7 @@ namespace ClinicaNekoLib
                     Usuario.ObterPorId(dr.GetInt32(1)),
                     Paciente.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
-                    dr.GetDateTime(4),
+                    dr.GetDateTime(3).Date + dr.GetTimeSpan(4),
                     dr.GetString(5)
 
                     ));

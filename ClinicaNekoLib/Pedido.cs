@@ -94,7 +94,7 @@ namespace ClinicaNekoLib
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"update pedido set status = '{Status} where id = {Id}'";
+            cmd.CommandText = $"update pedido set status = '{Status}' where id = {Id}";
             
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();

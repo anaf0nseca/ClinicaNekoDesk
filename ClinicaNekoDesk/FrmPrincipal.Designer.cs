@@ -894,8 +894,8 @@
             btnNovoAgend.CustomizableEdges = customizableEdges47;
             btnNovoAgend.DisabledState.BorderColor = Color.DarkGray;
             btnNovoAgend.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnNovoAgend.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnNovoAgend.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnNovoAgend.DisabledState.FillColor = Color.DarkSlateGray;
+            btnNovoAgend.DisabledState.ForeColor = Color.Gray;
             btnNovoAgend.Dock = DockStyle.Top;
             btnNovoAgend.FillColor = Color.FromArgb(164, 196, 169);
             btnNovoAgend.FocusedColor = Color.FromArgb(34, 85, 96);
@@ -1011,7 +1011,6 @@
             // 
             btnPedidos.BorderColor = Color.Transparent;
             btnPedidos.BorderRadius = 15;
-            btnPedidos.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             btnPedidos.CustomizableEdges = customizableEdges55;
             btnPedidos.DisabledState.BorderColor = Color.DarkGray;
             btnPedidos.DisabledState.CustomBorderColor = Color.DarkGray;

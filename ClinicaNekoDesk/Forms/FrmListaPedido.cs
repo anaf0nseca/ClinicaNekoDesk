@@ -83,7 +83,49 @@ namespace ClinicaNekoDesk.Forms
 
             Pedido pedido = Pedido.ObterPorId(id);
 
+            txtNPedido.Text = pedido.Id.ToString(); 
 
+            txtUsuario.Text = pedido.Usuario.Nome;
+            txtIdCliente.Text = pedido.Cliente.Id.ToString();
+            txtCliente.Text = pedido.Cliente.Nome;
+
+            var listaItens = ItemPedido.ObterListaPorPedido(id);
+            dgvItensPedido.Rows.Clear();
+
+            int cont = 0;
+            double valor = 0;
+            
+            foreach(var item in listaItens)
+            {
+                valor += item.Valor * item.Quantidade;
+
+                int rowIndex = dgvItensPedido.Rows.Add();
+                dgvItensPedido.Rows[cont].Cells[0].Value = item.Id;
+                dgvItensPedido.Rows[cont].Cells[1].Value = item.Produto.Nome;
+                dgvItensPedido.Rows[cont].Cells[2].Value = item.Produto.Descricao;
+                dgvItensPedido.Rows[cont].Cells[3].Value = item.Valor;
+                dgvItensPedido.Rows[cont].Cells[4].Value = item.Quantidade;
+
+                cont++;
+            }
+
+            txtDesconto.Text = pedido.Desconto.ToString();
+            txtTotal.Text = (valor - pedido.Desconto).ToString();
+
+            if(pedido.Status == "P")
+            {
+                btnPgto.Visible = true;
+            }
+            else
+            {
+                btnPgto.Visible = false;
+            }
+
+
+        }
+
+        private void guna2HtmlLabel14_Click(object sender, EventArgs e)
+        {
 
         }
     }

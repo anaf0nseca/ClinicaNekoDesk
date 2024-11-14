@@ -264,8 +264,13 @@ namespace ClinicaNeko.Forms
                 descontoPedido
                 );
 
-            pedido.AlterarStatus(Convert.ToInt32(txtNPedido.Text), status);
-            pedido.AtualizarDesconto(Convert.ToInt32(txtNPedido.Text), descontoPedido);
+            if(pedido.Id > 0)
+            {
+                pedido.AlterarStatus(pedido.Id, status);
+                pedido.AtualizarDesconto(pedido.Id, descontoPedido);
+
+            }
+
 
             Form Background = new Form();
 

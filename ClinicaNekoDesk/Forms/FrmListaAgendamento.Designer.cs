@@ -45,12 +45,12 @@
             clnStatus = new DataGridViewTextBoxColumn();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             label1 = new Label();
-            tabDetalhesAgend = new Guna.UI2.WinForms.Guna2TabControl();
+            tabConsultaAgend = new Guna.UI2.WinForms.Guna2TabControl();
             tpDetalheAgendamento = new TabPage();
             btnCadProduto = new Guna.UI2.WinForms.Guna2Button();
             tpListarAgendamentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaAgendamento).BeginInit();
-            tabDetalhesAgend.SuspendLayout();
+            tabConsultaAgend.SuspendLayout();
             tpDetalheAgendamento.SuspendLayout();
             SuspendLayout();
             // 
@@ -138,6 +138,7 @@
             dgvListaAgendamento.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(115, 158, 122);
             dgvListaAgendamento.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvListaAgendamento.CellContentClick += dgvListaPedido_CellContentClick;
+            dgvListaAgendamento.CellDoubleClick += dgvListaAgendamento_CellDoubleClick;
             // 
             // clnId
             // 
@@ -206,35 +207,35 @@
             label1.TabIndex = 26;
             label1.Text = "SERVIÇO";
             // 
-            // tabDetalhesAgend
+            // tabConsultaAgend
             // 
-            tabDetalhesAgend.Controls.Add(tpListarAgendamentos);
-            tabDetalhesAgend.Controls.Add(tpDetalheAgendamento);
-            tabDetalhesAgend.ItemSize = new Size(180, 40);
-            tabDetalhesAgend.Location = new Point(-5, 0);
-            tabDetalhesAgend.Name = "tabDetalhesAgend";
-            tabDetalhesAgend.SelectedIndex = 0;
-            tabDetalhesAgend.Size = new Size(1039, 585);
-            tabDetalhesAgend.TabButtonHoverState.BorderColor = Color.Empty;
-            tabDetalhesAgend.TabButtonHoverState.FillColor = Color.FromArgb(83, 133, 91);
-            tabDetalhesAgend.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F);
-            tabDetalhesAgend.TabButtonHoverState.ForeColor = Color.White;
-            tabDetalhesAgend.TabButtonHoverState.InnerColor = Color.FromArgb(38, 62, 41);
-            tabDetalhesAgend.TabButtonIdleState.BorderColor = Color.Empty;
-            tabDetalhesAgend.TabButtonIdleState.FillColor = Color.FromArgb(83, 133, 91);
-            tabDetalhesAgend.TabButtonIdleState.Font = new Font("Segoe UI Semibold", 10F);
-            tabDetalhesAgend.TabButtonIdleState.ForeColor = Color.FromArgb(64, 64, 64);
-            tabDetalhesAgend.TabButtonIdleState.InnerColor = Color.FromArgb(83, 133, 91);
-            tabDetalhesAgend.TabButtonSelectedState.BorderColor = Color.Empty;
-            tabDetalhesAgend.TabButtonSelectedState.FillColor = Color.FromArgb(38, 62, 41);
-            tabDetalhesAgend.TabButtonSelectedState.Font = new Font("Segoe UI Semibold", 10F);
-            tabDetalhesAgend.TabButtonSelectedState.ForeColor = Color.White;
-            tabDetalhesAgend.TabButtonSelectedState.InnerColor = Color.FromArgb(102, 162, 109);
-            tabDetalhesAgend.TabButtonSize = new Size(180, 40);
-            tabDetalhesAgend.TabButtonTextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-            tabDetalhesAgend.TabIndex = 5;
-            tabDetalhesAgend.TabMenuBackColor = Color.FromArgb(83, 133, 91);
-            tabDetalhesAgend.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
+            tabConsultaAgend.Controls.Add(tpListarAgendamentos);
+            tabConsultaAgend.Controls.Add(tpDetalheAgendamento);
+            tabConsultaAgend.ItemSize = new Size(180, 40);
+            tabConsultaAgend.Location = new Point(-5, 0);
+            tabConsultaAgend.Name = "tabConsultaAgend";
+            tabConsultaAgend.SelectedIndex = 0;
+            tabConsultaAgend.Size = new Size(1039, 585);
+            tabConsultaAgend.TabButtonHoverState.BorderColor = Color.Empty;
+            tabConsultaAgend.TabButtonHoverState.FillColor = Color.FromArgb(83, 133, 91);
+            tabConsultaAgend.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F);
+            tabConsultaAgend.TabButtonHoverState.ForeColor = Color.White;
+            tabConsultaAgend.TabButtonHoverState.InnerColor = Color.FromArgb(38, 62, 41);
+            tabConsultaAgend.TabButtonIdleState.BorderColor = Color.Empty;
+            tabConsultaAgend.TabButtonIdleState.FillColor = Color.FromArgb(83, 133, 91);
+            tabConsultaAgend.TabButtonIdleState.Font = new Font("Segoe UI Semibold", 10F);
+            tabConsultaAgend.TabButtonIdleState.ForeColor = Color.FromArgb(64, 64, 64);
+            tabConsultaAgend.TabButtonIdleState.InnerColor = Color.FromArgb(83, 133, 91);
+            tabConsultaAgend.TabButtonSelectedState.BorderColor = Color.Empty;
+            tabConsultaAgend.TabButtonSelectedState.FillColor = Color.FromArgb(38, 62, 41);
+            tabConsultaAgend.TabButtonSelectedState.Font = new Font("Segoe UI Semibold", 10F);
+            tabConsultaAgend.TabButtonSelectedState.ForeColor = Color.White;
+            tabConsultaAgend.TabButtonSelectedState.InnerColor = Color.FromArgb(102, 162, 109);
+            tabConsultaAgend.TabButtonSize = new Size(180, 40);
+            tabConsultaAgend.TabButtonTextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+            tabConsultaAgend.TabIndex = 5;
+            tabConsultaAgend.TabMenuBackColor = Color.FromArgb(83, 133, 91);
+            tabConsultaAgend.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
             // 
             // tpDetalheAgendamento
             // 
@@ -275,7 +276,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1034, 581);
-            Controls.Add(tabDetalhesAgend);
+            Controls.Add(tabConsultaAgend);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmListaAgendamento";
             Text = "FrmListaAgendamento";
@@ -283,7 +284,7 @@
             tpListarAgendamentos.ResumeLayout(false);
             tpListarAgendamentos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaAgendamento).EndInit();
-            tabDetalhesAgend.ResumeLayout(false);
+            tabConsultaAgend.ResumeLayout(false);
             tpDetalheAgendamento.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -294,7 +295,7 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvListaAgendamento;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Label label1;
-        private Guna.UI2.WinForms.Guna2TabControl tabDetalhesAgend;
+        private Guna.UI2.WinForms.Guna2TabControl tabConsultaAgend;
         private TabPage tpDetalheAgendamento;
         private Guna.UI2.WinForms.Guna2Button btnCadProduto;
         private DataGridViewTextBoxColumn clnId;

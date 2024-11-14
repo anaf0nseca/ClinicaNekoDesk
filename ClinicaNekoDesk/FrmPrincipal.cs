@@ -39,44 +39,47 @@ namespace ClinicaNeko
 
             if (cargo == 3)
             {
-                btnPedidos.Enabled = false;
-                btnAgend.Enabled = false;
-                btnClientes.Enabled = false;
-                btnProdutos.Enabled = false;
-                btnVeterinario.Enabled = false;
-                btnServico.Enabled = false;
+                btnPedidos.Visible = false;
+                btnAgend.Visible = false;
+                btnClientes.Visible = false;
+                btnProdutos.Visible = false;
+                btnVeterinario.Visible = false;
+                btnServico.Visible = false;
             }
             else if (cargo >= 5 && cargo <= 17)
             {
-                btnPedidos.Enabled = false;
+
+                btnPedidos.Visible = false;
                 btnNovoAgend.Enabled = false;
-                btnClientes.Enabled = false;
-                btnProdutos.Enabled = false;
-                btnServico.Enabled = false;
+                btnClientes.Visible = false;
+                btnProdutos.Visible = false;
+                btnServico.Visible = false;
+                btnUsuarios.Visible = false;
+
             }
             else if (cargo == 18)
             {
-                btnPedidos.Enabled = false;
-                btnProdutos.Enabled = false;
-                btnVeterinario.Enabled = false;
-                btnServico.Enabled = false;
-                btnUsuarios.Enabled = false;
+                btnPedidos.Visible = false;
+                btnProdutos.Visible = false;
+                btnVeterinario.Visible = false;
+                btnServico.Visible = false;
+                btnUsuarios.Visible = false;
             }
             else if (cargo == 19)
             {
-                btnAgend.Enabled = false;
-                btnVeterinario.Enabled = false;
-                btnServico.Enabled = false;
-                btnUsuarios.Enabled = false;
+                btnAgend.Visible = false;
+                btnVeterinario.Visible = false;
+                btnServico.Visible = false;
+                btnUsuarios.Visible = false;
             }
             else if (cargo >= 20 && cargo <= 22)
             {
-                btnPedidos.Enabled = false;
-                btnClientes.Enabled = false;
-                btnProdutos.Enabled = false;
-                btnVeterinario.Enabled = false;
-                btnServico.Enabled = false;
-                btnUsuarios.Enabled = false;
+                btnPedidos.Visible = false;
+                btnClientes.Visible = false;
+                btnProdutos.Visible = false;
+                btnVeterinario.Visible = false;
+                btnServico.Visible = false;
+                btnUsuarios.Visible = false;
             }
         }
 

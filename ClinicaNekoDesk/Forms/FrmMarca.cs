@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicaNekoLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,23 @@ namespace ClinicaNekoDesk.Forms
 
         private void FrmMarca_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Marca marca = new(
+            txtMarca.Text
+             );
+
+            marca.Inserir();
+
+            this.Close();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
 
         }
     }

@@ -46,6 +46,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNovoProduto));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtNomeProduto = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtDescricao = new Guna.UI2.WinForms.Guna2TextBox();
@@ -64,6 +67,8 @@
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnCadProduto = new Guna.UI2.WinForms.Guna2Button();
+            btnAddCategoria = new Guna.UI2.WinForms.Guna2CircleButton();
+            btnAddMarca = new Guna.UI2.WinForms.Guna2CircleButton();
             SuspendLayout();
             // 
             // txtNomeProduto
@@ -156,7 +161,7 @@
             guna2HtmlLabel8.BackColor = Color.Transparent;
             guna2HtmlLabel8.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel8.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel8.Location = new Point(408, 256);
+            guna2HtmlLabel8.Location = new Point(419, 250);
             guna2HtmlLabel8.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             guna2HtmlLabel8.Size = new Size(46, 20);
@@ -168,7 +173,7 @@
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel7.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel7.Location = new Point(65, 256);
+            guna2HtmlLabel7.Location = new Point(66, 250);
             guna2HtmlLabel7.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             guna2HtmlLabel7.Size = new Size(72, 20);
@@ -187,7 +192,7 @@
             cmbMarca.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             cmbMarca.ForeColor = Color.FromArgb(39, 63, 44);
             cmbMarca.ItemHeight = 30;
-            cmbMarca.Location = new Point(392, 279);
+            cmbMarca.Location = new Point(410, 273);
             cmbMarca.Margin = new Padding(4, 3, 4, 3);
             cmbMarca.Name = "cmbMarca";
             cmbMarca.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -206,7 +211,7 @@
             cmbCategoria.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             cmbCategoria.ForeColor = Color.FromArgb(39, 63, 44);
             cmbCategoria.ItemHeight = 30;
-            cmbCategoria.Location = new Point(53, 279);
+            cmbCategoria.Location = new Point(54, 273);
             cmbCategoria.Margin = new Padding(4, 3, 4, 3);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -218,7 +223,7 @@
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel4.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel4.Location = new Point(687, 248);
+            guna2HtmlLabel4.Location = new Point(741, 248);
             guna2HtmlLabel4.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(144, 20);
@@ -233,7 +238,7 @@
             dtpVencimento.FillColor = Color.White;
             dtpVencimento.Font = new Font("Segoe UI", 9F);
             dtpVencimento.Format = DateTimePickerFormat.Short;
-            dtpVencimento.Location = new Point(676, 273);
+            dtpVencimento.Location = new Point(730, 273);
             dtpVencimento.Margin = new Padding(4, 3, 4, 3);
             dtpVencimento.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtpVencimento.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -375,12 +380,50 @@
             btnCadProduto.Text = "Cadastrar produto";
             btnCadProduto.Click += btnCadProduto_Click;
             // 
+            // btnAddCategoria
+            // 
+            btnAddCategoria.DisabledState.BorderColor = Color.DarkGray;
+            btnAddCategoria.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAddCategoria.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAddCategoria.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAddCategoria.FillColor = Color.FromArgb(34, 85, 96);
+            btnAddCategoria.Font = new Font("Segoe UI", 9F);
+            btnAddCategoria.ForeColor = Color.White;
+            btnAddCategoria.Image = (Image)resources.GetObject("btnAddCategoria.Image");
+            btnAddCategoria.Location = new Point(340, 274);
+            btnAddCategoria.Name = "btnAddCategoria";
+            btnAddCategoria.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            btnAddCategoria.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            btnAddCategoria.Size = new Size(35, 35);
+            btnAddCategoria.TabIndex = 43;
+            btnAddCategoria.Click += guna2CircleButton1_Click;
+            // 
+            // btnAddMarca
+            // 
+            btnAddMarca.DisabledState.BorderColor = Color.DarkGray;
+            btnAddMarca.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAddMarca.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAddMarca.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAddMarca.FillColor = Color.FromArgb(34, 85, 96);
+            btnAddMarca.Font = new Font("Segoe UI", 9F);
+            btnAddMarca.ForeColor = Color.White;
+            btnAddMarca.Image = (Image)resources.GetObject("btnAddMarca.Image");
+            btnAddMarca.Location = new Point(651, 274);
+            btnAddMarca.Name = "btnAddMarca";
+            btnAddMarca.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnAddMarca.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            btnAddMarca.Size = new Size(35, 35);
+            btnAddMarca.TabIndex = 44;
+            btnAddMarca.Click += btnAddMarca_Click;
+            // 
             // FrmNovoProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(159, 187, 164);
             ClientSize = new Size(1050, 620);
+            Controls.Add(btnAddMarca);
+            Controls.Add(btnAddCategoria);
             Controls.Add(btnCadProduto);
             Controls.Add(guna2HtmlLabel6);
             Controls.Add(guna2HtmlLabel5);
@@ -428,5 +471,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2Button btnCadProduto;
+        private Guna.UI2.WinForms.Guna2CircleButton btnAddCategoria;
+        private Guna.UI2.WinForms.Guna2CircleButton btnAddMarca;
     }
 }

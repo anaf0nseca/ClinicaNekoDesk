@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicaNekoLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,22 @@ namespace ClinicaNekoDesk.Forms
         public FrmCategoria()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Categoria categoria = new(
+                txtCategoria.Text
+                );
+
+            categoria.Inserir();
+
+            this.Close();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

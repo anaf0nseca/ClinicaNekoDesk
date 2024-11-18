@@ -1,4 +1,5 @@
-﻿using ClinicaNekoLib;
+﻿using ClinicaNekoDesk.Forms;
+using ClinicaNekoLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,6 +55,58 @@ namespace ClinicaNeko.Forms
             produto.Inserir();
 
             MessageBox.Show("Produto cadastrado com sucesso!");
+        }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            Form Background = new Form();
+
+            FrmCategoria frmCategoria = new FrmCategoria();
+
+            //Código utilizado para criar o efeito de "escurecimento" do formulário principal ao abrir uma janela secundária
+            using (frmCategoria)
+            {
+                Background.StartPosition = FormStartPosition.CenterScreen;
+                Background.FormBorderStyle = FormBorderStyle.None;
+                Background.Opacity = 0.7d;
+                Background.BackColor = Color.Black;
+                Background.Size = new Size(1310, 722);
+                Background.Location = this.Location;
+                Background.ShowInTaskbar = false;
+                Background.Show(this);
+                frmCategoria.Owner = Background;
+                frmCategoria.ShowDialog(Background);
+                Background.Dispose();
+            }
+
+            FrmNovoProduto_Load(sender, e);
+
+        }
+
+        private void btnAddMarca_Click(object sender, EventArgs e)
+        {
+            Form Background = new Form();
+
+            FrmMarca frmMarca = new FrmMarca();
+
+            //Código utilizado para criar o efeito de "escurecimento" do formulário principal ao abrir uma janela secundária
+            using (frmMarca)
+            {
+                Background.StartPosition = FormStartPosition.CenterScreen;
+                Background.FormBorderStyle = FormBorderStyle.None;
+                Background.Opacity = 0.7d;
+                Background.BackColor = Color.Black;
+                Background.Size = new Size(1310, 722);
+                Background.Location = this.Location;
+                Background.ShowInTaskbar = false;
+                Background.Show(this);
+                frmMarca.Owner = Background;
+                frmMarca.ShowDialog(Background);
+                Background.Dispose();
+            }
+
+            FrmNovoProduto_Load(sender,e);
+
         }
     }
 }

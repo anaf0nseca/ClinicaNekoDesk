@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ana.csfonseca5\\source\\repos\\anaf0nseca\\ClinicaNekoDesk1\\ClinicaNekoLib\\ClinicaNekoLib.csproj": {}
+    "C:\\Users\\v601953\\Source\\Repos\\ClinicaNekoDesk1\\ClinicaNekoLib\\ClinicaNekoLib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ana.csfonseca5\\source\\repos\\anaf0nseca\\ClinicaNekoDesk1\\ClinicaNekoLib\\ClinicaNekoLib.csproj": {
+    "C:\\Users\\v601953\\Source\\Repos\\ClinicaNekoDesk1\\ClinicaNekoLib\\ClinicaNekoLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ana.csfonseca5\\source\\repos\\anaf0nseca\\ClinicaNekoDesk1\\ClinicaNekoLib\\ClinicaNekoLib.csproj",
+        "projectUniqueName": "C:\\Users\\v601953\\Source\\Repos\\ClinicaNekoDesk1\\ClinicaNekoLib\\ClinicaNekoLib.csproj",
         "projectName": "ClinicaNekoLib",
-        "projectPath": "C:\\Users\\ana.csfonseca5\\source\\repos\\anaf0nseca\\ClinicaNekoDesk1\\ClinicaNekoLib\\ClinicaNekoLib.csproj",
-        "packagesPath": "C:\\Users\\ana.csfonseca5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ana.csfonseca5\\source\\repos\\anaf0nseca\\ClinicaNekoDesk1\\ClinicaNekoLib\\obj\\",
+        "projectPath": "C:\\Users\\v601953\\Source\\Repos\\ClinicaNekoDesk1\\ClinicaNekoLib\\ClinicaNekoLib.csproj",
+        "packagesPath": "C:\\Users\\v601953\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\v601953\\Source\\Repos\\ClinicaNekoDesk1\\ClinicaNekoLib\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ana.csfonseca5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\v601953\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -61,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -16,6 +16,7 @@ using System.Collections;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 using System.Diagnostics.Eventing.Reader;
 using System.Globalization;
+using ClinicaNeko;
 
 namespace ClinicaNekoDesk.Forms
 {
@@ -31,9 +32,14 @@ namespace ClinicaNekoDesk.Forms
         public List<string> horariosDisponiveis { get; set; }
         //public static Panel PanelAgenda;
 
+        public static Panel MainPanel;
+
+
         public FrmNovoAgendamento()
         {
             InitializeComponent();
+            MainPanel = FrmPrincipal.MainPanel;
+
         }
         private void FrmNovoAgendamento_Load(object sender, EventArgs e)
         {
@@ -668,44 +674,14 @@ namespace ClinicaNekoDesk.Forms
         private void cmbHorarios_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            //if (rbBanhoETosa.Checked)
-            //{
-
-
-            //}
-            //else if (rbAdestramento.Checked)
-            //{
-
-
-            //}
-            //else if (rbVacinacao.Checked)
-            //{
-
-            //}
-            //else if (rbConsulta.Checked)
-            //{
-            //    ConsultarHorariosDisponíveis("consulta");
-
-            //    MessageBox.Show($"Dia selecionado para consulta: {diaSelecionado}");
-            //}
-            //else if (rbExame.Checked)
-            //{
-            //    ConsultarHorariosDisponíveis("Banho e Tosa");
-            //    MessageBox.Show($"Dia selecionado para Exame: {diaSelecionado}");
-            //}
-            //else if (rbCirurgia.Checked)
-            //{
-            //    ConsultarHorariosDisponíveis("Banho e Tosa");
-            //    MessageBox.Show($"Dia selecionado para cirurgia: {diaSelecionado}");
-            //}
         }
 
         private void btnAgendar_Click(object sender, EventArgs e)
         {
             if (VerificaControles())
             {
-                //string Hora = cmbHorarios.SelectedItem;
-                //DateTime hora = DateTime.ParseExact(Hora, "t", CultureInfo.CurrentCulture);
+
+
                 
                    Agendamento agendamento = new(
                    Usuario.ObterPorId(Convert.ToInt32(cmbProfissional.SelectedValue)),
@@ -772,6 +748,13 @@ namespace ClinicaNekoDesk.Forms
                     }
 
                     MessageBox.Show($"Agendamento realizado com sucesso para o dia: {calendarioNeko.SelectionRange.Start}");
+
+                    FrmListaAgendamento frmListaAgendamento = new();
+                    frmListaAgendamento.Dock = DockStyle.Fill;
+                    frmListaAgendamento.TopLevel = false;
+                    MainPanel.Controls.Clear();
+                    MainPanel.Controls.Add(frmListaAgendamento);
+                    frmListaAgendamento.Show();
 
                 }
 

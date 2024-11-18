@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             tpListarAgendamentos = new TabPage();
             dgvListaAgendamento = new Guna.UI2.WinForms.Guna2DataGridView();
             clnId = new DataGridViewTextBoxColumn();
@@ -46,12 +44,9 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             label1 = new Label();
             tabConsultaAgend = new Guna.UI2.WinForms.Guna2TabControl();
-            tpDetalheAgendamento = new TabPage();
-            btnCadProduto = new Guna.UI2.WinForms.Guna2Button();
             tpListarAgendamentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaAgendamento).BeginInit();
             tabConsultaAgend.SuspendLayout();
-            tpDetalheAgendamento.SuspendLayout();
             SuspendLayout();
             // 
             // tpListarAgendamentos
@@ -73,46 +68,46 @@
             dgvListaAgendamento.AllowUserToDeleteRows = false;
             dgvListaAgendamento.AllowUserToResizeColumns = false;
             dgvListaAgendamento.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(164, 196, 169);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(115, 158, 122);
-            dataGridViewCellStyle6.SelectionForeColor = Color.White;
-            dgvListaAgendamento.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(164, 196, 169);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dgvListaAgendamento.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvListaAgendamento.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             dgvListaAgendamento.BackgroundColor = Color.FromArgb(200, 219, 203);
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(34, 85, 96);
-            dataGridViewCellStyle7.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle7.ForeColor = Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(34, 85, 96);
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dgvListaAgendamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(34, 85, 96);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(34, 85, 96);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvListaAgendamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvListaAgendamento.ColumnHeadersHeight = 32;
             dgvListaAgendamento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgvListaAgendamento.Columns.AddRange(new DataGridViewColumn[] { clnId, clnUsuario, clnCliente, clnData, clnHora, clnStatus });
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = Color.White;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle9.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(115, 158, 122);
-            dataGridViewCellStyle9.SelectionForeColor = Color.White;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
-            dgvListaAgendamento.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvListaAgendamento.DefaultCellStyle = dataGridViewCellStyle4;
             dgvListaAgendamento.GridColor = Color.FromArgb(231, 229, 255);
-            dgvListaAgendamento.Location = new Point(20, 64);
+            dgvListaAgendamento.Location = new Point(18, 64);
             dgvListaAgendamento.Name = "dgvListaAgendamento";
             dgvListaAgendamento.ReadOnly = true;
             dgvListaAgendamento.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = Color.White;
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle10.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
-            dgvListaAgendamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvListaAgendamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvListaAgendamento.RowHeadersVisible = false;
             dgvListaAgendamento.Size = new Size(996, 461);
             dgvListaAgendamento.TabIndex = 28;
@@ -170,9 +165,9 @@
             // 
             // clnHora
             // 
-            dataGridViewCellStyle8.Format = "d";
-            dataGridViewCellStyle8.NullValue = null;
-            clnHora.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            clnHora.DefaultCellStyle = dataGridViewCellStyle3;
             clnHora.HeaderText = "Hora";
             clnHora.Name = "clnHora";
             clnHora.ReadOnly = true;
@@ -210,7 +205,6 @@
             // tabConsultaAgend
             // 
             tabConsultaAgend.Controls.Add(tpListarAgendamentos);
-            tabConsultaAgend.Controls.Add(tpDetalheAgendamento);
             tabConsultaAgend.ItemSize = new Size(180, 40);
             tabConsultaAgend.Location = new Point(-5, 0);
             tabConsultaAgend.Name = "tabConsultaAgend";
@@ -237,40 +231,6 @@
             tabConsultaAgend.TabMenuBackColor = Color.FromArgb(83, 133, 91);
             tabConsultaAgend.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
             // 
-            // tpDetalheAgendamento
-            // 
-            tpDetalheAgendamento.BackColor = Color.FromArgb(159, 187, 164);
-            tpDetalheAgendamento.Controls.Add(btnCadProduto);
-            tpDetalheAgendamento.Location = new Point(4, 44);
-            tpDetalheAgendamento.Name = "tpDetalheAgendamento";
-            tpDetalheAgendamento.Padding = new Padding(3);
-            tpDetalheAgendamento.Size = new Size(1031, 537);
-            tpDetalheAgendamento.TabIndex = 2;
-            tpDetalheAgendamento.Text = "Detalhes do Agendamento";
-            // 
-            // btnCadProduto
-            // 
-            btnCadProduto.Animated = true;
-            btnCadProduto.BackColor = Color.Transparent;
-            btnCadProduto.BorderRadius = 20;
-            btnCadProduto.CustomizableEdges = customizableEdges3;
-            btnCadProduto.DisabledState.BorderColor = Color.DarkGray;
-            btnCadProduto.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnCadProduto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnCadProduto.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCadProduto.FillColor = Color.FromArgb(34, 85, 96);
-            btnCadProduto.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            btnCadProduto.ForeColor = Color.White;
-            btnCadProduto.ImageAlign = HorizontalAlignment.Right;
-            btnCadProduto.ImageSize = new Size(24, 24);
-            btnCadProduto.Location = new Point(815, 464);
-            btnCadProduto.Margin = new Padding(4, 3, 4, 3);
-            btnCadProduto.Name = "btnCadProduto";
-            btnCadProduto.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnCadProduto.Size = new Size(195, 52);
-            btnCadProduto.TabIndex = 77;
-            btnCadProduto.Text = "Salvar alterações";
-            // 
             // FrmListaAgendamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -285,7 +245,6 @@
             tpListarAgendamentos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaAgendamento).EndInit();
             tabConsultaAgend.ResumeLayout(false);
-            tpDetalheAgendamento.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -296,8 +255,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Label label1;
         private Guna.UI2.WinForms.Guna2TabControl tabConsultaAgend;
-        private TabPage tpDetalheAgendamento;
-        private Guna.UI2.WinForms.Guna2Button btnCadProduto;
         private DataGridViewTextBoxColumn clnId;
         private DataGridViewTextBoxColumn clnUsuario;
         private DataGridViewTextBoxColumn clnCliente;

@@ -52,12 +52,10 @@ namespace ClinicaNekoDesk.Forms
 
         private void dgvListaAgendamento_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.tpDetalheAgendamento.Enabled = true;
             int id = 0;
             int posicaoLinha = dgvListaAgendamento.CurrentRow.Index;
             id = Convert.ToInt32(dgvListaAgendamento.Rows[posicaoLinha].Cells[0].Value);
 
-            this.tabConsultaAgend.SelectedTab = tpDetalheAgendamento;
 
             Agendamento agendamento = Agendamento.ObterPorId(id);
         }

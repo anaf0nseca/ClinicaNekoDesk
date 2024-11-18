@@ -463,5 +463,15 @@ namespace ClinicaNeko
             MainPanel.Controls.Add(frmListaAgendamento);
             frmListaAgendamento.Show();
         }
+
+        private void btnAgendados_Click(object sender, EventArgs e)
+        {
+            FrmAgendados frmAgendados = new FrmAgendados();
+            frmAgendados.Dock = DockStyle.Fill;
+            frmAgendados.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmAgendados);
+            frmAgendados.Show();
+        }
     }
 }

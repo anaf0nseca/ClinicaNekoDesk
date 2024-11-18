@@ -90,5 +90,10 @@ namespace ClinicaNeko.Forms
         {
 
         }
+
+        private void tpListarClientes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

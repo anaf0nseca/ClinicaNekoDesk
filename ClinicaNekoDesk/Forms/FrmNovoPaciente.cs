@@ -1,4 +1,5 @@
-﻿using ClinicaNekoLib;
+﻿using ClinicaNeko;
+using ClinicaNekoLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,16 +9,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using ClinicaNeko.Forms;
+
 
 namespace ClinicaNekoDesk.Forms
 {
     public partial class FrmNovoPaciente : Form
     {
         public int idCliente { get; set; }
+        public static Panel MainPanel;
+
 
         public FrmNovoPaciente()
         {
             InitializeComponent();
+            MainPanel = FrmPrincipal.MainPanel;
         }
 
         private void FrmNovoPaciente_Load(object sender, EventArgs e)
@@ -61,6 +68,14 @@ namespace ClinicaNekoDesk.Forms
                 MessageBox.Show("Preencha todos os campos antes de continuar");
 
             }
+
+            FrmListaCliente frmListaCliente = new();
+            frmListaCliente.Dock = DockStyle.Fill;
+            frmListaCliente.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmListaCliente);
+            frmListaCliente.Show();
+
         }
 
         private void cmbEspecie_SelectedIndexChanged(object sender, EventArgs e)

@@ -28,29 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             tpListarAgendamentos = new TabPage();
             dgvListaAgendados = new Guna.UI2.WinForms.Guna2DataGridView();
-            clnId = new DataGridViewTextBoxColumn();
-            clnUsuario = new DataGridViewTextBoxColumn();
-            clnCliente = new DataGridViewTextBoxColumn();
-            clnData = new DataGridViewTextBoxColumn();
-            clnHora = new DataGridViewTextBoxColumn();
-            clnStatus = new DataGridViewTextBoxColumn();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             label1 = new Label();
             tabConsultaAgend = new Guna.UI2.WinForms.Guna2TabControl();
             tpDetalheAgendamento = new TabPage();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            btnCadProduto = new Guna.UI2.WinForms.Guna2Button();
+            btnCancelarAgend = new Guna.UI2.WinForms.Guna2Button();
+            btnConcluirAgend = new Guna.UI2.WinForms.Guna2Button();
+            clnId = new DataGridViewTextBoxColumn();
+            clnUsuario = new DataGridViewTextBoxColumn();
+            clnCliente = new DataGridViewTextBoxColumn();
+            clbEspecialidade = new DataGridViewTextBoxColumn();
+            clnTipo = new DataGridViewTextBoxColumn();
+            clnData = new DataGridViewTextBoxColumn();
+            clnHora = new DataGridViewTextBoxColumn();
+            clnStatus = new DataGridViewTextBoxColumn();
             tpListarAgendamentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaAgendados).BeginInit();
             tabConsultaAgend.SuspendLayout();
@@ -76,46 +79,46 @@
             dgvListaAgendados.AllowUserToDeleteRows = false;
             dgvListaAgendados.AllowUserToResizeColumns = false;
             dgvListaAgendados.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(164, 196, 169);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(115, 158, 122);
-            dataGridViewCellStyle6.SelectionForeColor = Color.White;
-            dgvListaAgendados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(164, 196, 169);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dgvListaAgendados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvListaAgendados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             dgvListaAgendados.BackgroundColor = Color.FromArgb(200, 219, 203);
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(34, 85, 96);
-            dataGridViewCellStyle7.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle7.ForeColor = Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(34, 85, 96);
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dgvListaAgendados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(34, 85, 96);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(34, 85, 96);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvListaAgendados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvListaAgendados.ColumnHeadersHeight = 32;
             dgvListaAgendados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvListaAgendados.Columns.AddRange(new DataGridViewColumn[] { clnId, clnUsuario, clnCliente, clnData, clnHora, clnStatus });
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = Color.White;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle9.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(115, 158, 122);
-            dataGridViewCellStyle9.SelectionForeColor = Color.White;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
-            dgvListaAgendados.DefaultCellStyle = dataGridViewCellStyle9;
+            dgvListaAgendados.Columns.AddRange(new DataGridViewColumn[] { clnId, clnUsuario, clnCliente, clbEspecialidade, clnTipo, clnData, clnHora, clnStatus });
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dgvListaAgendados.DefaultCellStyle = dataGridViewCellStyle5;
             dgvListaAgendados.GridColor = Color.FromArgb(231, 229, 255);
             dgvListaAgendados.Location = new Point(20, 64);
             dgvListaAgendados.Name = "dgvListaAgendados";
             dgvListaAgendados.ReadOnly = true;
             dgvListaAgendados.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = Color.White;
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle10.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
-            dgvListaAgendados.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvListaAgendados.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgvListaAgendados.RowHeadersVisible = false;
             dgvListaAgendados.Size = new Size(996, 461);
             dgvListaAgendados.TabIndex = 28;
@@ -141,50 +144,6 @@
             dgvListaAgendados.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(115, 158, 122);
             dgvListaAgendados.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvListaAgendados.CellDoubleClick += dgvListaAgendamento_CellDoubleClick;
-            // 
-            // clnId
-            // 
-            clnId.HeaderText = "ID";
-            clnId.Name = "clnId";
-            clnId.ReadOnly = true;
-            clnId.Width = 55;
-            // 
-            // clnUsuario
-            // 
-            clnUsuario.HeaderText = "Usuário";
-            clnUsuario.Name = "clnUsuario";
-            clnUsuario.ReadOnly = true;
-            clnUsuario.Width = 300;
-            // 
-            // clnCliente
-            // 
-            clnCliente.HeaderText = "Cliente";
-            clnCliente.Name = "clnCliente";
-            clnCliente.ReadOnly = true;
-            clnCliente.Width = 300;
-            // 
-            // clnData
-            // 
-            clnData.HeaderText = "Data";
-            clnData.Name = "clnData";
-            clnData.ReadOnly = true;
-            clnData.Width = 120;
-            // 
-            // clnHora
-            // 
-            dataGridViewCellStyle8.Format = "d";
-            dataGridViewCellStyle8.NullValue = null;
-            clnHora.DefaultCellStyle = dataGridViewCellStyle8;
-            clnHora.HeaderText = "Hora";
-            clnHora.Name = "clnHora";
-            clnHora.ReadOnly = true;
-            clnHora.Width = 120;
-            // 
-            // clnStatus
-            // 
-            clnStatus.HeaderText = "Status";
-            clnStatus.Name = "clnStatus";
-            clnStatus.ReadOnly = true;
             // 
             // guna2HtmlLabel1
             // 
@@ -214,7 +173,7 @@
             tabConsultaAgend.Controls.Add(tpListarAgendamentos);
             tabConsultaAgend.Controls.Add(tpDetalheAgendamento);
             tabConsultaAgend.ItemSize = new Size(180, 40);
-            tabConsultaAgend.Location = new Point(-5, -2);
+            tabConsultaAgend.Location = new Point(0, 0);
             tabConsultaAgend.Name = "tabConsultaAgend";
             tabConsultaAgend.SelectedIndex = 0;
             tabConsultaAgend.Size = new Size(1041, 589);
@@ -242,61 +201,122 @@
             // tpDetalheAgendamento
             // 
             tpDetalheAgendamento.BackColor = Color.FromArgb(159, 187, 164);
-            tpDetalheAgendamento.Controls.Add(guna2Button1);
-            tpDetalheAgendamento.Controls.Add(btnCadProduto);
+            tpDetalheAgendamento.Controls.Add(btnCancelarAgend);
+            tpDetalheAgendamento.Controls.Add(btnConcluirAgend);
             tpDetalheAgendamento.Location = new Point(4, 44);
             tpDetalheAgendamento.Name = "tpDetalheAgendamento";
             tpDetalheAgendamento.Padding = new Padding(3);
-            tpDetalheAgendamento.Size = new Size(1031, 537);
+            tpDetalheAgendamento.Size = new Size(1033, 541);
             tpDetalheAgendamento.TabIndex = 2;
             tpDetalheAgendamento.Text = "Detalhes do Agendamento";
             // 
-            // guna2Button1
+            // btnCancelarAgend
             // 
-            guna2Button1.Animated = true;
-            guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.BorderRadius = 20;
-            guna2Button1.CustomizableEdges = customizableEdges5;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(34, 85, 96);
-            guna2Button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.ImageAlign = HorizontalAlignment.Right;
-            guna2Button1.ImageSize = new Size(24, 24);
-            guna2Button1.Location = new Point(26, 464);
-            guna2Button1.Margin = new Padding(4, 3, 4, 3);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button1.Size = new Size(221, 52);
-            guna2Button1.TabIndex = 78;
-            guna2Button1.Text = "Cancelar Agendamento";
+            btnCancelarAgend.Animated = true;
+            btnCancelarAgend.BackColor = Color.Transparent;
+            btnCancelarAgend.BorderRadius = 20;
+            btnCancelarAgend.CustomizableEdges = customizableEdges1;
+            btnCancelarAgend.DisabledState.BorderColor = Color.DarkGray;
+            btnCancelarAgend.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCancelarAgend.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCancelarAgend.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCancelarAgend.FillColor = Color.FromArgb(34, 85, 96);
+            btnCancelarAgend.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            btnCancelarAgend.ForeColor = Color.White;
+            btnCancelarAgend.ImageAlign = HorizontalAlignment.Right;
+            btnCancelarAgend.ImageSize = new Size(24, 24);
+            btnCancelarAgend.Location = new Point(26, 464);
+            btnCancelarAgend.Margin = new Padding(4, 3, 4, 3);
+            btnCancelarAgend.Name = "btnCancelarAgend";
+            btnCancelarAgend.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnCancelarAgend.Size = new Size(221, 52);
+            btnCancelarAgend.TabIndex = 78;
+            btnCancelarAgend.Text = "Cancelar Agendamento";
             // 
-            // btnCadProduto
+            // btnConcluirAgend
             // 
-            btnCadProduto.Animated = true;
-            btnCadProduto.BackColor = Color.Transparent;
-            btnCadProduto.BorderRadius = 20;
-            btnCadProduto.CustomizableEdges = customizableEdges7;
-            btnCadProduto.DisabledState.BorderColor = Color.DarkGray;
-            btnCadProduto.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnCadProduto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnCadProduto.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCadProduto.FillColor = Color.FromArgb(34, 85, 96);
-            btnCadProduto.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            btnCadProduto.ForeColor = Color.White;
-            btnCadProduto.ImageAlign = HorizontalAlignment.Right;
-            btnCadProduto.ImageSize = new Size(24, 24);
-            btnCadProduto.Location = new Point(802, 464);
-            btnCadProduto.Margin = new Padding(4, 3, 4, 3);
-            btnCadProduto.Name = "btnCadProduto";
-            btnCadProduto.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnCadProduto.Size = new Size(208, 52);
-            btnCadProduto.TabIndex = 77;
-            btnCadProduto.Text = "Concluir Agendamento";
-            btnCadProduto.Click += btnCadProduto_Click;
+            btnConcluirAgend.Animated = true;
+            btnConcluirAgend.BackColor = Color.Transparent;
+            btnConcluirAgend.BorderRadius = 20;
+            btnConcluirAgend.CustomizableEdges = customizableEdges3;
+            btnConcluirAgend.DisabledState.BorderColor = Color.DarkGray;
+            btnConcluirAgend.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnConcluirAgend.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnConcluirAgend.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnConcluirAgend.FillColor = Color.FromArgb(34, 85, 96);
+            btnConcluirAgend.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            btnConcluirAgend.ForeColor = Color.White;
+            btnConcluirAgend.ImageAlign = HorizontalAlignment.Right;
+            btnConcluirAgend.ImageSize = new Size(24, 24);
+            btnConcluirAgend.Location = new Point(802, 464);
+            btnConcluirAgend.Margin = new Padding(4, 3, 4, 3);
+            btnConcluirAgend.Name = "btnConcluirAgend";
+            btnConcluirAgend.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnConcluirAgend.Size = new Size(208, 52);
+            btnConcluirAgend.TabIndex = 77;
+            btnConcluirAgend.Text = "Concluir Agendamento";
+            btnConcluirAgend.Click += btnCadProduto_Click;
+            // 
+            // clnId
+            // 
+            clnId.HeaderText = "ID";
+            clnId.Name = "clnId";
+            clnId.ReadOnly = true;
+            clnId.Width = 55;
+            // 
+            // clnUsuario
+            // 
+            clnUsuario.HeaderText = "Usuário";
+            clnUsuario.Name = "clnUsuario";
+            clnUsuario.ReadOnly = true;
+            clnUsuario.Width = 200;
+            // 
+            // clnCliente
+            // 
+            clnCliente.HeaderText = "Cliente";
+            clnCliente.Name = "clnCliente";
+            clnCliente.ReadOnly = true;
+            clnCliente.Width = 200;
+            // 
+            // clbEspecialidade
+            // 
+            clbEspecialidade.HeaderText = "Especialidade";
+            clbEspecialidade.Name = "clbEspecialidade";
+            clbEspecialidade.ReadOnly = true;
+            clbEspecialidade.Width = 150;
+            // 
+            // clnTipo
+            // 
+            clnTipo.HeaderText = "Tipo";
+            clnTipo.Name = "clnTipo";
+            clnTipo.ReadOnly = true;
+            clnTipo.Width = 150;
+            // 
+            // clnData
+            // 
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            clnData.DefaultCellStyle = dataGridViewCellStyle3;
+            clnData.HeaderText = "Data";
+            clnData.Name = "clnData";
+            clnData.ReadOnly = true;
+            clnData.Width = 120;
+            // 
+            // clnHora
+            // 
+            dataGridViewCellStyle4.Format = "t";
+            dataGridViewCellStyle4.NullValue = null;
+            clnHora.DefaultCellStyle = dataGridViewCellStyle4;
+            clnHora.HeaderText = "Hora";
+            clnHora.Name = "clnHora";
+            clnHora.ReadOnly = true;
+            clnHora.Width = 120;
+            // 
+            // clnStatus
+            // 
+            clnStatus.HeaderText = "Status";
+            clnStatus.Name = "clnStatus";
+            clnStatus.ReadOnly = true;
             // 
             // FrmAgendados
             // 
@@ -320,17 +340,19 @@
 
         private TabPage tpListarAgendamentos;
         private Guna.UI2.WinForms.Guna2DataGridView dgvListaAgendados;
-        private DataGridViewTextBoxColumn clnId;
-        private DataGridViewTextBoxColumn clnUsuario;
-        private DataGridViewTextBoxColumn clnCliente;
-        private DataGridViewTextBoxColumn clnData;
-        private DataGridViewTextBoxColumn clnHora;
-        private DataGridViewTextBoxColumn clnStatus;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Label label1;
         private Guna.UI2.WinForms.Guna2TabControl tabConsultaAgend;
         private TabPage tpDetalheAgendamento;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button btnCadProduto;
+        private Guna.UI2.WinForms.Guna2Button btnCancelarAgend;
+        private Guna.UI2.WinForms.Guna2Button btnConcluirAgend;
+        private DataGridViewTextBoxColumn clnId;
+        private DataGridViewTextBoxColumn clnUsuario;
+        private DataGridViewTextBoxColumn clnCliente;
+        private DataGridViewTextBoxColumn clbEspecialidade;
+        private DataGridViewTextBoxColumn clnTipo;
+        private DataGridViewTextBoxColumn clnData;
+        private DataGridViewTextBoxColumn clnHora;
+        private DataGridViewTextBoxColumn clnStatus;
     }
 }

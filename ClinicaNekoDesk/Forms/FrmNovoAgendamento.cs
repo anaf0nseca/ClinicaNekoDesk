@@ -206,39 +206,7 @@ namespace ClinicaNekoDesk.Forms
         {
 
             cmbHorarios.Enabled = true;
-
-            if (rbBanhoETosa.Checked)
-            {
-                MessageBox.Show($"Dia selecionado para banho e tosa: {diaSelecionado}");
-
-            }
-            else if (rbAdestramento.Checked)
-            {
-                ConsultarHorariosDisponíveis();
-                MessageBox.Show($"Dia selecionado para adestramento: {diaSelecionado}");
-
-            }
-            else if (rbVacinacao.Checked)
-            {
-                ConsultarHorariosDisponíveis();
-                MessageBox.Show($"Dia selecionado para vacinacao: {diaSelecionado}");
-            }
-            else if (rbConsulta.Checked)
-            {
-                ConsultarHorariosDisponíveis();
-
-                MessageBox.Show($"Dia selecionado para consulta: {diaSelecionado}");
-            }
-            else if (rbExame.Checked)
-            {
-                ConsultarHorariosDisponíveis();
-                MessageBox.Show($"Dia selecionado para Exame: {diaSelecionado}");
-            }
-            else if (rbCirurgia.Checked)
-            {
-                ConsultarHorariosDisponíveis();
-                MessageBox.Show($"Dia selecionado para cirurgia: {diaSelecionado}");
-            }
+            ConsultarHorariosDisponíveis();
         }
 
         private void rbBanhoETosa_CheckedChanged(object sender, EventArgs e)
@@ -250,7 +218,7 @@ namespace ClinicaNekoDesk.Forms
                 cmbTipo.Enabled = false;
 
                 //Carrega a lista de usuarios de acordo com o serviço selecionado
-                var usuarios = Usuario.ObterListaPorCargo(11);
+                var usuarios = Usuario.ObterListaPorCargo(21);
 
                 //Associa as listas ao combobox
                 cmbProfissional.DataSource = usuarios;
@@ -262,10 +230,7 @@ namespace ClinicaNekoDesk.Forms
                 cmbProfissional.ValueMember = "Id";
 
             }
-            else
-            {
 
-            }
         }
 
         private void rbVacinacao_CheckedChanged(object sender, EventArgs e)
@@ -277,7 +242,7 @@ namespace ClinicaNekoDesk.Forms
                 cmbTipo.Enabled = false;
 
                 //Carrega a lista de usuarios de acordo com o serviço selecionado
-                var usuarios = Usuario.ObterListaPorCargo(7);
+                var usuarios = Usuario.ObterListaPorCargo(22);
 
                 //Associa as listas ao combobox
                 cmbProfissional.DataSource = usuarios;
@@ -288,10 +253,7 @@ namespace ClinicaNekoDesk.Forms
                 //Retorna para o banco o valor contido na coluna ID
                 cmbProfissional.ValueMember = "Id";
             }
-            else
-            {
 
-            }
         }
 
         private void rbAdestramento_CheckedChanged(object sender, EventArgs e)
@@ -303,7 +265,7 @@ namespace ClinicaNekoDesk.Forms
                 cmbTipo.Enabled = false;
 
                 //Carrega a lista de usuarios de acordo com o serviço selecionado
-                var usuarios = Usuario.ObterListaPorCargo(10);
+                var usuarios = Usuario.ObterListaPorCargo(20);
 
                 //Associa as listas ao combobox
                 cmbProfissional.DataSource = usuarios;

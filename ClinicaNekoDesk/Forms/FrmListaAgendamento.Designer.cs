@@ -30,20 +30,21 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             tpListarAgendamentos = new TabPage();
             dgvListaAgendamento = new Guna.UI2.WinForms.Guna2DataGridView();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            label1 = new Label();
+            tabConsultaAgend = new Guna.UI2.WinForms.Guna2TabControl();
             clnId = new DataGridViewTextBoxColumn();
             clnUsuario = new DataGridViewTextBoxColumn();
             clnCliente = new DataGridViewTextBoxColumn();
             clnData = new DataGridViewTextBoxColumn();
             clnHora = new DataGridViewTextBoxColumn();
             clnStatus = new DataGridViewTextBoxColumn();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            label1 = new Label();
-            tabConsultaAgend = new Guna.UI2.WinForms.Guna2TabControl();
             tpListarAgendamentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaAgendamento).BeginInit();
             tabConsultaAgend.SuspendLayout();
@@ -87,27 +88,27 @@
             dgvListaAgendamento.ColumnHeadersHeight = 32;
             dgvListaAgendamento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgvListaAgendamento.Columns.AddRange(new DataGridViewColumn[] { clnId, clnUsuario, clnCliente, clnData, clnHora, clnStatus });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(115, 158, 122);
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgvListaAgendamento.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(115, 158, 122);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dgvListaAgendamento.DefaultCellStyle = dataGridViewCellStyle5;
             dgvListaAgendamento.GridColor = Color.FromArgb(231, 229, 255);
             dgvListaAgendamento.Location = new Point(18, 64);
             dgvListaAgendamento.Name = "dgvListaAgendamento";
             dgvListaAgendamento.ReadOnly = true;
             dgvListaAgendamento.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.White;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvListaAgendamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvListaAgendamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgvListaAgendamento.RowHeadersVisible = false;
             dgvListaAgendamento.Size = new Size(996, 461);
             dgvListaAgendamento.TabIndex = 28;
@@ -134,50 +135,6 @@
             dgvListaAgendamento.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvListaAgendamento.CellContentClick += dgvListaPedido_CellContentClick;
             dgvListaAgendamento.CellDoubleClick += dgvListaAgendamento_CellDoubleClick;
-            // 
-            // clnId
-            // 
-            clnId.HeaderText = "ID";
-            clnId.Name = "clnId";
-            clnId.ReadOnly = true;
-            clnId.Width = 55;
-            // 
-            // clnUsuario
-            // 
-            clnUsuario.HeaderText = "Usuário";
-            clnUsuario.Name = "clnUsuario";
-            clnUsuario.ReadOnly = true;
-            clnUsuario.Width = 300;
-            // 
-            // clnCliente
-            // 
-            clnCliente.HeaderText = "Cliente";
-            clnCliente.Name = "clnCliente";
-            clnCliente.ReadOnly = true;
-            clnCliente.Width = 300;
-            // 
-            // clnData
-            // 
-            clnData.HeaderText = "Data";
-            clnData.Name = "clnData";
-            clnData.ReadOnly = true;
-            clnData.Width = 120;
-            // 
-            // clnHora
-            // 
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            clnHora.DefaultCellStyle = dataGridViewCellStyle3;
-            clnHora.HeaderText = "Hora";
-            clnHora.Name = "clnHora";
-            clnHora.ReadOnly = true;
-            clnHora.Width = 120;
-            // 
-            // clnStatus
-            // 
-            clnStatus.HeaderText = "Status";
-            clnStatus.Name = "clnStatus";
-            clnStatus.ReadOnly = true;
             // 
             // guna2HtmlLabel1
             // 
@@ -230,6 +187,53 @@
             tabConsultaAgend.TabIndex = 5;
             tabConsultaAgend.TabMenuBackColor = Color.FromArgb(83, 133, 91);
             tabConsultaAgend.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
+            // 
+            // clnId
+            // 
+            clnId.HeaderText = "ID";
+            clnId.Name = "clnId";
+            clnId.ReadOnly = true;
+            clnId.Width = 55;
+            // 
+            // clnUsuario
+            // 
+            clnUsuario.HeaderText = "Usuário";
+            clnUsuario.Name = "clnUsuario";
+            clnUsuario.ReadOnly = true;
+            clnUsuario.Width = 300;
+            // 
+            // clnCliente
+            // 
+            clnCliente.HeaderText = "Cliente";
+            clnCliente.Name = "clnCliente";
+            clnCliente.ReadOnly = true;
+            clnCliente.Width = 300;
+            // 
+            // clnData
+            // 
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            clnData.DefaultCellStyle = dataGridViewCellStyle3;
+            clnData.HeaderText = "Data";
+            clnData.Name = "clnData";
+            clnData.ReadOnly = true;
+            clnData.Width = 120;
+            // 
+            // clnHora
+            // 
+            dataGridViewCellStyle4.Format = "t";
+            dataGridViewCellStyle4.NullValue = null;
+            clnHora.DefaultCellStyle = dataGridViewCellStyle4;
+            clnHora.HeaderText = "Hora";
+            clnHora.Name = "clnHora";
+            clnHora.ReadOnly = true;
+            clnHora.Width = 120;
+            // 
+            // clnStatus
+            // 
+            clnStatus.HeaderText = "Status";
+            clnStatus.Name = "clnStatus";
+            clnStatus.ReadOnly = true;
             // 
             // FrmListaAgendamento
             // 

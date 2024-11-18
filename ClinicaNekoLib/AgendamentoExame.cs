@@ -41,5 +41,26 @@ namespace ClinicaNekoLib
             cmd.Connection.Close();
 
         }
+
+        public static List<AgendamentoExame> ObterListaPorAgendamento(int agendamentoId)
+        {
+            List<AgendamentoExame> agendamentoExames = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select * from agendamento_exame where id_agendamento = {agendamentoId}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                agendamentoExames.Add(new(
+                dr.GetInt32(0),
+                Agendamento.ObterPorId(dr.GetInt32(1)),
+                Exame.ObterPorId(dr.GetInt32(2))
+                    ));
+            }
+
+            cmd.Connection.Close();
+            return agendamentoExames;
+        }
+
     }
 }

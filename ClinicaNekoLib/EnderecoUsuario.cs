@@ -43,5 +43,27 @@ namespace ClinicaNekoLib
 
         }
 
+
+        public static List<EnderecoUsuario> ObterListaPorUsuario(int usuarioId)
+        {
+            List<EnderecoUsuario> enderecoUsuario = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select * from endereco_usuario where id_usuario = {usuarioId}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                enderecoUsuario.Add(new(
+                dr.GetInt32(0),
+                Endereco.ObterPorId(dr.GetInt32(1)),
+                Usuario.ObterPorId(dr.GetInt32(2))
+                    ));
+            }
+
+            cmd.Connection.Close();
+            return enderecoUsuario;
+        }
+
+
     }
 }

@@ -43,5 +43,25 @@ namespace ClinicaNekoLib
 
         }
 
+        public static List<TelefoneUsuario> ObterListaPorUsuario(int usuarioId)
+        {
+            List<TelefoneUsuario> telefoneUsuario = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select * from telefone_usuario where id_usuario = {usuarioId}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                telefoneUsuario.Add(new(
+                dr.GetInt32(0),
+                Telefone.ObterPorId(dr.GetInt32(1)),
+                Usuario.ObterPorId(dr.GetInt32(2))
+                    ));
+            }
+
+            cmd.Connection.Close();
+            return telefoneUsuario;
+        }
+
     }
 }

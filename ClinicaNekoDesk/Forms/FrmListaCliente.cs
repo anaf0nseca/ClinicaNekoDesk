@@ -21,12 +21,60 @@ namespace ClinicaNeko.Forms
 
         private void FrmListaCliente_Load(object sender, EventArgs e)
         {
-
+            CarregaGridClientes();
         }
 
         private void CarregaGridClientes(string nome = "")
         {
             var listaClientes = Cliente.ObterLista(nome);
+
+            dgvListaClientes.Rows.Clear();
+            int cont = 0;
+
+            foreach (var cliente in listaClientes)
+            {
+                int rowIndex = dgvListaClientes.Rows.Add();
+                dgvListaClientes.Rows[cont].Cells[0].Value = cliente.Id;
+                dgvListaClientes.Rows[cont].Cells[1].Value = cliente.Nome;
+                dgvListaClientes.Rows[cont].Cells[2].Value = cliente.Cpf;
+                dgvListaClientes.Rows[cont].Cells[3].Value = cliente.Data_Nascimento;
+                dgvListaClientes.Rows[cont].Cells[4].Value = cliente.Email;
+
+                cont++;
+            }
+
+
+
+        }
+
+        private void CarregaGridPacientes(int id)
+        {
+            var listaPacientes = Paciente.ObterListaPorCliente(id);
+
+            dgvListaPacientes.Rows.Clear();
+            int cont = 0;
+
+            foreach (var paciente in listaPacientes)
+            {
+                int rowIndex = dgvListaPacientes.Rows.Add();
+                dgvListaPacientes.Rows[cont].Cells[0].Value = paciente.Id;
+                dgvListaPacientes.Rows[cont].Cells[1].Value = paciente.Nome;
+                dgvListaPacientes.Rows[cont].Cells[2].Value = paciente.Raca.Nome;
+                dgvListaPacientes.Rows[cont].Cells[3].Value = paciente.Cor;
+                dgvListaPacientes.Rows[cont].Cells[4].Value = paciente.Idade;
+                dgvListaPacientes.Rows[cont].Cells[5].Value = paciente.Peso;
+
+
+                cont++;
+            }
+
+
+
+        }
+
+        private void CarregaGridEnderecos()
+        {
+            var listaClientes = Cliente.ObterLista();
 
             dgvListaClientes.Rows.Clear();
             int cont = 0;
@@ -63,14 +111,17 @@ namespace ClinicaNeko.Forms
 
             this.tabConsultaCliente.SelectedTab = tpEditarClientes;
 
-            Cliente cliente = Cliente.ObterPorId(id);
 
+            Cliente cliente = Cliente.ObterPorId(id);
+            CarregaGridPacientes(cliente.Id);
             txtId.Text = cliente.Id.ToString();
             txtNome.Text = cliente.Nome;
             txtCpf.Text = cliente.Cpf;
             dtpNascimento.Value = cliente.Data_Nascimento.Value;
             txtEmail.Text = cliente.Email;
             txtCpf.ReadOnly = true;
+
+
         }
 
         private void txtBusca_TextChanged(object sender, EventArgs e)
@@ -92,6 +143,16 @@ namespace ClinicaNeko.Forms
         }
 
         private void tpListarClientes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvListaPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tpEditarClientes_Click(object sender, EventArgs e)
         {
 
         }

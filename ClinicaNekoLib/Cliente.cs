@@ -31,6 +31,14 @@ namespace ClinicaNekoLib
             Email = email;
         }
 
+        public Cliente(int id, string? nome, DateTime? data_Nascimento, string email)
+        {
+            Id = id;
+            Nome = nome;
+            Data_Nascimento = data_Nascimento;
+            Email = email;
+        }
+
         public Cliente(string? nome, string cpf, DateTime? data_Nascimento, string email, string senha)
         {
             Nome = nome;

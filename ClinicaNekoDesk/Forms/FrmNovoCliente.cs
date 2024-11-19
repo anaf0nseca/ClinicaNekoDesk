@@ -84,11 +84,15 @@ namespace ClinicaNeko.Forms
                         telefoneCliente.Inserir();
                     }
 
-                    frmNovoPaciente.Dock = DockStyle.Fill;
-                    frmNovoPaciente.TopLevel = false;
+                    FrmNovoEndereco frmNovoEndereco = new FrmNovoEndereco();
+                    frmNovoEndereco.idCliente = cliente.Id;
+                    ClienteId = cliente.Id;
+
+                    frmNovoEndereco.Dock = DockStyle.Fill;
+                    frmNovoEndereco.TopLevel = false;
                     MainPanel.Controls.Clear();
-                    MainPanel.Controls.Add(frmNovoPaciente);
-                    frmNovoPaciente.Show();
+                    MainPanel.Controls.Add(frmNovoEndereco);
+                    frmNovoEndereco.Show();
 
                 }
             }

@@ -51,16 +51,18 @@
             DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             txtCpf = new Guna.UI2.WinForms.Guna2TextBox();
             txtNome = new Guna.UI2.WinForms.Guna2TextBox();
@@ -102,6 +104,7 @@
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             clnPeso = new DataGridViewTextBoxColumn();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             tpListarClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaClientes).BeginInit();
             tabConsultaCliente.SuspendLayout();
@@ -201,13 +204,13 @@
             btnSalvarCliente.ForeColor = Color.White;
             btnSalvarCliente.ImageAlign = HorizontalAlignment.Right;
             btnSalvarCliente.ImageSize = new Size(24, 24);
-            btnSalvarCliente.Location = new Point(819, 101);
+            btnSalvarCliente.Location = new Point(622, 97);
             btnSalvarCliente.Margin = new Padding(4, 3, 4, 3);
             btnSalvarCliente.Name = "btnSalvarCliente";
             btnSalvarCliente.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnSalvarCliente.Size = new Size(190, 36);
+            btnSalvarCliente.Size = new Size(134, 36);
             btnSalvarCliente.TabIndex = 39;
-            btnSalvarCliente.Text = "Salvar alterações";
+            btnSalvarCliente.Text = "Salvar edição";
             btnSalvarCliente.Click += btnSalvarUsuario_Click;
             // 
             // guna2HtmlLabel5
@@ -370,7 +373,7 @@
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
             dgvListaClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvListaClientes.RowHeadersVisible = false;
-            dgvListaClientes.Size = new Size(941, 511);
+            dgvListaClientes.Size = new Size(941, 514);
             dgvListaClientes.TabIndex = 4;
             dgvListaClientes.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(164, 196, 169);
             dgvListaClientes.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9F);
@@ -439,7 +442,7 @@
             tabConsultaCliente.Controls.Add(tpListarClientes);
             tabConsultaCliente.Controls.Add(tpEditarClientes);
             tabConsultaCliente.ItemSize = new Size(180, 40);
-            tabConsultaCliente.Location = new Point(-4, -2);
+            tabConsultaCliente.Location = new Point(-1, -1);
             tabConsultaCliente.Name = "tabConsultaCliente";
             tabConsultaCliente.SelectedIndex = 0;
             tabConsultaCliente.Size = new Size(1058, 624);
@@ -467,6 +470,7 @@
             // tpEditarClientes
             // 
             tpEditarClientes.BackColor = Color.FromArgb(159, 187, 164);
+            tpEditarClientes.Controls.Add(guna2Button1);
             tpEditarClientes.Controls.Add(groupBox1);
             tpEditarClientes.Controls.Add(btnEnd);
             tpEditarClientes.Controls.Add(guna2HtmlLabel12);
@@ -630,7 +634,7 @@
             btnEnd.Animated = true;
             btnEnd.BackColor = Color.Transparent;
             btnEnd.BorderRadius = 15;
-            btnEnd.CustomizableEdges = customizableEdges13;
+            btnEnd.CustomizableEdges = customizableEdges15;
             btnEnd.DisabledState.BorderColor = Color.DarkGray;
             btnEnd.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEnd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -640,13 +644,14 @@
             btnEnd.ForeColor = Color.White;
             btnEnd.ImageAlign = HorizontalAlignment.Right;
             btnEnd.ImageSize = new Size(24, 24);
-            btnEnd.Location = new Point(610, 101);
+            btnEnd.Location = new Point(817, 97);
             btnEnd.Margin = new Padding(4, 3, 4, 3);
             btnEnd.Name = "btnEnd";
-            btnEnd.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnEnd.Size = new Size(190, 36);
+            btnEnd.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnEnd.Size = new Size(146, 36);
             btnEnd.TabIndex = 49;
-            btnEnd.Text = "Adicionar Endereço";
+            btnEnd.Text = "Novo Endereço";
+            btnEnd.Click += btnEnd_Click;
             // 
             // guna2HtmlLabel12
             // 
@@ -664,7 +669,7 @@
             // 
             txtId.BorderRadius = 10;
             txtId.Cursor = Cursors.IBeam;
-            txtId.CustomizableEdges = customizableEdges15;
+            txtId.CustomizableEdges = customizableEdges17;
             txtId.DefaultText = "";
             txtId.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtId.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -682,7 +687,7 @@
             txtId.PlaceholderText = "";
             txtId.ReadOnly = true;
             txtId.SelectedText = "";
-            txtId.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtId.ShadowDecoration.CustomizableEdges = customizableEdges18;
             txtId.Size = new Size(71, 27);
             txtId.TabIndex = 47;
             // 
@@ -817,10 +822,35 @@
             clnPeso.ReadOnly = true;
             clnPeso.Width = 140;
             // 
+            // guna2Button1
+            // 
+            guna2Button1.Animated = true;
+            guna2Button1.BackColor = Color.Transparent;
+            guna2Button1.BorderRadius = 15;
+            guna2Button1.CustomizableEdges = customizableEdges13;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.FromArgb(34, 85, 96);
+            guna2Button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.ImageAlign = HorizontalAlignment.Right;
+            guna2Button1.ImageSize = new Size(24, 24);
+            guna2Button1.Location = new Point(817, 46);
+            guna2Button1.Margin = new Padding(4, 3, 4, 3);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2Button1.Size = new Size(146, 36);
+            guna2Button1.TabIndex = 50;
+            guna2Button1.Text = "Novo Paciente";
+            guna2Button1.Click += guna2Button1_Click;
+            // 
             // FrmListaCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(159, 187, 164);
             ClientSize = new Size(1050, 620);
             ControlBox = false;
             Controls.Add(tabConsultaCliente);
@@ -883,5 +913,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private DataGridViewTextBoxColumn clnPeso;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

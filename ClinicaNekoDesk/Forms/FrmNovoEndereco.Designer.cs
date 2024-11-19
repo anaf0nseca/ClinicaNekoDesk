@@ -146,7 +146,7 @@
             txtNumero.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             txtNumero.ForeColor = Color.Black;
             txtNumero.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNumero.Location = new Point(454, 238);
+            txtNumero.Location = new Point(510, 238);
             txtNumero.Margin = new Padding(4, 3, 4, 3);
             txtNumero.Name = "txtNumero";
             txtNumero.PasswordChar = '\0';
@@ -217,7 +217,7 @@
             cmbTipoEnd.ForeColor = Color.Black;
             cmbTipoEnd.ItemHeight = 30;
             cmbTipoEnd.Items.AddRange(new object[] { "COS - Correspondência", "RES - Residencial", "COM - Comercial", "ENT - Entrega", "COB - Cobrança" });
-            cmbTipoEnd.Location = new Point(625, 317);
+            cmbTipoEnd.Location = new Point(682, 317);
             cmbTipoEnd.Margin = new Padding(4, 3, 4, 3);
             cmbTipoEnd.Name = "cmbTipoEnd";
             cmbTipoEnd.ShadowDecoration.CustomizableEdges = customizableEdges12;
@@ -237,7 +237,7 @@
             btnSalvarEnd.FillColor = Color.FromArgb(34, 85, 96);
             btnSalvarEnd.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnSalvarEnd.ForeColor = Color.White;
-            btnSalvarEnd.Location = new Point(691, 449);
+            btnSalvarEnd.Location = new Point(746, 425);
             btnSalvarEnd.Margin = new Padding(4, 3, 4, 3);
             btnSalvarEnd.Name = "btnSalvarEnd";
             btnSalvarEnd.ShadowDecoration.CustomizableEdges = customizableEdges14;
@@ -260,7 +260,7 @@
             txtComplemento.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             txtComplemento.ForeColor = Color.Black;
             txtComplemento.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtComplemento.Location = new Point(614, 238);
+            txtComplemento.Location = new Point(691, 238);
             txtComplemento.Margin = new Padding(4, 3, 4, 3);
             txtComplemento.Name = "txtComplemento";
             txtComplemento.PasswordChar = '\0';
@@ -283,7 +283,7 @@
             btnFechar.FillColor = Color.FromArgb(34, 85, 96);
             btnFechar.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnFechar.ForeColor = Color.White;
-            btnFechar.Location = new Point(154, 449);
+            btnFechar.Location = new Point(155, 425);
             btnFechar.Margin = new Padding(4, 3, 4, 3);
             btnFechar.Name = "btnFechar";
             btnFechar.ShadowDecoration.CustomizableEdges = customizableEdges18;
@@ -320,7 +320,7 @@
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel3.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel3.Location = new Point(467, 211);
+            guna2HtmlLabel3.Location = new Point(523, 211);
             guna2HtmlLabel3.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(59, 20);
@@ -332,7 +332,7 @@
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel4.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel4.Location = new Point(625, 211);
+            guna2HtmlLabel4.Location = new Point(702, 211);
             guna2HtmlLabel4.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(101, 20);
@@ -356,7 +356,7 @@
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel6.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel6.Location = new Point(315, 293);
+            guna2HtmlLabel6.Location = new Point(305, 295);
             guna2HtmlLabel6.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             guna2HtmlLabel6.Size = new Size(53, 20);
@@ -368,7 +368,7 @@
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel7.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel7.Location = new Point(100, 291);
+            guna2HtmlLabel7.Location = new Point(97, 293);
             guna2HtmlLabel7.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             guna2HtmlLabel7.Size = new Size(47, 20);
@@ -380,7 +380,7 @@
             guna2HtmlLabel8.BackColor = Color.Transparent;
             guna2HtmlLabel8.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel8.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel8.Location = new Point(638, 291);
+            guna2HtmlLabel8.Location = new Point(695, 291);
             guna2HtmlLabel8.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             guna2HtmlLabel8.Size = new Size(130, 20);

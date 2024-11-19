@@ -473,5 +473,15 @@ namespace ClinicaNeko
             MainPanel.Controls.Add(frmAgendados);
             frmAgendados.Show();
         }
+
+        private void btnEspecialidades_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSetorCargo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

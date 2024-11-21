@@ -72,7 +72,8 @@ namespace ClinicaNeko.Forms
                     Setor.ObterPorId(Convert.ToInt32(cmbSetor.SelectedValue)),
                     Cargo.ObterPorId(Convert.ToInt32(cmbCargo.SelectedValue)),
                     txtEmail.Text,
-                    txtSenha.Text
+                    txtSenha.Text,
+                    null
                     );
 
                 usuario.Inserir();

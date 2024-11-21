@@ -18,7 +18,7 @@ namespace ClinicaNekoDesk.Forms
         public static Panel MainPanel;
         public int idPedido { get; set; }
         public int idCliente {  get; set; }
-        public double totalP { get; set; }
+        public decimal totalP { get; set; }
 
 
 
@@ -31,6 +31,7 @@ namespace ClinicaNekoDesk.Forms
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             grbFormaPgto.Enabled = false;
+            btnFinalizarPgto.Enabled = true;
         }
 
         private void guna2HtmlLabel17_Click(object sender, EventArgs e)

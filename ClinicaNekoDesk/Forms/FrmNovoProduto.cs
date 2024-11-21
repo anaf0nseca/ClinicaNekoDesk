@@ -14,9 +14,12 @@ namespace ClinicaNeko.Forms
 {
     public partial class FrmNovoProduto : Form
     {
+        public static Panel MainPanel;
+
         public FrmNovoProduto()
         {
             InitializeComponent();
+            MainPanel = FrmPrincipal.MainPanel; 
         }
 
         private void txtNome_TextChanged(object sender, EventArgs e)
@@ -46,15 +49,23 @@ namespace ClinicaNeko.Forms
                 txtNomeProduto.Text,
                 txtDescricao.Text,
                 dtpVencimento.Value,
-                double.Parse(txtValor.Text),
+                decimal.Parse(txtValor.Text),
                 double.Parse(txtPeso.Text),
-                int.Parse(txtQtdeEstoque.Text)
+                int.Parse(txtQtdeEstoque.Text),
+                null
 
                 );
 
             produto.Inserir();
 
             MessageBox.Show("Produto cadastrado com sucesso!");
+
+            FrmListaProduto frmListaProduto = new();
+            frmListaProduto.Dock = DockStyle.Fill;
+            frmListaProduto.TopLevel = false;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(frmListaProduto);
+            frmListaProduto.Show();
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)

@@ -709,7 +709,7 @@ namespace ClinicaNekoDesk.Forms
                         agendamentoCirurgia.Inserir();
                     }
 
-                    MessageBox.Show($"Agendamento realizado com sucesso para o dia: {calendarioNeko.SelectionRange.Start}");
+                    MessageBox.Show($"Agendamento realizado com sucesso para o dia: {agendamento.Data.ToString("dd/MM/yyyy")} e horário: {agendamento.Hora.ToString("HH:mm")}!");
 
                     FrmListaAgendamento frmListaAgendamento = new();
                     frmListaAgendamento.Dock = DockStyle.Fill;

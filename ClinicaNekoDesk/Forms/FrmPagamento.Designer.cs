@@ -57,7 +57,7 @@
             rbDebito = new Guna.UI2.WinForms.Guna2RadioButton();
             rbPix = new Guna.UI2.WinForms.Guna2RadioButton();
             rbDinheiro = new Guna.UI2.WinForms.Guna2RadioButton();
-            btnFinalizarPedido = new Guna.UI2.WinForms.Guna2Button();
+            btnFinalizarPgto = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblParcelas = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtTotal = new Guna.UI2.WinForms.Guna2TextBox();
@@ -215,29 +215,30 @@
             rbDinheiro.UseVisualStyleBackColor = false;
             rbDinheiro.CheckedChanged += rbDinheiro_CheckedChanged;
             // 
-            // btnFinalizarPedido
+            // btnFinalizarPgto
             // 
-            btnFinalizarPedido.Animated = true;
-            btnFinalizarPedido.BackColor = Color.Transparent;
-            btnFinalizarPedido.BorderRadius = 10;
-            btnFinalizarPedido.CustomizableEdges = customizableEdges5;
-            btnFinalizarPedido.DisabledState.BorderColor = Color.DarkGray;
-            btnFinalizarPedido.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnFinalizarPedido.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnFinalizarPedido.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnFinalizarPedido.FillColor = Color.FromArgb(34, 85, 96);
-            btnFinalizarPedido.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            btnFinalizarPedido.ForeColor = Color.White;
-            btnFinalizarPedido.ImageAlign = HorizontalAlignment.Right;
-            btnFinalizarPedido.ImageSize = new Size(24, 24);
-            btnFinalizarPedido.Location = new Point(329, 258);
-            btnFinalizarPedido.Margin = new Padding(4, 3, 4, 3);
-            btnFinalizarPedido.Name = "btnFinalizarPedido";
-            btnFinalizarPedido.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnFinalizarPedido.Size = new Size(192, 35);
-            btnFinalizarPedido.TabIndex = 61;
-            btnFinalizarPedido.Text = "Realizar Pagamento";
-            btnFinalizarPedido.Click += btnFinalizarPedido_Click;
+            btnFinalizarPgto.Animated = true;
+            btnFinalizarPgto.BackColor = Color.Transparent;
+            btnFinalizarPgto.BorderRadius = 10;
+            btnFinalizarPgto.CustomizableEdges = customizableEdges5;
+            btnFinalizarPgto.DisabledState.BorderColor = Color.DarkGray;
+            btnFinalizarPgto.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnFinalizarPgto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnFinalizarPgto.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnFinalizarPgto.Enabled = false;
+            btnFinalizarPgto.FillColor = Color.FromArgb(34, 85, 96);
+            btnFinalizarPgto.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            btnFinalizarPgto.ForeColor = Color.White;
+            btnFinalizarPgto.ImageAlign = HorizontalAlignment.Right;
+            btnFinalizarPgto.ImageSize = new Size(24, 24);
+            btnFinalizarPgto.Location = new Point(329, 258);
+            btnFinalizarPgto.Margin = new Padding(4, 3, 4, 3);
+            btnFinalizarPgto.Name = "btnFinalizarPgto";
+            btnFinalizarPgto.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnFinalizarPgto.Size = new Size(192, 35);
+            btnFinalizarPgto.TabIndex = 61;
+            btnFinalizarPgto.Text = "Realizar Pagamento";
+            btnFinalizarPgto.Click += btnFinalizarPedido_Click;
             // 
             // guna2HtmlLabel17
             // 
@@ -527,7 +528,7 @@
             Controls.Add(pbLoading);
             Controls.Add(guna2GroupBox1);
             Controls.Add(lblParcelas);
-            Controls.Add(btnFinalizarPedido);
+            Controls.Add(btnFinalizarPgto);
             Controls.Add(cmbParcelas);
             Controls.Add(grbFormaPgto);
             FormBorderStyle = FormBorderStyle.None;
@@ -547,7 +548,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GroupBox grbFormaPgto;
-        private Guna.UI2.WinForms.Guna2Button btnFinalizarPedido;
+        private Guna.UI2.WinForms.Guna2Button btnFinalizarPgto;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2RadioButton rbcredito;
         private Guna.UI2.WinForms.Guna2RadioButton rbDebito;

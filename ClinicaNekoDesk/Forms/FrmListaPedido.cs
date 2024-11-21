@@ -35,7 +35,7 @@ namespace ClinicaNekoDesk.Forms
             foreach (var pedido in listaPedido)
             {
                 var listaItens = ItemPedido.ObterListaPorPedido(pedido.Id);
-                double valor = 0;
+                decimal valor = 0;
 
                 //Para cada pedido, somar o valor de todos os itens relacionados a ele para exibir o valor total do pedido.
                 foreach (var item in listaItens)
@@ -83,7 +83,7 @@ namespace ClinicaNekoDesk.Forms
 
             Pedido pedido = Pedido.ObterPorId(id);
 
-            txtNPedido.Text = pedido.Id.ToString(); 
+            txtNPedido.Text = pedido.Id.ToString();
 
             txtUsuario.Text = pedido.Usuario.Nome;
             txtIdCliente.Text = pedido.Cliente.Id.ToString();
@@ -93,9 +93,9 @@ namespace ClinicaNekoDesk.Forms
             dgvItensPedido.Rows.Clear();
 
             int cont = 0;
-            double valor = 0;
-            
-            foreach(var item in listaItens)
+            decimal valor = 0;
+
+            foreach (var item in listaItens)
             {
                 valor += item.Valor * item.Quantidade;
 
@@ -112,7 +112,7 @@ namespace ClinicaNekoDesk.Forms
             txtDesconto.Text = pedido.Desconto.ToString();
             txtTotal.Text = (valor - pedido.Desconto).ToString();
 
-            if(pedido.Status == "P")
+            if (pedido.Status == "P")
             {
                 btnPgto.Visible = true;
             }
@@ -125,6 +125,11 @@ namespace ClinicaNekoDesk.Forms
         }
 
         private void guna2HtmlLabel14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTotal_TextChanged(object sender, EventArgs e)
         {
 
         }

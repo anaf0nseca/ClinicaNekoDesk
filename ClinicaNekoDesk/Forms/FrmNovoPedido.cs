@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ClinicaNeko.Forms
 {
@@ -20,9 +21,9 @@ namespace ClinicaNeko.Forms
         public int produtoId;
         public int clienteId;
         public int idPedido {  get; set; }
-        public double total;
-        public double totalP;
-        public double descontoTotal;
+        public decimal total;
+        public decimal totalP;
+        public decimal descontoTotal;
 
         public FrmNovoPedido()
         {
@@ -44,7 +45,7 @@ namespace ClinicaNeko.Forms
             dgvItensPedido.Rows.Clear();
             //contador para alterar o índice a cada cliente da lista
             int cont = 0;
-            double desconto = 0;
+            decimal desconto = 0;
             total = 0;
             foreach (var item in itens)
             {
@@ -77,8 +78,6 @@ namespace ClinicaNeko.Forms
                     total += (item.Valor * item.Quantidade) - item.Desconto;
                 }
 
-                ////a cada item inserido, o valor total é atualizado
-                //total += (item.Valor * item.Quantidade) - item.Desconto;
 
 
             }
@@ -117,7 +116,7 @@ namespace ClinicaNeko.Forms
             produtoId = frmSelecionarProduto.ProdutoId;
             string produtoNome = frmSelecionarProduto.ProdutoNome;
             string produtoDescricao = frmSelecionarProduto.ProdutoDescricao;
-            double? produtoValor = frmSelecionarProduto.ProdutoValor;
+            decimal? produtoValor = frmSelecionarProduto.ProdutoValor;
 
             txtDescricao.Text = produtoNome;
             txtQuantidade.Text = 1.ToString();
@@ -169,7 +168,7 @@ namespace ClinicaNeko.Forms
                     produto,
                     produto.Valor,
                     int.Parse(txtQuantidade.Text),
-                    double.Parse(txtDesconto.Text)
+                    decimal.Parse(txtDesconto.Text)
                     );
 
                 item.Inserir();
@@ -251,55 +250,91 @@ namespace ClinicaNeko.Forms
 
         private void btnFinalizarPedido_Click(object sender, EventArgs e)
         {
+            //string status = "P";
+
+
+            //// Converte os valores dos campos para decimal
+            //if (decimal.TryParse(txtSubtotalPedido.Text, out decimal subtotalPedido) &&
+            //    decimal.TryParse(txtTotalPedido.Text, out decimal totalPedido))
+            //{
+            //    // Calcula o desconto com base nos valores
+            //    decimal descontoPedido = subtotalPedido - totalPedido;
+
+            //    // Cria um objeto Pedido com os valores calculados
+            //    Pedido pedido = new(
+            //        Convert.ToInt32(txtNPedido.Text),
+            //        status,
+            //        descontoPedido
+            //    );
+
+            //    // Verifica se o ID do pedido é válido
+            //    if (pedido.Id > 0)
+            //    {
+            //        //altera o status e o desconto
+            //        pedido.AlterarStatus(pedido.Id, status);
+            //        pedido.AtualizarDesconto(pedido.Id, descontoPedido);
+            //    }
+
+
             string status = "P";
-            string subtotalPedido = txtSubtotalPedido.Text;
-            string totalPedido = txtTotalPedido.Text;
-
-            totalP = double.Parse(totalPedido);
-            double descontoPedido = double.Parse(subtotalPedido) - double.Parse(totalPedido);
-
-            Pedido pedido = new(
-                Convert.ToInt32(txtNPedido.Text),
-                Convert.ToString(status),
-                descontoPedido
-                );
-
-            if(pedido.Id > 0)
+          
+            // Converte os valores dos campos para decimal
+            if (decimal.TryParse(txtSubtotalPedido.Text, out decimal subtotalPedido) &&
+                decimal.TryParse(txtTotalPedido.Text, out decimal totalPedido))
             {
-                pedido.AlterarStatus(pedido.Id, status);
-                pedido.AtualizarDesconto(pedido.Id, descontoPedido);
+                // Verifica se os valores são válidos e se o subtotal é maior que o total
+                if (subtotalPedido < 0 || totalPedido < 0)
+                {
+                    MessageBox.Show("Os valores de subtotal e total não podem ser negativos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Calcula o desconto com base nos valores
+                decimal descontoPedido = subtotalPedido - totalPedido;
+                totalP = totalPedido;
+                // Cria um objeto Pedido com os valores calculados
+                if (int.TryParse(txtNPedido.Text, out int pedidoId)) // Verifica se o ID do pedido é válido
+                {
+                    Pedido pedido = new(pedidoId, status, descontoPedido);
+
+                    // Verifica se o ID do pedido é válido
+                    if (pedido.Id > 0)
+                    {
+                        // Chama os métodos de atualização para alterar o status e o desconto
+                        pedido.AlterarStatus(pedido.Id, status);
+                        pedido.AtualizarDesconto();  // Passando descontoPedido como decimal
+                    }
+
+                    Form Background = new Form();
+
+                    FrmPagamento frmPagamento = new FrmPagamento();
+                    frmPagamento.totalP = totalP;
+                    frmPagamento.idPedido = pedido.Id;
+
+                    //Código utilizado para criar o efeito de "escurecimento" do formulário principal ao abrir uma janela secundária
+                    using (frmPagamento)
+                    {
+                        Background.StartPosition = FormStartPosition.CenterScreen;
+                        Background.FormBorderStyle = FormBorderStyle.None;
+                        Background.Opacity = 0.7d;
+                        Background.BackColor = Color.Black;
+                        Background.Size = new Size(1310, 722);
+                        Background.Location = this.Location;
+                        Background.ShowInTaskbar = false;
+                        Background.Show(this);
+                        frmPagamento.Owner = Background;
+                        frmPagamento.ShowDialog(Background);
+                        Background.Dispose();
+
+
+                    }
+                }
+
 
             }
-
-
-            Form Background = new Form();
-
-            FrmPagamento frmPagamento = new FrmPagamento();
-            frmPagamento.totalP = totalP;
-            frmPagamento.idPedido = pedido.Id;
-
-            //Código utilizado para criar o efeito de "escurecimento" do formulário principal ao abrir uma janela secundária
-            using (frmPagamento)
-            {
-                Background.StartPosition = FormStartPosition.CenterScreen;
-                Background.FormBorderStyle = FormBorderStyle.None;
-                Background.Opacity = 0.7d;
-                Background.BackColor = Color.Black;
-                Background.Size = new Size(1310, 722);
-                Background.Location = this.Location;
-                Background.ShowInTaskbar = false;
-                Background.Show(this);
-                frmPagamento.Owner = Background;
-                frmPagamento.ShowDialog(Background);
-                Background.Dispose();
-
-                
-            }
-
-
-
 
 
         }
     }
 }
+ 

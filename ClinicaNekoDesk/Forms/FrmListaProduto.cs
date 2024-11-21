@@ -106,7 +106,7 @@ namespace ClinicaNekoDesk.Forms
                txtNomeProduto.Text,
                txtDescricao.Text,
                dtpVencimento.Value,
-               double.Parse(txtValor.Text)
+               decimal.Parse(txtValor.Text)
                );
 
             produto.Atualizar();
@@ -117,12 +117,33 @@ namespace ClinicaNekoDesk.Forms
 
         private void tpEditarProdutos_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void dgvListaProduto_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            var msg = MessageBox.Show(
+            "Deseja excluir o produto?", //Texto da mensagem 
+            "Exclusão de produto", //Título da caixa de mensagem
+            MessageBoxButtons.YesNo, //Botões exibidos na caixa
+            MessageBoxIcon.Exclamation, //Ícone exibido
+            MessageBoxDefaultButton.Button2); //Botão padrão
+
+            if (msg == DialogResult.Yes)
+            {
+                Produto produto = Produto.ObterPorId(Convert.ToInt32(txtIdProduto.Text));
+
+                produto.Excluir();
+
+                FrmListaProduto_Load(sender, e);
+                this.tabConsultaProduto.SelectedTab = tpListarProdutos;
+                
+            }
         }
     }
 }

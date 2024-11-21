@@ -36,6 +36,8 @@
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -56,8 +58,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tabConsultaPedido = new Guna.UI2.WinForms.Guna2TabControl();
             tpListarPedidos = new TabPage();
             gpbDadosPaciente = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -75,6 +75,7 @@
             clnValor = new DataGridViewTextBoxColumn();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             tpDetalhePedido = new TabPage();
+            btnPgto = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtTotal = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -95,7 +96,6 @@
             txtCliente = new Guna.UI2.WinForms.Guna2TextBox();
             txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            btnPgto = new Guna.UI2.WinForms.Guna2Button();
             tabConsultaPedido.SuspendLayout();
             tpListarPedidos.SuspendLayout();
             gpbDadosPaciente.SuspendLayout();
@@ -377,6 +377,30 @@
             tpDetalhePedido.Text = "Detalhes do Pedido";
             tpDetalhePedido.Click += tpDetalhePedido_Click;
             // 
+            // btnPgto
+            // 
+            btnPgto.Animated = true;
+            btnPgto.BackColor = Color.Transparent;
+            btnPgto.BorderRadius = 10;
+            btnPgto.CustomizableEdges = customizableEdges3;
+            btnPgto.DisabledState.BorderColor = Color.DarkGray;
+            btnPgto.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnPgto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnPgto.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnPgto.FillColor = Color.FromArgb(34, 85, 96);
+            btnPgto.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            btnPgto.ForeColor = Color.White;
+            btnPgto.ImageAlign = HorizontalAlignment.Right;
+            btnPgto.ImageSize = new Size(24, 24);
+            btnPgto.Location = new Point(728, 521);
+            btnPgto.Margin = new Padding(4, 3, 4, 3);
+            btnPgto.Name = "btnPgto";
+            btnPgto.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnPgto.Size = new Size(190, 35);
+            btnPgto.TabIndex = 88;
+            btnPgto.Text = "Realizar Pagamento";
+            btnPgto.Visible = false;
+            // 
             // guna2HtmlLabel8
             // 
             guna2HtmlLabel8.BackColor = Color.Transparent;
@@ -417,6 +441,7 @@
             txtTotal.Size = new Size(73, 38);
             txtTotal.TabIndex = 86;
             txtTotal.TextAlign = HorizontalAlignment.Center;
+            txtTotal.TextChanged += txtTotal_TextChanged;
             // 
             // guna2HtmlLabel10
             // 
@@ -764,30 +789,6 @@
             guna2HtmlLabel5.Size = new Size(310, 34);
             guna2HtmlLabel5.TabIndex = 79;
             guna2HtmlLabel5.Text = "DETALHES DO PEDIDO";
-            // 
-            // btnPgto
-            // 
-            btnPgto.Animated = true;
-            btnPgto.BackColor = Color.Transparent;
-            btnPgto.BorderRadius = 10;
-            btnPgto.CustomizableEdges = customizableEdges3;
-            btnPgto.DisabledState.BorderColor = Color.DarkGray;
-            btnPgto.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnPgto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnPgto.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPgto.FillColor = Color.FromArgb(34, 85, 96);
-            btnPgto.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            btnPgto.ForeColor = Color.White;
-            btnPgto.ImageAlign = HorizontalAlignment.Right;
-            btnPgto.ImageSize = new Size(24, 24);
-            btnPgto.Location = new Point(728, 521);
-            btnPgto.Margin = new Padding(4, 3, 4, 3);
-            btnPgto.Name = "btnPgto";
-            btnPgto.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnPgto.Size = new Size(190, 35);
-            btnPgto.TabIndex = 88;
-            btnPgto.Text = "Realizar Pagamento";
-            btnPgto.Visible = false;
             // 
             // FrmListaPedido
             // 

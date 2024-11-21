@@ -134,7 +134,7 @@ namespace ClinicaNeko
             //Exibe painel de clientes
             if (showPanelClientes)
             {
-                panelClientes.Height = 90;
+                panelClientes.Height = 60;
             }
             else
             {
@@ -144,7 +144,7 @@ namespace ClinicaNeko
             //Exibe painel de produtos
             if (showPanelProdutos)
             {
-                panelProdutos.Height = 90;
+                panelProdutos.Height = 60;
             }
             else
             {

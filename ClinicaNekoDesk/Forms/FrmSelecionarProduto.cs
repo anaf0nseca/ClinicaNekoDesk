@@ -18,7 +18,7 @@ namespace ClinicaNekoDesk.Forms
 
         public string? ProdutoNome { get; set; }
         public string? ProdutoDescricao { get; set; }
-        public double? ProdutoValor { get; set; }
+        public decimal? ProdutoValor { get; set; }
 
 
 

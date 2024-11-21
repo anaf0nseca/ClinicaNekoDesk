@@ -204,7 +204,7 @@
             // 
             // clnCliente
             // 
-            clnCliente.HeaderText = "Cliente";
+            clnCliente.HeaderText = "Paciente";
             clnCliente.Name = "clnCliente";
             clnCliente.ReadOnly = true;
             clnCliente.Width = 300;

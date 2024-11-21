@@ -269,7 +269,7 @@
             txtValor.PlaceholderText = "";
             txtValor.SelectedText = "";
             txtValor.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            txtValor.Size = new Size(139, 42);
+            txtValor.Size = new Size(96, 42);
             txtValor.TabIndex = 34;
             // 
             // guna2HtmlLabel3
@@ -298,14 +298,14 @@
             txtPeso.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPeso.ForeColor = Color.FromArgb(39, 63, 44);
             txtPeso.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPeso.Location = new Point(288, 372);
+            txtPeso.Location = new Point(206, 372);
             txtPeso.Margin = new Padding(5);
             txtPeso.Name = "txtPeso";
             txtPeso.PasswordChar = '\0';
             txtPeso.PlaceholderText = "em gramas";
             txtPeso.SelectedText = "";
             txtPeso.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            txtPeso.Size = new Size(139, 42);
+            txtPeso.Size = new Size(99, 42);
             txtPeso.TabIndex = 38;
             // 
             // txtQtdeEstoque
@@ -322,14 +322,14 @@
             txtQtdeEstoque.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtQtdeEstoque.ForeColor = Color.FromArgb(39, 63, 44);
             txtQtdeEstoque.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtQtdeEstoque.Location = new Point(523, 372);
+            txtQtdeEstoque.Location = new Point(392, 372);
             txtQtdeEstoque.Margin = new Padding(5);
             txtQtdeEstoque.Name = "txtQtdeEstoque";
             txtQtdeEstoque.PasswordChar = '\0';
             txtQtdeEstoque.PlaceholderText = "";
             txtQtdeEstoque.SelectedText = "";
             txtQtdeEstoque.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtQtdeEstoque.Size = new Size(235, 42);
+            txtQtdeEstoque.Size = new Size(121, 42);
             txtQtdeEstoque.TabIndex = 39;
             // 
             // guna2HtmlLabel5
@@ -337,7 +337,7 @@
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel5.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel5.Location = new Point(533, 349);
+            guna2HtmlLabel5.Location = new Point(392, 349);
             guna2HtmlLabel5.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(173, 20);
@@ -349,7 +349,7 @@
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel6.ForeColor = Color.FromArgb(39, 63, 44);
-            guna2HtmlLabel6.Location = new Point(302, 352);
+            guna2HtmlLabel6.Location = new Point(220, 352);
             guna2HtmlLabel6.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             guna2HtmlLabel6.Size = new Size(39, 20);
@@ -371,7 +371,7 @@
             btnCadProduto.ForeColor = Color.White;
             btnCadProduto.ImageAlign = HorizontalAlignment.Right;
             btnCadProduto.ImageSize = new Size(24, 24);
-            btnCadProduto.Location = new Point(817, 362);
+            btnCadProduto.Location = new Point(790, 372);
             btnCadProduto.Margin = new Padding(4, 3, 4, 3);
             btnCadProduto.Name = "btnCadProduto";
             btnCadProduto.ShadowDecoration.CustomizableEdges = customizableEdges18;

@@ -11,12 +11,12 @@ namespace ClinicaNekoLib
         public int Id { get; set; }
         public int IdPedido { get; set; }
         public Produto Produto { get; set; }
-        public double Valor { get; set; }  
+        public decimal Valor { get; set; }  
         public int Quantidade { get; set; }
-        public double Desconto { get; set; }
+        public decimal Desconto { get; set; }
 
         public ItemPedido() { }
-        public ItemPedido(int id, int idPedido, Produto produto, double valor, int quantidade, double desconto)
+        public ItemPedido(int id, int idPedido, Produto produto, decimal valor, int quantidade, decimal desconto)
         {
             Id = id;
             IdPedido = idPedido;
@@ -26,7 +26,7 @@ namespace ClinicaNekoLib
             Desconto = desconto;
         }
 
-        public ItemPedido(int idPedido, Produto produto, double valor, int quantidade, double desconto)
+        public ItemPedido(int idPedido, Produto produto, decimal valor, int quantidade, decimal desconto)
         {
             IdPedido = idPedido;
             Produto = produto;
@@ -65,9 +65,9 @@ namespace ClinicaNekoLib
                     dr.GetInt32(0),
                     dr.GetInt32(1),
                     Produto.ObterPorId(dr.GetInt32(2)),
-                    dr.GetDouble(3),
+                    dr.GetDecimal(3),
                     dr.GetInt32(4),
-                    dr.GetDouble(5)
+                    dr.GetDecimal(5)
                     ));
             }
 

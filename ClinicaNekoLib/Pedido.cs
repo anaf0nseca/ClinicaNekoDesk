@@ -14,7 +14,7 @@ namespace ClinicaNekoLib
         public Cliente Cliente { get; set; }
         public DateTime? Data { get; set; }
         public string Status { get; set; }
-        public double? Desconto { get; set; }
+        public decimal? Desconto { get; set; }
         //public List<ItemPedido> Itens { get; set; }
 
         public Pedido() { }
@@ -28,14 +28,14 @@ namespace ClinicaNekoLib
         }
 
 
-        public Pedido(Usuario usuario, Cliente cliente, double desconto)
+        public Pedido(Usuario usuario, Cliente cliente, decimal desconto)
         {
             Usuario = usuario;
             Cliente = cliente;
             Desconto = desconto;
 
         }
-        public Pedido(Usuario usuario, Cliente cliente, DateTime? data, string status, double? desconto)
+        public Pedido(Usuario usuario, Cliente cliente, DateTime? data, string status, decimal? desconto)
         {
             Usuario = usuario;
             Cliente = cliente;
@@ -58,7 +58,7 @@ namespace ClinicaNekoLib
             Status = status;
         }
 
-        public Pedido(int id, string status, double? desconto)
+        public Pedido(int id, string status, decimal? desconto)
         {
             Id = id;
             Status = status;
@@ -66,7 +66,7 @@ namespace ClinicaNekoLib
 
         }
 
-        public Pedido(int id, Usuario usuario, Cliente cliente, DateTime? data, string status, double? desconto)
+        public Pedido(int id, Usuario usuario, Cliente cliente, DateTime? data, string status, decimal? desconto)
         {
             Id = id;
             Usuario = usuario;
@@ -100,11 +100,13 @@ namespace ClinicaNekoLib
             cmd.Connection.Close();
         }
 
-        public void AtualizarDesconto(int Id, double Desconto)
+        public void AtualizarDesconto()
         {
             var cmd = Banco.Abrir();
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"update pedido set desconto = '{Desconto}' where id = {Id}";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.CommandText = "sp_pedido_update";
+            cmd.Parameters.AddWithValue("spid", Id);
+            cmd.Parameters.AddWithValue("spdesconto", Desconto);
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }
@@ -125,7 +127,7 @@ namespace ClinicaNekoLib
                     Cliente.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
                     dr.GetString(4),
-                    dr.GetDouble(5)
+                    dr.GetDecimal(5)
 
                     );
             }
@@ -151,7 +153,7 @@ namespace ClinicaNekoLib
                     Cliente.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
                     dr.GetString(4),
-                    dr.GetDouble(5)
+                    dr.GetDecimal(5)
 
 
                     ));
@@ -177,7 +179,7 @@ namespace ClinicaNekoLib
                     Cliente.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
                     dr.GetString(4),
-                    dr.GetDouble(5)
+                    dr.GetDecimal(5)
 
                     ));
             }
@@ -201,7 +203,7 @@ namespace ClinicaNekoLib
                     Cliente.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
                     dr.GetString(4),
-                    dr.GetDouble(5)
+                    dr.GetDecimal(5)
 
                     ));
             }

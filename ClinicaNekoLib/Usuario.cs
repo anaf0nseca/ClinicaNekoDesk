@@ -22,6 +22,7 @@ namespace ClinicaNekoLib
         public string? Email { get; set; }
         public string? Senha { get; set; }
         public bool Ativo {  get; set; }
+        public string? Imagem { get; set; }
 
 
         public Usuario() 
@@ -30,7 +31,7 @@ namespace ClinicaNekoLib
             Cargo = new();
         }
 
-        public Usuario(string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string email, string senha)
+        public Usuario(string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string email, string senha, string? imagem)
         {
             Nome = nome;
             Cpf = cpf;
@@ -39,6 +40,7 @@ namespace ClinicaNekoLib
             Cargo = cargo;
             Email = email;
             Senha = senha;
+            Imagem = imagem;
         }
 
 
@@ -64,7 +66,7 @@ namespace ClinicaNekoLib
             Ativo = ativo;
         }
 
-        public Usuario(int id, string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string email, string senha, bool ativo)
+        public Usuario(int id, string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string email, string senha, bool ativo, string? imagem)
         {
             Id = id;
             Nome = nome;
@@ -75,6 +77,7 @@ namespace ClinicaNekoLib
             Email = email;
             Senha = senha;
             Ativo = ativo;
+            Imagem = imagem;
         }
 
         public Usuario(int id, string? nome, string? cpf, DateTime? dataNascimento, Setor setor, Cargo cargo, string senha)
@@ -131,7 +134,8 @@ namespace ClinicaNekoLib
                     Cargo.ObterPorId(dr.GetInt32(5)),//cargo
                     dr.GetString(6),//email
                     dr.GetString(7),//senha
-                    dr.GetBoolean(8)//ativo
+                    dr.GetBoolean(8),//ativo
+                    null
                     );
 
 
@@ -167,7 +171,8 @@ namespace ClinicaNekoLib
                     Cargo.ObterPorId(dr.GetInt32(5)),//cargo
                     dr.GetString(6),//email
                     dr.GetString(7),//senha
-                    dr.GetBoolean(8)//ativo
+                    dr.GetBoolean(8),
+                    null//ativo
                     ));
             }
 
@@ -193,7 +198,8 @@ namespace ClinicaNekoLib
                     Cargo.ObterPorId(dr.GetInt32(5)),//cargo
                     dr.GetString(6),//email
                     dr.GetString(7),//senha
-                    dr.GetBoolean(8)//ativo
+                    dr.GetBoolean(8),
+                    null//ativo
                     ));
             }
 
@@ -219,7 +225,8 @@ namespace ClinicaNekoLib
                     Cargo.ObterPorId(dr.GetInt32(5)),//cargo
                     dr.GetString(6),//email
                     dr.GetString(7),//senha
-                    dr.GetBoolean(8)//ativo
+                    dr.GetBoolean(8),
+                    null//ativo
                     );
             }
 
